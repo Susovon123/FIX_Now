@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color1: #6B7280;
+    --color2: #FFFFFF;
+    --color3: #D9D9D9;
+    --color4: #2772CC;
+    --color5: #244F84;
+    --color6: #030712;
+    --color7: #99D7F7;
+    --color8: #F3F4F8;
+    --color9: #1F2937;
+    --color10: #1A3151;
+    --color11: #E5E7EB;
+    --color12: #45A5EC;
+    --color13: #D97706;
+    --color-14: #F0F9FE;
+    --color-15: #F59E0B; 
+    --color-16:#FBBF24;
+    --outfit-r: "outfit";
+    --albert-sans-r: "albert-sans-r";
+}
+
+@font-face {
+    font-family: "outfit";
+    src: url(../asset/fonts/Outfit/Outfit/static/Outfit-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "albert-sans-r";
+    src: url(../asset/fonts/Albert_Sans/static/AlbertSans-Regular.ttf) format("truetype");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--albert-sans-r);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1350px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+figure {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,ul,li {
+    list-style: none;
+    padding-left: 0;
+
+}
+
+h1,.heading-1 {
+    font-family: var(--outfit-r);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+
+h2,.heading-2 {
+    font-family: var(--outfit-r);
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.2; 
+    color: var(--color5);
+    text-transform: capitalize;
+} 
+h3,.heading-3{
+    color: var(--color10); 
+    font-size: 32px; 
+    font-family: var(--outfit-r); 
+    line-height: 1.2;
+}
+body{
+    color: var(--color6); 
+    font-size: 18px; 
+    font-family: var(--albert-sans-r) ;
+    background-color: var(--color2);
+    
+}
+
+p {
+    color: var(--color1);
+    font-family: var(--albert-sans-r);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- starting  navbar --> 
+       <!-- Header -->
+   <header>
+    
+<nav >
+    <div class="container flex items-center justify-between">
+        
+            <!-- Logo -->
+             <a href="index.html" class="flex items-center gap-2 text-[#58CDFF] font-['rye-regular'] text-2xl">
+                    <img src="images/Group 5.png" alt="Logo">
+                    Job Portal
+                </a>
+
+              <!-- Navigation -->
+                <ul class="flex items-center  text-white text-base font-['poppins-r'] no-underline hidden lg:flex ">
+                    <li><a href="index.html" class="hover:text-[#58CDFF]  me-12 no-underline">Home</a></li>
+                    <li><a href="job-list.html" class="hover:text-[#58CDFF] me-12 no-underline">Job List</a></li>
+                    <li><a href="contact-us.html" class="hover:text-[#58CDFF] me-12 no-underline">Contact</a></li>
+                    <li><a href="about-us.html" class="hover:text-[#58CDFF] me-12 no-underline ">Apply</a></li>
+                </ul>
+      <!-- Login Button -->
+            <a href="#" class="hidden lg:inline-block cmn-btn bg-[#58CDFF] px-7 py-3 text-white font-['poppins-r'] rounded-lg no-underline">
+                    Login
+                </a>
+
+            <!-- Mobile Toggle -->
+            <button id="menuBtn" class="lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+    </div>
+</nav>
+<div id="overlay"
+    class="fixed inset-0 bg-black/40 hidden z-40"></div>
+
+<!-- Mobile Sidebar -->
+<div id="mobileMenu"
+    class="fixed top-0 right-[-100%] w-72 min-h-screen bg-[#3E3E3E] shadow-xl transition-all duration-300 z-50">
+
+    <div class="flex justify-between items-center p-5 border-b">
+        <a href="index.html" class="flex items-center gap-2 text-[#58CDFF] font-['rye-regular'] text-2xl">
+                    <img src="images/Group 5.png" alt="Logo">
+                    Job Portal
+                </a>
+
+        <button id="closeBtn" class="text-3xl">&times;</button>
+    </div>
+
+<ul class="flex flex-col mt-8 items-center space-y-6 text-white text-base font-['poppins-r']">
+    <li><a href="index.html" class="hover:text-[#58CDFF] no-underline">Home</a></li>
+    <li><a href="job-list.html" class="hover:text-[#58CDFF] no-underline">Job List</a></li>
+    <li><a href="contact-us.html" class="hover:text-[#58CDFF] no-underline">Contact</a></li>
+    <li><a href="about-us.html" class="hover:text-[#58CDFF] no-underline">Apply</a></li>
+
+    <li class="pt-4">
+        <a href="#" class="cmn-btn inline-block bg-[#58CDFF] px-7 py-3 text-white font-['poppins-r'] rounded-lg no-underline">
+            Login
+        </a>
+    </li>
+</ul>
+
+</div>
+   </header>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
+      <script src="../fixnow/css/js/script.js"></script>
+</body>
+</html>
