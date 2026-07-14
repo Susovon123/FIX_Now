@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 /* about us page */ 
 .about-us-banner{
@@ -18,7 +17,7 @@
     color: var(--color-16);
     font-size: 32px; 
     font-family: var(--outfit-r);
-=======
+
 
 /* about us page */ 
 .about-us-banner{
@@ -38,5 +37,5 @@
     color: var(--color-16);
     font-size: 32px; 
     font-family: var(--outfit-r);
->>>>>>> 6fd466b1d09111bf45fca105f37f56b90e2af896
+
 }
