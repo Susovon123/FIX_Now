@@ -1,79 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-      <!-- Tailwind cdn -->
- <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- css link -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-       <!-- starting  navbar -->
+    <!-- starting  navbar -->
     <!-- Header -->
-  <header>
-<!-- ===================== Navbar Starts ===================== -->
-<nav class="border-b border-[var(--color11)] bg-[var(--color2)] "> 
-    <!-- container -->
-    <div class="custom-container">
+    <header>
+        <!-- ===================== Navbar Starts ===================== -->
+        <nav class="border-b border-[var(--color11)] bg-[var(--color2)] ">
+            <!-- container -->
+            <div class="custom-container">
 
-        <div class="flex items-center justify-between h-[70px]">
+                <div class="flex items-center justify-between h-[70px]">
 
-            <!-- Logo -->
-            <a href="index.html" class="shrink-0">
-                <img src="assets/images/Frame 14.png" alt="logo-image" class="w-auto h-auto">
-            </a>
+                    <!-- Logo -->
+                    <a href="index.html" class="shrink-0">
+                        <img src="assets/images/Frame 14.png" alt="logo-image" class="w-auto h-auto">
+                    </a>
 
-            <!-- Desktop Menu -->
-            <div class="hidden lg:flex items-center w-full">
+                    <!-- Desktop Menu -->
+                    <div class="hidden lg:flex items-center w-full">
 
-                <!-- Navigation -->
-                <ul class="flex mx-auto">
+                        <!-- Navigation -->
+                        <ul class="flex mx-auto">
 
-                    <li class="mr-[50px]">
-                        <a href="index.html"
-                           class="text-[20px] font-medium text-[var(--color9)] hover:text-[var(--color-15)] transition-all duration-300 font-medium">
-                            Home
-                        </a>
-                    </li>
+                            <li class="mr-[50px]">
+                                <a href="index.html"
+                                    class="text-[20px] font-medium text-[var(--color9)] hover:text-[var(--color-15)] transition-all duration-300 font-medium">
+                                    Home
+                                </a>
+                            </li>
 
-                    <li class="mr-[50px]">
-                        <a href="Service.html"
-                            class="text-[20px] font-medium text-[var(--color9)] hover:text-[var(--color-15)] transition-all duration-300 font-medium">
-                            Service
-                        </a>
-                    </li>
+                            <li class="mr-[50px]">
+                                <a href="Service.html"
+                                    class="text-[20px] font-medium text-[var(--color9)] hover:text-[var(--color-15)] transition-all duration-300 font-medium">
+                                    Service
+                                </a>
+                            </li>
 
-                    <li class="mr-[50px]">
-                        <a href="about-us.html"
-                            class="text-[20px] font-medium text-[var(--color9)] hover:text-[var(--color-15)] transition-all duration-300 font-medium">
-                            About
-                        </a>
-                    </li>
+                            <li class="mr-[50px]">
+                                <a href="about-us.html"
+                                    class="text-[20px] font-medium text-[var(--color9)] hover:text-[var(--color-15)] transition-all duration-300 font-medium">
+                                    About
+                                </a>
+                            </li>
 
-                    <li>
-                        <a href="contact-us.html"
-                            class="text-[20px] font-medium text-[var(--color6)] hover:text-[var(--color-15)] transition-all duration-300">
-                            Contact Us
-                        </a>
-                    </li>
+                            <li>
+                                <a href="contact-us.html"
+                                    class="text-[20px] font-medium text-[var(--color6)] hover:text-[var(--color-15)] transition-all duration-300">
+                                    Contact Us
+                                </a>
+                            </li>
 
-                </ul>
+                        </ul>
 
-                <!-- Right Side -->
-                <div class="flex items-center">
+                        <!-- Right Side -->
+                        <div class="flex items-center">
 
-                    <!-- Search -->
-                <!-- Search -->
-<div class="relative flex items-center group mx-4">
+                            <!-- Search -->
+                            <!-- Search -->
+                            <div class="relative flex items-center group mx-4">
 
-    <!-- Input -->
-    <input
-        type="search"
-        placeholder="Search..."
-        class="absolute right-[50px] w-0 h-10 opacity-0
+                                <!-- Input -->
+                                <input type="search" placeholder="Search..." class="absolute right-[50px] w-0 h-10 opacity-0
         border border-[var(--color-15)]
         rounded-md bg-white
         px-0
@@ -83,234 +82,676 @@
         group-hover:px-4
         group-hover:opacity-100">
 
-    <!-- Circle -->
-    <button
-        class="w-12 h-12 rounded-full border border-[var(--color5)]
+                                <!-- Circle -->
+                                <button class="w-12 h-12 rounded-full border border-[var(--color5)]
         flex items-center justify-center bg-white">
 
-        <svg
-            width="23"
-            height="23"
-            viewBox="0 0 23 23"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
 
-            <path
-                d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
-                stroke="#1A3151"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round" />
+                                        <path
+                                            d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
+                                            stroke="#1A3151" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
 
-        </svg>
+                                    </svg>
 
-    </button>
+                                </button>
 
-</div>
+                            </div>
 
-                    <!-- User -->
-                    <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4">
+                            <!-- User -->
+                            <div
+                                class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4">
 
-                        <a href="#">
+                                <a href="#">
 
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
-                                    stroke="#1A3151"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
+                                            stroke="#1A3151" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
 
-                        </a>
+                                </a>
+
+                            </div>
+
+                            <!-- Cart -->
+                            <div
+                                class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4">
+
+                                <a href="#">
+
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z"
+                                            stroke="#1A3151" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                </a>
+
+                            </div>
+
+                            <!-- Button -->
+                            <a href="#"
+                                class="cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] inline-block z-10 py-[16px] px-[48px] rounded-[20px] text-['outfit'] text-[18px] font-semibold text-[var(--color2)]">
+                                Sign Up
+                            </a>
+
+                        </div>
 
                     </div>
 
-                    <!-- Cart -->
-                    <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4">
+                    <!-- Mobile Menu Button -->
+                    <button id="menuBtn" class="lg:hidden">
 
-                        <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
 
-                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z"
-                                    stroke="#1A3151"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
 
-                        </a>
+                        </svg>
 
-                    </div>
+                    </button>
 
-                    <!-- Button -->
-                    <a href="#"
-                        class="cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] inline-block z-10 py-[16px] px-[48px] rounded-[20px] text-['outfit'] text-[18px] font-semibold text-[var(--color2)]">
-                        Sign Up
+                </div>
+
+            </div>
+        </nav>
+        <!-- ===================== Navbar Ends ===================== -->
+        <!-- Overlay -->
+        <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-40">
+        </div>
+
+        <!-- Mobile Sidebar -->
+        <div id="mobileMenu"
+            class="fixed top-0 right-[-100%] w-[300px] h-screen bg-white z-50 transition-all duration-300 shadow-2xl">
+
+            <!-- Header -->
+            <div class="flex items-center justify-between px-5 py-5 border-b border-[var(--color11)]">
+
+                <a href="index.html">
+                    <img src="assets/images/Frame 14.png" alt="logo" class="w-[140px]">
+                </a>
+
+                <button id="closeBtn" class="text-4xl text-[var(--color6)]">
+                    &times;
+                </button>
+
+            </div>
+
+            <!-- Menu -->
+            <ul class="mt-8">
+
+                <li class="border-b border-[var(--color11)]">
+                    <a href="index.html"
+                        class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]">
+                        Home
                     </a>
+                </li>
+
+                <li class="border-b border-[var(--color11)]">
+                    <a href="service.html"
+                        class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]">
+                        Service
+                    </a>
+                </li>
+
+                <li class="border-b border-[var(--color11)]">
+                    <a href="about-us.html"
+                        class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]">
+                        About
+                    </a>
+                </li>
+
+                <li class="border-b border-[var(--color11)]">
+                    <a href="contact-us.html"
+                        class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Icons -->
+            <div class="flex justify-center mt-10">
+
+                <!-- Search -->
+                <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
+
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                        <path
+                            d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
+                            stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+                    </svg>
+
+                </div>
+
+                <!-- User -->
+                <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
+                            stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </div>
+
+                <!-- Cart -->
+                <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
+
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z"
+                            stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
 
                 </div>
 
             </div>
 
-            <!-- Mobile Menu Button -->
-            <button id="menuBtn" class="lg:hidden">
+            <!-- Button -->
+            <div class="px-6 mt-10">
 
-                <svg xmlns="http://www.w3.org/2000/svg"
-                    class="w-8 h-8"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
+                <a href="#"
+                    class="cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] inline-block z-10 py-[16px] px-[48px] rounded-[20px] text-['outfit'] text-[18px] font-semibold text-[var(--color2)]">
+                    Sign Up
+                </a>
 
-                    <path stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h16"/>
-
-                </svg>
-
-            </button>
+            </div>
 
         </div>
 
-    </div>
-</nav>
-<!-- ===================== Navbar Ends ===================== -->
- <!-- Overlay -->
-<div id="overlay"
-    class="fixed inset-0 bg-black/40 hidden z-40">
-</div>
 
-<!-- Mobile Sidebar -->
-<div id="mobileMenu"
-    class="fixed top-0 right-[-100%] w-[300px] h-screen bg-white z-50 transition-all duration-300 shadow-2xl">
+    </header>
+    <main>
+        <!-- body part -->
+    </main>
 
-    <!-- Header -->
-    <div class="flex items-center justify-between px-5 py-5 border-b border-[var(--color11)]">
+    <!-- footer starts -->
 
-        <a href="index.html">
-            <img src="assets/images/Frame 14.png"
-                alt="logo"
-                class="w-[140px]">
-        </a>
+    <footer class="bg-[var(--color-15)] py-[50px]">
 
-        <button id="closeBtn"
-            class="text-4xl text-[var(--color6)]">
-            &times;
-        </button>
+        <div class="custom-container">
 
-    </div>
+            <!-- ================= FOOTER TOP ================= -->
 
-    <!-- Menu -->
-    <ul class="mt-8">
+            <div class="flex flex-col lg:flex-row">
 
-        <li class="border-b border-[var(--color11)]">
-            <a href="index.html"
-                class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]">
-                Home
-            </a>
-        </li>
+                <!-- Logo -->
 
-        <li class="border-b border-[var(--color11)]">
-            <a href="service.html"
-                class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]">
-                Service
-            </a>
-        </li>
+                <div class="w-full lg:w-1/2 mb-10 lg:mb-0">
+                    <a href="index.html" class="inline-block">
 
-        <li class="border-b border-[var(--color11)]">
-            <a href="about-us.html"
-                class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]">
-                About
-            </a>
-        </li>
+                        <img src="./assets/images/footer-logo.png" alt="footer-logo" class="w-[208px]">
 
-        <li class="border-b border-[var(--color11)]">
-            <a href="contact-us.html"
-                class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]">
-                Contact Us
-            </a>
-        </li>
+                    </a>
 
-    </ul>
+                    <div
+                        class="text-[var(--color10)] text-[24px] font-[var(--outfit-r)] font-semibold mt-[10px] max-w-[450px]">
+                        Making Everyday Services Simple & Reliable
+                    </div>
+                </div>
 
-    <!-- Icons -->
-    <div class="flex justify-center mt-10">
 
-        <!-- Search -->
-        <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
+                <!-- Newsletter -->
 
-               <svg
-            width="23"
-            height="23"
-            viewBox="0 0 23 23"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+                <div class="w-full lg:w-1/2">
 
-            <path
-                d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
-                stroke="#1A3151"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round" />
+                    <div class="text-[var(--color2)] text-[24px] font-[var(--outfit-r)] font-semibold mb-[25.5px]">
 
-        </svg>
+                        Stay Updated
 
-        </div>
+                    </div>
 
-        <!-- User -->
-        <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
-                                    stroke="#1A3151"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round" />
+
+
+                    <p class="text-[var(--color2)] text-[14px] max-w-[535px] mb-[25.5px]">
+
+                        Get the latest service offers, home care tips, and exclusive
+                        discounts delivered straight to your inbox.
+
+                    </p>
+
+                    <form class="flex max-w-[530px] rounded-[5px] overflow-hidden">
+
+
+                        <input type="email" placeholder="Email Address..."
+                            class="h-[59.6px] flex-1 px-[20px] outline-none placeholder:text-[var(--color5)] text-[var(--color5)] rounded-[5px]">
+
+
+                        <button type="submit"
+                            class="w-[59.6px] h-[59.6px] bg-[var(--color4)] flex justify-center items-center">
+
+
+                            <svg width="19" height="16" viewBox="0 0 19 16">
+
+                                <path d="M1 8H17.3333M10.3333 15L17.3333 8L10.3333 1" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+
                             </svg>
 
+
+                        </button>
+
+
+                    </form>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- ================= FOOTER MIDDLE ================= -->
+
+
+            <div class="flex flex-col md:flex-row mt-[50px]">
+
+
+
+                <!-- Contact -->
+
+
+                <div class="w-full md:w-1/4 mb-8 md:mb-0">
+
+
+                    <div class="text-[var(--color-6)] text-[16px] font-semibold mb-4">
+
+                        Contact Info
+
+                    </div>
+
+
+
+                    <ul>
+
+
+                        <li class="text-[14px] leading-6">
+
+                            28 Park Street,<br>
+                            Kolkata, West Bengal,<br>
+                            India - 700016
+
+
+                        </li>
+
+
+                    </ul>
+
+
+
+                    <div class="text-[var(--color-6)] text-[16px] font-semibold mt-5 mb-3">
+
+                        Support Care
+
+                    </div>
+
+
+
+                    <ul>
+
+
+                        <li>
+
+                            <a href="tel:+6121234456">
+
+                                +(612) 123-4456
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+                <!-- Pages -->
+
+
+                <div class="w-full md:w-1/4 mb-8 md:mb-0">
+
+
+                    <div class="text-[var(--color-6)] text-[16px] font-semibold mb-4">
+
+                        Pages
+
+                    </div>
+
+
+
+                    <ul>
+
+
+                        <li class="mb-2">
+
+                            <a href="index.html">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a href="Service.html">
+
+                                Service
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a href="about-us.html">
+
+                                About Us
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="contact-us.html">
+
+                                Contact Us
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+                <!-- Services -->
+
+
+                <div class="w-full md:w-1/4 mb-8 md:mb-0">
+
+
+                    <div class="text-[var(--color-6)] text-[16px] font-semibold mb-4">
+
+                        Services
+
+                    </div>
+
+
+
+                    <ul>
+
+
+                        <li class="mb-2">
+
+                            <a href="#">
+
+                                House Help
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a href="#">
+
+                                House Cleaning
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a href="#">
+
+                                Electrical Service
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a href="#">
+
+                                Plumbing
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="#">
+
+                                Home Repair
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+                <!-- Company -->
+
+
+                <div class="w-full md:w-1/4">
+
+
+                    <div class="text-[var(--color-6)] text-[16px] font-semibold mb-4">
+
+                        Company
+
+                    </div>
+
+
+
+                    <ul>
+
+
+                        <li class="mb-2">
+
+                            <a href="#">
+
+                                Help & Support
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a href="#">
+
+                                FAQ's
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a href="#">
+
+                                Privacy Policy
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a href="#">
+
+                                Terms & Conditions
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="#">
+
+                                Refund Policy
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- ================= FOOTER BOTTOM ================= -->
+
+
+            <div class="flex justify-end mt-[40px]">
+
+
+                <div class="text-right">
+
+
+                    <p class="text-[14px] mb-3">
+
+                        © 2026 <a href="index.html">FIXNOW</a>. All Rights Reserved.
+
+                    </p>
+
+
+
+
+                    <ul class="flex">
+
+
+                        <li class="mr-5">
+
+                            <a href="#">
+                                Facebook
+                            </a>
+
+                        </li>
+
+
+                        <li class="mr-5">
+
+                            <a href="#">
+                                Twitter
+                            </a>
+
+                        </li>
+
+
+                        <li class="mr-5">
+
+                            <a href="#">
+                                Youtube
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="#">
+                                Instagram
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+
+                </div>
+
+
+            </div>
+
+
+
         </div>
 
-        <!-- Cart -->
-        <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
 
-             <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z"
-                                    stroke="#1A3151"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
+    </footer>
 
-        </div>
-
-    </div>
-
-    <!-- Button -->
-    <div class="px-6 mt-10">
-
-        <a href="#"
-            class="cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] inline-block z-10 py-[16px] px-[48px] rounded-[20px] text-['outfit'] text-[18px] font-semibold text-[var(--color2)]">
-            Sign Up
-        </a>
-
-    </div>
-
-</div> 
-
-
-</header> 
-<main>
-<!-- body part -->
-</main> 
-<footer>
-<!-- footer part -->
-</footer>
+    <!-- footer ends -->
 </body>
+
 </html>
