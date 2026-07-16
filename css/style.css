@@ -43,9 +43,11 @@ html {
 
 body {
     font-family: var(--albert-sans-r);
+
     overflow-x: hidden;
     color: var(--color6);
     background-color: var(--color2);
+
 }
 
 
@@ -209,4 +211,56 @@ p {
     width: 220px;
     padding: 0 15px;
     opacity: 1;
+}
+
+.about-fixnow img{
+    border-radius: 20px;
+    width: 449px; 
+    min-height: 500px;
+} 
+.about-fixnow-sub-head{
+    color: var(--color-16);
+}
+.about-text{
+    font-family: var(--albert-sans-r);
+    font-size: 18px;
+    margin-left: 12.5px;
+} 
+.cmn-btn1{
+    width:318px;
+    min-height:117px;
+    background:#F4F1EC;
+    border-radius:20px;
+    padding:25px;
+}
+
+.circle2{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:var(--color2);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+   
+}
+.circle1{
+  width:44px;
+    height:44px;
+    border-radius:50%;
+    background:#45A5EC; 
+    margin-left: 12px;
+    padding: 13px;
+}
+.about-text-btn-text-head{
+    font-size:28px;
+    font-weight:600;
+    color:var(--color5);
+    line-height:1;
+}
+
+.cmn-btn1 p{
+    font-size:16px;
+    margin-top:8px;
+
 }

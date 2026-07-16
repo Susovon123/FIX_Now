@@ -1,3 +1,5 @@
+
+
 const menuBtn = document.getElementById("menuBtn");
 const closeBtn = document.getElementById("closeBtn");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -19,3 +21,4 @@ function closeMenu() {
 
     overlay.classList.add("hidden");
 }
+
