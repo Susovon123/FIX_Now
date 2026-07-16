@@ -13,10 +13,7 @@
 
 } 
 
-.about-us-banner p{
-    color: var(--color-16);
-    font-size: 32px; 
-    font-family: var(--outfit-r);
+
 
 
 /* about us page */ 
@@ -33,9 +30,3 @@
 
 } 
 
-.about-us-banner p{
-    color: var(--color-16);
-    font-size: 32px; 
-    font-family: var(--outfit-r);
-
-}
