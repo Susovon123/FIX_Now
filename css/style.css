@@ -29,12 +29,12 @@
 
 @font-face {
     font-family: "outfit";
-    src: url(../asset/fonts/Outfit/Outfit/static/Outfit-Regular.ttf) format("truetype");
+    src: url(../assets/fonts/Outfit/Outfit/static/Outfit-Regular.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "albert-sans-r";
-    src: url(../asset/fonts/Albert_Sans/static/AlbertSans-Regular.ttf) format("truetype");
+    src: url(../assets/fonts/Albert_Sans/static/AlbertSans-Regular.ttf) format("truetype");
 }
 
 html {
@@ -46,12 +46,9 @@ body {
 
     overflow-x: hidden;
     color: var(--color6);
-    font-size: 18px;
-    font-family: var(--albert-sans-r);
     background-color: var(--color2);
 
 }
-
 
 
 .custom-container {
