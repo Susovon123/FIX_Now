@@ -43,11 +43,12 @@ html {
 
 body {
     font-family: var(--albert-sans-r);
-
     overflow-x: hidden;
     color: var(--color6);
     background-color: var(--color2);
-
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
