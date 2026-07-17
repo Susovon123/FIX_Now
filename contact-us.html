@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contact-us.css">
+</head>
+
+<body>
+    <!-- starting  navbar -->
+    <!-- Header -->
+    <header>
+        <!-- ===================== Navbar Starts ===================== -->
+        <nav class="border-b border-[var(--color11)] bg-[var(--color2)] ">
+            <!-- container -->
+            <div class="custom-container">
+
+                <div class="flex items-center justify-between h-[70px]">
+
+                    <!-- Logo -->
+                    <a href="index.html" class="shrink-0">
+                        <img src="assets/images/Frame 14.png" alt="logo-image" class="w-auto h-auto">
+                    </a>
+
+                    <!-- Desktop Menu -->
+                    <div class="hidden lg:flex items-center w-full">
+
+                        <!-- Navigation -->
+                        <ul class="flex mx-auto">
+
+                            <li class="mr-[50px]">
+                                <a href="index.html"
+                                    class="text-[20px] font-medium text-[var(--color9)] hover:text-[var(--color-15)] transition-all duration-300 font-medium">
+                                    Home
+                                </a>
+                            </li>
+
+                            <li class="mr-[50px]">
+                                <a href="Service.html"
+                                    class="text-[20px] font-medium text-[var(--color9)] hover:text-[var(--color-15)] transition-all duration-300 font-medium">
+                                    Service
+                                </a>
+                            </li>
+
+                            <li class="mr-[50px]">
+                                <a href="about-us.html"
+                                    class="text-[20px] font-medium text-[var(--color9)] hover:text-[var(--color-15)] transition-all duration-300 font-medium">
+                                    About
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="contact-us.html"
+                                    class="text-[20px] font-medium text-[var(--color6)] hover:text-[var(--color-15)] transition-all duration-300">
+                                    Contact Us
+                                </a>
+                            </li>
+
+                        </ul>
+
+                        <!-- Right Side -->
+                        <div class="flex items-center">
+
+                            <!-- Search -->
+                            <!-- Search -->
+                            <div class="relative flex items-center group mx-4">
+
+                                <!-- Input -->
+                                <input type="search" placeholder="Search..." class="absolute right-[50px] w-0 h-10 opacity-0
+        border border-[var(--color-15)]
+        rounded-md bg-white
+        px-0
+        outline-none
+        transition-all duration-300
+        group-hover:w-[220px]
+        group-hover:px-4
+        group-hover:opacity-100">
+
+                                <!-- Circle -->
+                                <button class="w-12 h-12 rounded-full border border-[var(--color5)]
+        flex items-center justify-center bg-white">
+
+                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+
+                                        <path
+                                            d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
+                                            stroke="#1A3151" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
+                            <!-- User -->
+                            <div
+                                class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4">
+
+                                <a href="#">
+
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
+                                            stroke="#1A3151" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                </a>
+
+                            </div>
+
+                            <!-- Cart -->
+                            <div
+                                class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4">
+
+                                <a href="#">
+
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z"
+                                            stroke="#1A3151" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                </a>
+
+                            </div>
+
+                            <!-- Button -->
+                            <a href="#"
+                                class="cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] inline-block z-10 py-[16px] px-[48px] rounded-[20px] text-['outfit'] text-[18px] font-semibold text-[var(--color2)]">
+                                Sign Up
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="menuBtn" class="lg:hidden">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+
+                        </svg>
+
+                    </button>
+
+                </div>
+
+            </div>
+        </nav>
+        <!-- ===================== Navbar Ends ===================== -->
+        <!-- Overlay -->
+        <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-40">
+        </div>
+
+        <!-- Mobile Sidebar -->
+        <div id="mobileMenu"
+            class="fixed top-0 right-[-100%] w-[300px] h-screen bg-white z-50 transition-all duration-300 shadow-2xl">
+
+            <!-- Header -->
+            <div class="flex items-center justify-between px-5 py-5 border-b border-[var(--color11)]">
+
+                <a href="index.html">
+                    <img src="assets/images/Frame 14.png" alt="logo" class="w-[140px]">
+                </a>
+
+                <button id="closeBtn" class="text-4xl text-[var(--color6)]">
+                    &times;
+                </button>
+
+            </div>
+
+            <!-- Menu -->
+            <ul class="mt-8">
+
+                <li class="border-b border-[var(--color11)]">
+                    <a href="index.html"
+                        class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]">
+                        Home
+                    </a>
+                </li>
+
+                <li class="border-b border-[var(--color11)]">
+                    <a href="service.html"
+                        class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]">
+                        Service
+                    </a>
+                </li>
+
+                <li class="border-b border-[var(--color11)]">
+                    <a href="about-us.html"
+                        class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]">
+                        About
+                    </a>
+                </li>
+
+                <li class="border-b border-[var(--color11)]">
+                    <a href="contact-us.html"
+                        class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]">
+                        Contact Us
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Icons -->
+            <div class="flex justify-center mt-10">
+
+                <!-- Search -->
+                <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
+
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                        <path
+                            d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
+                            stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+                    </svg>
+
+                </div>
+
+                <!-- User -->
+                <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
+                            stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </div>
+
+                <!-- Cart -->
+                <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
+
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z"
+                            stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </div>
+
+            </div>
+
+            <!-- Button -->
+            <div class="px-6 mt-10">
+
+                <a href="#"
+                    class="cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] inline-block z-10 py-[16px] px-[48px] rounded-[20px] text-['outfit'] text-[18px] font-semibold text-[var(--color2)]">
+                    Sign Up
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </header>
+
+    <main>
+        <!-- contact banner starts -->
+        <section
+            class="contact-banner relative flex items-center overflow-hidden min-h-[360px] sm:min-h-[450px] md:min-h-[520px] lg:min-h-[644px]">
+
+            <div class="custom-container relative z-[2]">
+
+                <div class="flex justify-center">
+
+                    <div class="w-full text-center">
+
+                        <h1
+                            class="heading-1 text-[var(--color2)] text-[36px] sm:text-[42px] md:text-[48px] lg:text-[56px]">
+                            Contact Us
+                        </h1>
+
+                        <h2
+                            class="heading-3 mt-[8px] sm:mt-[10px] text-[var(--color-16)] text-[22px] sm:text-[26px] md:text-[30px] lg:text-[32px] font-[var(--outfit-r)]">
+                            We Are Here To Help!
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- contact banner ends -->
+
+        <!-- contact area starts -->
+        <section class="contact-area relative overflow-hidden bg-[var(--color2)] py-[60px] md:py-[80px] lg:py-[100px]">
+
+            <div class="custom-container relative z-[2]">
+
+                <div class="flex flex-col lg:flex-row">
+
+                    <!-- contact left starts -->
+
+                    <div class="w-full lg:w-1/2 mb-[50px] lg:mb-0 lg:pr-[26px]">
+
+                        <!-- Sub Heading -->
+
+                        <span
+                            class="subheading inline-block mb-[16px] text-[var(--color-15)] text-[16px] md:text-[18px] lg:text-[20px] font-medium">
+                            Get In Touch
+                        </span>
+
+                        <!-- Heading -->
+
+                        <h2
+                            class="heading-3 max-w-[590px] mb-[36px] font-semibold text-[26px] sm:text-[30px] lg:text-[32px]">
+                            Have a question or need assistance? We're here to help.
+                        </h2>
+
+                        <!-- Paragraph -->
+
+                        <p class="max-w-[590px] mb-[46px]">
+                            We're happy to answer your questions and guide you through our services.
+                            Expect a prompt response from our support team.
+                        </p>
+
+                        <!-- Contact Card Starts -->
+
+                        <div class="flex flex-col sm:flex-row mb-[72px]">
+                            <!-- Phone -->
+
+                            <div
+                                class="w-full sm:w-[48%] bg-[var(--color4)] rounded-[20px] p-[16px] sm:p-[20px] flex items-center mb-[20px] sm:mb-0 sm:mr-[4%]">
+
+                                <!-- Icon -->
+
+                                <div
+                                    class="w-[44px] h-[44px] rounded-full bg-[var(--color12)] flex justify-center items-center shrink-0">
+
+                                    <!-- Phone SVG -->
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+
+                                        <path
+                                            d="M9.50246 4.25722C9.19873 3.4979 8.46332 3 7.64551 3H4.89474C3.8483 3 3 3.8481 3 4.89453C3 13.7892 10.2108 21 19.1055 21C20.1519 21 21 20.1516 21 19.1052L21.0005 16.354C21.0005 15.5361 20.5027 14.8009 19.7434 14.4971L17.1069 13.4429C16.4249 13.1701 15.6483 13.2929 15.0839 13.7632L14.4035 14.3307C13.6089 14.9929 12.4396 14.9402 11.7082 14.2088L9.79222 12.2911C9.06079 11.5596 9.00673 10.3913 9.66895 9.59668L10.2363 8.9163C10.7066 8.35195 10.8305 7.57516 10.5577 6.89309L9.50246 4.25722Z"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+
+                                <!-- Content -->
+
+                                <div class="ml-[16px]">
+
+                                    <h4
+                                        class="heading-6 font-[var(--outfit-r)] text-[20px] font-medium text-[var(--color2)] mb-[10px]">
+                                        Phone
+                                    </h4>
+
+                                    <a href="tel:+919876543210"
+                                        class="text-[16px] font-semibold text-[var(--color2)] transition-colors duration-700 hover:text-[var(--color10)]">
+                                        +91 98765 43210
+                                    </a>
+
+                                </div>
+
+                            </div>
+                            <!-- Email -->
+
+                            <div
+                                class="w-full sm:w-[48%] bg-[var(--color-15)] rounded-[20px] p-[16px] sm:p-[20px] flex items-center">
+
+                                <!-- Icon -->
+
+                                <div
+                                    class="w-[44px] h-[44px] rounded-full bg-[#FCD34D] flex justify-center items-center shrink-0">
+
+                                    <!-- Email SVG -->
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+
+                                        <path
+                                            d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z"
+                                            stroke="white" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+
+                                <!-- Content -->
+
+                                <div class="ml-[16px]">
+
+                                    <h4
+                                        class="heading-6 font-[var(--outfit-r)] text-[20px] font-medium text-[var(--color2)] mb-[10px]">
+                                        Email
+                                    </h4>
+
+                                    <a href="mailto:info@fixnow.com"
+                                        class="text-[16px] font-semibold text-[var(--color2)] transition-colors duration-700 hover:text-[var(--color10)]">
+                                        info@fixnow.com
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- Google Map -->
+
+                        <div class="rounded-[20px] overflow-hidden shadow-[0_18px_45px_rgba(0,0,0,.05)]">
+
+                            <iframe class="w-full h-[220px] sm:h-[260px] lg:h-[343px]"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.6010795292464!2d88.35877807475667!3d22.556611633557186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277023e8c0195%3A0x8649e48a66b8ace6!2sAngel%20Nursing%20Home%20Aaga%20mehdy%20street!5e0!3m2!1sen!2sin!4v1784222435621!5m2!1sen!2sin"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+                        </div>
+
+                    </div>
+
+                    <!-- contact left ends -->
+                    <!-- contact form starts -->
+
+                    <div class="w-full lg:w-1/2">
+
+                        <div
+                            class="bg-[var(--color2)] rounded-[20px] shadow-[0_10px_35px_rgba(0,0,0,.08)] p-[20px] md:p-[22px] lg:p-[24px] relative z-[2]">
+
+                            <!-- Heading -->
+
+                            <h3
+                                class="heading-3 text-[var(--color5)] font-semibold mb-[16px] text-[26px] sm:text-[30px] lg:text-[32px]">
+                                Send Us A Message
+                            </h3>
+
+                            <!-- Paragraph -->
+
+                            <p class="text-[14px] lg:text-[16px] text-[var(--color1)] mb-[36px] max-w-[580px]">
+                                Have a question or need assistance? Fill out the form below, and our
+                                team will get back to you as soon as possible.
+                            </p>
+
+                            <!-- Form -->
+
+                            <form action="#">
+
+                                <!-- Name -->
+
+                                <div class="mb-[16px]">
+
+                                    <label for="name"
+                                        class="block text-[14px] lg:text-[16px] font-semibold text-[#000000] mb-[10px]">
+                                        Name
+                                    </label>
+
+                                    <input type="text" id="name" placeholder="Enter Your Name"
+                                        class="w-full h-[50px] md:h-[55px] lg:h-[57px] rounded-[20px] border border-[var(--color1)] p-[20px] outline-none focus:border-[var(--color1)] transition-all duration-300 placeholder:text-[var(--color1)] text-[#000000]">
+
+                                </div>
+
+                                <!-- Email -->
+
+                                <div class="mb-[16px]">
+
+                                    <label for="email"
+                                        class="block text-[14px] lg:text-[16px] font-semibold text-[#000000] mb-[10px]">
+                                        Email
+                                    </label>
+
+                                    <input type="email" id="email" placeholder="Enter Your Email"
+                                        class="w-full h-[50px] md:h-[55px] lg:h-[57px] rounded-[20px] border border-[var(--color1)] p-[20px] outline-none focus:border-[var(--color1)] transition-all duration-300 placeholder:text-[var(--color1)] text-[#000000]">
+
+                                </div>
+
+                                <!-- Subject -->
+
+                                <div class="mb-[16px]">
+
+                                    <label for="subject"
+                                        class="block text-[14px] lg:text-[16px] font-semibold text-[#000000] mb-[10px]">
+                                        Subject
+                                    </label>
+
+                                    <input type="text" id="subject" placeholder="What Can We Help You With"
+                                        class="w-full h-[50px] md:h-[55px] lg:h-[57px] rounded-[20px] border border-[var(--color1)] p-[20px] outline-none focus:border-[var(--color1)] transition-all duration-300 placeholder:text-[var(--color1)] text-[#000000]">
+
+                                </div>
+
+                                <!-- Message -->
+
+                                <div class="mb-[16px]">
+
+                                    <label for="message"
+                                        class="block text-[14px] lg:text-[16px] font-semibold text-[#000000] mb-[10px]">
+                                        Message
+                                    </label>
+
+                                    <textarea id="message" rows="6" placeholder="Tell Us About Your Enquiry"
+                                        class="w-full h-[150px] md:h-[170px] lg:h-[200px] rounded-[20px] border border-[var(--color1)] p-[20px] resize-none outline-none focus:border-[var(--color1)] transition-all duration-300 placeholder:text-[var(--color1)] text-[#000000]"></textarea>
+
+                                </div>
+
+                                <!-- Button -->
+
+                                <div class="flex justify-center lg:justify-end">
+
+                                    <button type="submit"
+                                        class="relative overflow-hidden bg-[var(--color4)] z-10 py-[16px] px-[36px] rounded-[20px] text-[16px] font-semibold text-[var(--color2)] border-0 transition-all duration-500 hover:bg-[var(--color-15)] hover:-translate-y-[3px] after:absolute after:top-0 after:left-[-120%] after:w-[50%] after:h-full after:bg-white/40 after:skew-x-[-25deg] after:transition-all after:duration-700 hover:after:left-[150%]">
+                                        Send Now
+                                    </button>
+
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                    <!-- contact form ends -->
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- contact area ends -->
+    </main>
+
+    <!-- footer starts -->
+    <footer class="bg-[var(--color-15)] py-[30px] sm:py-[40px] lg:py-[50px]">
+
+        <div class="custom-container">
+
+            <!-- footer top -->
+
+            <div class="flex flex-col lg:flex-row">
+
+                <!-- Logo -->
+
+                <div class="w-full lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left">
+                    <a href="index.html" class="inline-block">
+
+                        <img src="./assets/images/footer-logo.png" alt="footer-logo"
+                            class="w-[140px] sm:w-[160px] md:w-[180px] lg:w-[208px] mx-auto lg:mx-0">
+
+                    </a>
+
+                    <div
+                        class="text-[var(--color10)] text-[18px] md:text-[20px] lg:text-[24px] font-[var(--outfit-r)] font-semibold mt-[10px] max-w-[450px] mx-auto lg:mx-0">
+                        Making Everyday Services Simple & Reliable
+                    </div>
+                </div>
+
+
+                <!-- Newsletter -->
+
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+
+                    <div
+                        class="text-[var(--color2)] text-[18px] md:text-[20px] lg:text-[24px] font-[var(--outfit-r)] font-semibold mb-[25.5px]">
+                        Stay Updated
+                    </div>
+
+
+                    <p class="text-[var(--color2)] text-[14px] max-w-full lg:max-w-[535px] mx-auto lg:mx-0 mb-[25.5px]">
+                        Get the latest service offers, home care tips, and exclusive
+                        discounts delivered straight to your inbox.
+                    </p>
+
+                    <form
+                        class="flex w-full max-w-[635px] h-[50px] md:h-[55px] lg:h-[59.6px] rounded-[5px] overflow-hidden mx-auto lg:mx-0">
+
+
+                        <input type="email" placeholder="Email Address..."
+                            class="h-full flex-1 px-[12px] md:px-[20px] outline-none placeholder:text-[var(--color5)] text-[var(--color5)] bg-[#FFFBEB]">
+
+
+                        <button type="submit"
+                            class="w-[50px] md:w-[55px] lg:w-[59.6px] h-full bg-[var(--color4)] flex justify-center items-center group transition-all duration-300 hover:bg-[var(--color5)]">
+
+
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path class="transition-transform duration-300 group-hover:translate-x-1"
+                                    d="M5.83325 14H22.1666M15.1666 21L22.1666 14L15.1666 7" stroke="#FFFFFF"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!-- footer middle -->
+
+            <div class="flex flex-wrap justify-center mt-[34px]">
+
+                <!-- Contact -->
+
+                <div class="w-full md:w-1/2 lg:w-1/4 text-center lg:text-left mb-[20px] lg:mb-0">
+
+                    <div
+                        class="text-[var(--color10)] text-[18px] md:text-[20px] lg:text-[20px] font-semibold mb-[16px]">
+                        Contact Info
+                    </div>
+
+                    <ul>
+                        <li
+                            class="text-[14px] md:text-[15px] lg:text-[16px] text-[var(--color10)] mb-[30px] lg:mb-[51px] font-medium">
+                            28 Park Street,<br>
+                            Kolkata, West Bengal,<br>
+                            India - 700016
+                        </li>
+                    </ul>
+
+                    <div class="text-[var(--color10)] text-[18px] md:text-[20px] font-semibold mb-[10px]">
+                        Support Care
+                    </div>
+
+                    <ul class="text-[14px] md:text-[15px] lg:text-[16px] font-medium">
+                        <li>
+                            <a href="tel:+6121234456"
+                                class=" text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
+                                +(612) 123-4456
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Pages -->
+
+                <div class="w-full md:w-1/2 lg:w-1/4 text-center lg:text-left mb-[20px] lg:mb-0">
+
+                    <div class="text-[var(--color10)] text-[20px] font-semibold mb-[16px]">
+                        Pages
+                    </div>
+
+                    <ul class="text-[13px] md:text-[14px] lg:text-[14px] font-normal">
+
+                        <li class="mb-[8px]">
+
+                            <a href="index.html"
+                                class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
+                                Home
+                            </a>
+
+                        </li>
+
+                        <li class="mb-[8px]">
+
+                            <a href="service.html"
+                                class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
+                                Service
+                            </a>
+
+                        </li>
+
+                        <li class="mb-[8px]">
+
+                            <a href="about-us.html"
+                                class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
+                                About Us
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="contact-us.html"
+                                class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
+                                Contact Us
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Services -->
+
+
+                <div class="w-full md:w-1/2 lg:w-1/4 text-center lg:text-left mb-[20px] lg:mb-0">
+
+                    <div class="text-[var(--color10)] text-[20px] font-semibold mb-[16px]">
+                        Services
+                    </div>
+
+                    <ul class="text-[13px] md:text-[14px] lg:text-[14px] font-normal">
+
+                        <li class="mb-[8px]">
+
+                            <a href="#"
+                                class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
+                                House Help
+                            </a>
+
+                        </li>
+
+                        <li class="mb-[8px]">
+
+                            <a href="#"
+                                class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
+                                House Cleaning
+                            </a>
+
+                        </li>
+
+                        <li class="mb-[8px]">
+
+                            <a href="#"
+                                class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
+                                Electrical Service
+                            </a>
+
+                        </li>
+
+                        <li class="mb-[8px]">
+
+                            <a href="#"
+                                class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
+                                Plumbing
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#"
+                                class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
+                                Home Repair
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Company -->
+
+                <div class="w-full md:w-1/2 lg:w-1/4 text-center lg:text-left mb-[20px] lg:mb-0">
+
+                    <div class="text-[var(--color10)] text-[20px] font-semibold mb-[16px]">
+                        Company
+                    </div>
+
+                    <ul class="text-[13px] md:text-[14px] lg:text-[14px] font-normal">
+
+                        <li class="mb-[8px]">
+
+                            <a href="#"
+                                class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
+                                Help & Support
+                            </a>
+
+                        </li>
+
+                        <li class="mb-[8px]">
+
+                            <a href="#"
+                                class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
+                                FAQ's
+                            </a>
+
+                        </li>
+
+                        <li class="mb-[8px]">
+
+                            <a href="#"
+                                class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
+                                Privacy Policy
+                            </a>
+
+                        </li>
+
+                        <li class="mb-[8px]">
+
+                            <a href="#"
+                                class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
+                                Terms & Conditions
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#"
+                                class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
+                                Refund Policy
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- footer bottom -->
+
+            <div class="flex justify-center lg:justify-end">
+
+                <div class="text-center lg:text-right">
+
+                    <div
+                        class="text-[13px] md:text-[14px] lg:text-[16px] text-[var(--color10)] mb-[16px] font-semibold">
+                        © 2026 <a href="index.html"
+                            class="text-[var(--color10)] hover:text-[var(--color2)] transition-colors duration-300">FIXNOW</a>.
+                        All Rights Reserved.
+                    </div>
+
+                    <ul
+                        class="flex flex-wrap justify-center lg:justify-end gap-x-[15px] font-bold text-[var(--color10)] text-[14px] md:text-[15px] lg:text-[16px]">
+
+                        <li class="mb-2">
+
+                            <a href="#"
+                                class="relative inline-block text-[var(--color10)] transition-colors duration-300 hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0  after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+                                Facebook
+                            </a>
+
+                        </li>
+
+                        <li class="mb-2">
+
+                            <a href="#"
+                                class="relative inline-block text-[var(--color10)] transition-colors duration-300 hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0  after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+                                Twitter
+                            </a>
+
+                        </li>
+
+                        <li class="mb-2">
+
+                            <a href="#"
+                                class="relative inline-block text-[var(--color10)] transition-colors duration-300 hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0  after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+                                Youtube
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#"
+                                class="relative inline-block text-[var(--color10)] transition-colors duration-300 hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0  after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+                                Instagram
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- footer ends -->
+
+    <!-- js link -->
+    <script src="./js/script.js"></script>
+</body>
+
+
+</html>
