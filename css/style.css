@@ -264,4 +264,18 @@ p {
     font-size:16px;
     margin-top:8px;
 
+} 
+
+.loader-progress{
+    width:0%;
+    animation: loading 3s ease forwards;
+}
+
+@keyframes loading{
+    from{
+        width:0%;
+    }
+    to{
+        width:100%;
+    }
 }

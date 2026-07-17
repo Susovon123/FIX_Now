@@ -19,7 +19,28 @@
      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body>
+<body> 
+  <!-- loading -->
+   <!-- Loader -->
+<div id="loader"
+    class="fixed inset-0 z-[999999] flex flex-col items-center justify-center bg-white transition-opacity duration-500">
+
+    <!-- Logo -->
+    <h1 class="text-[70px] font-extrabold tracking-[2px] font-[family-name:var(--outfit-r)]">
+        <span class="text-[var(--color4)]">Fix</span><span class="text-[var(--color-15)]">Now</span>
+    </h1>
+
+    <!-- Progress Bar -->
+    <div class="mt-8 h-2 w-[220px] overflow-hidden rounded-full bg-gray-200">
+        <div class="loader-progress h-full rounded-full bg-gradient-to-r from-[var(--color4)] to-[var(--color-15)]"></div>
+    </div>
+
+</div>
+
+<!-- Website -->
+<div id="website" class="hidden">
+    <!-- Your complete website -->
+</div>
     <!-- starting  navbar -->
     <!-- Header -->
     <header>
@@ -1444,7 +1465,25 @@
   AOS.init();
 </script>
     <!-- js link -->
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js"></script> 
+    <script>
+        window.addEventListener("load", () => {
+
+    setTimeout(() => {
+
+        const loader = document.getElementById("loader");
+
+        loader.style.opacity = "0";
+
+        setTimeout(() => {
+            loader.style.display = "none";
+            document.getElementById("website").style.display = "block";
+        }, 1000);
+
+    }, 2000);
+
+});
+    </script>
 </body>
 
 
