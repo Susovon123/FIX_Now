@@ -1484,9 +1484,22 @@
 
 });
     </script> 
-  <!-- modal login dialog box -->
-    <div class="max-w-[1350px] mx-auto px-[15px]">
-           <div class="grid grid-cols-2  lg:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 w-full min-h-[832px]gap-[62px]"> 
+  <!-- modal login dialog box --> 
+   <!-- Login Modal -->
+<div id="loginModal"
+     class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50 p-5">
+
+    <div class="max-w-[1220px] w-full bg-white rounded-[40px] overflow-hidden relative">
+
+        <!-- Close Button -->
+        <button id="closeModal"
+            class="absolute top-6 right-6 text-3xl text-black font-bold z-50">
+            &times;
+        </button>
+
+                   
+    <div class="max-w-[1220px] mx-auto px-[15px]">
+           <div class="grid grid-cols-2  lg:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 w-full min-h-[832px]gap-[62px]  my-[30px]"> 
 <div class="w-full min-h-[821px] bg-[linear-gradient(-39deg,_#2772C9_0%,_#DDF0FC_100%)] rounded-tr-[60px] relative z-[1]">
 <div class="absolute z-[2] top-1/2 -translate-y-1/2">
   <figure>
@@ -1527,9 +1540,9 @@
 <a href="#"
    class="relative flex items-center justify-between overflow-hidden rounded-2xl bg-[var(--color4)] px-8 py-4 whitespace-nowrap font-[family-name:var(--font-outfit-r)] before:absolute before:inset-0 before:bg-[var(--color-16)] before:-translate-x-full before:transition-transform before:duration-500 hover:before:translate-x-0">
 
-  <h3 class="relative z-10 text-white text-[12px] font-semibold">
+  <p class="relative z-10 text-white text-[12px] font-semibold">
     Continue with Google
-  </h3>
+  </p>
 
   <div class="relative z-10">
     <img
@@ -1545,9 +1558,9 @@
   <a href="#"
    class="relative flex items-center justify-between overflow-hidden rounded-2xl bg-[var(--color4)] px-8 py-4 whitespace-nowrap font-[family-name:var(--font-outfit-r)] before:absolute before:inset-0 before:bg-[var(--color-16)] before:-translate-x-full before:transition-transform before:duration-500 hover:before:translate-x-0 inline-block">
 
-  <h3 class="relative z-10 text-white text-[12px] font-semibold">
+  <p class="relative z-10 text-white text-[12px] font-semibold">
     Continue with 
-  </h3>
+  </p>
 
   <div class="relative z-10">
     <img
@@ -1564,7 +1577,10 @@
           </form>
         </div>
      </div>
+    </div>                
+
     </div>
+</div>
 
 </body>
 

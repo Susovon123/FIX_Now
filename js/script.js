@@ -20,4 +20,31 @@ function closeMenu() {
     mobileMenu.classList.add("right-[-100%]");
 
     overlay.classList.add("hidden");
-}
+}  
+
+// modal
+// document.addEventListener("DOMContentLoaded", function () {
+
+//     const openBtn = document.getElementById("openModal");
+//     const modal = document.getElementById("loginModal");
+
+//     if (!openBtn || !modal) {
+//         console.log("Element not found");
+//         return;
+//     }
+
+//     openBtn.addEventListener("click", function(e) {
+//         e.preventDefault();
+
+//         modal.classList.remove("hidden");
+//         modal.classList.add("flex");
+//     });
+
+//     modal.addEventListener("click", function(e) {
+//         if (e.target === modal) {
+//             modal.classList.remove("flex");
+//             modal.classList.add("hidden");
+//         }
+//     });
+
+// });
