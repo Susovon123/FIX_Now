@@ -1,4 +1,58 @@
+// Signup Modal starts
 
+const signupModal = document.getElementById("signupModal");
+const signupButtons = document.querySelectorAll(".openSignup");
+const skipSignup = document.getElementById("skipSignup");
+
+
+// Open Modal
+signupButtons.forEach((button) => {
+
+    button.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        signupModal.classList.remove("hidden");
+
+        document.body.classList.add("overflow-hidden");
+
+    });
+
+});
+
+
+// Close Modal
+if (skipSignup) {
+
+    skipSignup.addEventListener("click", function () {
+
+        signupModal.classList.add("hidden");
+
+        document.body.classList.remove("overflow-hidden");
+
+    });
+
+}
+
+
+// Click Outside Modal Close
+if (signupModal) {
+
+    signupModal.addEventListener("click", function (e) {
+
+        if (e.target === signupModal) {
+
+            signupModal.classList.add("hidden");
+
+            document.body.classList.remove("overflow-hidden");
+
+        }
+
+    });
+
+}
+
+// Signup Modal ends
 
 const menuBtn = document.getElementById("menuBtn");
 const closeBtn = document.getElementById("closeBtn");
@@ -21,4 +75,5 @@ function closeMenu() {
 
     overlay.classList.add("hidden");
 }
+
 
