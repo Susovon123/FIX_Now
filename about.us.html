@@ -198,7 +198,7 @@
 
                     <!-- Button -->
                     <a href="#"
-                        class="cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] inline-block z-10 py-[16px] px-[48px] rounded-[20px]  font-[family-name:var(--outfit-r)]text-[18px] font-semibold text-[var(--color2)]" id="openModal">
+                        class=" openSignup  cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] inline-block z-10 py-[16px] px-[48px] rounded-[20px]  font-[family-name:var(--outfit-r)]text-[18px] font-semibold text-[var(--color2)] " >
                         Sign Up
                     </a>
 
@@ -1459,7 +1459,465 @@
         </div> 
 
     </footer>
-    <!-- AOS JS Link --> 
+  
+  <!-- modal login dialog box --> 
+   <!-- signup modal starts -->
+    <div id="signupModal"
+        class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/30 backdrop-blur-sm py-[20px] lg:py-[36px] ">
+
+        <div class="max-w-[1350px] mx-auto px-[15px] flex items-center justify-center min-h-full">
+
+            <!-- Modal Box -->
+
+            <section
+                class="flex flex-col lg:flex-row lg:flex-nowrap w-full max-w-[1320px] bg-[var(--color2)] rounded-[20px] overflow-hidden shadow-[0px_4px_52.7px_0px_#FFFFFF]">
+
+                <!--left side starts -->
+
+                <div
+                    class="left-panel relative z-0 w-full lg:w-1/2 shrink-0 min-h-[260px] sm:min-h-[380px] lg:min-h-[821px] bg-[linear-gradient(180deg,_#DDF0FC_13%,_#2772CC_86%)] overflow-hidden rounded-none lg:rounded-tr-[70px] lg:rounded-br-[70px] flex items-center justify-center p-6 lg:p-0">
+
+
+
+                    <!-- Blur Shape -->
+
+                    <span
+                        class="absolute top-[20px] left-[20px] sm:top-[30px] sm:left-[30px] lg:top-[36px] lg:left-[42px] w-[90px] h-[24px] sm:w-[110px] sm:h-[28px] lg:w-[128px] lg:h-[32px] rounded-full bg-white/20 pointer-events-none">
+                    </span>
+
+                    <span
+                        class="absolute top-[40px] right-[20px] sm:top-[50px] sm:right-[50px] lg:top-[58px] lg:right-[92px] w-[130px] h-[30px] sm:w-[160px] sm:h-[35px] lg:w-[192px] lg:h-[40px] rounded-full bg-white/20 pointer-events-none">
+                    </span>
+
+                    <!-- Illustration -->
+
+                    <figure class="w-[220px] sm:w-[320px] md:w-[420px] lg:w-[560px] max-w-full">
+
+                        <img src="assets/images/Create Account Illustration.png" alt="Create Account Illustration"
+                            class="block w-full h-auto object-contain" loading="lazy">
+
+                    </figure>
+
+                </div>
+
+                <!-- left side ends -->
+
+                <!-- right side starts -->
+
+                <div
+                    class="w-full lg:w-1/2 shrink-0 min-w-0 bg-[var(--color2)] pt-[30px] pb-[35px] px-[20px] sm:px-[35px] md:px-[50px] lg:px-[94px]">
+
+                    <!-- Skip -->
+
+                    <div class="flex justify-end">
+
+                        <button id="skipSignup" type="button"
+                            class="text-[16px] font-semibold text-[var(--color4)] hover:text-[var(--color-15)] transition-colors duration-300">
+                            Skip
+                        </button>
+
+                    </div>
+
+                    <!-- Heading -->
+
+                    <div class="mt-[5px]">
+
+                        <h2
+                            class="text-[28px] sm:text-[32px] lg:text-[32px] leading-none font-semibold text-[var(--color10)] font-[var(--outfit-r)]">
+                            Create An Account
+                        </h2>
+
+                    </div>
+
+                    <!-- ================= Form Starts ================= -->
+                    <form action="#" method="post" class="mt-[30px] lg:mt-[44px]">
+
+                        <!-- First Name & Last Name -->
+
+                        <div class="flex flex-col sm:flex-row justify-between">
+
+                            <div class="w-full sm:w-[48%] mb-[20px] sm:mb-0">
+
+                                <input type="text" placeholder="First Name*" required
+                                    class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300">
+
+                            </div>
+
+                            <div class="w-full sm:w-[48%]">
+
+                                <input type="text" placeholder="Last Name*" required
+                                    class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300">
+
+                            </div>
+
+                        </div>
+
+                        <!-- Phone & Email -->
+
+                        <div class="flex flex-col sm:flex-row justify-between mt-[20px]">
+
+                            <div class="w-full sm:w-[48%] mb-[20px] sm:mb-0">
+
+                                <input type="tel" placeholder="Phone Number*" required
+                                    class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300">
+
+                            </div>
+
+                            <div class="w-full sm:w-[48%]">
+
+                                <input type="email" placeholder="Enter Your Email"
+                                    class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300">
+
+                            </div>
+
+                        </div>
+
+                        <!-- Password -->
+
+                        <div class="mt-[20px]">
+
+                            <input type="password" placeholder="Enter Your Password"
+                                class="w-full h-[55px] sm:h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[15px] sm:text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300">
+
+                        </div>
+
+                        <!-- Confirm Password -->
+
+                        <div class="mt-[20px]">
+
+                            <input type="password" placeholder="Confirm Password"
+                                class="w-full h-[55px] sm:h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[15px] sm:text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300">
+
+                        </div>
+
+                        <!-- Terms -->
+
+                        <div class="flex items-start mt-[20px]">
+
+                            <input id="terms" type="checkbox" required
+                                class="w-[22px] h-[22px] mt-[2px] rounded-[6px] accent-[#F4F1EC] flex-shrink-0">
+
+                            <label for="terms"
+                                class="ml-[5.5px] text-[14px] sm:text-[16px] leading-6 text-[var(--color1)]">
+
+                                I Agree To The
+                                <a href="#"
+                                    class="font-semibold text-[var(--color10)] hover:text-[var(--color-15)] transition-colors duration-300">
+                                    Terms & Conditions
+                                </a>
+
+                            </label>
+
+                        </div>
+
+                        <!-- Button -->
+
+                        <button type="submit"
+                            class="group w-full h-[60px] sm:h-[68px] lg:h-[76px] mt-[20px] rounded-[20px] bg-[var(--color4)] hover:bg-[var(--color-15)] transition-all duration-500 flex items-center justify-center text-[15px] sm:text-[16px] font-semibold text-[var(--color2)]">
+
+                            Create Account
+
+                            <svg class="ml-[16px] transition-transform duration-500 ease-in-out group-hover:translate-x-1"
+                                width="22" height="22" viewBox="0 0 24 24" fill="none">
+
+                                <path d="M5 12H19M13 6L19 12L13 18" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+
+                            </svg>
+
+                        </button>
+
+                        <!-- OR Divider -->
+
+                        <div class="flex items-center my-[24px]">
+
+                            <div class="w-full h-[1px] bg-[#9CA3AF]"></div>
+
+                            <span class="mx-[14px] sm:mx-[20px] text-[14px] sm:text-[16px] font-medium text-[#9CA3AF]">
+                                OR
+                            </span>
+
+                            <div class="w-full h-[1px] bg-[#9CA3AF]"></div>
+
+                        </div>
+
+                        <!-- Social Login -->
+
+                        <div class="flex flex-col sm:flex-row justify-between mt-[20px]">
+
+                            <button type="button"
+                                class="group relative overflow-hidden z-10 w-full sm:w-[48%] mb-[15px] sm:mb-0 h-[66.25px] rounded-[20px] border-2 border-[var(--color4)] flex items-center justify-center transition-all duration-500 hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:-translate-y-[3px] after:absolute after:top-0 after:left-[-120%] after:w-[50%] after:h-full after:bg-white/40 after:skew-x-[-25deg] after:transition-all after:duration-700 hover:after:left-[150%]">
+
+                                <span
+                                    class="mr-[12px] lg:mr-[24px] text-[14px] sm:text-[15px] lg:text-[16px] font-semibold text-[var(--color4)] transition-colors duration-500 group-hover:text-[var(--color2)]">
+                                    Continue With
+                                </span>
+
+                                <!-- Google SVG -->
+                                <svg class="text-[var(--color4)] group-hover:text-[var(--color2)]" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.9892 0.000179964C12.0366 0.000280848 12.0841 0.000381732 12.1331 0.000485674C12.815 0.00281232 13.4816 0.0175196 14.1518 0.155241C14.1983 0.164292 14.2448 0.173343 14.2927 0.182669C16.9684 0.713372 19.0749 2.07541 20.9605 3.99372C20.8962 4.13864 20.8225 4.23746 20.7108 4.34921C20.6785 4.38176 20.6462 4.41431 20.6129 4.44786C20.5775 4.48308 20.5421 4.5183 20.5056 4.55458C20.4683 4.59205 20.4309 4.62951 20.3925 4.66812C20.2691 4.79194 20.1453 4.91543 20.0216 5.03892C19.9359 5.12469 19.8503 5.21048 19.7648 5.29629C19.5625 5.49905 19.3599 5.7016 19.1573 5.90404C18.9266 6.13457 18.6962 6.36537 18.4658 6.59618C17.9919 7.0709 17.5176 7.54528 17.0432 8.01945C16.8508 7.93136 16.7265 7.79982 16.5826 7.64788C15.6833 6.72534 14.5724 6.0941 13.3124 5.81934C13.2441 5.80441 13.2441 5.80441 13.1743 5.78917C11.5705 5.48262 9.89012 5.83051 8.53293 6.73526C8.3126 6.88666 8.10442 7.04787 7.90282 7.22366C7.83781 7.27797 7.83781 7.27797 7.77148 7.33338C6.63257 8.32307 5.94644 9.7607 5.75764 11.2494C5.71524 12.0705 5.71865 12.8883 5.94418 13.6835C5.95266 13.7148 5.96114 13.746 5.96988 13.7781C6.21091 14.6458 6.67316 15.4336 7.24994 16.1177C7.28204 16.1563 7.31414 16.1948 7.34722 16.2345C8.40228 17.4599 9.96612 18.1562 11.556 18.3052C13.286 18.4279 14.95 17.8084 16.2504 16.6794C16.8223 16.1641 17.2062 15.5641 17.6028 14.9006C15.7561 14.9006 13.9093 14.9006 12.0066 14.9006C12.0066 13.0315 12.0066 11.1623 12.0066 9.23652C15.854 9.23652 19.7013 9.23652 23.6652 9.23652C24.0261 10.8061 24.1292 12.5627 23.8051 14.1517C23.7961 14.1983 23.7871 14.245 23.7778 14.293C23.3992 16.2164 22.5892 17.9528 21.3802 19.4881C21.3423 19.5367 21.3044 19.5852 21.2654 19.6353C20.6744 20.3642 19.9954 21.0451 19.235 21.5946C19.1815 21.6344 19.1281 21.6744 19.0747 21.7143C18.6927 21.9974 18.2958 22.2495 17.8826 22.484C17.8496 22.5028 17.8166 22.5216 17.7826 22.541C16.7317 23.1349 15.6002 23.5306 14.4229 23.783C14.3798 23.7923 14.3366 23.8016 14.2922 23.8112C13.5364 23.9653 12.7934 23.9995 12.0241 23.9965C11.9529 23.9964 11.9529 23.9964 11.8802 23.9962C11.1984 23.9939 10.5315 23.9796 9.86147 23.8415C9.81425 23.8322 9.76702 23.8229 9.71837 23.8133C7.80204 23.4286 6.07959 22.6122 4.54514 21.4073C4.52 21.3877 4.49486 21.3681 4.46895 21.3479C3.71139 20.7502 3.00951 20.039 2.4466 19.254C2.40687 19.2003 2.3671 19.1467 2.32728 19.0931C2.04526 18.7097 1.79414 18.3113 1.56054 17.8965C1.54179 17.8634 1.52303 17.8303 1.50371 17.7962C0.51149 16.0272 0.046034 14.0404 0.053669 12.0188C0.0537695 11.9711 0.05387 11.9233 0.0539735 11.874C0.0562894 11.1887 0.0703715 10.5185 0.208145 9.84506C0.217411 9.79767 0.226676 9.75027 0.236222 9.70143C0.685976 7.44382 1.73919 5.37184 3.33265 3.71286C3.36364 3.68048 3.39463 3.64809 3.42656 3.61473C3.86651 3.15745 4.31019 2.72675 4.82495 2.35535C4.85035 2.33687 4.87575 2.31839 4.90192 2.29935C6.34365 1.25645 7.94637 0.549693 9.68659 0.190349C9.72066 0.18327 9.75473 0.176191 9.78983 0.168897C10.5217 0.0270435 11.2456 -0.00266194 11.9892 0.000179964Z"
+                                        fill="#3B78E5" />
+                                    <path
+                                        d="M11.9892 0.000179964C12.0366 0.000280848 12.0841 0.000381732 12.1331 0.000485674C12.815 0.00281232 13.4816 0.0175196 14.1518 0.155241C14.1983 0.164292 14.2448 0.173343 14.2927 0.182669C16.9684 0.713372 19.0749 2.07541 20.9605 3.99372C20.8962 4.13864 20.8225 4.23746 20.7108 4.34921C20.6785 4.38176 20.6462 4.41431 20.6129 4.44786C20.5775 4.48308 20.5421 4.5183 20.5056 4.55458C20.4683 4.59205 20.4309 4.62951 20.3925 4.66812C20.2691 4.79194 20.1453 4.91543 20.0216 5.03892C19.9359 5.12469 19.8503 5.21048 19.7648 5.29629C19.5625 5.49905 19.3599 5.7016 19.1573 5.90404C18.9266 6.13457 18.6962 6.36537 18.4658 6.59618C17.9919 7.0709 17.5176 7.54528 17.0432 8.01945C16.8508 7.93136 16.7265 7.79982 16.5826 7.64788C15.6833 6.72534 14.5724 6.0941 13.3124 5.81934C13.2441 5.80441 13.2441 5.80441 13.1743 5.78917C11.5705 5.48262 9.89012 5.83051 8.53293 6.73526C8.3126 6.88666 8.10442 7.04787 7.90282 7.22366C7.83781 7.27797 7.83781 7.27797 7.77148 7.33338C6.63257 8.32307 5.94644 9.7607 5.75764 11.2494C5.71524 12.0705 5.71865 12.8883 5.94418 13.6835C5.95266 13.7148 5.96114 13.746 5.96988 13.7781C6.07928 14.1719 6.23778 14.5308 6.4337 14.8877C6.55283 15.1106 6.55283 15.1106 6.54117 15.2273C6.49505 15.344 6.43636 15.4069 6.34769 15.4955C6.31428 15.5292 6.28086 15.563 6.24643 15.5977C6.20953 15.6343 6.17264 15.6708 6.13462 15.7084C6.09595 15.7473 6.05728 15.7861 6.01744 15.8261C5.91142 15.9325 5.8051 16.0385 5.69863 16.1444C5.58741 16.2551 5.47658 16.3663 5.36571 16.4774C5.15574 16.6877 4.94542 16.8977 4.73497 17.1075C4.49538 17.3465 4.25618 17.5858 4.01702 17.8252C3.52508 18.3175 3.03264 18.8093 2.53987 19.3008C2.40724 19.1692 2.28221 19.0448 2.1779 18.8892C2.1558 18.8563 2.1337 18.8234 2.11092 18.7895C2.088 18.7545 2.06508 18.7196 2.04146 18.6835C2.01712 18.6465 1.99279 18.6095 1.96772 18.5713C1.09425 17.225 0.502181 15.7317 0.208145 14.1517C0.200578 14.114 0.193012 14.0763 0.185215 14.0375C-0.0706562 12.7238 -0.0599234 11.1554 0.208145 9.84506C0.217411 9.79767 0.226676 9.75027 0.236222 9.70143C0.685976 7.44382 1.73919 5.37184 3.33265 3.71286C3.36364 3.68048 3.39463 3.64809 3.42656 3.61473C3.86651 3.15745 4.31019 2.72675 4.82495 2.35535C4.85035 2.33687 4.87575 2.31839 4.90192 2.29935C6.34365 1.25645 7.94637 0.549693 9.68659 0.190349C9.72066 0.18327 9.75473 0.176191 9.78983 0.168897C10.5217 0.0270435 11.2456 -0.00266194 11.9892 0.000179964Z"
+                                        fill="#EB4131" />
+                                    <path
+                                        d="M6.55042 15.2283C6.66349 15.3374 6.75134 15.453 6.83993 15.5832C7.79576 16.9833 9.24998 17.8908 10.9089 18.2125C12.2529 18.4547 13.8586 18.2917 15.0279 17.5312C15.1312 17.4752 15.1312 17.4752 15.2201 17.4853C15.3396 17.5303 15.4006 17.588 15.4906 17.6787C15.541 17.729 15.541 17.729 15.5925 17.7804C15.6288 17.8174 15.6652 17.8544 15.7027 17.8926C15.7414 17.9314 15.7801 17.9702 15.82 18.0102C15.9259 18.1166 16.0315 18.2234 16.137 18.3302C16.2474 18.4419 16.3581 18.5531 16.4688 18.6644C16.6784 18.8752 16.8875 19.0863 17.0966 19.2975C17.3346 19.538 17.573 19.7781 17.8115 20.0182C18.302 20.512 18.792 21.0063 19.2816 21.5009C19.1504 21.6341 19.0265 21.7596 18.8716 21.8643C18.8388 21.8865 18.806 21.9086 18.7722 21.9315C18.7374 21.9545 18.7025 21.9775 18.6666 22.0012C18.6297 22.0257 18.5928 22.0501 18.5548 22.0753C17.3524 22.8613 16.0301 23.4307 14.6269 23.742C14.5892 23.7504 14.5516 23.7587 14.5127 23.7674C14.3773 23.7952 14.2416 23.8188 14.1052 23.8415C14.0703 23.8473 14.0354 23.8531 13.9994 23.8591C13.3337 23.9673 12.6834 24.0051 12.0096 23.9995C11.9627 23.9992 11.9158 23.999 11.8674 23.9988C11.1903 23.9951 10.5268 23.9786 9.86147 23.8415C9.81425 23.8322 9.76702 23.8229 9.71837 23.8133C7.80204 23.4286 6.07959 22.6122 4.54514 21.4073C4.52 21.3877 4.49486 21.3681 4.46895 21.3479C4.10103 21.0576 3.76939 20.7315 3.43758 20.4009C3.39675 20.3603 3.35592 20.3198 3.31385 20.278C2.71002 19.6689 2.71002 19.6689 2.53987 19.3945C2.55676 19.2286 2.6273 19.1489 2.74259 19.0336C2.77601 18.9999 2.80943 18.9662 2.84386 18.9314C2.88076 18.8949 2.91765 18.8583 2.95567 18.8207C2.99434 18.7819 3.03301 18.743 3.07285 18.703C3.17887 18.5967 3.28519 18.4907 3.39166 18.3848C3.50288 18.274 3.61371 18.1628 3.72458 18.0517C3.93455 17.8414 4.14487 17.6314 4.35532 17.4216C4.59491 17.1827 4.83411 16.9433 5.07327 16.704C5.56521 16.2116 6.05765 15.7198 6.55042 15.2283Z"
+                                        fill="#31AA51" />
+                                    <path
+                                        d="M2.49323 4.69588C2.74 4.90325 2.97152 5.12124 3.19994 5.34868C3.23645 5.38488 3.27296 5.42107 3.31058 5.45835C3.4303 5.57713 3.54982 5.6961 3.66929 5.81514C3.73067 5.87628 3.73067 5.87628 3.79329 5.93867C3.98711 6.13186 4.18082 6.32518 4.37437 6.51865C4.59742 6.74159 4.82101 6.96396 5.04504 7.18589C5.23954 7.37865 5.43326 7.57216 5.62673 7.76595C5.70905 7.84818 5.79161 7.93017 5.87441 8.01191C5.98974 8.12587 6.10418 8.24067 6.21843 8.35573C6.25297 8.38946 6.28751 8.42319 6.32309 8.45795C6.35395 8.48938 6.3848 8.5208 6.41659 8.55318C6.44373 8.58022 6.47086 8.60725 6.49881 8.63511C6.55042 8.72161 6.55042 8.72161 6.53971 8.84031C6.49347 8.98879 6.42545 9.11698 6.35223 9.25408C6.1772 9.59554 6.04602 9.94321 5.94418 10.3132C5.93496 10.3456 5.92575 10.3779 5.91626 10.4113C5.63289 11.4473 5.65176 12.6525 5.94418 13.6835C5.95266 13.7148 5.96114 13.746 5.96988 13.7781C6.07928 14.1719 6.23778 14.5308 6.4337 14.8877C6.55283 15.1106 6.55283 15.1106 6.54117 15.2273C6.49505 15.344 6.43636 15.4069 6.34769 15.4955C6.31428 15.5292 6.28086 15.563 6.24643 15.5977C6.20953 15.6343 6.17264 15.6708 6.13462 15.7084C6.09595 15.7473 6.05728 15.7861 6.01744 15.8261C5.91142 15.9325 5.8051 16.0385 5.69863 16.1444C5.58741 16.2551 5.47658 16.3663 5.36571 16.4774C5.15574 16.6877 4.94542 16.8977 4.73497 17.1075C4.49538 17.3465 4.25618 17.5858 4.01702 17.8252C3.52508 18.3175 3.03264 18.8093 2.53987 19.3008C2.40724 19.1692 2.28221 19.0448 2.1779 18.8892C2.1558 18.8563 2.1337 18.8234 2.11092 18.7895C2.088 18.7545 2.06508 18.7196 2.04146 18.6835C2.01712 18.6465 1.99279 18.6095 1.96772 18.5713C1.09425 17.225 0.502181 15.7317 0.208145 14.1517C0.200578 14.114 0.193012 14.0763 0.185215 14.0375C-0.0706562 12.7238 -0.0599234 11.1554 0.208145 9.84506C0.217411 9.79767 0.226676 9.75027 0.236222 9.70143C0.594756 7.90171 1.32849 6.12544 2.49323 4.69588Z"
+                                        fill="#FABC00" />
+                                    <path
+                                        d="M12.0066 0.0148083C12.1744 0.013252 12.3422 0.0123342 12.51 0.0115169C12.5567 0.0110757 12.6034 0.0106344 12.6516 0.0101798C15.579 -0.000460405 18.4107 1.45225 20.4537 3.48264C20.6234 3.65218 20.7923 3.82261 20.9605 3.99372C20.8962 4.13864 20.8225 4.23746 20.7108 4.34921C20.6785 4.38176 20.6462 4.41431 20.6129 4.44786C20.5775 4.48308 20.5421 4.5183 20.5056 4.55458C20.4683 4.59205 20.4309 4.62951 20.3925 4.66812C20.2691 4.79194 20.1453 4.91543 20.0216 5.03892C19.9359 5.12469 19.8503 5.21048 19.7648 5.29629C19.5625 5.49905 19.3599 5.7016 19.1573 5.90404C18.9266 6.13457 18.6962 6.36537 18.4658 6.59618C17.9919 7.0709 17.5176 7.54528 17.0432 8.01945C16.8508 7.93136 16.7265 7.79982 16.5826 7.64788C15.399 6.43378 13.8796 5.77457 12.1912 5.69043C12.0533 5.67891 12.0533 5.67891 12.0066 5.6321C12.0022 5.55925 12.001 5.4862 12.001 5.41321C12.001 5.36589 12.0009 5.31856 12.0008 5.26979C12.001 5.21744 12.0012 5.16508 12.0014 5.11113C12.0013 5.05634 12.0013 5.00154 12.0013 4.94509C12.0014 4.79441 12.0016 4.64373 12.0019 4.49306C12.0022 4.33575 12.0022 4.17843 12.0023 4.02112C12.0024 3.72304 12.0028 3.42496 12.0033 3.12688C12.0038 2.78761 12.0041 2.44834 12.0043 2.10906C12.0048 1.41098 12.0056 0.712893 12.0066 0.0148083Z"
+                                        fill="#CF2C47" />
+                                    <path
+                                        d="M15.2201 17.4853C15.3396 17.5303 15.4006 17.588 15.4906 17.6787C15.5242 17.7123 15.5578 17.7458 15.5925 17.7804C15.6288 17.8174 15.6652 17.8544 15.7027 17.8926C15.7414 17.9314 15.7801 17.9702 15.82 18.0102C15.9259 18.1166 16.0315 18.2234 16.137 18.3302C16.2474 18.4419 16.3581 18.5531 16.4688 18.6644C16.6784 18.8752 16.8875 19.0863 17.0966 19.2975C17.3346 19.538 17.573 19.7781 17.8115 20.0182C18.302 20.512 18.792 21.0063 19.2816 21.5009C19.1504 21.6341 19.0265 21.7596 18.8716 21.8643C18.8388 21.8865 18.806 21.9086 18.7722 21.9315C18.7374 21.9545 18.7025 21.9775 18.6666 22.0012C18.6297 22.0257 18.5928 22.0501 18.5548 22.0753C17.1998 22.961 15.6988 23.5591 14.1052 23.8415C14.0415 23.8529 14.0415 23.8529 13.9765 23.8645C13.4866 23.949 13.0082 23.9903 12.5109 23.9854C12.462 23.9851 12.4132 23.9849 12.3629 23.9846C12.2441 23.984 12.1254 23.9831 12.0066 23.9819C12.0056 23.2503 12.0047 22.5187 12.0042 21.7871C12.004 21.4475 12.0037 21.1078 12.0031 20.7681C12.0027 20.4722 12.0024 20.1762 12.0023 19.8803C12.0022 19.7235 12.0021 19.5667 12.0017 19.4099C12.0014 19.2351 12.0013 19.0603 12.0014 18.8856C12.0012 18.8332 12.001 18.7809 12.0008 18.7269C12.0009 18.6796 12.001 18.6323 12.001 18.5835C12.001 18.5421 12.001 18.5007 12.0009 18.4581C12.0066 18.3646 12.0066 18.3646 12.0533 18.3178C12.1185 18.31 12.184 18.3049 12.2495 18.301C13.2014 18.2355 14.2105 18.0628 15.0279 17.5312C15.1312 17.4752 15.1312 17.4752 15.2201 17.4853Z"
+                                        fill="#0F9D58" />
+                                </svg>
+
+                            </button>
+
+                            <button type="button"
+                                class="group relative overflow-hidden z-10 w-full sm:w-[48%] h-[66.25px] rounded-[20px] border-2 border-[var(--color4)] flex items-center justify-center transition-all duration-500 hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:-translate-y-[3px] after:absolute after:top-0 after:left-[-120%] after:w-[50%] after:h-full after:bg-white/40 after:skew-x-[-25deg] after:transition-all after:duration-700 hover:after:left-[150%]">
+
+                                <span
+                                    class="mr-[12px] lg:mr-[24px] text-[14px] sm:text-[15px] lg:text-[16px] font-semibold text-[var(--color4)] transition-colors duration-500 group-hover:text-[var(--color2)]">
+                                    Continue With
+                                </span>
+
+                                <!-- Apple SVG -->
+                                <svg class="text-[var(--color4)] group-hover:text-[var(--color2)]" width="20"
+                                    height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.4199 6.67773C14.1318 5.96193 16.1135 6.13521 17.6074 7.2041H17.6084C17.9713 7.47252 18.3165 7.77037 18.6162 8.09277V8.09375C17.4782 8.9252 16.7049 10.0476 16.3213 11.3838C16.3096 11.4245 16.2972 11.4649 16.2852 11.5068L16.2812 11.5195L16.2783 11.5322C15.952 12.9344 16.3917 14.4196 17.041 15.5811L17.1729 15.8086L17.1807 15.8203C17.7615 16.7241 18.5362 17.3424 19.4189 17.8242C19.4023 17.8677 19.3833 17.9137 19.3613 17.9629V17.9639C19.3413 18.009 19.3406 18.009 19.3203 18.0547C19.2773 18.1513 19.2337 18.248 19.1895 18.3457V18.3467C19.1743 18.3803 19.1592 18.4146 19.1436 18.4492C18.4918 19.8951 17.8005 21.3295 16.6807 22.2998L16.4502 22.4883C16.3399 22.5733 16.2325 22.6598 16.126 22.749C15.5033 23.2647 14.9735 23.5243 14.2461 23.4912C13.6516 23.4346 13.0718 23.1718 12.4033 22.9014L12.4014 22.9004L12.1191 22.7959C10.7236 22.3232 9.55268 22.5789 8.27051 23.0557C8.22057 23.0742 8.17059 23.0932 8.11914 23.1123H8.11816C8.02065 23.1488 7.92264 23.1853 7.8252 23.2227C7.36588 23.3959 6.96933 23.5052 6.54395 23.5H6.54199C6.50299 23.4996 6.46387 23.4994 6.42383 23.499H6.4248C6.14572 23.4918 5.93175 23.4466 5.69727 23.3379L5.69238 23.3359L5.54395 23.2686C4.69675 22.8494 4.00714 22.1394 3.4043 21.3369L3.40137 21.334L3.33301 21.2441C1.93879 19.4186 1.06118 17.1713 0.680664 14.9043V14.9014L0.657227 14.7666C0.287771 12.5859 0.531701 10.4018 1.7998 8.63672C2.67411 7.45042 3.80635 6.65055 5.24219 6.37988C6.41785 6.23384 7.44414 6.49902 8.58594 6.98242H8.58691C9.10552 7.20101 9.59956 7.31545 10.1074 7.31543C10.6138 7.31538 11.1067 7.20229 11.6221 7.00293L11.625 7.00098C11.8903 6.89636 12.1556 6.78941 12.4199 6.67773ZM14.3867 0.533203C14.4101 0.70214 14.4143 0.911645 14.3916 1.15332C14.3544 1.54923 14.2587 1.95319 14.166 2.24219C13.9874 2.75024 13.7326 3.13597 13.3398 3.53906L13.333 3.54688L13.3252 3.55469C13.3019 3.58077 13.2788 3.60703 13.2549 3.63379C12.6222 4.3148 11.555 4.75182 10.5225 4.94629C10.5602 3.87608 10.8222 2.88623 11.5146 2.13477C11.927 1.71094 12.4116 1.3948 12.9756 1.09961L12.9854 1.09375C13.0269 1.07084 13.0677 1.04696 13.1104 1.02344L13.1113 1.02441C13.5159 0.810769 13.9811 0.609698 14.3867 0.533203Z"
+                                        stroke="currentColor" stroke-width="1.2" />
+                                </svg>
+
+                            </button>
+
+                        </div>
+
+                        <!-- Bottom -->
+
+                        <p
+                            class="mt-[28px] sm:mt-[38px] text-center text-[14px] sm:text-[16px] font-medium text-[var(--color1)]]">
+                            Already Have An Account?
+
+                            <a href="#"
+                                class=" font-semibold text-[var(--color4)] hover:text-[var(--color-15)] transition-colors duration-300" id="signinLink">
+                                Sign In
+                            </a>
+
+                        </p>
+
+                    </form>
+
+                </div>
+
+                <!-- right side ends -->
+
+            </section>
+
+        </div>
+
+    </div>
+    <!-- signup modal ends --> 
+     <!-- login start -->
+      <!-- ================= LOGIN MODAL START ================= -->
+
+<div id="loginModal"
+    class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/30 backdrop-blur-sm py-[20px] lg:py-[36px]">
+
+    <div class="max-w-[1350px] mx-auto px-[15px] flex items-center justify-center min-h-full">
+
+        <!-- Modal Box -->
+        <section
+            class="flex flex-col lg:flex-row lg:flex-nowrap w-full max-w-[1320px] bg-[var(--color2)] rounded-[20px] overflow-hidden shadow-[0px_4px_52.7px_0px_#FFFFFF]">
+
+            <!-- Left Side -->
+            <div
+                class="relative z-0 w-full lg:w-1/2 shrink-0 min-h-[260px] sm:min-h-[380px] lg:min-h-[821px] bg-[linear-gradient(180deg,_#DDF0FC_13%,_#2772CC_86%)] overflow-hidden rounded-none lg:rounded-tr-[70px] lg:rounded-br-[70px] flex items-center justify-center p-6 lg:p-0">
+
+                <!-- Blur Shapes -->
+                <span
+                    class="absolute top-[36px] left-[42px] w-[128px] h-[32px] rounded-full bg-white/20">
+                </span>
+
+                <span
+                    class="absolute top-[58px] right-[92px] w-[192px] h-[40px] rounded-full bg-white/20">
+                </span>
+
+                <!-- Illustration -->
+                <figure class="w-[220px] sm:w-[320px] md:w-[420px] lg:w-[560px] max-w-full">
+                    <img src="assets/images/Login Illustration.png"
+                        alt="Login Illustration"
+                        class="block w-full h-auto object-contain">
+                </figure>
+
+            </div>
+
+            <!-- Right Side -->
+            <div
+                class="w-full lg:w-1/2 shrink-0 min-w-0 bg-[var(--color2)] pt-[30px] pb-[35px] px-[20px] sm:px-[35px] md:px-[50px] lg:px-[94px]">
+
+                <!-- Close -->
+                <div class="flex justify-end">
+                   <button id="closeLogin" class="closeModal" type="button">
+    ✕
+</button>
+                </div>
+
+                <!-- Heading -->
+                <div class="mt-[5px]">
+
+                    <h2
+                        class="text-[32px] font-semibold leading-none text-[var(--color10)] font-[var(--outfit-r)]">
+                        Welcome Back
+                    </h2>
+
+                    <p class="mt-[12px] text-[16px] text-[var(--color1)]">
+                        Login to continue your account.
+                    </p>
+
+                </div>
+
+                <!-- Login Form -->
+                <form action="#" method="post" class="mt-[44px]">
+                  <!-- Email -->
+<div class="mt-[20px]">
+
+    <input
+        type="email"
+        placeholder="Enter Your Email"
+        required
+        class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300">
+
+</div>
+
+<!-- Password -->
+<div class="mt-[20px]">
+
+    <input
+        type="password"
+        placeholder="Enter Your Password"
+        required
+        class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300">
+
+</div>
+
+<!-- Remember & Forgot -->
+<div class="flex items-center justify-between mt-[24px]">
+
+    <label class="flex items-center cursor-pointer">
+
+        <input
+            type="checkbox"
+            class="w-[20px] h-[20px] accent-[var(--color4)]">
+
+        <span class="ml-[10px] text-[15px] text-[var(--color1)]">
+            Remember Me
+        </span>
+
+    </label>
+
+    <a href="#"
+        class="text-[15px] font-medium text-[var(--color4)] hover:text-[var(--color-15)] transition-all duration-300">
+        Forgot Password?
+    </a>
+
+</div>
+
+<!-- Login Button -->
+<button
+    type="submit"
+    class="group w-full h-[76px] mt-[30px] rounded-[20px] bg-[var(--color4)] hover:bg-[var(--color-15)] transition-all duration-500 flex items-center justify-center text-[16px] font-semibold text-[var(--color2)]">
+
+    Login
+
+    <svg
+        class="ml-[16px] transition-transform duration-500 group-hover:translate-x-1"
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none">
+
+        <path
+            d="M5 12H19M13 6L19 12L13 18"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round" />
+
+    </svg>
+
+</button>
+
+<!-- OR Divider -->
+<div class="flex items-center my-[24px]">
+
+    <div class="w-full h-[1px] bg-[#9CA3AF]"></div>
+
+    <span
+        class="mx-[20px] text-[16px] font-medium text-[#9CA3AF]">
+        OR
+    </span>
+
+    <div class="w-full h-[1px] bg-[#9CA3AF]"></div>
+
+</div>
+<!-- Social Login -->
+<div class="flex flex-col sm:flex-row justify-between mt-[20px]">
+
+    <!-- Google -->
+    <button
+        type="button"
+        class="group w-full sm:w-[48%] mb-[15px] sm:mb-0 h-[66px] rounded-[20px] border-2 border-[var(--color4)] flex items-center justify-center hover:bg-[var(--color-15)] hover:border-[var(--color-15)] transition-all duration-500">
+
+        <img src="assets/images/google.svg"
+             alt="Google"
+             class="w-[22px] h-[22px] mr-[12px]">
+
+        <span
+            class="text-[16px] font-semibold text-[var(--color4)] group-hover:text-[var(--color2)]">
+            Google
+        </span>
+
+    </button>
+
+    <!-- Apple -->
+    <button
+        type="button"
+        class="group w-full sm:w-[48%] h-[66px] rounded-[20px] border-2 border-[var(--color4)] flex items-center justify-center hover:bg-[var(--color-15)] hover:border-[var(--color-15)] transition-all duration-500">
+
+        <img src="assets/images/apple.svg"
+             alt="Apple"
+             class="w-[22px] h-[22px] mr-[12px]">
+
+        <span
+            class="text-[16px] font-semibold text-[var(--color4)] group-hover:text-[var(--color2)]">
+            Apple
+        </span>
+
+    </button>
+
+</div>
+
+</form>
+
+</div>
+<!-- Right Side End -->
+
+</section>
+<!-- Modal Box End -->
+
+</div>
+
+</div>
+
+<!-- ================= LOGIN MODAL END ================= -->
+     <!-- login end  -->
+  <!-- AOS JS Link --> 
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
      <script>
   AOS.init();
@@ -1484,103 +1942,6 @@
 
 });
     </script> 
-  <!-- modal login dialog box --> 
-   <!-- Login Modal -->
-<div id="loginModal"
-     class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50 p-5">
-
-    <div class="max-w-[1220px] w-full bg-white rounded-[40px] overflow-hidden relative">
-
-        <!-- Close Button -->
-        <button id="closeModal"
-            class="absolute top-6 right-6 text-3xl text-black font-bold z-50">
-            &times;
-        </button>
-
-                   
-    <div class="max-w-[1220px] mx-auto px-[15px]">
-           <div class="grid grid-cols-2  lg:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 w-full min-h-[832px]gap-[62px]  my-[30px]"> 
-<div class="w-full min-h-[821px] bg-[linear-gradient(-39deg,_#2772C9_0%,_#DDF0FC_100%)] rounded-tr-[60px] relative z-[1]">
-<div class="absolute z-[2] top-1/2 -translate-y-1/2">
-  <figure>
-    <img src="assets/images/Main Illustration Container.png" alt="login-image" loading="lazy">
-
-  </figure>
-</div>
-</div>
-        <div class="w-full px-[72px] py-[49px] ">
-          <a href="#" class="justify-end flex font-[family-name:var(--albert-sans-r)] text-[var(--color4)] text-[16px] font-semibold">Skip</a>
-            <h4 class="heading-3 mt-[57px]"> 
-              Let's Get you signed in
-            </h4>
-          <form action="#" method="get" class="mt-[62px]">
-            <input type="text" class="w-full p-[20px] rounded-[20px] border-b-[var(--color4)] mt-[52px] border-b-2 outline-none capitalize text-[16px] font-medium font-[family-name:var(--albert-sans-r)] " placeholder="enter your Email"> 
-            <input type="password" class="w-full p-[20px] rounded-[20px] border-b-[var(--color4)] border-b-2 outline-none mt-[20px] text-[var(--color1)] capitalize text-[16px] font-medium font-[family-name:var(--albert-sans-r)]" placeholder="enter your phone number">
-            <div class="flex justify-between">
-                <div class="flex">
-              <input type="checkbox" name="" id="" class=" mt-[20px] w-[30px] h-[30px] bg-[#F4F1EC] rounded-[10px]">
-              <label for="" class="text-[var(--color1)] text-[16px] font-medium font-[family-name:var(--albert-sans-r)] ms-[10px] mt-[20px]"> Remember Me</label>
-            </div>
-              <a href="#" class="text-[var(--color1)] text-[16px] font-medium font-[family-name:var(--albert-sans-r)] capitalize mt-[20px]"> Forgot password ?</a>
-            </div>
-            <a href="#" class="w-full py-[28px] cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] inline-block z-10  rounded-[20px]  font-[family-name:var(--outfit-r)]text-[18px] font-semibold text-[var(--color2)] justify-center text-center items-center capitalize mt-[20px] flex">Sign in
-              <svg class="ms-[21px] " width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 8H17.3333M10.3333 15L17.3333 8L10.3333 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-            </a> 
-         <div class="grid grid-cols-3 items-center w-full mt-[20px]">
-  <div class="border-b-2 border-black"></div>
-
-  <p class="text-center text-black">Or</p>
-
-  <div class="border-b-2 border-black"></div>
-</div>
-           <div class="grid grid-cols-2 gap-6 mt-16">
-
-<a href="#"
-   class="relative flex items-center justify-between overflow-hidden rounded-2xl bg-[var(--color4)] px-8 py-4 whitespace-nowrap font-[family-name:var(--font-outfit-r)] before:absolute before:inset-0 before:bg-[var(--color-16)] before:-translate-x-full before:transition-transform before:duration-500 hover:before:translate-x-0">
-
-  <p class="relative z-10 text-white text-[12px] font-semibold">
-    Continue with Google
-  </p>
-
-  <div class="relative z-10">
-    <img
-      src="assets/images/Vector.png"
-      alt="Google"
-      class="w-10 h-10 object-contain"
-    >
-  </div>
-
-</a>
-
-
-  <a href="#"
-   class="relative flex items-center justify-between overflow-hidden rounded-2xl bg-[var(--color4)] px-8 py-4 whitespace-nowrap font-[family-name:var(--font-outfit-r)] before:absolute before:inset-0 before:bg-[var(--color-16)] before:-translate-x-full before:transition-transform before:duration-500 hover:before:translate-x-0 inline-block">
-
-  <p class="relative z-10 text-white text-[12px] font-semibold">
-    Continue with 
-  </p>
-
-  <div class="relative z-10">
-    <img
-      src="assets/images/about-us/Frame 289.png"
-      alt="Google"
-      class="w-10 h-10 object-contain"
-    >
-  </div>
-
-</a>
-</div>
-<p class="text-center capitalize mt-[20px]"> Already register <a href="#" class="text-[var(--color4)]">Login</a> </p>
-
-          </form>
-        </div>
-     </div>
-    </div>                
-
-    </div>
-</div>
 
 </body>
 
