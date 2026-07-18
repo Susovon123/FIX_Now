@@ -22,3 +22,27 @@ function closeMenu() {
     overlay.classList.add("hidden");
 }
 
+// // modal 
+// const modal = document.getElementById("loginModal");
+// const openBtn = document.getElementById("openModal");
+// const closeBtn = document.getElementById("closeModal");
+
+// openBtn.addEventListener("click", function () {
+//     modal.classList.remove("hidden");
+//     modal.classList.add("flex");
+//     document.body.style.overflow = "hidden";
+// });
+
+// closeBtn.addEventListener("click", function () {
+//     modal.classList.add("hidden");
+//     modal.classList.remove("flex");
+//     document.body.style.overflow = "auto";
+// });
+
+// modal.addEventListener("click", function (e) {
+//     if (e.target === modal) {
+//         modal.classList.add("hidden");
+//         modal.classList.remove("flex");
+//         document.body.style.overflow = "auto";
+//     }
+// });
