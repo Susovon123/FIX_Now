@@ -269,7 +269,8 @@ p {
 .loader-progress{
     width:0%;
     animation: loading 3s ease forwards;
-}
+} 
+
 
 @keyframes loading{
     from{
