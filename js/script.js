@@ -1,5 +1,5 @@
 
-
+// side bar 
 const menuBtn = document.getElementById("menuBtn");
 const closeBtn = document.getElementById("closeBtn");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -10,6 +10,8 @@ menuBtn.addEventListener("click", () => {
     mobileMenu.classList.add("right-0");
 
     overlay.classList.remove("hidden");
+
+    document.body.classList.add("overflow-hidden");
 });
 
 closeBtn.addEventListener("click", closeMenu);
@@ -20,7 +22,9 @@ function closeMenu() {
     mobileMenu.classList.add("right-[-100%]");
 
     overlay.classList.add("hidden");
-}  
+
+    document.body.classList.remove("overflow-hidden");
+}
 // location 
 
 const locationSelect = document.getElementById("locationSelect");
@@ -59,12 +63,12 @@ locationSelect.addEventListener("change", function () {
 
 });
 
-async function getAddress(position){
+async function getAddress(position) {
 
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
 
-    try{
+    try {
 
         const response = await fetch(
             `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lon}`
@@ -75,7 +79,7 @@ async function getAddress(position){
         address.innerHTML = data.display_name;
 
     }
-    catch{
+    catch {
 
         address.innerHTML = "Unable to fetch address.";
 
@@ -83,9 +87,9 @@ async function getAddress(position){
 
 }
 
-function showError(error){
+function showError(error) {
 
-    switch(error.code){
+    switch (error.code) {
 
         case error.PERMISSION_DENIED:
             address.innerHTML = "Location permission denied.";
