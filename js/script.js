@@ -158,6 +158,8 @@ if (signupModal) {
 
 // Signup Modal ends
 
+// login starts
+
 document.getElementById("signinLink").addEventListener("click", function (e) {
     e.preventDefault();
 
