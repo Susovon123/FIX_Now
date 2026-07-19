@@ -1,0 +1,32 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+.gradient-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 11px;
+
+ 
+
+    background:
+        /* Padding Box (2nd Image) */
+        linear-gradient(
+            90deg,
+            #FFFFFF 36%,
+            #FFE28A 100%
+        ) padding-box,
+
+        /* Border Box (1st Image) */
+        linear-gradient(
+            -19deg,
+            /* #FFC233 0%,  */
+            #fff 0%,
+            #FFC233 100%
+        ) border-box;
+}
