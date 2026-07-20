@@ -4,7 +4,62 @@
     box-sizing: border-box;
 }
 .gradient-btn{
-    display: inline-flex;
+    /* display: inline-flex; */
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 11px;
+
+ 
+
+    background:
+        /* Padding Box (2nd Image) */
+        linear-gradient(
+            -90deg,
+            #FFFFFF 36%,
+            #FFE28A 80%
+        ) padding-box,
+
+        /* Border Box (1st Image) */
+        linear-gradient(
+            -19deg,
+            /* #FFC233 0%,  */
+            #fff 0%,
+            #FFC233 100%
+        ) border-box;
+} 
+
+.gradient-btn1{
+    /* display: inline-flex; */
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 11px;
+
+ 
+
+    background:
+        /* Padding Box (2nd Image) */
+        linear-gradient(
+            -90deg,
+            #FFFFFF 36%,
+            #45A5EC 80%
+        ) padding-box,
+
+        /* Border Box (1st Image) */
+        linear-gradient(
+            -19deg,
+            /* #FFC233 0%,  */
+            #fff 0%,
+            #45A5EC 100%
+        ) border-box;
+} 
+.gradient-btn2{
+    /* display: inline-flex; */
     align-items: center;
     justify-content: center;
 
@@ -18,8 +73,8 @@
         /* Padding Box (2nd Image) */
         linear-gradient(
             90deg,
-            #FFFFFF 36%,
-            #FFE28A 100%
+            #FFFFFF 6%,
+            #22C55E 100%
         ) padding-box,
 
         /* Border Box (1st Image) */
@@ -27,6 +82,35 @@
             -19deg,
             /* #FFC233 0%,  */
             #fff 0%,
-            #FFC233 100%
+            #22C55E 100%
+        ) border-box;
+} 
+
+ 
+.gradient-btn3{
+    /* display: inline-flex; */
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-radius: 11px;
+
+ 
+
+    background:
+        /* Padding Box (2nd Image) */
+        linear-gradient(
+            90deg,
+            #FFFFFF 6%,
+            #DC2626 100%
+        ) padding-box,
+
+        /* Border Box (1st Image) */
+        linear-gradient(
+            -19deg,
+            /* #FFC233 0%,  */
+            #fff 0%,
+            #DC2626 100%
         ) border-box;
 }
