@@ -113,4 +113,373 @@
             #fff 0%,
             #DC2626 100%
         ) border-box;
+} 
+
+
+
+/* Large Tablet / Small Desktop */
+@media (max-width: 1200px) {
+
+    .booking-history {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .booking-history > div {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    /* Main 4 + 8 layout */
+    .booking-history .grid.grid-cols-12 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    /* Sidebar */
+    .booking-history .col-span-4 {
+        width: 100%;
+        min-height: auto;
+        border-right: 0;
+        border-bottom: 2px solid #9CA3AF;
+    }
+
+    /* Right content */
+    .booking-history .col-span-8 {
+        width: 100%;
+    }
+
+    /* Profile */
+    .booking-history .col-span-4 > div:first-child {
+        min-height: 120px;
+        height: auto;
+        padding: 25px;
+    }
+
+    /* Sidebar menu */
+    .booking-history .col-span-4 > div:not(:first-child) {
+        height: auto;
+        min-height: 80px;
+        padding: 25px;
+    }
+
+    /* Booking card details */
+    .booking-history .grid.grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+
+
+
+@media (max-width: 991px) {
+
+    .booking-history {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    /* Breadcrumb */
+    .booking-history > div > div:first-child {
+        margin-bottom: 40px;
+    }
+
+    /* Main wrapper */
+    .booking-history .grid.grid-cols-12 {
+        display: block;
+    }
+
+    /* Sidebar */
+    .booking-history .col-span-4 {
+        margin-bottom: 25px;
+        border: 1px solid #9CA3AF;
+        border-radius: 26px;
+        overflow: hidden;
+    }
+
+    /* Profile header */
+    .booking-history .col-span-4 > div:first-child {
+        padding: 20px;
+    }
+
+    /* Sidebar items */
+    .booking-history .col-span-4 > div:not(:first-child) {
+        padding: 22px 25px;
+        min-height: 75px;
+    }
+
+    /* Right side */
+    .booking-history .col-span-8 {
+        width: 100%;
+    }
+
+    /* Booking card */
+    .booking-history .col-span-8 > div {
+        padding: 22px;
+    }
+
+    /* Booking card header */
+    .booking-history .col-span-8 .flex.items-start.justify-between {
+        align-items: flex-start;
+    }
+
+    /* Service details */
+    .booking-history .grid.grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Date and payment section */
+    .booking-history .text-right {
+        text-align: right;
+    }
+
+    /* Address + button */
+    .booking-history .flex.justify-between.items-end {
+        align-items: center;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .booking-history {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .booking-history > div {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Breadcrumb */
+    .booking-history > div > div:first-child {
+        margin-top: 0;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .booking-history > div > div:first-child a {
+        font-size: 16px;
+    }
+
+    /* Sidebar profile */
+    .booking-history .col-span-4 > div:first-child {
+        padding: 18px;
+    }
+
+    .booking-history .col-span-4 > div:first-child img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .booking-history .col-span-4 > div:first-child .ms-\[24px\] {
+        margin-left: 15px;
+    }
+
+    .booking-history .col-span-4 > div:first-child p:first-child {
+        font-size: 18px;
+    }
+
+    /* Sidebar menu */
+    .booking-history .col-span-4 > div:not(:first-child) {
+        padding: 18px 20px;
+    }
+
+    .booking-history .col-span-4 > div:not(:first-child) p {
+        font-size: 17px;
+    }
+
+    /* Booking cards */
+    .booking-history .col-span-8 > div {
+        padding: 18px;
+        border-radius: 20px;
+    }
+
+    /* Card header */
+    .booking-history .col-span-8 .flex.items-start.justify-between {
+        flex-direction: column;
+    }
+
+    /* Provider information */
+    .booking-history .col-span-8 .flex.items-start.justify-between > div:first-child {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Status button */
+    .booking-history .col-span-8 .flex.items-start.justify-between > a {
+        align-self: flex-start;
+    }
+
+    /* 3 columns -> 1 column */
+    .booking-history .grid.grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+
+    /* Date / payment content */
+    .booking-history .text-right {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    /* Address section */
+    .booking-history .flex.justify-between.items-end {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .booking-history .flex.justify-between.items-end > div {
+        width: 100%;
+    }
+
+    .booking-history .flex.justify-between.items-end h4 {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    /* View booking button */
+    .booking-history .flex.justify-between.items-end > a {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .booking-history {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    /* Breadcrumb */
+    .booking-history > div > div:first-child {
+        margin-bottom: 25px;
+    }
+
+    /* Profile */
+    .booking-history .col-span-4 > div:first-child {
+        padding: 15px;
+    }
+
+    .booking-history .col-span-4 > div:first-child img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .booking-history .col-span-4 > div:first-child p:first-child {
+        font-size: 16px;
+    }
+
+    .booking-history .col-span-4 > div:first-child p:last-child {
+        font-size: 12px;
+        word-break: break-word;
+    }
+
+    /* Sidebar */
+    .booking-history .col-span-4 > div:not(:first-child) {
+        padding: 16px;
+    }
+
+    .booking-history .col-span-4 > div:not(:first-child) p {
+        font-size: 15px;
+    }
+
+    /* Card */
+    .booking-history .col-span-8 > div {
+        padding: 15px;
+        border-radius: 18px;
+    }
+
+    /* Provider image */
+    .booking-history .col-span-8 img {
+        width: 55px;
+        height: 55px;
+    }
+
+    /* Provider name */
+    .booking-history .col-span-8 h3 {
+        font-size: 18px;
+    }
+
+    /* Card text */
+    .booking-history .col-span-8 p {
+        font-size: 14px;
+    }
+
+    /* Service title */
+    .booking-history .col-span-8 .heading-6 {
+        font-size: 18px;
+    }
+
+    /* Date */
+    .booking-history .col-span-8 h4 {
+        font-size: 24px;
+    }
+
+    /* Status button */
+    .booking-history .col-span-8 .gradient-btn,
+    .booking-history .col-span-8 .gradient-btn1,
+    .booking-history .col-span-8 .gradient-btn2,
+    .booking-history .col-span-8 .gradient-btn3 {
+        font-size: 13px;
+        padding: 7px 12px;
+    }
+}
+
+
+
+@media (max-width: 360px) {
+
+    .booking-history > div {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .booking-history .col-span-4 > div:first-child {
+        padding: 12px;
+    }
+
+    .booking-history .col-span-4 > div:first-child img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .booking-history .col-span-4 > div:first-child p:first-child {
+        font-size: 15px;
+    }
+
+    .booking-history .col-span-4 > div:first-child p:last-child {
+        font-size: 11px;
+    }
+
+    .booking-history .col-span-8 > div {
+        padding: 12px;
+    }
+
+    .booking-history .col-span-8 img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .booking-history .col-span-8 h3 {
+        font-size: 16px;
+    }
+
+    .booking-history .col-span-8 .heading-6 {
+        font-size: 16px;
+    }
+
+    .booking-history .col-span-8 h4 {
+        font-size: 20px;
+    }
+}
+
