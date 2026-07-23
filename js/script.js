@@ -203,7 +203,7 @@ document.querySelectorAll(".closeModal").forEach(btn => {
                 delay: 2000,
                 disableOnInteraction: false,
             },
-
+                
             on: {
 
                 init: function () {
