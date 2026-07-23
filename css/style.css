@@ -351,6 +351,36 @@ select {
     display: none;
 }
 
+/* slider */
+.mySwiper {
+            width: 500px;
+            height: 700px;
+            margin: 110px auto;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: transform 0.8s ease;
+        }
+
+        .card {
+            width: 584px;
+            height: 303px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            border-radius: 20px;
+
+            font-size: 30px;
+            font-weight: bold;
+        }
+
 
 @keyframes loading {
     from {

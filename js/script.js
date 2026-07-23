@@ -175,3 +175,67 @@ document.querySelectorAll(".closeModal").forEach(btn => {
         this.closest(".fixed").classList.add("hidden");
     });
 });
+
+// slider
+
+ const swiper = new Swiper(".mySwiper", {
+
+            // Vertical slider
+            direction: "vertical",
+
+            // 3 cards visible
+            slidesPerView: 3,
+
+            // Center card
+            centeredSlides: true,
+
+            // Gap between cards
+            spaceBetween: 140,
+
+            // Infinite loop
+            loop: true,
+
+            // Animation speed
+            speed: 1000,
+
+            // Auto slide
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+
+            on: {
+
+                init: function () {
+                    updateRotation(this);
+                },
+
+                slideChangeTransitionStart: function () {
+                    updateRotation(this);
+                }
+
+            }
+
+        });
+
+
+        function updateRotation(swiper) {
+
+            swiper.slides.forEach((slide) => {
+
+                // Check if this is the active center slide
+                if (slide.classList.contains("swiper-slide-active")) {
+
+                    // Center card = normal
+                    slide.style.transform = "rotate(0deg)";
+
+                } else {
+
+                    // Other cards = rotated
+                    slide.style.transform = "rotate(160deg)";
+
+                }
+
+            });
+
+        }
