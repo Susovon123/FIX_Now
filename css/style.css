@@ -353,7 +353,7 @@ select {
 
 /* slider */
 .mySwiper {
-            width: 500px;
+            width: 584px;
             height: 700px;
             margin: 110px auto;
         }
@@ -367,20 +367,11 @@ select {
         }
 
         .card {
-            width: 584px;
+            width: 504px;
             height: 303px;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-
-            border-radius: 20px;
-
-            font-size: 30px;
-            font-weight: bold;
+          
         }
-
 
 @keyframes loading {
     from {
