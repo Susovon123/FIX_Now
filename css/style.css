@@ -50,8 +50,13 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
 
+}
+html,
+body{ 
+    overflow-x: hidden;
+    width: 100%;
+}
 
 .custom-container {
     max-width: 1350px;
@@ -366,12 +371,7 @@ select {
             transition: transform 0.8s ease;
         }
 
-        .card {
-            width: 504px;
-            height: 303px;
-
-          
-        }
+        
 
 @keyframes loading {
     from {
