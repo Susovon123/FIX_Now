@@ -176,7 +176,7 @@ document.querySelectorAll(".closeModal").forEach(btn => {
     });
 });
 
-// slider
+// slider why choose us section
 
  const swiper = new Swiper(".mySwiper", {
 
@@ -316,7 +316,8 @@ document.querySelectorAll(".closeModal").forEach(btn => {
 
         }
     ); 
-    // expert swiper 
+
+    // expert swiper  slider section
   
 
     const expertSwiper = new Swiper(
