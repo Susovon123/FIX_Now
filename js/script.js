@@ -328,4 +328,86 @@ document.querySelectorAll(".closeModal").forEach(btn => {
             }
 
         }
+    ); 
+    // expert swiper 
+  
+
+    const expertSwiper = new Swiper(
+        ".expert-swiper",
+        {
+
+
+            freeMode: true,
+
+
+
+            autoplay: {
+
+                delay: 3000,
+
+                disableOnInteraction: false,
+
+            },
+
+
+            
+
+            slidesPerView: 1,
+
+            spaceBetween: 20,
+
+
+           
+
+            breakpoints: {
+
+
+                /* 545px */
+
+                545: {
+
+                    slidesPerView: 2,
+
+                    spaceBetween: 20,
+
+                },
+
+
+                /* 780px */
+
+                780: {
+
+                    slidesPerView: 2,
+
+                    spaceBetween: 25,
+
+                },
+
+
+                /* 991px */
+
+                991: {
+
+                    slidesPerView: 4,
+
+                    spaceBetween: 30,
+
+                },
+
+
+                /* 1200px */
+
+                1200: {
+
+                    slidesPerView: 4,
+
+                    spaceBetween: 30,
+
+                }
+
+            }
+
+        }
+
     );
+
