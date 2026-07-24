@@ -239,3 +239,93 @@ document.querySelectorAll(".closeModal").forEach(btn => {
             });
 
         }
+// tetsimonal slider
+ const testimonialSwiper = new Swiper(
+        ".testimonal-swiper",
+        {
+
+            /* =========================
+               FREE MODE
+            ========================== */
+
+            freeMode: true,
+
+
+            /* =========================
+               AUTOPLAY
+            ========================== */
+
+            autoplay: {
+
+                delay: 5000,
+
+                disableOnInteraction: false,
+
+            },
+
+
+            /* =========================
+               DESKTOP
+               2 CARDS = 50% EACH
+            ========================== */
+
+            slidesPerView: 2,
+
+            spaceBetween: 30,
+
+
+            /* =========================
+               ARROWS
+            ========================== */
+
+            navigation: {
+
+                prevEl: ".testimonialPrev",
+
+                nextEl: ".testimonialNext",
+
+            },
+
+
+            /* =========================
+               RESPONSIVE
+            ========================== */
+
+            breakpoints: {
+
+                /* Mobile */
+
+                320: {
+
+                    slidesPerView: 1,
+
+                    spaceBetween: 15,
+
+                },
+
+
+                /* Tablet */
+
+                768: {
+
+                    slidesPerView: 1,
+
+                    spaceBetween: 20,
+
+                },
+
+
+                /* Desktop */
+
+                992: {
+
+                    slidesPerView: 2,
+
+                    spaceBetween: 30,
+
+                }
+
+            }
+
+        }
+    );
