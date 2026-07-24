@@ -244,16 +244,10 @@ document.querySelectorAll(".closeModal").forEach(btn => {
         ".testimonal-swiper",
         {
 
-            /* =========================
-               FREE MODE
-            ========================== */
 
             freeMode: true,
 
 
-            /* =========================
-               AUTOPLAY
-            ========================== */
 
             autoplay: {
 
@@ -264,19 +258,14 @@ document.querySelectorAll(".closeModal").forEach(btn => {
             },
 
 
-            /* =========================
-               DESKTOP
-               2 CARDS = 50% EACH
-            ========================== */
+        
 
             slidesPerView: 2,
 
             spaceBetween: 30,
 
 
-            /* =========================
-               ARROWS
-            ========================== */
+          
 
             navigation: {
 
@@ -287,9 +276,7 @@ document.querySelectorAll(".closeModal").forEach(btn => {
             },
 
 
-            /* =========================
-               RESPONSIVE
-            ========================== */
+           
 
             breakpoints: {
 
