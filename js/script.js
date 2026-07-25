@@ -398,4 +398,40 @@ document.querySelectorAll(".closeModal").forEach(btn => {
         }
 
     );
+// popular services 
+  const popularServiceSwiper = new Swiper(".popular-service-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
 
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+
+      545: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+
+      780: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
