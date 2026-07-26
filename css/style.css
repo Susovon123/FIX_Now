@@ -50,8 +50,13 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
 
+}
+html,
+body{ 
+    overflow-x: hidden;
+    width: 100%;
+}
 
 .custom-container {
     max-width: 1350px;
@@ -353,6 +358,22 @@ select {
     display: none;
 }
 
+/* slider */
+.mySwiper {
+            width: 584px;
+            height: 700px;
+            margin: 110px auto;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: transform 0.8s ease;
+        }
+
+        
 
 @keyframes loading {
     from {
