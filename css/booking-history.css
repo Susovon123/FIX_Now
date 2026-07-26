@@ -72,8 +72,8 @@
     background:
         /* Padding Box (2nd Image) */
         linear-gradient(
-            90deg,
-            #FFFFFF 6%,
+            -90deg,
+            #FFFFFF 2%,
             #22C55E 100%
         ) padding-box,
 
