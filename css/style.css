@@ -22,8 +22,8 @@
     --color13: #D97706;
     --color-14: #F0F9FE;
     --color-15: #f59e0b;
-    --color-16: #FBBF24; 
-    --color-17:#D1D5DB;
+    --color-16: #FBBF24;
+    --color-17: #D1D5DB;
     --outfit-r: "outfit";
     --albert-sans-r: "albert-sans-r";
 }
@@ -171,6 +171,8 @@ p {
     position: relative;
     overflow: hidden;
     border-radius: 20px;
+    z-index: 1;
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .cmn-btn::before {
