@@ -417,12 +417,12 @@
 
     <main>
       <!-- body part -->
-      <section class="after-service py-[106px]">
+      <section class="after-service py-[50px] sm:py-[70px] lg:py-[106px]">
         <div class="max-w-[1350px] px-[15px] mx-auto">
-          <div class="grid lg:grid-cols-12 gap-[24px]">
+          <div class="grid grid-cols-1 lg:grid-cols-12">
             <div class="col-span-7">
               <div
-                class="shadow-[inset_2px_0_13.5px_0_#E5E7EB] w-full min-h-[851px] rounded-[20px]"
+                class="w-full shadow-[inset_2px_0_13.5px_0_#E5E7EB] min-h-[264px] rounded-[20px] p-[20px] sm:p-[30px]"
               >
                 <figure>
                   <img src="assets/images/after-service/Frame 587.png" alt="" />
@@ -439,7 +439,7 @@
                 </p>
               </div>
               <div
-                class="shadow-[inset_2px_0_13.5px_0_#E5E7EB] mt-[20px] w-full min-h-[264px] rounded-[20px] p-[20px]"
+                class="w-full shadow-[inset_2px_0_13.5px_0_#E5E7EB] min-h-[264px] rounded-[20px] p-[20px] sm:p-[30px] mt-[20px]"
               >
                 <div class="flex">
                   <div>
@@ -460,13 +460,12 @@
                   <div class="flex flex-col gap-[16px] ms-[9px]">
                     <div class="flex items-center">
                       <p
-                        class="font-[family-name:var(--outfit-r)] text-[var(--color10)] text-[20px] font-medium capitalize"
+                        class="font-[family-name:var(--outfit-r)] text-[var(--color10)] lg:text-[20px] text-[15px] font-medium capitalize"
                       >
                         Rahul Sharma
                       </p>
-                      <a
-                        href="#"
-                        class="gradient-btn2 text-[var(--color2)] capitalize text-[16px] font-medium font-[family-name:var(--albert-sans-r)] flex ms-[10px]"
+                      <div
+                        class="gradient-btn2 text-[var(--color2)] capitalize lg:text-[16px] font-medium font-[family-name:var(--albert-sans-r)] flex ms-[10px] text-[7px]"
                       >
                         <svg
                           width="20"
@@ -496,13 +495,20 @@
                           </defs>
                         </svg>
                         Verified Provider
-                      </a>
+                      </div>
                     </div>
-                    <p> Certified AC Repair & Maintenance Technician</p>
-                    <div class="flex items-center">
+                    <p class="lg:text-[16px] text-[8px]">
+                       Certified AC Repair & Maintenance Technician
+                    </p> 
+                    
+                    <div class="flex items-center gap-[4px] 
+         max-[991px]:flex-wrap
+         max-[991px]:justify-center
+         max-[545px]:gap-[2px]">
                       <!-- RATING -->
                       <div class="h-[74px] bg-white px-7 py-3">
-                        <div class="flex items-center gap-2 h-full">
+
+                        <div class="flex  gap-2">
                           <!-- STAR SVG -->
                           <svg
                             width="24"
@@ -510,7 +516,7 @@
                             viewBox="0 0 24 24"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
-                            class="mt-[-33px]"
+                        
                           >
                             <g clip-path="url(#clip0_2160_2300)">
                               <path
@@ -528,7 +534,8 @@
                           <div class="flex flex-col">
                             <!-- RATING NUMBER -->
                             <p
-                              class="font-[family-name:var(--outfit-r)] font-medium text-[24px] text-[var(--color10)]"
+                              class="font-[family-name:var(--outfit-r)] font-medium text-[24px] text-[var(--color10)]   max-[545px]:text-[20px]
+                 max-[545px]:leading-[24px]"
                             >
                               4.9
                             </p>
@@ -549,7 +556,8 @@
                       <div class="h-[74px] bg-white px-7 py-3 text-center">
                         <div class="flex justify-center h-full flex-col">
                           <p
-                            class="font-[family-name:var(--outfit-r)] font-medium text-[24px] text-[var(--color10)]"
+                            class="font-[family-name:var(--outfit-r)] font-medium text-[24px] text-[var(--color10)]   max-[545px]:text-[20px]
+                 max-[545px]:leading-[24px]"
                           >
                             2,500
                           </p>
@@ -566,7 +574,8 @@
                       <div class="h-[74px] bg-white px-7 py-3 text-center">
                         <div class="flex justify-center h-full flex-col">
                           <p
-                            class="font-[family-name:var(--outfit-r)] font-medium text-[24px] text-[var(--color10)]"
+                            class="font-[family-name:var(--outfit-r)] font-medium text-[24px] text-[var(--color10)]   max-[545px]:text-[20px]
+                 max-[545px]:leading-[24px]"
                           >
                             8+years
                           </p>
@@ -578,7 +587,7 @@
                 </div>
               </div>
               <div
-                class="shadow-[inset_2px_0_13.5px_0_#E5E7EB] mt-[20px] w-full min-h-[323px] rounded-[20px] p-[30px]"
+                class="w-full shadow-[inset_2px_0_13.5px_0_#E5E7EB] min-h-[264px] rounded-[20px] p-[20px] sm:p-[30px] mt-[20px]"
               >
                 <p
                   class="text-center font-[family-name:var(--outfit-r)] text-black font-medium text-[24px] capitalize"
@@ -586,7 +595,9 @@
                   appreciate your professional
                 </p>
                 <p class="text-center">your tips motivates them to do better</p>
-                <div class="grid grid-cols-5 gap-[24px] mt-[38px]">
+                <div
+                  class="grid md:grid-cols-5 grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-[14px] mt-[38px]"
+                >
                   <div
                     class="shadow-[2px_0_4px_0_#000000] w-[120px] h-[79px] bg-white rounded-[20px] flex justify-center items-center cursor-pointer"
                   >
@@ -607,7 +618,7 @@
                     <p class="text-[#030712] font-medium">50</p>
                   </div>
                   <div
-                    class="shadow-[2px_0_4px_0_#000000] w-[120px] h-[79px] bg-white rounded-[20px] flex justify-center items-center cursor-pointer"
+                    class="shadow-[2px_0_4px_0_#000000] w-[120px] h-[79px] bg-white rounded-[20px] flex justify-center items-center cursor-pointer lg:mt-[0] mt-[6px]"
                   >
                     <div>
                       <svg
@@ -677,9 +688,9 @@
                 </a>
               </div>
             </div>
-            <div class="col-span-5">
+            <div class="col-span-5 ms-[9px]">
               <div
-                class="shadow-[inset_2px_0_13.5px_0_#E5E7EB] w-full min-h-[558px] rounded-[20px] p-[30px]"
+                class="w-full shadow-[inset_2px_0_13.5px_0_#E5E7EB] min-h-[264px] rounded-[20px] p-[20px] sm:p-[30px] mt-[6px] lg:mt-[0]"
               >
                 <p
                   class="text-black font-[family-name:var(--outfit-r)] capitalize text-[24px] font-medium"
@@ -754,12 +765,12 @@
                 </div>
                 <a
                   href="#"
-                  class="block w-full py-[18px] rounded-[16px] border-2 border-[var(--color4)] text-center mt-[38px] text-[var(--color4)] font-medium font-[family-name:var(--outfit-r)]"
+                  class="block w-full py-[18px] rounded-[16px] border-2 border-[var(--color4)] text-center mt-[38px] text-[var(--color4)] font-medium font-[family-name:var(--outfit-r)] hover:bg-[var(--color4)] hover:text-white transition-all duration-500"
                 >
                   Download Invoice
                 </a>
                 <div
-                  class="w-full py-[18px] rounded-[16px] border-2 bg-[#F0FAF3] border-[#16A34A] border-2 mt-[38px] font-medium flex justify-center"
+                  class="w-full py-[18px] rounded-[16px] border-2 bg-[#F0FAF3] border-[#16A34A] border-2 mt-[38px] font-medium flex justify-center gap-[9px]"
                 >
                   <svg
                     width="32"
@@ -779,7 +790,7 @@
                 </div>
               </div>
               <div
-                class="shadow-[inset_2px_0_13.5px_0_#E5E7EB] mt-[20px] w-full min-h-[398px] rounded-[20px] p-[30px]"
+                class="w-full shadow-[inset_2px_0_13.5px_0_#E5E7EB] min-h-[264px] rounded-[20px] p-[20px] sm:p-[30px] mt-[20px]"
               >
                 <p
                   class="font-[family-name:var(--outfit-r)] font-medium text-[20px] text-black"
@@ -895,14 +906,14 @@
                 </a>
               </div>
               <div
-                class="shadow-[inset_2px_0_13.5px_0_#E5E7EB] mt-[20px] w-full min-h-[293px] rounded-[20px] p-[30px]"
+                class="w-full shadow-[inset_2px_0_13.5px_0_#E5E7EB] min-h-[264px] rounded-[20px] p-[20px] sm:p-[30px] mt-[20px]"
               >
                 <p
                   class="text-center capitalize text-black text-[24px] font-[family-name:var(--outfit-r)] font-medium"
                 >
                   you might need this
                 </p>
-                <div class="flex gap-[16px] mt-[48px] justify-center">
+                <div class="flex gap-[12px] mt-[48px] justify-center">
                   <div>
                     <div
                       class="w-[58px] h-[58px] p-[20px] rounded-full bg-[#C2E6FB]"
@@ -1050,7 +1061,7 @@
                 <div class="flex mt-[13px] gap-[10px]">
                   <a
                     href="#"
-                    class="block px-[38px] py-[22px] border-2 border-[var(--color4)] rounded-[20px] gap-[6px] whitespace-nowrap flex items-center justify-center capitalize text-[var(--color4)]"
+                    class="inline-block px-[38px] py-[22px] border-2 border-[var(--color4)] rounded-[20px] gap-[10px] whitespace-nowrap flex items-center justify-center capitalize text-[var(--color4)] hover:bg-[var(--color4)] hover:text-white transition-all duration-500"
                   >
                     Contact support
                     <svg
@@ -1068,7 +1079,7 @@
                   </a>
                   <a
                     href="#"
-                    class="block px-[38px] py-[22px] border-2 border-[var(--color4)] rounded-[20px] flex items-center justify-center capitalize gap text-[var(--color4)] whitespace-nowrap"
+                    class="inline-block px-[38px] py-[22px] border-2 border-[var(--color4)] rounded-[20px] flex items-center justify-center capitalize gap-[10px] text-[var(--color4)] whitespace-nowrap hover:bg-[var(--color4)] hover:text-white transition-all duration-500"
                   >
                     raise in issue
                     <svg
