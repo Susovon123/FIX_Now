@@ -6,7 +6,12 @@
     <title>Document</title>
 
     <!-- Tailwind cdn -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script> 
+        <!-- Font Awesome -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
 
     <!-- css link -->
     <link rel="stylesheet" href="./css/style.css" />
@@ -152,33 +157,260 @@
               <!-- Right Side -->
               <div class="flex items-center">
                 <!-- Search -->
-                <div class="relative flex items-center group mx-4">
-                  <input
-                    type="search"
-                    placeholder="Search..."
-                    class="absolute right-[50px] w-0 h-10 opacity-0 border border-[var(--color-15)] rounded-md bg-white px-0 outline-none transition-all duration-300 group-hover:w-[220px] group-hover:px-4 group-hover:opacity-100"
-                  />
+               
+                  <!-- SEARCH WRAPPER -->
 
-                  <button
-                    class="w-12 h-12 rounded-full border border-[var(--color5)] flex items-center justify-center bg-white text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300"
-                  >
-                    <svg
-                      width="23"
-                      height="23"
-                      viewBox="0 0 23 23"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </button>
-                </div>
+<div class="relative group mx-4">
+
+  <!-- INVISIBLE HOVER BRIDGE -->
+
+  <div
+    class="absolute
+    right-0
+    top-[48px]
+    w-[440px]
+    h-[25px]
+    z-[9998]"
+  ></div>
+
+  <!-- SEARCH ICON -->
+
+<button
+class="relative z-[10000]
+w-12 h-12
+rounded-full
+border border-[var(--color5)]
+flex items-center justify-center
+bg-white
+text-[var(--color5)]
+hover:bg-[var(--color-15)]
+hover:border-[var(--color-15)]
+hover:text-white
+transition-all duration-300"
+
+>
+
+
+<svg
+  width="23"
+  height="23"
+  viewBox="0 0 23 23"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 13.677 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
+
+
+  </button>
+
+  <!-- SEARCH DROPDOWN -->
+
+  <div
+    class="absolute
+    right-0
+    top-[73px]
+    w-[440px]
+    opacity-0
+    invisible
+    translate-y-[-10px]
+    group-hover:opacity-100
+    group-hover:visible
+    group-hover:translate-y-0
+    transition-all duration-300
+    z-[9999]"
+  >
+
+
+<!-- SEARCH INPUT -->
+<div
+  class="relative
+  w-full
+  h-[62px]
+  bg-white
+  rounded-[30px]
+  border border-[var(--color-15)]
+  shadow-[0_4px_15px_rgba(0,0,0,0.10)]"
+>
+
+  <input
+    type="search"
+    placeholder="Search By City, Service Type, OR ZIP Code"
+    class="w-full
+    h-full
+    rounded-[30px]
+    pl-[25px]
+    pr-[55px]
+    outline-none
+    text-[14px]
+    text-gray-600
+    placeholder:text-gray-400"
+  >
+
+  <!-- MICROPHONE -->
+  <button
+    class="absolute
+    right-[17px]
+    top-1/2
+    -translate-y-1/2
+    text-[var(--color5)]
+    hover:text-[var(--color-15)]
+    transition"
+  >
+    <i class="fa-solid fa-microphone text-[20px]"></i>
+  </button>
+
+</div>
+
+
+<!-- DROPDOWN -->
+<div
+  class="mt-[15px]
+  w-full
+  bg-white
+  rounded-[16px]
+  border border-[#e0e4e9]
+  shadow-[0_5px_20px_rgba(0,0,0,0.12)]
+  overflow-hidden"
+>
+
+  <!-- CITY -->
+  <div
+    class="flex items-center
+    min-h-[70px]
+    px-[20px]
+    bg-[#eef5ff]
+    border-b border-[#dce3eb]
+    cursor-pointer
+    hover:bg-[#e7f1ff]"
+  >
+
+    <div class="w-[40px] text-[var(--color5)]">
+      <i class="fa-solid fa-location-dot text-[22px]"></i>
+    </div>
+
+    <p class="flex-1 text-[14px] text-gray-600">
+      Search by city
+    </p>
+
+    <i class="fa-solid fa-chevron-right text-[12px] text-gray-400"></i>
+
+  </div>
+
+
+  <!-- SERVICE TYPE -->
+  <div
+    class="flex items-center
+    min-h-[70px]
+    px-[20px]
+    border-b border-[#e0e0e0]
+    cursor-pointer
+    hover:bg-[#f7f9fc]"
+  >
+
+    <div class="w-[40px] text-[var(--color5)]">
+      <i class="fa-solid fa-border-all text-[21px]"></i>
+    </div>
+
+    <p class="flex-1 text-[14px] text-gray-600">
+      Search by service type
+    </p>
+
+    <i class="fa-solid fa-chevron-right text-[12px] text-gray-400"></i>
+
+  </div>
+
+
+  <!-- ZIP CODE -->
+  <div
+    class="flex items-center
+    min-h-[70px]
+    px-[20px]
+    border-b border-[#e0e0e0]
+    cursor-pointer
+    hover:bg-[#f7f9fc]"
+  >
+
+    <div class="w-[40px] text-[var(--color5)]">
+      <i class="fa-solid fa-map-location-dot text-[21px]"></i>
+    </div>
+
+    <p class="flex-1 text-[14px] text-gray-600">
+      Search by zip code
+    </p>
+
+    <i class="fa-solid fa-chevron-right text-[12px] text-gray-400"></i>
+
+  </div>
+
+
+  <!-- RECENT SEARCHES -->
+  <div class="px-[20px] pt-[20px] pb-[20px]">
+
+    <div class="flex items-center">
+
+      <div class="w-[40px] text-[var(--color5)]">
+        <i class="fa-solid fa-clock-rotate-left text-[19px]"></i>
+      </div>
+
+      <p class="flex-1 text-[14px] text-gray-600">
+        Recent Searches
+      </p>
+
+      <button class="text-gray-400 hover:text-[var(--color-15)]">
+        <i class="fa-solid fa-xmark text-[17px]"></i>
+      </button>
+
+    </div>
+
+
+    <!-- RECENT ITEMS -->
+    <div class="mt-[15px] flex overflow-hidden">
+
+      <button
+        class="shrink-0
+        bg-[#f1f3f6]
+        rounded-[15px]
+        px-[18px]
+        py-[11px]
+        mr-[10px]
+        text-[13px]
+        text-gray-500
+        hover:bg-[#e6eaf0]"
+      >
+        Electrician Near Salt Lake
+      </button>
+
+      <button
+        class="shrink-0
+        bg-[#f1f3f6]
+        rounded-[15px]
+        px-[18px]
+        py-[11px]
+        mr-[10px]
+        text-[13px]
+        text-gray-500
+        hover:bg-[#e6eaf0]"
+      >
+        Salon At Home In Ballygunge
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  </div>
+
+</div>
 
                 <!-- User -->
                 <div
@@ -2253,6 +2485,109 @@
           }, 1000);
         }, 2000);
       });
+    </script> 
+     <script>
+      
+    // Elements
+    const searchBtn = document.getElementById("searchBtn");
+    const searchIcon = document.getElementById("searchIcon");
+    const searchContent = document.getElementById("searchContent");
+    const searchInput = document.getElementById("searchInput");
+
+    const searchOptions =
+        document.querySelectorAll(".search-option");
+
+    const removeButtons =
+        document.querySelectorAll(".remove-option");
+
+    const clearAll =
+        document.getElementById("clearAll");
+
+    const recentSearches =
+        document.getElementById("recentSearches");
+
+
+    // Open / Close Search Dropdown
+    searchBtn.addEventListener("click", function () {
+
+        searchContent.classList.toggle("hidden");
+
+        // Change Search Icon to X
+        if (searchContent.classList.contains("hidden")) {
+
+            searchIcon.classList.remove("fa-xmark");
+            searchIcon.classList.add("fa-magnifying-glass");
+
+        } else {
+
+            searchIcon.classList.remove("fa-magnifying-glass");
+            searchIcon.classList.add("fa-xmark");
+
+            searchInput.focus();
+
+        }
+
+    });
+
+
+    // Click Search Option
+    searchOptions.forEach(option => {
+
+        option.addEventListener("click", function () {
+
+            const placeholder =
+                this.dataset.placeholder;
+
+            searchInput.placeholder =
+                placeholder;
+
+            searchInput.focus();
+
+        });
+
+    });
+
+
+    // Remove Search Option
+    removeButtons.forEach(button => {
+
+        button.addEventListener("click", function (e) {
+
+            e.stopPropagation();
+
+            const option =
+                this.closest(".search-option");
+
+            option.remove();
+
+        });
+
+    });
+
+
+    // Clear All Recent Searches
+    clearAll.addEventListener("click", function () {
+
+        recentSearches.innerHTML = "";
+
+    });
+
+
+    // Recent Search Click
+    document.querySelectorAll(".recent-item")
+        .forEach(item => {
+
+            item.addEventListener("click", function () {
+
+                searchInput.value =
+                    this.textContent.trim();
+
+                searchInput.focus();
+
+            });
+
+        });
+
     </script>
   </body>
 </html>
