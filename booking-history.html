@@ -127,14 +127,60 @@
                   </a>
                 </li>
 
-                <li class="mr-[50px]">
-                  <a
-                    href="Service.html"
-                    class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
-                  >
-                    Service
-                  </a>
-                </li>
+             <li class="relative mr-[50px]">
+  <!-- Button -->
+  <button
+    id="serviceBtn"
+    class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full flex items-center gap-1"
+  >
+    Service
+
+    <svg
+      class="w-4 h-4 transition-transform duration-300"
+      id="arrow"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M19 9l-7 7-7-7"/>
+    </svg>
+  </button>
+
+  <!-- Mega Menu -->
+  <div
+    id="megaMenu"
+    class="hidden absolute -right-1/2 translate-x-1/2 top-[60px] w-[1000px] bg-white shadow-2xl rounded-xl p-8 z-50 "
+  > 
+    <div class="grid grid-cols-12 gap-8 ">
+
+      <div class="col-span-6">
+        
+        <ul class="space-y-2">
+          <li><a href="#"  class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">Electrician</a></li>
+          <li><a href="#"  class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">Plumber</a></li>
+          <li><a href="#"  class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">Personal Prooming</a></li>
+           <li><a href="#"  class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">House Help </a></li>
+            <li><a href="#"  class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"> Repairing</a></li>
+        </ul>
+      </div>
+
+      <div class="col-span-6">
+      
+        <ul class="space-y-2">
+         <li><a href="#"  class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">Carpenter</a></li>
+           <li><a href="#"  class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">Delivery Assistance</a></li>
+           <li><a href="#"  class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"></a></li>
+        </ul>
+      </div>
+
+    
+
+
+    </div>
+  
+</li>
 
                 <li class="mr-[50px]">
                   <a
@@ -2442,5 +2488,26 @@ transition-all duration-300"
         });
 
     </script>
+    <!-- Mega menu -->
+     <script>
+      const serviceBtn = document.getElementById("serviceBtn");
+const megaMenu = document.getElementById("megaMenu");
+const arrow = document.getElementById("arrow");
+
+serviceBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  megaMenu.classList.toggle("hidden");
+  arrow.classList.toggle("rotate-180");
+});
+
+// Close when clicking outside
+document.addEventListener("click", (e) => {
+  if (!megaMenu.contains(e.target) && !serviceBtn.contains(e.target)) {
+    megaMenu.classList.add("hidden");
+    arrow.classList.remove("rotate-180");
+  }
+});
+     </script>
   </body>
 </html>
