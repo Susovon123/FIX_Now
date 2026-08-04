@@ -131,7 +131,7 @@
   <!-- Button -->
   <button
     id="serviceBtn"
-    class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full flex items-center gap-1"
+    class="relative  outline-none text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full flex items-center gap-1"
   >
     Service
 
@@ -149,9 +149,9 @@
   </button>
 
   <!-- Mega Menu -->
-  <div
+ <div
     id="megaMenu"
-    class="hidden absolute -right-1/2 translate-x-1/2 top-[60px] w-[1000px] bg-white shadow-2xl rounded-xl p-8 z-50 "
+    class="hidden absolute -right-1/2 translate-x-1/2 top-[60px] w-[600px] bg-white shadow-2xl rounded-xl p-8 z-50 "
   > 
     <div class="grid grid-cols-12 gap-8 ">
 
@@ -176,7 +176,7 @@
       </div>
 
     
-
+</div>
 
     </div>
   
@@ -208,21 +208,21 @@
 
 <div class="relative group mx-4">
 
+
+  
   <!-- INVISIBLE HOVER BRIDGE -->
+<div
+  class="absolute
+  right-0
+  top-[48px]
+  w-[440px]
+  h-[25px]
+  z-40"
+></div>
 
-  <div
-    class="absolute
-    right-0
-    top-[48px]
-    w-[440px]
-    h-[25px]
-    z-[9998]"
-  ></div>
-
-  <!-- SEARCH ICON -->
-
+<!-- SEARCH ICON -->
 <button
-class="relative z-[10000]
+class="relative z-40
 w-12 h-12
 rounded-full
 border border-[var(--color5)]
@@ -233,28 +233,23 @@ hover:bg-[var(--color-15)]
 hover:border-[var(--color-15)]
 hover:text-white
 transition-all duration-300"
-
 >
-
-
-<svg
-  width="23"
-  height="23"
-  viewBox="0 0 23 23"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 13.677 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
-</svg>
-
-
-  </button>
+  <svg
+    width="23"
+    height="23"
+    viewBox="0 0 23 23"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</button>
 
   <!-- SEARCH DROPDOWN -->
 

@@ -112,7 +112,7 @@
   <!-- Button -->
   <button
     id="serviceBtn"
-    class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full flex items-center gap-1"
+    class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full flex items-center gap-1 outline-none"
   >
     Service
 
@@ -130,10 +130,11 @@
   </button>
 
   <!-- Mega Menu -->
-  <div
+ <div
     id="megaMenu"
-    class="hidden absolute -right-1/2 translate-x-1/2 top-[60px] w-[1000px] bg-white shadow-2xl rounded-xl p-8 z-50 "
+    class="hidden absolute -right-1/2 translate-x-1/2 top-[60px] w-[600px] bg-white shadow-2xl rounded-xl p-8 z-50 "
   > 
+
     <div class="grid grid-cols-12 gap-8 ">
 
       <div class="col-span-6">
@@ -157,7 +158,7 @@
       </div>
 
     
-
+</div>
 
     </div>
   
@@ -186,21 +187,20 @@
 
 <div class="relative group mx-4">
 
+ 
   <!-- INVISIBLE HOVER BRIDGE -->
+<div
+  class="absolute
+  right-0
+  top-[48px]
+  w-[440px]
+  h-[25px]
+  z-40"
+></div>
 
-  <div
-    class="absolute
-    right-0
-    top-[48px]
-    w-[440px]
-    h-[25px]
-    z-[9998]"
-  ></div>
-
-  <!-- SEARCH ICON -->
-
+<!-- SEARCH ICON -->
 <button
-class="relative z-[10000]
+class="relative z-40
 w-12 h-12
 rounded-full
 border border-[var(--color5)]
@@ -211,28 +211,23 @@ hover:bg-[var(--color-15)]
 hover:border-[var(--color-15)]
 hover:text-white
 transition-all duration-300"
-
 >
-
-
-<svg
-  width="23"
-  height="23"
-  viewBox="0 0 23 23"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 13.677 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
-</svg>
-
-
-  </button>
+  <svg
+    width="23"
+    height="23"
+    viewBox="0 0 23 23"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</button>
 
   <!-- SEARCH DROPDOWN -->
 
@@ -577,29 +572,514 @@ transition-all duration-300"
 
   <main >
     <!-- body part --> 
-    <!-- service coverage --> 
-     <section class="section-coverage py-[160px] w-full relative overflow-hidden">
-      <div class="max-w-[1350px] px-[15px] mx-auto">
-          
-      </div> 
-     <div
-    class="w-full h-[900px]
-    bg-[url('../assets/images/04.location.png')]
-    bg-center
-    bg-no-repeat
-    bg-contain relative"
-  >
-  <p
-              class="text-[var(--color-15)] text-center font-medium capitalize mb-[10px] text-[18px] sm:text-[20px] font-[family-name:var(--outfit-r)]">
-              Service Coverage
-            </p>
+<!-- service coverage -->
+<section class="section-coverage w-full overflow-hidden py-[80px] sm:py-[100px] md:py-[120px] lg:py-[160px]">
 
-            <h2
-              class="heading-2 text-[22px] sm:text-[26px] md:text-[32px] lg:text-[42px] leading-[1.2] text-[var(--color10)] capitalize text-center mx-auto max-w-[460px]">
-                Bring service close to you
-            </h2>
+  <div
+    class="
+      relative
+      w-full
+      h-[650px]
+      min-[375px]:h-[680px]
+      sm:h-[720px]
+      md:h-[780px]
+      lg:h-[900px]
+
+      bg-[url('../assets/images/location.png')]
+      bg-center
+      bg-no-repeat
+      bg-contain
+    "
+  >
+
+    <!-- ================= HEADING ================= -->
+
+    <p
+      class="
+        text-[var(--color-15)]
+        text-center
+        font-medium
+        capitalize
+        mb-[8px]
+        text-[15px]
+        min-[375px]:text-[16px]
+        sm:text-[18px]
+        md:text-[20px]
+        lg:text-[20px]
+        font-[family-name:var(--outfit-r)]
+      "
+    >
+      Service Coverage
+    </p>
+
+    <h2
+      class="
+        heading-2
+        text-[20px]
+        min-[375px]:text-[22px]
+        sm:text-[26px]
+        md:text-[32px]
+        lg:text-[42px]
+
+        leading-[1.2]
+        text-[var(--color10)]
+        capitalize
+        text-center
+        mx-auto
+
+        max-w-[280px]
+        min-[375px]:max-w-[320px]
+        sm:max-w-[380px]
+        md:max-w-[420px]
+        lg:max-w-[460px]
+      "
+    >
+      Bring service close to you
+    </h2>
+
+
+
+
+    <div
+      class="
+        absolute
+        z-[2]
+
+        w-[110px]
+        h-[55px]
+
+        min-[350px]:w-[120px]
+        min-[350px]:h-[60px]
+
+        min-[375px]:w-[135px]
+        min-[375px]:h-[65px]
+
+        sm:w-[155px]
+        sm:h-[75px]
+
+        md:w-[175px]
+        md:h-[82px]
+
+        lg:w-[195px]
+        lg:h-[93px]
+
+        rounded-[14px]
+        min-[375px]:rounded-[16px]
+        sm:rounded-[20px]
+        lg:rounded-[25px]
+
+        bg-white
+
+        shadow-[3px_0_12px_rgba(0,0,0,0.30)]
+        sm:shadow-[4px_0_16px_rgba(0,0,0,0.35)]
+        lg:shadow-[6px_0_22.5px_rgba(0,0,0,0.45)]
+
+        top-[205px]
+        min-[375px]:top-[215px]
+        sm:top-[225px]
+        md:top-[230px]
+        lg:top-[228px]
+
+        left-[3%]
+        sm:left-[7%]
+        md:left-[8%]
+        lg:left-[5.4%]
+
+        px-[8px]
+        py-[10px]
+
+        flex
+        items-center
+        justify-center
+        text-center
+      "
+    >
+      <p
+        class="
+          text-[var(--color5)]
+          font-semibold
+          text-[8px]
+          min-[375px]:text-[9px]
+          sm:text-[11px]
+          md:text-[13px]
+          lg:text-[16px]
+          whitespace-nowrap
+        "
+      >
+        Madhya Pradesh
+      </p>
+    </div>
+
+
+  
+
+    <div
+      class="
+        absolute
+        z-[2]
+
+        w-[90px]
+        h-[55px]
+
+        min-[350px]:w-[95px]
+        min-[350px]:h-[58px]
+
+        min-[375px]:w-[105px]
+        min-[375px]:h-[62px]
+
+        sm:w-[115px]
+        sm:h-[70px]
+
+        md:w-[120px]
+        md:h-[80px]
+
+        lg:w-[128px]
+        lg:h-[93px]
+
+        rounded-[14px]
+        min-[375px]:rounded-[16px]
+        sm:rounded-[18px]
+        lg:rounded-[25px]
+
+        bg-white
+
+        shadow-[3px_0_12px_rgba(0,0,0,0.30)]
+        sm:shadow-[4px_0_16px_rgba(0,0,0,0.35)]
+        lg:shadow-[6px_0_22.5px_rgba(0,0,0,0.45)]
+
+        top-[290px]
+        min-[375px]:top-[300px]
+        sm:top-[315px]
+        md:top-[325px]
+        lg:top-[328px]
+
+        left-[20%]
+        sm:left-[24%]
+        md:left-[26%]
+        lg:left-[20.8%]
+
+        px-[5px]
+        py-[8px]
+
+        flex
+        items-center
+        justify-center
+        text-center
+      "
+    >
+      <p
+        class="
+          text-[var(--color5)]
+          font-semibold
+          text-[8px]
+          min-[375px]:text-[9px]
+          sm:text-[10px]
+          md:text-[12px]
+          lg:text-[15px]
+          whitespace-nowrap
+        "
+      >
+        Maharastra
+      </p>
+    </div>
+
+
+   
+
+    <div
+      class="
+        absolute
+        z-[2]
+
+        w-[90px]
+        h-[55px]
+
+        min-[350px]:w-[95px]
+        min-[350px]:h-[58px]
+
+        min-[375px]:w-[105px]
+        min-[375px]:h-[62px]
+
+        sm:w-[115px]
+        sm:h-[70px]
+
+        md:w-[120px]
+        md:h-[80px]
+
+        lg:w-[128px]
+        lg:h-[93px]
+
+        rounded-[14px]
+        min-[375px]:rounded-[16px]
+        sm:rounded-[18px]
+        lg:rounded-[25px]
+
+        bg-white
+
+        shadow-[3px_0_12px_rgba(0,0,0,0.30)]
+        sm:shadow-[4px_0_16px_rgba(0,0,0,0.35)]
+        lg:shadow-[6px_0_22.5px_rgba(0,0,0,0.45)]
+
+        top-[365px]
+        min-[375px]:top-[375px]
+        sm:top-[390px]
+        md:top-[400px]
+        lg:top-[328px]
+
+        left-[8%]
+        sm:left-[38%]
+        md:left-[39%]
+        lg:left-[35.1%]
+
+        px-[5px]
+        py-[8px]
+
+        flex
+        items-center
+        justify-center
+        text-center
+      "
+    >
+      <p
+        class="
+          text-[var(--color5)]
+          font-semibold
+          text-[8px]
+          min-[375px]:text-[9px]
+          sm:text-[10px]
+          md:text-[12px]
+          lg:text-[15px]
+          whitespace-nowrap
+        "
+      >
+        West Bengal
+      </p>
+    </div>
+
+
+
+
+    <div
+      class="
+        absolute
+        z-[2]
+
+        w-[90px]
+        h-[55px]
+
+        min-[350px]:w-[95px]
+        min-[350px]:h-[58px]
+
+        min-[375px]:w-[105px]
+        min-[375px]:h-[62px]
+
+        sm:w-[115px]
+        sm:h-[70px]
+
+        md:w-[120px]
+        md:h-[80px]
+
+        lg:w-[128px]
+        lg:h-[93px]
+
+        rounded-[14px]
+        min-[375px]:rounded-[16px]
+        sm:rounded-[18px]
+        lg:rounded-[25px]
+
+        bg-white
+
+        shadow-[3px_0_12px_rgba(0,0,0,0.30)]
+        sm:shadow-[4px_0_16px_rgba(0,0,0,0.35)]
+        lg:shadow-[6px_0_22.5px_rgba(0,0,0,0.45)]
+
+        top-[365px]
+        min-[375px]:top-[375px]
+        sm:top-[390px]
+        md:top-[400px]
+        lg:top-[328px]
+
+        right-[8%]
+        sm:right-[28%]
+        md:right-[29%]
+        lg:right-[34.1%]
+
+        px-[5px]
+        py-[8px]
+
+        flex
+        items-center
+        justify-center
+        text-center
+      "
+    >
+      <p
+        class="
+          text-[var(--color5)]
+          font-semibold
+          text-[8px]
+          min-[375px]:text-[9px]
+          sm:text-[10px]
+          md:text-[12px]
+          lg:text-[15px]
+          whitespace-nowrap
+        "
+      >
+        Tamil Nadu
+      </p>
+    </div>
+
+
+ 
+
+    <div
+      class="
+        absolute
+        z-[2]
+
+        w-[90px]
+        h-[55px]
+
+        min-[350px]:w-[95px]
+        min-[350px]:h-[58px]
+
+        min-[375px]:w-[105px]
+        min-[375px]:h-[62px]
+
+        sm:w-[115px]
+        sm:h-[70px]
+
+        md:w-[120px]
+        md:h-[80px]
+
+        lg:w-[128px]
+        lg:h-[93px]
+
+        rounded-[14px]
+        min-[375px]:rounded-[16px]
+        sm:rounded-[18px]
+        lg:rounded-[25px]
+
+        bg-white
+
+        shadow-[3px_0_12px_rgba(0,0,0,0.30)]
+        sm:shadow-[4px_0_16px_rgba(0,0,0,0.35)]
+        lg:shadow-[6px_0_22.5px_rgba(0,0,0,0.45)]
+
+        top-[445px]
+        min-[375px]:top-[455px]
+        sm:top-[470px]
+        md:top-[480px]
+        lg:top-[328px]
+
+        left-[20%]
+        sm:left-auto
+        md:left-auto
+
+        lg:right-[244px]
+
+        px-[5px]
+        py-[8px]
+
+        flex
+        items-center
+        justify-center
+        text-center
+      "
+    >
+      <p
+        class="
+          text-[var(--color5)]
+          font-semibold
+          text-[8px]
+          min-[375px]:text-[9px]
+          sm:text-[10px]
+          md:text-[12px]
+          lg:text-[15px]
+          whitespace-nowrap
+        "
+      >
+        Karnataka
+      </p>
+    </div>
+
+
+ 
+
+    <div
+      class="
+        absolute
+        z-[2]
+
+        w-[90px]
+        h-[55px]
+
+        min-[350px]:w-[95px]
+        min-[350px]:h-[58px]
+
+        min-[375px]:w-[105px]
+        min-[375px]:h-[62px]
+
+        sm:w-[115px]
+        sm:h-[70px]
+
+        md:w-[120px]
+        md:h-[80px]
+
+        lg:w-[128px]
+        lg:h-[93px]
+
+        rounded-[14px]
+        min-[375px]:rounded-[16px]
+        sm:rounded-[18px]
+        lg:rounded-[25px]
+
+        bg-white
+
+        shadow-[3px_0_12px_rgba(0,0,0,0.30)]
+        sm:shadow-[4px_0_16px_rgba(0,0,0,0.35)]
+        lg:shadow-[6px_0_22.5px_rgba(0,0,0,0.45)]
+
+        top-[445px]
+        min-[375px]:top-[455px]
+        sm:top-[470px]
+        md:top-[480px]
+        lg:top-[328px]
+
+        right-[16%]
+        sm:right-auto
+        md:right-auto
+
+        lg:right-[94px]
+
+        px-[5px]
+        py-[8px]
+
+        flex
+        items-center
+        justify-center
+        text-center
+      "
+    >
+      <p
+        class="
+          text-[var(--color5)]
+          font-semibold
+          text-[8px]
+          min-[375px]:text-[9px]
+          sm:text-[10px]
+          md:text-[12px]
+          lg:text-[15px]
+          whitespace-nowrap
+        "
+      >
+        Manipur
+      </p>
+    </div>
+
   </div>
-     </section>
+
+</section>
     <!-- popular service -->
     <section class="popular-service py-[160px]">
       <div class="max-w-[1350px] px-[15px] mx-auto">
@@ -2356,4 +2836,4 @@ document.addEventListener("click", (e) => {
   <script src="./js/script.js"></script>
 </body>
 
-</html>
+</html
