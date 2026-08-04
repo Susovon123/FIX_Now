@@ -178,260 +178,361 @@ document.querySelectorAll(".closeModal").forEach(btn => {
 
 // slider why choose us section
 
- const swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper(".mySwiper", {
 
-            // Vertical slider
-            direction: "vertical",
+    // Vertical slider
+    direction: "vertical",
 
-            // 3 cards visible
-            slidesPerView: 3,
+    // 3 cards visible
+    slidesPerView: 3,
 
-            // Center card
-            centeredSlides: true,
+    // Center card
+    centeredSlides: true,
 
-            // Gap between cards
-            spaceBetween: 140,
+    // Gap between cards
+    spaceBetween: 140,
 
-            // Infinite loop
-            loop: true,
+    // Infinite loop
+    loop: true,
 
-            // Animation speed
-            speed: 1000,
+    // Animation speed
+    speed: 1000,
 
-            // Auto slide
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: false,
+    // Auto slide
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+
+    on: {
+
+        init: function () {
+            updateRotation(this);
+        },
+
+        slideChangeTransitionStart: function () {
+            updateRotation(this);
+        }
+
+    }
+
+});
+
+
+function updateRotation(swiper) {
+
+    swiper.slides.forEach((slide) => {
+
+        // Check if this is the active center slide
+        if (slide.classList.contains("swiper-slide-active")) {
+
+            // Center card = normal
+            slide.style.transform = "rotate(0deg)";
+
+        } else {
+
+            // Other cards = rotated
+            slide.style.transform = "rotate(160deg)";
+
+        }
+
+    });
+
+}
+// tetsimonal slider
+const testimonialSwiper = new Swiper(
+    ".testimonal-swiper",
+    {
+
+
+        freeMode: true,
+
+
+
+        autoplay: {
+
+            delay: 5000,
+
+            disableOnInteraction: false,
+
+        },
+
+
+
+
+        slidesPerView: 2,
+
+        spaceBetween: 30,
+
+
+
+
+        navigation: {
+
+            prevEl: ".testimonialPrev",
+
+            nextEl: ".testimonialNext",
+
+        },
+
+
+
+
+        breakpoints: {
+
+            /* Mobile */
+
+            320: {
+
+                slidesPerView: 1,
+
+                spaceBetween: 15,
+
             },
-                
-            on: {
 
-                init: function () {
-                    updateRotation(this);
-                },
 
-                slideChangeTransitionStart: function () {
-                    updateRotation(this);
-                }
+            /* Tablet */
+
+            768: {
+
+                slidesPerView: 1,
+
+                spaceBetween: 20,
+
+            },
+
+
+            /* Desktop */
+
+            992: {
+
+                slidesPerView: 2,
+
+                spaceBetween: 30,
+
+            }
+
+        }
+
+    }
+);
+
+// expert swiper  slider section
+
+
+const expertSwiper = new Swiper(
+    ".expert-swiper",
+    {
+
+
+        freeMode: true,
+
+
+
+        autoplay: {
+
+            delay: 3000,
+
+            disableOnInteraction: false,
+
+        },
+
+
+
+
+        slidesPerView: 1,
+
+        spaceBetween: 20,
+
+
+
+
+        breakpoints: {
+
+
+            /* 545px */
+
+            545: {
+
+                slidesPerView: 2,
+
+                spaceBetween: 20,
+
+            },
+
+
+            /* 780px */
+
+            780: {
+
+                slidesPerView: 2,
+
+                spaceBetween: 25,
+
+            },
+
+
+            /* 991px */
+
+            991: {
+
+                slidesPerView: 4,
+
+                spaceBetween: 30,
+
+            },
+
+
+            /* 1200px */
+
+            1200: {
+
+                slidesPerView: 4,
+
+                spaceBetween: 30,
+
+            }
+
+        }
+
+    }
+
+);
+// popular services 
+const popularServiceSwiper = new Swiper(".popular-service-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 15,
+        },
+
+        545: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+
+        780: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+
+        991: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+    },
+});
+
+
+//   FAQ Accordian
+
+console.log("FAQ JS loaded");
+
+const faqButtons = document.querySelectorAll(".faq-btn");
+
+faqButtons.forEach((button) => {
+
+    button.addEventListener("click", function () {
+
+        const currentItem = this.parentElement;
+        const currentContent = currentItem.querySelector(".faq-content");
+        const currentPath = currentItem.querySelector(".faq-path");
+
+
+        // Close other FAQ items
+        document.querySelectorAll(".faq-item").forEach((item) => {
+
+            if (item !== currentItem) {
+
+                item.classList.remove("active");
+
+                item.querySelector(".faq-content").style.maxHeight = "0px";
+
+                item.querySelector(".faq-path").setAttribute(
+                    "d",
+                    "M1 9H9M9 9H17M9 9V17M9 9V1"
+                );
 
             }
 
         });
 
 
-        function updateRotation(swiper) {
+        // Toggle current FAQ item
+        if (currentItem.classList.contains("active")) {
 
-            swiper.slides.forEach((slide) => {
+            currentItem.classList.remove("active");
 
-                // Check if this is the active center slide
-                if (slide.classList.contains("swiper-slide-active")) {
+            currentContent.style.maxHeight = "0px";
 
-                    // Center card = normal
-                    slide.style.transform = "rotate(0deg)";
-
-                } else {
-
-                    // Other cards = rotated
-                    slide.style.transform = "rotate(160deg)";
-
-                }
-
-            });
-
-        }
-// tetsimonal slider
- const testimonialSwiper = new Swiper(
-        ".testimonal-swiper",
-        {
+            currentPath.setAttribute(
+                "d",
+                "M1 9H9M9 9H17M9 9V17M9 9V1"
+            );
 
 
-            freeMode: true,
+        } else {
+
+            currentItem.classList.add("active");
+
+            currentContent.style.maxHeight =
+                currentContent.scrollHeight + "px";
 
 
-
-            autoplay: {
-
-                delay: 5000,
-
-                disableOnInteraction: false,
-
-            },
-
-
-        
-
-            slidesPerView: 2,
-
-            spaceBetween: 30,
-
-
-          
-
-            navigation: {
-
-                prevEl: ".testimonialPrev",
-
-                nextEl: ".testimonialNext",
-
-            },
-
-
-           
-
-            breakpoints: {
-
-                /* Mobile */
-
-                320: {
-
-                    slidesPerView: 1,
-
-                    spaceBetween: 15,
-
-                },
-
-
-                /* Tablet */
-
-                768: {
-
-                    slidesPerView: 1,
-
-                    spaceBetween: 20,
-
-                },
-
-
-                /* Desktop */
-
-                992: {
-
-                    slidesPerView: 2,
-
-                    spaceBetween: 30,
-
-                }
-
-            }
+            currentPath.setAttribute(
+                "d",
+                "M1 9H17"
+            );
 
         }
-    ); 
 
-    // expert swiper  slider section
-  
+    });
 
-    const expertSwiper = new Swiper(
-        ".expert-swiper",
-        {
+});
 
-
-            freeMode: true,
-
-
-
-            autoplay: {
-
-                delay: 3000,
-
-                disableOnInteraction: false,
-
-            },
-
-
-            
-
-            slidesPerView: 1,
-
-            spaceBetween: 20,
-
-
-           
-
-            breakpoints: {
-
-
-                /* 545px */
-
-                545: {
-
-                    slidesPerView: 2,
-
-                    spaceBetween: 20,
-
-                },
-
-
-                /* 780px */
-
-                780: {
-
-                    slidesPerView: 2,
-
-                    spaceBetween: 25,
-
-                },
-
-
-                /* 991px */
-
-                991: {
-
-                    slidesPerView: 4,
-
-                    spaceBetween: 30,
-
-                },
-
-
-                /* 1200px */
-
-                1200: {
-
-                    slidesPerView: 4,
-
-                    spaceBetween: 30,
-
-                }
-
-            }
-
-        }
-
-    );
-// popular services 
-  const popularServiceSwiper = new Swiper(".popular-service-swiper", {
-    slidesPerView: 1,
-    spaceBetween: 20,
+// Swiper Initialization
+const professionalServiceSwiper = new Swiper(".professional-service-swiper", {
+    slidesPerView: 3,
+    spaceBetween: 24,
     loop: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-
+    speed: 800,
     breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 15,
-      },
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 16,
+        },
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+        }
+    }
+});
 
-      545: {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
+// Card Active Toggle (Using Event Delegation)
+document.addEventListener("click", function (event) {
+    let btn = event.target.closest(".arrow-btn");
+    if (!btn) return; // 
 
-      780: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
+    let card = btn.closest(".service-card");
+    if (card) {
+        card.classList.toggle("active");
+    }
+});
 
-      991: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-    },
-  });
