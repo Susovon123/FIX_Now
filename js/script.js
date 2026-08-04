@@ -535,3 +535,4 @@ document.addEventListener("click", function (event) {
         card.classList.toggle("active");
     }
 });
+

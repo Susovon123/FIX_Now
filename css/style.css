@@ -452,6 +452,37 @@ select {
 }
 
 /* professional services ends */
+/* professional services modal starts */
+dialog {
+  border: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+dialog[open] {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+/* professional services modal ends */
 
 /* service coverage starts */
 
