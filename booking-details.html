@@ -524,123 +524,220 @@ transition-all duration-300">
 
 
         </nav>
-        <!-- ===================== Navbar Ends ===================== -->
-        <!-- Overlay -->
-        <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-40">
+         <!-- ===================== Navbar Ends ===================== -->
+      <!-- Overlay -->
+      <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-40"></div>
+
+      <!-- Mobile Sidebar -->
+      <div
+        id="mobileMenu"
+        class="fixed top-0 right-[-100%] w-[300px] h-screen bg-white z-50 transition-all duration-300 shadow-2xl overflow-y-auto"
+      >
+        <!-- Header -->
+        <div
+          class="flex items-center justify-between px-5 py-5 border-b border-[var(--color11)]"
+        >
+          <a href="index.html">
+            <img
+              src="assets/images/Frame 14.png"
+              alt="logo"
+              class="w-[140px]"
+            />
+          </a>
+
+          <button id="closeBtn" class="text-4xl text-[var(--color6)]">
+            &times;
+          </button>
         </div>
 
-        <!-- Mobile Sidebar -->
-        <div id="mobileMenu"
-            class="fixed top-0 right-[-100%] w-[300px] h-screen bg-white z-50 transition-all duration-300 shadow-2xl overflow-y-auto">
+        <!-- Icons -->
+        <div class="flex justify-start px-8 gap-4 mt-8">
+          <!-- Search -->
+          <div
+            class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2"
+          >
+            <svg
+              width="23"
+              height="23"
+              viewBox="0 0 23 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
+                stroke="#1A3151"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
 
-            <!-- Header -->
-            <div class="flex items-center justify-between px-5 py-5 border-b border-[var(--color11)]">
+          <!-- User -->
+          <div
+            class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2"
+          >
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
+                stroke="#1A3151"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
 
-                <a href="index.html">
-                    <img src="assets/images/Frame 14.png" alt="logo" class="w-[140px]">
-                </a>
-
-                <button id="closeBtn" class="text-4xl text-[var(--color6)]">
-                    &times;
-                </button>
-
-            </div>
-
-            <!-- Icons -->
-            <div class="flex justify-start px-8 gap-4 mt-8">
-
-                <!-- Search -->
-                <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
-
-                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-                        <path
-                            d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
-                            stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-
-                    </svg>
-
-                </div>
-
-                <!-- User -->
-                <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
-                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
-                            stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-
-                </div>
-
-                <!-- Cart -->
-                <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
-
-                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z"
-                            stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-
-                </div>
-
-            </div>
-
-            <!-- Menu -->
-            <ul class="mt-6">
-
-                <li class="border-b border-[var(--color11)]">
-                    <a href="index.html"
-                        class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]">
-                        Home
-                    </a>
-                </li>
-
-                <li class="border-b border-[var(--color11)]">
-                    <a href="service.html"
-                        class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]">
-                        Service
-                    </a>
-                </li>
-
-                <li class="border-b border-[var(--color11)]">
-                    <a href="about.us.html"
-                        class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]">
-                        About
-                    </a>
-                </li>
-
-                <li class="border-b border-[var(--color11)]">
-                    <a href="contact-us.html"
-                        class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]">
-                        Contact Us
-                    </a>
-                </li>
-
-            </ul>
-
-            <div class="px-8 py-5 border-t border-[var(--color11)]">
-
-                <a href="#" class="block text-[18px] text-[var(--color-15)] hover:text-[var(--color4)] transition">
-                    Help & Support
-                </a>
-
-            </div>
-            <!-- Button -->
-            <div class="px-8 mt-6 space-y-4">
-
-                <a href="#"
-                    class="openSignup cmn-btn relative block w-full overflow-hidden bg-[var(--color4)] z-10 py-[16px] rounded-[20px] text-center text-[18px] font-semibold text-white">
-                    Sign Up
-                </a>
-
-                <a href="#"
-                    class="block w-full border-2 border-[var(--color4)] rounded-[20px] py-[16px] text-center text-[18px] font-semibold text-[var(--color5)] hover:bg-[var(--color4)] hover:text-white transition-all duration-300">
-                    Work With Us
-                </a>
-
-            </div>
-
+          <!-- Cart -->
+          <div
+            class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2"
+          >
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z"
+                stroke="#1A3151"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
         </div>
+
+        <!-- Menu -->
+        <ul class="mt-6">
+          <li class="border-b border-[var(--color11)]">
+            <a
+              href="index.html"
+              class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+            >
+              Home
+            </a>
+          </li>
+
+          <li class="border-b border-[var(--color11)]">
+   <button
+  id="mobileServicesBtn"
+  type="button"
+  class="w-full flex items-center justify-between px-5 py-4"
+>
+  <span  class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+    Services
+  </span>
+
+  <svg
+    id="mobileServicesArrow"
+    class="w-4 h-4 transition-transform duration-300"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M19 9l-7 7-7-7"
+    />
+  </svg>
+</button>
+
+
+<ul
+  id="mobileServicesDropdown"
+  class="hidden px-5 py-2 border-t border-gray-100"
+>
+  <li class="py-3">
+    <a href="#" class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      Electrician
+    </a>
+  </li>
+
+  <li class="py-3">
+    <a href="#" class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      Plumber
+    </a>
+  </li>
+
+  <li class="py-3">
+    <a href="#" class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      Personal Grooming
+    </a>
+  </li>
+
+  <li class="py-3">
+    <a href="#" class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      House Help
+    </a>
+  </li>
+
+  <li class="py-3">
+    <a href="#" class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      Repairing
+    </a>
+  </li>
+
+  <li class="py-3">
+    <a href="#" class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      Carpenter
+    </a>
+  </li>
+</ul>
+          </li>
+
+                   <li class="mr-[50px]">
+                                <a href="about.us.html"    class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+                                    About
+                                </a>
+                            </li>
+
+          <li class="border-b border-[var(--color11)]">
+            <a
+              href="contact-us.html"
+              class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+            >
+              Contact Us
+            </a>
+          </li>
+        </ul>
+
+        <div class="px-8 py-5 border-t border-[var(--color11)]">
+          <a
+            href="#"
+            class="block text-[18px] text-[var(--color-15)] hover:text-[var(--color4)] transition"
+          >
+            Help & Support
+          </a>
+        </div>
+        <!-- Button -->
+        <div class="px-8 mt-6 space-y-4">
+          <a
+            href="#"
+            class="openSignup cmn-btn relative block w-full overflow-hidden bg-[var(--color4)] z-10 py-[16px] rounded-[20px] text-center text-[18px] font-semibold text-white"
+          >
+            Sign Up
+          </a>
+
+          <a
+            href="#"
+            class="block w-full border-2 border-[var(--color4)] rounded-[20px] py-[16px] text-center text-[18px] font-semibold text-[var(--color5)] hover:bg-[var(--color4)] hover:text-white transition-all duration-300"
+          >
+            Work With Us
+          </a>
+        </div>
+      </div>
 
 
     </header>
@@ -3358,6 +3455,53 @@ gap-[20px]
             }
         });
     </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const mobileServicesBtn =
+      document.getElementById("mobileServicesBtn");
+
+    const mobileServicesDropdown =
+      document.getElementById("mobileServicesDropdown");
+
+    const mobileServicesArrow =
+      document.getElementById("mobileServicesArrow");
+
+    const closeMobileServices =
+      document.getElementById("closeMobileServices");
+
+    const mobileMenu =
+      document.getElementById("mobileMenu");
+
+
+
+    mobileServicesBtn.addEventListener("click", function () {
+
+      mobileServicesDropdown.classList.toggle("hidden");
+
+      mobileServicesArrow.classList.toggle("rotate-180");
+
+    });
+
+
+  
+
+    closeMobileServices.addEventListener("click", function () {
+
+      mobileMenu.classList.remove("right-0");
+
+      mobileMenu.classList.add("right-[-100%]");
+
+      // Close Services dropdown
+      mobileServicesDropdown.classList.add("hidden");
+
+      // Reset arrow
+      mobileServicesArrow.classList.remove("rotate-180");
+
+    });
+
+  });
+</script>
 </body>
 
 

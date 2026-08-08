@@ -475,7 +475,7 @@
           </div>
         </div>
       </nav>
-      <!-- ===================== Navbar Ends ===================== -->
+       <!-- ===================== Navbar Ends ===================== -->
       <!-- Overlay -->
       <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-40"></div>
 
@@ -572,34 +572,92 @@
           <li class="border-b border-[var(--color11)]">
             <a
               href="index.html"
-              class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]"
+              class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
             >
               Home
             </a>
           </li>
 
           <li class="border-b border-[var(--color11)]">
-            <a
-              href="service.html"
-              class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]"
-            >
-              Service
-            </a>
+   <button
+  id="mobileServicesBtn"
+  type="button"
+  class="w-full flex items-center justify-between px-5 py-4"
+>
+  <span  class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+    Services
+  </span>
+
+  <svg
+    id="mobileServicesArrow"
+    class="w-4 h-4 transition-transform duration-300"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M19 9l-7 7-7-7"
+    />
+  </svg>
+</button>
+
+
+<ul
+  id="mobileServicesDropdown"
+  class="hidden px-5 py-2 border-t border-gray-100"
+>
+  <li class="py-3">
+    <a href="#" class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      Electrician
+    </a>
+  </li>
+
+  <li class="py-3">
+    <a href="#" class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      Plumber
+    </a>
+  </li>
+
+  <li class="py-3">
+    <a href="#" class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      Personal Grooming
+    </a>
+  </li>
+
+  <li class="py-3">
+    <a href="#" class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      House Help
+    </a>
+  </li>
+
+  <li class="py-3">
+    <a href="#" class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      Repairing
+    </a>
+  </li>
+
+  <li class="py-3">
+    <a href="#" class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      Carpenter
+    </a>
+  </li>
+</ul>
           </li>
 
-          <li class="border-b border-[var(--color11)]">
-            <a
-              href="about.us.html"
-              class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]"
-            >
-              About
-            </a>
-          </li>
+                   <li class="mr-[50px]">
+                                <a href="about.us.html"    class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+                                    About
+                                </a>
+                            </li>
 
           <li class="border-b border-[var(--color11)]">
             <a
               href="contact-us.html"
-              class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]"
+              class="block px-8 py-4 text-[20px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
             >
               Contact Us
             </a>
@@ -2582,6 +2640,53 @@
           arrow.classList.remove("rotate-180");
         }
       });
-    </script>
+    </script> 
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const mobileServicesBtn =
+      document.getElementById("mobileServicesBtn");
+
+    const mobileServicesDropdown =
+      document.getElementById("mobileServicesDropdown");
+
+    const mobileServicesArrow =
+      document.getElementById("mobileServicesArrow");
+
+    const closeMobileServices =
+      document.getElementById("closeMobileServices");
+
+    const mobileMenu =
+      document.getElementById("mobileMenu");
+
+
+
+    mobileServicesBtn.addEventListener("click", function () {
+
+      mobileServicesDropdown.classList.toggle("hidden");
+
+      mobileServicesArrow.classList.toggle("rotate-180");
+
+    });
+
+
+  
+
+    closeMobileServices.addEventListener("click", function () {
+
+      mobileMenu.classList.remove("right-0");
+
+      mobileMenu.classList.add("right-[-100%]");
+
+      // Close Services dropdown
+      mobileServicesDropdown.classList.add("hidden");
+
+      // Reset arrow
+      mobileServicesArrow.classList.remove("rotate-180");
+
+    });
+
+  });
+</script>
   </body>
 </html>
