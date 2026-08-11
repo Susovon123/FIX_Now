@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* service banner starts */
+.service-banner {
+  background: url("../assets/images/service/service-banner.png") center
+    center/cover no-repeat;
+  min-height: 520px;
+}
+
+/* service stacking part starts */
+
+.service-stack {
+  position: relative;
+}
+
+.service-card {
+  position: sticky;
+  min-height: 720px;
+  transform-origin: top center;
+  transition: transform 0.25s ease;
+  will-change: transform;
+}
+
+/* booking process starts */
+.booking-step-card {
+  overflow: hidden;
+}
+
