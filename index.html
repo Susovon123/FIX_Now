@@ -45,7 +45,6 @@
         ></div>
       </div>
     </div>
-
     <!-- starting  navbar -->
     <!-- Header -->
     <header>
@@ -62,7 +61,6 @@
               Trusted Local Services, Right When You Need Them.
             </p>
           </div>
-
           <!-- Right -->
           <div class="w-auto flex items-center justify-end gap-6 mt-4 md:mt-0">
             <div class="location-box w-[250px] shrink-0">
@@ -71,23 +69,19 @@
                 <option value="search">🔍 Search By Area</option>
                 <option value="current">📍 Use My Current Location</option>
               </select>
-
               <div id="searchBox" class="hide">
                 <input type="text" placeholder="Search your area..." />
               </div>
-
               <div id="addressBox" class="hide">
                 <h4>Your Current Address</h4>
                 <p id="address">No location selected.</p>
               </div>
             </div>
-
             <p
               class="hidden lg:block text-[16px] text-[var(--color-15)] whitespace-nowrap"
             >
               Help & Support
             </p>
-
             <a
               href="#"
               class="hidden lg:block text-[16px] rounded-[20px] border-2 border-[var(--color4)] px-[36px] py-[16px] whitespace-nowrap text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-500 ease-in-out"
@@ -97,12 +91,10 @@
           </div>
         </div>
       </div>
-
       <!-- Gradient Divider -->
       <div
         class="h-[1px] w-full bg-[linear-gradient(90deg,rgb(240,249,254)_1%,rgb(48,137,224)_47%,rgb(240,249,254)_100%)]"
       ></div>
-
       <nav class="w-full bg-[var(--color2)] px-[20px] py-[11px]">
         <!-- container -->
         <div class="w-full">
@@ -115,7 +107,6 @@
                 class="w-auto h-auto"
               />
             </a>
-
             <!-- Desktop Menu -->
             <div class="hidden lg:flex items-center w-full">
               <!-- Navigation -->
@@ -123,68 +114,113 @@
                 <li class="mr-[50px]">
                   <a
                     href="index.html"
-                  class="relative text-[16px] font-semibold text-[var(--color4)] after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-full after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2"
+                    class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
                   >
                     Home
                   </a>
                 </li>
-
-           
-             <li class="relative mr-[50px]">
-  <!-- Button -->
-  <button
-    id="serviceBtn"
-    class="relative outline-none text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full flex items-center gap-1"
-  >
-    Service
-
-    <svg
-      class="w-4 h-4 transition-transform duration-300"
-      id="arrow"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M19 9l-7 7-7-7"/>
-    </svg>
-  </button>
-
-  <!-- Mega Menu -->
- <div
-    id="megaMenu"
-    class="hidden absolute -right-1/2 translate-x-1/2 top-[60px] w-[600px] bg-white shadow-2xl rounded-xl p-8 z-50 "
-  > 
-    <div class="grid grid-cols-12 gap-8 ">
-
-      <div class="col-span-6">
-        
-        <ul class="space-y-2">
-          <li><a href="#"  class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">Electrician</a></li>
-          <li><a href="#"  class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">Plumber</a></li>
-          <li><a href="#"  class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">Personal Prooming</a></li>
-           <li><a href="#"  class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">House Help </a></li>
-            <li><a href="#"  class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"> Repairing</a></li>
-        </ul>
-      </div>
-
-      <div class="col-span-6">
-      
-        <ul class="space-y-2">
-         <li><a href="#"  class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">Carpenter</a></li>
-           <li><a href="#"  class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">Delivery Assistance</a></li>
-           <li><a href="#"  class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"></a></li>
-        </ul>
-      </div>
-
-    
-</div>
-
-    </div>
-  
-</li>
-
+                <li class="relative mr-[50px]">
+                  <!-- Button -->
+                  <button
+                    id="serviceBtn"
+                    class="relative outline-none text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full flex items-center gap-1"
+                  >
+                    Service
+                    <svg
+                      class="w-4 h-4 transition-transform duration-300"
+                      id="arrow"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                  <!-- Mega Menu -->
+                  <div
+                    id="megaMenu"
+                    class="hidden absolute -right-1/2 translate-x-1/2 top-[60px] w-[600px] bg-white shadow-2xl rounded-xl p-8 z-50"
+                  >
+                    <div class="grid grid-cols-12 gap-8">
+                      <div class="col-span-6">
+                        <ul class="space-y-2">
+                          <li>
+                            <a
+                              href="#"
+                              class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                              Electrician
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                              Plumber
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                              Personal Prooming
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                              House Help
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                              Repairing
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-span-6">
+                        <ul class="space-y-2">
+                          <li>
+                            <a
+                              href="#"
+                              class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                              Carpenter
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                              Delivery Assistance
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
                 <li class="mr-[50px]">
                   <a
                     href="about.us.html"
@@ -193,7 +229,6 @@
                     About
                   </a>
                 </li>
-
                 <li>
                   <a
                     href="contact-us.html"
@@ -203,253 +238,136 @@
                   </a>
                 </li>
               </ul>
-
               <!-- Right Side -->
               <div class="flex items-center">
                 <!-- Search -->
-               
-                  <!-- SEARCH WRAPPER -->
-
-<div class="relative group mx-4">
-
-  <!-- INVISIBLE HOVER BRIDGE -->
-  <div
+                <div class="relative group mx-4">
+                  <!-- INVISIBLE HOVER BRIDGE -->
+                  <div
                     class="absolute right-0 top-[48px] w-[40px] h-[25px] z-40"
                   ></div>
-
-<!-- SEARCH ICON -->
-<button
-class="relative z-40
-w-12 h-12
-rounded-full
-border border-[var(--color5)]
-flex items-center justify-center
-bg-white
-text-[var(--color5)]
-hover:bg-[var(--color-15)]
-hover:border-[var(--color-15)]
-hover:text-white
-transition-all duration-300"
->
-  <svg
-    width="23"
-    height="23"
-    viewBox="0 0 23 23"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-  </svg>
-</button>
-
-  <!-- SEARCH DROPDOWN -->
-
-  <div
-    class="absolute
-    right-0
-    top-[73px]
-    w-[440px]
-    opacity-0
-    invisible
-    translate-y-[-10px]
-    group-hover:opacity-100
-    group-hover:visible
-    group-hover:translate-y-0
-    transition-all duration-300
-    z-[9999]"
-  >
-
-
-<!-- SEARCH INPUT -->
-<div
-  class="relative
-  w-full
-  h-[62px]
-  bg-white
-  rounded-[30px]
-  border border-[var(--color-15)]
-  shadow-[0_4px_15px_rgba(0,0,0,0.10)]"
->
-
-  <input
-    type="search"
-    placeholder="Search By City, Service Type, OR ZIP Code"
-    class="w-full
-    h-full
-    rounded-[30px]
-    pl-[25px]
-    pr-[55px]
-    outline-none
-    text-[14px]
-    text-gray-600
-    placeholder:text-gray-400"
-  >
-
-  <!-- MICROPHONE -->
-  <button
-    class="absolute
-    right-[17px]
-    top-1/2
-    -translate-y-1/2
-    text-[var(--color5)]
-    hover:text-[var(--color-15)]
-    transition"
-  >
-    <i class="fa-solid fa-microphone text-[20px]"></i>
-  </button>
-
-</div>
-
-
-<!-- DROPDOWN -->
-<div
-  class="mt-[15px]
-  w-full
-  bg-white
-  rounded-[16px]
-  border border-[#e0e4e9]
-  shadow-[0_5px_20px_rgba(0,0,0,0.12)]
-  overflow-hidden"
->
-
-  <!-- CITY -->
-  <div
-    class="flex items-center
-    min-h-[70px]
-    px-[20px]
-    bg-[#eef5ff]
-    border-b border-[#dce3eb]
-    cursor-pointer
-    hover:bg-[#e7f1ff]"
-  >
-
-    <div class="w-[40px] text-[var(--color5)]">
-      <i class="fa-solid fa-location-dot text-[22px]"></i>
-    </div>
-
-    <p class="flex-1 text-[14px] text-gray-600">
-      Search by city
-    </p>
-
-    <i class="fa-solid fa-chevron-right text-[12px] text-gray-400"></i>
-
-  </div>
-
-
-  <!-- SERVICE TYPE -->
-  <div
-    class="flex items-center
-    min-h-[70px]
-    px-[20px]
-    border-b border-[#e0e0e0]
-    cursor-pointer
-    hover:bg-[#f7f9fc]"
-  >
-
-    <div class="w-[40px] text-[var(--color5)]">
-      <i class="fa-solid fa-border-all text-[21px]"></i>
-    </div>
-
-    <p class="flex-1 text-[14px] text-gray-600">
-      Search by service type
-    </p>
-
-    <i class="fa-solid fa-chevron-right text-[12px] text-gray-400"></i>
-
-  </div>
-
-
-  <!-- ZIP CODE -->
-  <div
-    class="flex items-center
-    min-h-[70px]
-    px-[20px]
-    border-b border-[#e0e0e0]
-    cursor-pointer
-    hover:bg-[#f7f9fc]"
-  >
-
-    <div class="w-[40px] text-[var(--color5)]">
-      <i class="fa-solid fa-map-location-dot text-[21px]"></i>
-    </div>
-
-    <p class="flex-1 text-[14px] text-gray-600">
-      Search by zip code
-    </p>
-
-    <i class="fa-solid fa-chevron-right text-[12px] text-gray-400"></i>
-
-  </div>
-
-
-  <!-- RECENT SEARCHES -->
-  <div class="px-[20px] pt-[20px] pb-[20px]">
-
-    <div class="flex items-center">
-
-      <div class="w-[40px] text-[var(--color5)]">
-        <i class="fa-solid fa-clock-rotate-left text-[19px]"></i>
-      </div>
-
-      <p class="flex-1 text-[14px] text-gray-600">
-        Recent Searches
-      </p>
-
-      <button class="text-gray-400 hover:text-[var(--color-15)]">
-        <i class="fa-solid fa-xmark text-[17px]"></i>
-      </button>
-
-    </div>
-
-
-    <!-- RECENT ITEMS -->
-    <div class="mt-[15px] flex overflow-hidden">
-
-      <button
-        class="shrink-0
-        bg-[#f1f3f6]
-        rounded-[15px]
-        px-[18px]
-        py-[11px]
-        mr-[10px]
-        text-[13px]
-        text-gray-500
-        hover:bg-[#e6eaf0]"
-      >
-        Electrician Near Salt Lake
-      </button>
-
-      <button
-        class="shrink-0
-        bg-[#f1f3f6]
-        rounded-[15px]
-        px-[18px]
-        py-[11px]
-        mr-[10px]
-        text-[13px]
-        text-gray-500
-        hover:bg-[#e6eaf0]"
-      >
-        Salon At Home In Ballygunge
-      </button>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-  </div>
-
-</div>
-
+                  <!-- SEARCH ICON -->
+                  <button
+                    class="relative z-40 w-12 h-12 rounded-full border border-[var(--color5)] flex items-center justify-center bg-white text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300"
+                  >
+                    <svg
+                      width="23"
+                      height="23"
+                      viewBox="0 0 23 23"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <!-- SEARCH DROPDOWN -->
+                  <div
+                    class="absolute right-0 top-[73px] w-[440px] opacity-0 invisible translate-y-[-10px] group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-20"
+                  >
+                    <!-- SEARCH INPUT -->
+                    <div
+                      class="relative w-full h-[62px] bg-white rounded-[30px] border border-[var(--color-15)] shadow-[0_4px_15px_rgba(0,0,0,0.10)]"
+                    >
+                      <input
+                        type="search"
+                        placeholder="Search By City, Service Type, OR ZIP Code"
+                        class="w-full h-full rounded-[30px] pl-[25px] pr-[55px] outline-none text-[14px] text-gray-600 placeholder:text-gray-400"
+                      />
+                      <!-- MICROPHONE -->
+                      <button
+                        class="absolute right-[17px] top-1/2 -translate-y-1/2 text-[var(--color5)] hover:text-[var(--color-15)] transition"
+                      >
+                        <i class="fa-solid fa-microphone text-[20px]"></i>
+                      </button>
+                    </div>
+                    <!-- DROPDOWN -->
+                    <div
+                      class="mt-[15px] w-full bg-white rounded-[16px] border border-[#e0e4e9] shadow-[0_5px_20px_rgba(0,0,0,0.12)] overflow-hidden"
+                    >
+                      <!-- CITY -->
+                      <div
+                        class="flex items-center min-h-[70px] px-[20px] bg-[#eef5ff] border-b border-[#dce3eb] cursor-pointer hover:bg-[#e7f1ff]"
+                      >
+                        <div class="w-[40px] text-[var(--color5)]">
+                          <i class="fa-solid fa-location-dot text-[22px]"></i>
+                        </div>
+                        <p class="flex-1 text-[14px] text-gray-600">
+                          Search by city
+                        </p>
+                        <i
+                          class="fa-solid fa-chevron-right text-[12px] text-gray-400"
+                        ></i>
+                      </div>
+                      <!-- SERVICE TYPE -->
+                      <div
+                        class="flex items-center min-h-[70px] px-[20px] border-b border-[#e0e0e0] cursor-pointer hover:bg-[#f7f9fc]"
+                      >
+                        <div class="w-[40px] text-[var(--color5)]">
+                          <i class="fa-solid fa-border-all text-[21px]"></i>
+                        </div>
+                        <p class="flex-1 text-[14px] text-gray-600">
+                          Search by service type
+                        </p>
+                        <i
+                          class="fa-solid fa-chevron-right text-[12px] text-gray-400"
+                        ></i>
+                      </div>
+                      <!-- ZIP CODE -->
+                      <div
+                        class="flex items-center min-h-[70px] px-[20px] border-b border-[#e0e0e0] cursor-pointer hover:bg-[#f7f9fc]"
+                      >
+                        <div class="w-[40px] text-[var(--color5)]">
+                          <i
+                            class="fa-solid fa-map-location-dot text-[21px]"
+                          ></i>
+                        </div>
+                        <p class="flex-1 text-[14px] text-gray-600">
+                          Search by zip code
+                        </p>
+                        <i
+                          class="fa-solid fa-chevron-right text-[12px] text-gray-400"
+                        ></i>
+                      </div>
+                      <!-- RECENT SEARCHES -->
+                      <div class="px-[20px] pt-[20px] pb-[20px]">
+                        <div class="flex items-center">
+                          <div class="w-[40px] text-[var(--color5)]">
+                            <i
+                              class="fa-solid fa-clock-rotate-left text-[19px]"
+                            ></i>
+                          </div>
+                          <p class="flex-1 text-[14px] text-gray-600">
+                            Recent Searches
+                          </p>
+                          <button
+                            class="text-gray-400 hover:text-[var(--color-15)]"
+                          >
+                            <i class="fa-solid fa-xmark text-[17px]"></i>
+                          </button>
+                        </div>
+                        <!-- RECENT ITEMS -->
+                        <div class="mt-[15px] flex overflow-hidden">
+                          <button
+                            class="shrink-0 bg-[#f1f3f6] rounded-[15px] px-[18px] py-[11px] mr-[10px] text-[13px] text-gray-500 hover:bg-[#e6eaf0]"
+                          >
+                            Electrician Near Salt Lake
+                          </button>
+                          <button
+                            class="shrink-0 bg-[#f1f3f6] rounded-[15px] px-[18px] py-[11px] mr-[10px] text-[13px] text-gray-500 hover:bg-[#e6eaf0]"
+                          >
+                            Salon At Home In Ballygunge
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <!-- User -->
                 <div
                   class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300"
@@ -473,7 +391,6 @@ transition-all duration-300"
                   </a>
                 </div>
               </div>
-
               <!-- Cart -->
               <div
                 class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300"
@@ -497,7 +414,6 @@ transition-all duration-300"
                   </svg>
                 </a>
               </div>
-
               <!-- Button -->
               <a
                 href="#"
@@ -506,7 +422,6 @@ transition-all duration-300"
                 Sign Up
               </a>
             </div>
-
             <!-- Mobile Menu Button -->
             <button id="menuBtn" class="lg:hidden">
               <svg
@@ -527,7 +442,7 @@ transition-all duration-300"
           </div>
         </div>
       </nav>
-      <!-- ===================== Navbar Ends ===================== -->
+     <!-- ===================== Navbar Ends ===================== -->
       <!-- Overlay -->
       <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-40"></div>
 
@@ -624,34 +539,92 @@ transition-all duration-300"
           <li class="border-b border-[var(--color11)]">
             <a
               href="index.html"
-              class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]"
+      class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
             >
               Home
             </a>
           </li>
 
           <li class="border-b border-[var(--color11)]">
-            <a
-              href="service.html"
-              class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]"
-            >
-              Service
-            </a>
+   <button
+  id="mobileServicesBtn"
+  type="button"
+  class="w-full flex items-center justify-between px-5 py-4"
+>
+  <span  class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+    Services
+  </span>
+
+  <svg
+    id="mobileServicesArrow"
+    class="w-4 h-4 transition-transform duration-300"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M19 9l-7 7-7-7"
+    />
+  </svg>
+</button>
+
+
+<ul
+  id="mobileServicesDropdown"
+  class="hidden px-5 py-2 border-t border-gray-100"
+>
+  <li >
+    <a href="#"  class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      Electrician
+    </a>
+  </li>
+
+  <li class="py-3">
+    <a href="#"  class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      Plumber
+    </a>
+  </li>
+
+  <li class="py-3">
+    <a href="#"  class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      Personal Grooming
+    </a>
+  </li>
+
+  <li class="py-3">
+    <a href="#"  class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      House Help
+    </a>
+  </li>
+
+  <li class="py-3">
+    <a href="#"  class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      Repairing
+    </a>
+  </li>
+
+  <li class="py-3">
+    <a href="#"   class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+      Carpenter
+    </a>
+  </li>
+</ul>
           </li>
 
-          <li class="border-b border-[var(--color11)]">
-            <a
-              href="about.us.html"
-              class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]"
-            >
-              About
-            </a>
-          </li>
+                   <li class="mr-[50px]">
+                                <a href="about.us.html"   class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+                                    About
+                                </a>
+                            </li>
 
           <li class="border-b border-[var(--color11)]">
             <a
               href="contact-us.html"
-              class="block px-8 py-4 text-[20px] text-[var(--color6)] hover:bg-[var(--color-14)]"
+              class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
             >
               Contact Us
             </a>
@@ -684,8 +657,6 @@ transition-all duration-300"
         </div>
       </div>
     </header>
-
-
   <main>
     <!-- banner starts -->
     <section class="hero-banner relative overflow-hidden bg-white">
@@ -4104,7 +4075,53 @@ document.addEventListener("click", (e) => {
 });
      </script>
   
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
 
+    const mobileServicesBtn =
+      document.getElementById("mobileServicesBtn");
+
+    const mobileServicesDropdown =
+      document.getElementById("mobileServicesDropdown");
+
+    const mobileServicesArrow =
+      document.getElementById("mobileServicesArrow");
+
+    const closeMobileServices =
+      document.getElementById("closeMobileServices");
+
+    const mobileMenu =
+      document.getElementById("mobileMenu");
+
+
+
+    mobileServicesBtn.addEventListener("click", function () {
+
+      mobileServicesDropdown.classList.toggle("hidden");
+
+      mobileServicesArrow.classList.toggle("rotate-180");
+
+    });
+
+
+  
+
+    closeMobileServices.addEventListener("click", function () {
+
+      mobileMenu.classList.remove("right-0");
+
+      mobileMenu.classList.add("right-[-100%]");
+
+      // Close Services dropdown
+      mobileServicesDropdown.classList.add("hidden");
+
+      // Reset arrow
+      mobileServicesArrow.classList.remove("rotate-180");
+
+    });
+
+  });
+</script>
 
 </body>
 
