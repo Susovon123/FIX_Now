@@ -283,8 +283,8 @@
                             </div>
                             <!-- User -->
                             <div
-                                class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300">
-                                <a href="#">
+                                class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300 relative">
+                                <button id="userDropdownBtn">
                                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -292,38 +292,100 @@
                                             stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                             stroke-linejoin="round" />
                                     </svg>
+                                </button>
+
+                                <div id="userMegaMenu"
+                                    class="hidden absolute -right-1/2 translate-x-1/2 top-[60px] w-[600px] bg-white shadow-2xl rounded-xl p-8 z-50">
+                                    <div class="grid grid-cols-12 gap-8">
+                                        <div class="col-span-6">
+                                            <ul class="space-y-2">
+                                                <li>
+                                                    <a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+                                                        Personal Details
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+                                                        Saved Address
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+                                                        Emergency Contact
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+                                                        Saved Payment Method
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+                                                        Notifications
+
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-span-6">
+                                            <ul class="space-y-2">
+                                                <li>
+                                                    <a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+                                                        Privacy Security
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="booking-history.html"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+                                                        Booking History
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full">
+                                                        Logout
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Cart -->
+                            <div
+                                class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300">
+                                <a href="cart.html">
+                                    <svg class="transition-transform duration-300" width="28" height="28"
+                                        viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
                                 </a>
                             </div>
-                        </div>
-                        <!-- Cart -->
-                        <div
-                            class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300">
-                            <a href="#">
-                                <svg class="transition-transform duration-300" width="28" height="28"
-                                    viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z"
-                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                            <!-- Button -->
+                            <a href="#"
+                                class="openSignup cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] inline-block z-10 py-[16px] px-[48px] rounded-[20px] font-[family-name:var(--outfit-r)]text-[18px] font-semibold text-[var(--color2)]">
+                                Sign Up
                             </a>
                         </div>
-                        <!-- Button -->
-                        <a href="#"
-                            class="openSignup cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] inline-block z-10 py-[16px] px-[48px] rounded-[20px] font-[family-name:var(--outfit-r)]text-[18px] font-semibold text-[var(--color2)]">
-                            Sign Up
-                        </a>
+                        <!-- Mobile Menu Button -->
+                        <button id="menuBtn" class="lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
                     </div>
-                    <!-- Mobile Menu Button -->
-                    <button id="menuBtn" class="lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
                 </div>
-            </div>
         </nav>
         <!-- ===================== Navbar Ends ===================== -->
         <!-- Overlay -->
@@ -365,11 +427,13 @@
 
                 <!-- Cart -->
                 <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
-                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z"
-                            stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                    <a href="cart.html">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z"
+                                stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
                 </div>
             </div>
 
@@ -395,7 +459,6 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-
 
                     <ul id="mobileServicesDropdown" class="hidden px-5 py-2 border-t border-gray-100">
                         <li>
@@ -3235,6 +3298,21 @@ gap-[20px]
 
             });
 
+        });
+    </script>
+    <script>
+        const userDropdownBtn = document.getElementById('userDropdownBtn');
+        const userMegaMenu = document.getElementById('userMegaMenu');
+
+        userDropdownBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            userMegaMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!userMegaMenu.contains(e.target) && !userDropdownBtn.contains(e.target)) {
+                userMegaMenu.classList.add('hidden');
+            }
         });
     </script>
 </body>
