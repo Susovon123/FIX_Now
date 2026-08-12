@@ -384,6 +384,7 @@ select {
 }
 
 /* banner starts */
+
 .hero-banner {
   position: relative;
   overflow: hidden;
@@ -397,6 +398,7 @@ select {
 .hero-banner img {
   user-select: none;
 }
+
 
 /* banner ends */
 
