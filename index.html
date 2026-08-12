@@ -371,28 +371,108 @@
                   </div>
                 </div>
                 <!-- User -->
-                <div
-                  class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300"
-                >
-                  <a href="#">
-                    <svg
-                      width="28"
-                      height="28"
-                      viewBox="0 0 28 28"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
+               <div
+  class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300 relative"
+>
+  <button id="userDropdownBtn">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+
+  <div
+    id="userMegaMenu"
+    class="hidden absolute -right-1/2 translate-x-1/2 top-[60px] w-[600px] bg-white shadow-2xl rounded-xl p-8 z-50"
+  >
+    <div class="grid grid-cols-12 gap-8">
+        <div class="col-span-6">
+                        <ul class="space-y-2">
+                          <li>
+                            <a
+                              href="#"
+                              class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                              Personal Details
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                              Saved Address
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                             Emergency Contact
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                              Saved Payment Method
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                              Notifications
+
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-span-6">
+                        <ul class="space-y-2">
+                          <li>
+                            <a
+                              href="#"
+                              class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                            Privacy Security
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="booking-history.html"
+                              class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                              Booking History
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                            Logout
+                          </a>
+                          </li>
+                        </ul>
+                      </div>
+    </div>
+  </div>
+</div>
               <!-- Cart -->
               <div
                 class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300"
@@ -4773,5 +4853,20 @@
         });
       });
     </script>
+   <script>
+  const userDropdownBtn = document.getElementById('userDropdownBtn');
+  const userMegaMenu = document.getElementById('userMegaMenu');
+
+  userDropdownBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    userMegaMenu.classList.toggle('hidden');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!userMegaMenu.contains(e.target) && !userDropdownBtn.contains(e.target)) {
+      userMegaMenu.classList.add('hidden');
+    }
+  });
+</script>
   </body>
 </html>
