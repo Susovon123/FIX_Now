@@ -2893,6 +2893,21 @@
       }
     });
   </script>
+  <script>
+    const userDropdownBtn = document.getElementById('userDropdownBtn');
+    const userMegaMenu = document.getElementById('userMegaMenu');
+
+    userDropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      userMegaMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!userMegaMenu.contains(e.target) && !userDropdownBtn.contains(e.target)) {
+        userMegaMenu.classList.add('hidden');
+      }
+    });
+  </script>
 </body>
 
 </html>
