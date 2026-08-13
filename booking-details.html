@@ -42,284 +42,393 @@
 
     <!-- starting  navbar -->
     <!-- Header -->
-<header>
-  <!-- Header Top -->
-  <div class="w-full min-h-[74px] bg-[var(--color-14)] px-[20px] py-[10px]">
-    <div class="w-full flex flex-col md:flex-row items-center justify-between">
-      <!-- Left -->
-      <div class="w-auto shrink-0 text-center md:text-left">
-        <p class="font-[var(--albert-sans-r)] text-[14px] text-[var(--color5)] whitespace-nowrap">
-          Trusted Local Services, Right When You Need Them.
-        </p>
-      </div>
-      <!-- Right -->
-      <div class="w-auto flex items-center justify-end gap-6 mt-4 md:mt-0">
-        <div class="location-box w-[250px] shrink-0">
-          <select id="locationSelect">
-            <option value="">Choose Location</option>
-            <option value="search">🔍 Search By Area</option>
-            <option value="current">📍 Use My Current Location</option>
-          </select>
-          <div id="searchBox" class="hide">
-            <input type="text" placeholder="Search your area..." />
-          </div>
-          <div id="addressBox" class="hide">
-            <h4>Your Current Address</h4>
-            <p id="address">No location selected.</p>
-          </div>
-        </div>
-          <a href="#" class="hidden lg:block text-[16px] text-[var(--color-15)] whitespace-nowrap">
-          Help & Support
-        </a>
-        <a
-          href="work-with-us.html"
-          class="hidden lg:block text-[16px] rounded-[20px] border-2 border-[var(--color4)] px-[36px] py-[16px] whitespace-nowrap text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-500 ease-in-out"
-        >
-          Work With Us
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Gradient Divider -->
-  <div class="h-[1px] w-full bg-[linear-gradient(90deg,rgb(240,249,254)_1%,rgb(48,137,224)_47%,rgb(240,249,254)_100%)]"></div>
-
-  <nav class="w-full bg-[var(--color2)] px-[20px] py-[11px]">
-    <div class="w-full">
-      <div class="flex items-center justify-between h-[70px] py-[14px]">
-        <!-- Logo -->
-        <a href="index.html" class="shrink-0">
-          <img src="assets/images/Frame 14.png" alt="logo-image" class="w-auto h-auto" />
-        </a>
-
-        <!-- Desktop Menu -->
-        <div class="hidden lg:flex items-center w-full">
-          <ul class="flex mx-auto">
-            <li class="mr-[50px]">
-              <a href="index.html" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
-                Home
-              </a>
-            </li>
-            <li class="relative mr-[50px]">
-              <button id="serviceBtn" class="relative outline-none text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full flex items-center gap-1">
-                Service
-                <svg id="arrow" class="w-4 h-4 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <!-- Mega Menu -->
-              <div id="megaMenu" class="hidden absolute -right-1/2 translate-x-1/2 top-[60px] w-[600px] bg-white shadow-2xl rounded-xl p-8 z-50">
-                <div class="grid grid-cols-12 gap-8">
-                  <div class="col-span-6">
-                    <ul class="space-y-2">
-                      <li><a href="#" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Electrician</a></li>
-                      <li><a href="#" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Plumber</a></li>
-                      <li><a href="#" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Personal Grooming</a></li>
-                      <li><a href="#" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">House Help</a></li>
-                      <li><a href="#" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Repairing</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-span-6">
-                    <ul class="space-y-2">
-                      <li><a href="#" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Carpenter</a></li>
-                      <li><a href="#" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Delivery Assistance</a></li>
-                      <li><a href="service.html" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Service</a></li>
-                    </ul>
-                  </div>
+    <header>
+        <!-- Header Top -->
+        <div class="w-full min-h-[74px] bg-[var(--color-14)] px-[20px] py-[10px]">
+            <div class="w-full flex flex-col md:flex-row items-center justify-between">
+                <!-- Left -->
+                <div class="w-auto shrink-0 text-center md:text-left">
+                    <p class="font-[var(--albert-sans-r)] text-[14px] text-[var(--color5)] whitespace-nowrap">
+                        Trusted Local Services, Right When You Need Them.
+                    </p>
                 </div>
-              </div>
-            </li>
-            <li class="mr-[50px]">
-              <a href="about.us.html" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="contact-us.html" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
-                Contact Us
-              </a>
-            </li>
-          </ul>
-
-          <!-- Right Side -->
-          <div class="flex items-center">
-            <!-- Search -->
-            <div class="relative group mx-4">
-              <div class="absolute right-0 top-[48px] w-[40px] h-[25px] z-40"></div>
-              <button class="relative z-40 w-12 h-12 rounded-full border border-[var(--color5)] flex items-center justify-center bg-white text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300">
-                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-              <div class="absolute right-0 top-[73px] w-[440px] opacity-0 invisible translate-y-[-10px] group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-20">
-                <div class="relative w-full h-[62px] bg-white rounded-[30px] border border-[var(--color-15)] shadow-[0_4px_15px_rgba(0,0,0,0.10)]">
-                  <input type="search" placeholder="Search By City, Service Type, OR ZIP Code" class="w-full h-full rounded-[30px] pl-[25px] pr-[55px] outline-none text-[14px] text-gray-600 placeholder:text-gray-400" />
-                  <button class="absolute right-[17px] top-1/2 -translate-y-1/2 text-[var(--color5)] hover:text-[var(--color-15)] transition">
-                    <i class="fa-solid fa-microphone text-[20px]"></i>
-                  </button>
-                </div>
-                <div class="mt-[15px] w-full bg-white rounded-[16px] border border-[#e0e4e9] shadow-[0_5px_20px_rgba(0,0,0,0.12)] overflow-hidden">
-                  <div class="flex items-center min-h-[70px] px-[20px] bg-[#eef5ff] border-b border-[#dce3eb] cursor-pointer hover:bg-[#e7f1ff]">
-                    <div class="w-[40px] text-[var(--color5)]"><i class="fa-solid fa-location-dot text-[22px]"></i></div>
-                    <p class="flex-1 text-[14px] text-gray-600">Search by city</p>
-                    <i class="fa-solid fa-chevron-right text-[12px] text-gray-400"></i>
-                  </div>
-                  <div class="flex items-center min-h-[70px] px-[20px] border-b border-[#e0e0e0] cursor-pointer hover:bg-[#f7f9fc]">
-                    <div class="w-[40px] text-[var(--color5)]"><i class="fa-solid fa-border-all text-[21px]"></i></div>
-                    <p class="flex-1 text-[14px] text-gray-600">Search by service type</p>
-                    <i class="fa-solid fa-chevron-right text-[12px] text-gray-400"></i>
-                  </div>
-                  <div class="flex items-center min-h-[70px] px-[20px] border-b border-[#e0e0e0] cursor-pointer hover:bg-[#f7f9fc]">
-                    <div class="w-[40px] text-[var(--color5)]"><i class="fa-solid fa-map-location-dot text-[21px]"></i></div>
-                    <p class="flex-1 text-[14px] text-gray-600">Search by zip code</p>
-                    <i class="fa-solid fa-chevron-right text-[12px] text-gray-400"></i>
-                  </div>
-                  <div class="px-[20px] pt-[20px] pb-[20px]">
-                    <div class="flex items-center">
-                      <div class="w-[40px] text-[var(--color5)]"><i class="fa-solid fa-clock-rotate-left text-[19px]"></i></div>
-                      <p class="flex-1 text-[14px] text-gray-600">Recent Searches</p>
-                      <button class="text-gray-400 hover:text-[var(--color-15)]"><i class="fa-solid fa-xmark text-[17px]"></i></button>
+                <!-- Right -->
+                <div class="w-auto flex items-center justify-end gap-6 mt-4 md:mt-0">
+                    <div class="location-box w-[250px] shrink-0">
+                        <select id="locationSelect">
+                            <option value="">Choose Location</option>
+                            <option value="search">🔍 Search By Area</option>
+                            <option value="current">📍 Use My Current Location</option>
+                        </select>
+                        <div id="searchBox" class="hide">
+                            <input type="text" placeholder="Search your area..." />
+                        </div>
+                        <div id="addressBox" class="hide">
+                            <h4>Your Current Address</h4>
+                            <p id="address">No location selected.</p>
+                        </div>
                     </div>
-                    <div class="mt-[15px] flex overflow-hidden">
-                      <button class="shrink-0 bg-[#f1f3f6] rounded-[15px] px-[18px] py-[11px] mr-[10px] text-[13px] text-gray-500 hover:bg-[#e6eaf0]">Electrician Near Salt Lake</button>
-                      <button class="shrink-0 bg-[#f1f3f6] rounded-[15px] px-[18px] py-[11px] mr-[10px] text-[13px] text-gray-500 hover:bg-[#e6eaf0]">Salon At Home In Ballygunge</button>
-                    </div>
-                  </div>
+                    <a href="#" class="hidden lg:block text-[16px] text-[var(--color-15)] whitespace-nowrap">
+                        Help & Support
+                    </a>
+                    <a href="work-with-us.html"
+                        class="hidden lg:block text-[16px] rounded-[20px] border-2 border-[var(--color4)] px-[36px] py-[16px] whitespace-nowrap text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-500 ease-in-out">
+                        Work With Us
+                    </a>
                 </div>
-              </div>
             </div>
-
-            <!-- User -->
-            <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300 relative">
-              <button id="userDropdownBtn">
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-
-              <div id="userMegaMenu" class="hidden absolute -right-1/2 translate-x-1/2 top-[60px] w-[600px] bg-white shadow-2xl rounded-xl p-8 z-50">
-                <div class="grid grid-cols-12 gap-8">
-                  <div class="col-span-6">
-                    <ul class="space-y-2">
-                      <li><a href="#" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Personal Details</a></li>
-                      <li><a href="#" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Saved Address</a></li>
-                      <li><a href="#" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Emergency Contact</a></li>
-                      <li><a href="#" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Saved Payment Method</a></li>
-                      <li><a href="#" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Notifications</a></li>
-                    </ul>
-                  </div>
-                  <div class="col-span-6">
-                    <ul class="space-y-2">
-                      <li><a href="#" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Privacy Security</a></li>
-                      <li><a href="booking-history.html" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Booking History</a></li>
-                      <li><a href="#" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Logout</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Cart -->
-            <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300">
-              <a href="cart.html">
-                <svg class="transition-transform duration-300" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </a>
-            </div>
-
-            <!-- Sign Up button (fixed: added missing space between font-[...] and text-[18px], removed duplicate inline-block) -->
-            <a href="#" class="openSignup cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] z-10 py-[16px] px-[48px] rounded-[20px] font-[family-name:var(--outfit-r)] text-[18px] font-semibold text-[var(--color2)]">
-              Sign Up
-            </a>
-          </div>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <button id="menuBtn" class="lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </nav>
+        <!-- Gradient Divider -->
+        <div
+            class="h-[1px] w-full bg-[linear-gradient(90deg,rgb(240,249,254)_1%,rgb(48,137,224)_47%,rgb(240,249,254)_100%)]">
+        </div>
 
-  <!-- Overlay -->
-  <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-40"></div>
+        <nav class="w-full bg-[var(--color2)] px-[20px] py-[11px]">
+            <div class="w-full">
+                <div class="flex items-center justify-between h-[70px] py-[14px]">
+                    <!-- Logo -->
+                    <a href="index.html" class="shrink-0">
+                        <img src="assets/images/Frame 14.png" alt="logo-image" class="w-auto h-auto" />
+                    </a>
 
-  <!-- Mobile Sidebar -->
-  <div id="mobileMenu" class="fixed top-0 right-[-100%] w-[300px] h-screen bg-white z-50 transition-all duration-300 shadow-2xl overflow-y-auto">
-    <div class="flex items-center justify-between px-5 py-5 border-b border-[var(--color11)]">
-      <a href="index.html">
-        <img src="assets/images/Frame 14.png" alt="logo" class="w-[140px]" />
-      </a>
-      <button id="closeBtn" class="text-4xl text-[var(--color6)]">&times;</button>
-    </div>
+                    <!-- Desktop Menu -->
+                    <div class="hidden lg:flex items-center w-full">
+                        <ul class="flex mx-auto">
+                            <li class="mr-[50px]">
+                                <a href="index.html"
+                                    class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="relative mr-[50px]">
+                                <button id="serviceBtn"
+                                    class="relative outline-none text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full flex items-center gap-1">
+                                    Service
+                                    <svg id="arrow" class="w-4 h-4 transition-transform duration-300"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </button>
+                                <!-- Mega Menu -->
+                                <div id="megaMenu"
+                                    class="hidden absolute -right-1/2 translate-x-1/2 top-[60px] w-[600px] bg-white shadow-2xl rounded-xl p-8 z-50">
+                                    <div class="grid grid-cols-12 gap-8">
+                                        <div class="col-span-6">
+                                            <ul class="space-y-2">
+                                                <li><a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Electrician</a>
+                                                </li>
+                                                <li><a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Plumber</a>
+                                                </li>
+                                                <li><a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Personal
+                                                        Grooming</a></li>
+                                                <li><a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">House
+                                                        Help</a></li>
+                                                <li><a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Repairing</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-span-6">
+                                            <ul class="space-y-2">
+                                                <li><a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Carpenter</a>
+                                                </li>
+                                                <li><a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Delivery
+                                                        Assistance</a></li>
+                                                <li><a href="service.html"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Service</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="mr-[50px]">
+                                <a href="about.us.html"
+                                    class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact-us.html"
+                                    class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
 
-    <div class="flex justify-start px-8 gap-4 mt-8">
-      <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
-        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z" stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </div>
-      <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z" stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </div>
-      <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
-        <a href="cart.html">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z" stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </a>
-      </div>
-    </div>
+                        <!-- Right Side -->
+                        <div class="flex items-center">
+                            <!-- Search -->
+                            <div class="relative group mx-4">
+                                <div class="absolute right-0 top-[48px] w-[40px] h-[25px] z-40"></div>
+                                <button
+                                    class="relative z-40 w-12 h-12 rounded-full border border-[var(--color5)] flex items-center justify-center bg-white text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300">
+                                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <div
+                                    class="absolute right-0 top-[73px] w-[440px] opacity-0 invisible translate-y-[-10px] group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-20">
+                                    <div
+                                        class="relative w-full h-[62px] bg-white rounded-[30px] border border-[var(--color-15)] shadow-[0_4px_15px_rgba(0,0,0,0.10)]">
+                                        <input type="search" placeholder="Search By City, Service Type, OR ZIP Code"
+                                            class="w-full h-full rounded-[30px] pl-[25px] pr-[55px] outline-none text-[14px] text-gray-600 placeholder:text-gray-400" />
+                                        <button
+                                            class="absolute right-[17px] top-1/2 -translate-y-1/2 text-[var(--color5)] hover:text-[var(--color-15)] transition">
+                                            <i class="fa-solid fa-microphone text-[20px]"></i>
+                                        </button>
+                                    </div>
+                                    <div
+                                        class="mt-[15px] w-full bg-white rounded-[16px] border border-[#e0e4e9] shadow-[0_5px_20px_rgba(0,0,0,0.12)] overflow-hidden">
+                                        <div
+                                            class="flex items-center min-h-[70px] px-[20px] bg-[#eef5ff] border-b border-[#dce3eb] cursor-pointer hover:bg-[#e7f1ff]">
+                                            <div class="w-[40px] text-[var(--color5)]"><i
+                                                    class="fa-solid fa-location-dot text-[22px]"></i></div>
+                                            <p class="flex-1 text-[14px] text-gray-600">Search by city</p>
+                                            <i class="fa-solid fa-chevron-right text-[12px] text-gray-400"></i>
+                                        </div>
+                                        <div
+                                            class="flex items-center min-h-[70px] px-[20px] border-b border-[#e0e0e0] cursor-pointer hover:bg-[#f7f9fc]">
+                                            <div class="w-[40px] text-[var(--color5)]"><i
+                                                    class="fa-solid fa-border-all text-[21px]"></i></div>
+                                            <p class="flex-1 text-[14px] text-gray-600">Search by service type</p>
+                                            <i class="fa-solid fa-chevron-right text-[12px] text-gray-400"></i>
+                                        </div>
+                                        <div
+                                            class="flex items-center min-h-[70px] px-[20px] border-b border-[#e0e0e0] cursor-pointer hover:bg-[#f7f9fc]">
+                                            <div class="w-[40px] text-[var(--color5)]"><i
+                                                    class="fa-solid fa-map-location-dot text-[21px]"></i></div>
+                                            <p class="flex-1 text-[14px] text-gray-600">Search by zip code</p>
+                                            <i class="fa-solid fa-chevron-right text-[12px] text-gray-400"></i>
+                                        </div>
+                                        <div class="px-[20px] pt-[20px] pb-[20px]">
+                                            <div class="flex items-center">
+                                                <div class="w-[40px] text-[var(--color5)]"><i
+                                                        class="fa-solid fa-clock-rotate-left text-[19px]"></i></div>
+                                                <p class="flex-1 text-[14px] text-gray-600">Recent Searches</p>
+                                                <button class="text-gray-400 hover:text-[var(--color-15)]"><i
+                                                        class="fa-solid fa-xmark text-[17px]"></i></button>
+                                            </div>
+                                            <div class="mt-[15px] flex overflow-hidden">
+                                                <button
+                                                    class="shrink-0 bg-[#f1f3f6] rounded-[15px] px-[18px] py-[11px] mr-[10px] text-[13px] text-gray-500 hover:bg-[#e6eaf0]">Electrician
+                                                    Near Salt Lake</button>
+                                                <button
+                                                    class="shrink-0 bg-[#f1f3f6] rounded-[15px] px-[18px] py-[11px] mr-[10px] text-[13px] text-gray-500 hover:bg-[#e6eaf0]">Salon
+                                                    At Home In Ballygunge</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-    <ul class="mt-6">
-      <li class="border-b border-[var(--color11)]">
-        <a href="index.html" class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Home</a>
-      </li>
+                            <!-- User -->
+                            <div
+                                class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300 relative">
+                                <button id="userDropdownBtn">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
 
-      <li class="border-b border-[var(--color11)]">
-        <button id="mobileServicesBtn" type="button" class="w-full flex items-center justify-between px-5 py-4">
-          <span class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Services</span>
-          <svg id="mobileServicesArrow" class="w-4 h-4 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
+                                <div id="userMegaMenu"
+                                    class="hidden absolute -right-1/2 translate-x-1/2 top-[60px] w-[600px] bg-white shadow-2xl rounded-xl p-8 z-50">
+                                    <div class="grid grid-cols-12 gap-8">
+                                        <div class="col-span-6">
+                                            <ul class="space-y-2">
+                                                <li><a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Personal
+                                                        Details</a></li>
+                                                <li><a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Saved
+                                                        Address</a></li>
+                                                <li><a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Emergency
+                                                        Contact</a></li>
+                                                <li><a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Saved
+                                                        Payment Method</a></li>
+                                                <li><a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Notifications</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-span-6">
+                                            <ul class="space-y-2">
+                                                <li><a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Privacy
+                                                        Security</a></li>
+                                                <li><a href="booking-history.html"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Booking
+                                                        History</a></li>
+                                                <li><a href="#"
+                                                        class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Logout</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-        <ul id="mobileServicesDropdown" class="hidden px-5 py-2 border-t border-gray-100">
-          <li><a href="#" class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Electrician</a></li>
-          <li class="py-3"><a href="#" class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Plumber</a></li>
-          <li class="py-3"><a href="#" class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Personal Grooming</a></li>
-          <li class="py-3"><a href="#" class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">House Help</a></li>
-          <li class="py-3"><a href="#" class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Repairing</a></li>
-          <li class="py-3"><a href="#" class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Carpenter</a></li>
-          <li class="py-3"><a href="service.html" class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Service</a></li>
-        </ul>
-      </li>
+                            <!-- Cart -->
+                            <div
+                                class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300">
+                                <a href="cart.html">
+                                    <svg class="transition-transform duration-300" width="28" height="28"
+                                        viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
 
-      <li class="mr-[50px]">
-        <a href="about.us.html" class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">About</a>
-      </li>
+                            <!-- Sign Up button (fixed: added missing space between font-[...] and text-[18px], removed duplicate inline-block) -->
+                            <a href="#"
+                                class="openSignup cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] z-10 py-[16px] px-[48px] rounded-[20px] font-[family-name:var(--outfit-r)] text-[18px] font-semibold text-[var(--color2)]">
+                                Sign Up
+                            </a>
+                        </div>
+                    </div>
 
-      <li class="border-b border-[var(--color11)]">
-        <a href="contact-us.html" class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Contact Us</a>
-      </li>
-    </ul>
+                    <!-- Mobile Menu Button -->
+                    <button id="menuBtn" class="lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
 
-    <div class="px-8 py-5 border-t border-[var(--color11)]">
-      <a href="#" class="block text-[18px] text-[var(--color-15)] hover:text-[var(--color4)] transition">Help & Support</a>
-    </div>
+        <!-- Overlay -->
+        <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-40"></div>
 
-    <div class="px-8 mt-6 space-y-4">
-      <a href="#" class="openSignup cmn-btn relative block w-full overflow-hidden bg-[var(--color4)] z-10 py-[16px] rounded-[20px] text-center text-[18px] font-semibold text-white">Sign Up</a>
-      <a href="#" class="block w-full border-2 border-[var(--color4)] rounded-[20px] py-[16px] text-center text-[18px] font-semibold text-[var(--color5)] hover:bg-[var(--color4)] hover:text-white transition-all duration-300">Work With Us</a>
-    </div>
-  </div>
-</header>
+        <!-- Mobile Sidebar -->
+        <div id="mobileMenu"
+            class="fixed top-0 right-[-100%] w-[300px] h-screen bg-white z-50 transition-all duration-300 shadow-2xl overflow-y-auto">
+            <div class="flex items-center justify-between px-5 py-5 border-b border-[var(--color11)]">
+                <a href="index.html">
+                    <img src="assets/images/Frame 14.png" alt="logo" class="w-[140px]" />
+                </a>
+                <button id="closeBtn" class="text-4xl text-[var(--color6)]">&times;</button>
+            </div>
+
+            <div class="flex justify-start px-8 gap-4 mt-8">
+                <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
+                            stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
+                            stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
+                    <a href="cart.html">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z"
+                                stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="mt-6">
+                <li class="border-b border-[var(--color11)]">
+                    <a href="index.html"
+                        class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Home</a>
+                </li>
+
+                <li class="border-b border-[var(--color11)]">
+                    <button id="mobileServicesBtn" type="button"
+                        class="w-full flex items-center justify-between px-5 py-4">
+                        <span
+                            class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Services</span>
+                        <svg id="mobileServicesArrow" class="w-4 h-4 transition-transform duration-300"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <ul id="mobileServicesDropdown" class="hidden px-5 py-2 border-t border-gray-100">
+                        <li><a href="#"
+                                class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Electrician</a>
+                        </li>
+                        <li class="py-3"><a href="#"
+                                class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Plumber</a>
+                        </li>
+                        <li class="py-3"><a href="#"
+                                class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Personal
+                                Grooming</a></li>
+                        <li class="py-3"><a href="#"
+                                class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">House
+                                Help</a></li>
+                        <li class="py-3"><a href="#"
+                                class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Repairing</a>
+                        </li>
+                        <li class="py-3"><a href="#"
+                                class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Carpenter</a>
+                        </li>
+                        <li class="py-3"><a href="service.html"
+                                class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Service</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="mr-[50px]">
+                    <a href="about.us.html"
+                        class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">About</a>
+                </li>
+
+                <li class="border-b border-[var(--color11)]">
+                    <a href="contact-us.html"
+                        class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Contact
+                        Us</a>
+                </li>
+            </ul>
+
+            <div class="px-8 py-5 border-t border-[var(--color11)]">
+                <a href="#" class="block text-[18px] text-[var(--color-15)] hover:text-[var(--color4)] transition">Help
+                    & Support</a>
+            </div>
+
+            <div class="px-8 mt-6 space-y-4">
+                <a href="#"
+                    class="openSignup cmn-btn relative block w-full overflow-hidden bg-[var(--color4)] z-10 py-[16px] rounded-[20px] text-center text-[18px] font-semibold text-white">Sign
+                    Up</a>
+                <a href="#"
+                    class="block w-full border-2 border-[var(--color4)] rounded-[20px] py-[16px] text-center text-[18px] font-semibold text-[var(--color5)] hover:bg-[var(--color4)] hover:text-white transition-all duration-300">Work
+                    With Us</a>
+            </div>
+        </div>
+    </header>
 
 
     <main>
@@ -1938,126 +2047,40 @@ before:bg-gradient-to-b before:from-[#86EFAC]/30 before:to-[#15803D]">
     <!-- provider details modal starts -->
     <dialog id="providerModal"
         class="relative w-[95%] max-w-[1140px] bg-white rounded-[24px] border-0 p-0 overflow-visible shadow-[4px_0_18.5px_0_#D1D5DB]">
-
         <!-- Close Button -->
-        <button id="closeProviderModal" class="
-    absolute
-    -top-[38px]
-    right-0
-
-    p-0
-    bg-transparent
-    border-0
-    shadow-none
-
-    flex
-    items-center
-    justify-center
-
-    hover:scale-110
-    transition-all
-    duration-300
-
-    z-50" aria-label="Close">
-
+        <button id="closeProviderModal"
+            class="absolute -top-[38px] right-0 p-0 bg-transparent border-0 shadow-none flex items-center justify-center hover:scale-110 transition-all duration-300 z-50"
+            aria-label="Close">
             <!-- Close SVG -->
             <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M20.7499 20.7499L11.375 11.375M11.375 11.375L2 2M11.375 11.375L20.7501 2M11.375 11.375L2 20.7501"
                     stroke="#9CA3AF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-
         </button>
 
         <!-- Modal Body -->
-        <div class="
-modal-content p-[20px] sm:p-[24px]
-">
-
+        <div class="modal-content p-[20px] sm:p-[24px]">
             <!-- provider profile -->
-            <section class=" relative
-w-full
-bg-white
-rounded-[25px]
-flex
-flex-col
-gap-y-[24px]
-mb-[24px]
-">
-
+            <div class="relative w-full bg-white rounded-[25px] flex flex-col gap-y-[24px] mb-[24px]">
                 <!-- TOP DIV -->
-                <div class="flex
-flex-col
-lg:flex-row
-justify-between
-items-start
-w-full">
-
+                <div class="flex flex-col lg:flex-row justify-between items-start w-full">
                     <!-- Left Part -->
-                    <div class="flex
-flex-col
-sm:flex-row
-items-start
-w-full
-lg:w-auto">
-
+                    <div class="flex flex-col sm:flex-row items-start w-full lg:w-auto">
                         <!-- Provider Image -->
-                        <img src="./assets/images/booking-details/provider-profile-image.png" alt="profile-image" class="
-w-[70px]
-h-[70px]
-
-min-[350px]:w-[80px]
-min-[350px]:h-[80px]
-
-min-[375px]:w-[90px]
-min-[375px]:h-[90px]
-
-sm:w-[110px]
-sm:h-[110px]
-
-lg:w-[120px]
-lg:h-[120px]
-
-rounded-full
-object-cover
-
-border-8
-border-[#F3F4F6]
-
-mb-[16px]
-sm:mb-0
-
-sm:mr-[24px]
-
-shrink-0
-">
+                        <img src="./assets/images/booking-details/provider-profile-image.png" alt="profile-image"
+                            class="w-[70px] h-[70px] min-[350px]:w-[80px] min-[350px]:h-[80px] min-[375px]:w-[90px] min-[375px]:h-[90px] sm:w-[110px] sm:h-[110px] lg:w-[120px] lg:h-[120px] rounded-full object-cover border-8 border-[#F3F4F6] mb-[16px] sm:mb-0 sm:mr-[24px] shrink-0" />
 
                         <div class="flex-1 w-full">
-
                             <!-- Name & Badge -->
-                            <div class="
-flex
-flex-wrap
-items-center
-">
-
-                                <h2 class="text-[16px]
-min-[375px]:text-[17px]
-sm:text-[18px]
-lg:text-[20px] font-semibold text-[var(--color10)] font-[var(--outfit-r)] mr-[10px]">
+                            <div class="flex flex-wrap items-center">
+                                <h2
+                                    class="text-[16px] min-[375px]:text-[17px] sm:text-[18px] lg:text-[20px] font-semibold text-[var(--color10)] font-[var(--outfit-r)] mr-[10px]">
                                     Rahul Sharma
                                 </h2>
 
-                                <span class="confirmed-badge text-[var(--color2)] capitalize px-[8px]
-py-[7px]
-
-min-[375px]:px-[10px]
-min-[375px]:py-[8px]
-
-text-[10px]
-min-[375px]:text-[10px]
-sm:text-[11px] font-bold font-[var(--albert-sans-r)]">
-
+                                <span
+                                    class="confirmed-badge text-[var(--color2)] capitalize px-[8px] py-[7px] min-[375px]:px-[10px] min-[375px]:py-[8px] text-[10px] min-[375px]:text-[10px] sm:text-[11px] font-bold font-[var(--albert-sans-r)]">
                                     <svg class="mr-[17.48px]" width="21" height="24" viewBox="0 0 21 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -2069,26 +2092,19 @@ sm:text-[11px] font-bold font-[var(--albert-sans-r)]">
                                     </svg>
 
                                     Verified Provider
-
                                 </span>
-
                             </div>
 
-                            <p class="mt-[10px] text-[12px]
-min-[375px]:text-[14px]
-sm:text-[16px]">
+                            <p class="mt-[10px] text-[12px] min-[375px]:text-[14px] sm:text-[16px]">
                                 Certified AC Repair &amp; Maintenance Technician
                             </p>
 
                             <!-- Stats -->
                             <div class="flex items-start mt-[26px] w-full">
-
                                 <!-- Rating -->
                                 <div class="flex-1 min-w-0">
-
                                     <h3
                                         class="flex items-center gap-[4px] font-bold mb-[10px] text-[14px] min-[375px]:text-[16px] sm:text-[20px] lg:text-[24px] text-[var(--color10)]">
-
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_1055_3490)">
@@ -2103,36 +2119,17 @@ sm:text-[16px]">
                                             </defs>
                                         </svg>
 
-
                                         4.9
-
                                     </h3>
 
                                     <p class="text-[10px] sm:text-[14px] w-full leading-tight">
                                         Average Customer Rating
                                     </p>
-
                                 </div>
 
                                 <!-- Successful Services -->
-                                <div class="flex-1 min-w-0
-relative
-pl-[10px]
-sm:pl-[20px]
-lg:pl-[34px]
-ml-[4px]
-sm:ml-[10px]
-
-before:absolute
-before:left-0
-before:top-0
-before:h-[70px]
-before:w-[1px]
-before:bg-gradient-to-b
-before:from-[#F0F9FE]
-before:via-[#3089E0]
-before:to-[#F0F9FE]">
-
+                                <div
+                                    class="flex-1 min-w-0 relative pl-[10px] sm:pl-[20px] lg:pl-[34px] ml-[4px] sm:ml-[10px] before:absolute before:left-0 before:top-0 before:h-[70px] before:w-[1px] before:bg-gradient-to-b before:from-[#F0F9FE] before:via-[#3089E0] before:to-[#F0F9FE]">
                                     <h3
                                         class="font-bold mb-[10px] text-[14px] min-[375px]:text-[16px] sm:text-[20px] lg:text-[24px] text-[var(--color10)]">
                                         2,500+
@@ -2141,28 +2138,11 @@ before:to-[#F0F9FE]">
                                     <p class="text-[10px] sm:text-[14px] w-full leading-tight">
                                         Successful Services
                                     </p>
-
                                 </div>
 
                                 <!-- Experience -->
-                                <div class="flex-1 min-w-0
-relative
-pl-[10px]
-sm:pl-[20px]
-lg:pl-[34px]
-ml-[4px]
-sm:ml-[10px]
-
-before:absolute
-before:left-0
-before:top-0
-before:h-[70px]
-before:w-[1px]
-before:bg-gradient-to-b
-before:from-[#F0F9FE]
-before:via-[#3089E0]
-before:to-[#F0F9FE]">
-
+                                <div
+                                    class="flex-1 min-w-0 relative pl-[10px] sm:pl-[20px] lg:pl-[34px] ml-[4px] sm:ml-[10px] before:absolute before:left-0 before:top-0 before:h-[70px] before:w-[1px] before:bg-gradient-to-b before:from-[#F0F9FE] before:via-[#3089E0] before:to-[#F0F9FE]">
                                     <h3
                                         class="font-bold mb-[10px] text-[14px] min-[375px]:text-[16px] sm:text-[20px] lg:text-[24px] text-[var(--color10)]">
                                         8+ Years
@@ -2171,36 +2151,17 @@ before:to-[#F0F9FE]">
                                     <p class="text-[10px] sm:text-[14px] w-full leading-tight">
                                         Of Industry Experience
                                     </p>
-
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
 
                     <!-- Right Part : Share Button -->
-                    <div class="absolute
-top-[12px]
-right-[12px]
-
-min-[375px]:top-[16px]
-min-[375px]:right-[16px]
-
-sm:top-[20px]
-sm:right-[20px]
-
-lg:static
-lg:mt-0
-lg:ml-[20px]">
-
+                    <div
+                        class="absolute top-[12px] right-[12px] min-[375px]:top-[16px] min-[375px]:right-[16px] sm:top-[20px] sm:right-[20px] lg:static lg:mt-0 lg:ml-[20px]">
                         <button
-                            class="w-[42px] h-[42px]
-sm:w-[48px]
-sm:h-[48px] rounded-[12px] border border-[var(--color11)] flex items-center justify-center text-[var(--color10)] hover:bg-[var(--color-15)] hover:text-[var(--color2)] hover:border-[var(--color-15)] transition-all duration-300"
+                            class="w-[42px] h-[42px] sm:w-[48px] sm:h-[48px] rounded-[12px] border border-[var(--color11)] flex items-center justify-center text-[var(--color10)] hover:bg-[var(--color-15)] hover:text-[var(--color2)] hover:border-[var(--color-15)] transition-all duration-300"
                             aria-label="Share">
-
                             <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.5" y="0.5" width="49" height="49" rx="9.5" stroke="#D97706" />
@@ -2224,69 +2185,29 @@ sm:h-[48px] rounded-[12px] border border-[var(--color11)] flex items-center just
                                     </clipPath>
                                 </defs>
                             </svg>
-
-
                         </button>
-
                     </div>
-
                 </div>
-
-            </section>
+            </div>
 
             <!-- about provider -->
-            <section class="mb-[24px]">
-
+            <div class="mb-[24px]">
                 <!-- ABOUT -->
 
-                <div class="
-border
-border-[#E5E7EB]
-rounded-[25px]
-p-[16px]
-min-[375px]:p-[20px]
-sm:p-[24px]
-shadow-[inset_0_2px_13.7px_0_#E5E7EB]
-">
+                <div
+                    class="border border-[#E5E7EB] rounded-[25px] p-[16px] min-[375px]:p-[20px] sm:p-[24px] shadow-[inset_0_2px_13.7px_0_#E5E7EB]">
+                    <h3 class="font-semibold text-[20px] mb-[10px]">About Me</h3>
 
-                    <h3 class="
-            font-semibold
-            text-[20px]
-            mb-[10px]
-            ">
-                        About Me
-                    </h3>
-
-
-                    <p class="
-            text-[14px]
-            sm:text-[18px]
-            text-[var(--color1)]
-            leading-[22px]
-sm:leading-[28px]
-            ">
-                        Experienced and customer-focused AC technician specializing in residential and commercial air
-                        conditioning systems. Skilled in diagnostics, repairs, preventive maintenance, gas refilling,
-                        and installation. Committed to delivering timely, reliable, and high-quality service with
-                        complete customer satisfaction.
+                    <p class="text-[14px] sm:text-[18px] text-[var(--color1)] leading-[22px] sm:leading-[28px]">
+                        Experienced and customer-focused AC technician specializing in
+                        residential and commercial air conditioning systems. Skilled in
+                        diagnostics, repairs, preventive maintenance, gas refilling, and
+                        installation. Committed to delivering timely, reliable, and
+                        high-quality service with complete customer satisfaction.
                     </p>
 
-
-                    <div class="
-            flex
-flex-wrap
-gap-x-[24px]
-gap-y-[12px]
-mt-[24px]
-text-[12px]
-            text-[var(--color1)]
-            ">
-
-                        <span class="
-flex
-items-center
-gap-[10px] text-[14px] shrink-0
-">
+                    <div class="flex flex-wrap gap-x-[24px] gap-y-[12px] mt-[24px] text-[12px] text-[var(--color1)]">
+                        <span class="flex items-center gap-[10px] text-[14px] shrink-0">
                             <svg width="24" height="30" viewBox="0 0 24 30" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2296,11 +2217,7 @@ gap-[10px] text-[14px] shrink-0
                             Salt Lake, Kolkata
                         </span>
 
-                        <span class="
-flex
-items-center
-gap-[10px] text-[14px] shrink-0
-">
+                        <span class="flex items-center gap-[10px] text-[14px] shrink-0">
                             <svg width="28" height="24" viewBox="0 0 28 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -2312,78 +2229,25 @@ gap-[10px] text-[14px] shrink-0
                             </svg>
                             English, Hindi, Bengali
                         </span>
-
                     </div>
-
-
                 </div>
-
-            </section>
-
-
+            </div>
 
             <!-- provider information -->
-            <section class="
-border
-border-[#E5E7EB]
-rounded-[25px]
-p-[16px]
-sm:p-[24px]
-shadow-[inset_0_2px_13.7px_0_#E5E7EB]
-grid
-grid-cols-1
-lg:grid-cols-12
-gap-[24px]
-">
-
-
+            <div
+                class="border border-[#E5E7EB] rounded-[25px] p-[16px] sm:p-[24px] shadow-[inset_0_2px_13.7px_0_#E5E7EB] grid grid-cols-1 lg:grid-cols-12 gap-[24px]">
                 <!-- Services Offered -->
-                <div class="lg:col-span-4
-relative
-lg:pr-[24px]
-
-after:absolute
-after:right-0
-after:top-0
-after:h-full
-after:w-[1px]
-
-after:bg-gradient-to-b
-after:from-[#F0F9FE]
-after:via-[#3089E0]
-after:to-[#F0F9FE]
-
-after:hidden
-lg:after:block
-">
-
-
-                    <h3 class="
-        text-[18px]
-        sm:text-[20px]
-        font-semibold
-        mb-[24px]
-        text-[#var(--color9)]
-        ">
+                <div
+                    class="lg:col-span-4 relative lg:pr-[24px] after:absolute after:right-0 after:top-0 after:h-full after:w-[1px] after:bg-gradient-to-b after:from-[#F0F9FE] after:via-[#3089E0] after:to-[#F0F9FE] after:hidden lg:after:block">
+                    <h3 class="text-[18px] sm:text-[20px] font-semibold mb-[24px] text-[#var(--color9)]">
                         Services Offered
                     </h3>
 
-
                     <div class="flex flex-col gap-[16px]">
-
-
                         <div class="flex items-center gap-[36px]">
                             <!-- Icon Circle -->
-                            <div class="
-    w-[60px]
-    h-[60px]
-    rounded-full
-    bg-[#DDF0FC]
-    flex
-    items-center
-    justify-center
-    shrink-0
-    ">
+                            <div
+                                class="w-[60px] h-[60px] rounded-full bg-[#DDF0FC] flex items-center justify-center shrink-0">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <mask id="path-1-inside-1_5021_2531" fill="white">
@@ -2448,22 +2312,12 @@ lg:after:block
                             <p class="text-[14px] sm:text-[16px] font-medium text-[#4B5563]">
                                 Air Conditioner Repair
                             </p>
-
                         </div>
-
 
                         <div class="flex items-center gap-[36px]">
                             <!-- Icon Circle -->
-                            <div class="
-    w-[60px]
-    h-[60px]
-    rounded-full
-    bg-[#DDF0FC]
-    flex
-    items-center
-    justify-center
-    shrink-0
-    ">
+                            <div
+                                class="w-[60px] h-[60px] rounded-full bg-[#DDF0FC] flex items-center justify-center shrink-0">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <mask id="path-1-inside-1_5021_3104" fill="white">
@@ -2514,26 +2368,16 @@ lg:after:block
                                         d="M4.71715 26.2786C5.02653 26.2786 5.3359 26.2786 5.65465 26.2786C5.65465 27.2067 5.65465 28.1348 5.65465 29.0911C5.34528 29.0911 5.0359 29.0911 4.71715 29.0911C4.71715 28.163 4.71715 27.2348 4.71715 26.2786Z"
                                         stroke="#1A3151" stroke-width="2" mask="url(#path-1-inside-1_5021_3104)" />
                                 </svg>
-
                             </div>
                             <p class="text-[14px] sm:text-[16px] font-medium text-[#4B5563]">
                                 AC Installation & Uninstallation
                             </p>
                         </div>
 
-
                         <div class="flex items-center gap-[36px]">
                             <!-- Icon Circle -->
-                            <div class="
-    w-[60px]
-    h-[60px]
-    rounded-full
-    bg-[#DDF0FC]
-    flex
-    items-center
-    justify-center
-    shrink-0
-    ">
+                            <div
+                                class="w-[60px] h-[60px] rounded-full bg-[#DDF0FC] flex items-center justify-center shrink-0">
                                 <svg width="30" height="19" viewBox="0 0 30 19" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <mask id="path-1-inside-1_5021_1993" fill="white">
@@ -2579,26 +2423,16 @@ lg:after:block
                                         d="M25.7414 2.71564C25.8139 2.71394 25.8864 2.71224 25.961 2.71049C26.0309 2.71 26.1008 2.70951 26.1729 2.709C26.2689 2.70772 26.2689 2.70772 26.3668 2.70641C26.5845 2.74036 26.6805 2.81566 26.8364 2.96832C26.9221 3.17191 26.9016 3.24493 26.8181 3.45172C26.7192 3.61285 26.7192 3.61285 26.602 3.67145C26.3615 3.68516 26.1209 3.68483 25.8801 3.68552C25.7606 3.68609 25.6412 3.68791 25.5217 3.68976C25.4463 3.69006 25.3709 3.69036 25.2933 3.69067C25.2241 3.69122 25.1548 3.69177 25.0835 3.69233C24.8858 3.66949 24.8062 3.63715 24.6684 3.49567C24.6098 3.29791 24.6098 3.29791 24.6098 3.08551C24.8948 2.63347 25.2516 2.71943 25.7414 2.71564Z"
                                         stroke="#1A3151" stroke-width="2" mask="url(#path-1-inside-1_5021_1993)" />
                                 </svg>
-
                             </div>
                             <p class="text-[14px] sm:text-[16px] font-medium text-[#4B5563]">
                                 Preventive Maintenance
                             </p>
                         </div>
 
-
                         <div class="flex items-center gap-[36px]">
                             <!-- Icon Circle -->
-                            <div class="
-    w-[60px]
-    h-[60px]
-    rounded-full
-    bg-[#DDF0FC]
-    flex
-    items-center
-    justify-center
-    shrink-0
-    ">
+                            <div
+                                class="w-[60px] h-[60px] rounded-full bg-[#DDF0FC] flex items-center justify-center shrink-0">
                                 <svg width="30" height="25" viewBox="0 0 30 25" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <mask id="path-1-inside-1_5021_1291" fill="white">
@@ -2654,232 +2488,791 @@ lg:after:block
                                         d="M25.8106 16.5234C25.6231 16.5937 25.5528 16.7168 25.4883 17.0508C25.459 17.2207 25.4297 17.3672 25.4297 17.3789C25.4297 17.3906 25.2715 17.5723 25.0782 17.7891C24.7911 18.1055 24.7032 18.252 24.6036 18.5859C24.3926 19.2715 24.5567 19.9629 25.0489 20.4785C25.3653 20.8125 25.4883 21.0352 25.4883 21.2812C25.4883 21.6035 25.4004 21.7793 25.0489 22.1602C24.8028 22.4238 24.7032 22.5879 24.6094 22.8867C24.4395 23.4434 24.4688 23.6953 24.7207 23.8887C24.9903 24.0938 25.4883 23.8594 25.4883 23.5254C25.4883 23.2793 25.6465 22.9746 25.9512 22.6406C26.3555 22.2012 26.502 21.7852 26.4727 21.2109C26.4375 20.6895 26.2793 20.332 25.875 19.8984C25.3653 19.3594 25.377 18.9492 25.9278 18.334C26.2911 17.9297 26.4844 17.4785 26.4844 17.0566C26.4844 16.8047 26.461 16.7461 26.3028 16.6172C26.1153 16.459 26.0098 16.4414 25.8106 16.5234Z"
                                         stroke="#1A3151" stroke-width="258" mask="url(#path-1-inside-1_5021_1291)" />
                                 </svg>
-
                             </div>
                             <p class="text-[14px] sm:text-[16px] font-medium text-[#4B5563]">
                                 Emergency Repair Service
                             </p>
                         </div>
-
-
                     </div>
-
                 </div>
 
-
-
-
-
                 <!-- Right Side -->
-                <div class="
-lg:col-span-8
-flex
-flex-col
-gap-[20px]
-">
-
-
+                <div class="lg:col-span-8 flex flex-col gap-[20px]">
                     <!-- Portfolio -->
                     <div>
-
-                        <h3 class="
-        text-[18px]
-        sm:text-[20px]
-        font-semibold
-        text-[var(--color9)]
-        mb-[24px]
-        ">
+                        <h3 class="text-[18px] sm:text-[20px] font-semibold text-[var(--color9)] mb-[24px]">
                             Portfolio
                         </h3>
 
-
-                        <div class="
-        grid
-        grid-cols-2
-        sm:grid-cols-4
-        gap-[10px]
-        ">
-
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-[10px]">
                             <figure>
                                 <img src="./assets/images/booking-details/portfolio1.png" alt="Portfolio Image 1"
-                                    class="w-full h-[90px] object-cover">
+                                    class="w-full h-[90px] object-cover" />
                             </figure>
 
                             <figure>
                                 <img src="./assets/images/booking-details/portfolio2.png" alt="Portfolio Image 2"
-                                    class="w-full h-[90px] object-cover">
+                                    class="w-full h-[90px] object-cover" />
                             </figure>
 
                             <figure>
                                 <img src="./assets/images/booking-details/portfolio3.png" alt="Portfolio Image 3"
-                                    class="w-full h-[90px] object-cover">
+                                    class="w-full h-[90px] object-cover" />
                             </figure>
 
                             <figure>
                                 <img src="./assets/images/booking-details/portfolio4.png" alt="Portfolio Image 4"
-                                    class="w-full h-[90px] object-cover">
+                                    class="w-full h-[90px] object-cover" />
                             </figure>
                         </div>
-
                     </div>
-
-
-
-
 
                     <!-- Certifications -->
                     <!-- Certifications -->
                     <div>
-
-                        <h3 class="
-    text-[18px]
-    sm:text-[20px]
-    font-semibold
-    text-[#1A3151]
-    mb-[16px]
-    ">
+                        <h3 class="text-[18px] sm:text-[20px] font-semibold text-[#1A3151] mb-[16px]">
                             Certifications
                         </h3>
 
-                        <div class="
-    grid
-    grid-cols-1
-    sm:grid-cols-3
-    gap-x-[16px]
-    gap-y-[40px]
-    ">
-
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-[16px] gap-y-[40px]">
                             <!-- Certificate 1 -->
                             <figure class="relative pb-[22px]">
-
                                 <img src="./assets/images/booking-details/certificate1.png"
-                                    alt="Certified HVAC Technician" class="w-full rounded-[14px]">
+                                    alt="Certified HVAC Technician" class="w-full rounded-[14px]" />
 
-                                <figcaption class="
-            absolute
-            left-1/2
-            -translate-x-1/2
-            bottom-12
-
-            w-[88%]
-
-            bg-white
-            rounded-[12px]
-
-            px-[12px]
-            py-[10px]
-
-            shadow-[0_4px_16px_rgba(0,0,0,0.10)]
-            ">
-
-                                    <p class="
-                text-[14px]
-                font-medium
-                text-[#4B5563]
-                leading-[20px]
-                ">
+                                <figcaption
+                                    class="absolute left-1/2 -translate-x-1/2 bottom-12 w-[88%] bg-white rounded-[12px] px-[12px] py-[10px] shadow-[0_4px_16px_rgba(0,0,0,0.10)]">
+                                    <p class="text-[14px] font-medium text-[#4B5563] leading-[20px]">
                                         Certified HVAC Technician
                                     </p>
-
                                 </figcaption>
-
                             </figure>
-
-
-
-
 
                             <!-- Certificate 2 -->
                             <figure class="relative pb-[22px]">
-
                                 <img src="./assets/images/booking-details/certificate2.png"
-                                    alt="Electrical Safety & Workplace Compliance" class="w-full rounded-[14px]">
+                                    alt="Electrical Safety & Workplace Compliance" class="w-full rounded-[14px]" />
 
-                                <figcaption class="
-            absolute
-            left-1/2
-            -translate-x-1/2
-            bottom-8
-
-            w-[88%]
-
-            bg-white
-            rounded-[12px]
-
-            px-[12px]
-            py-[10px]
-
-            shadow-[0_4px_16px_rgba(0,0,0,0.10)]
-            ">
-
-                                    <p class="
-                text-[14px]
-                font-medium
-                text-[#4B5563]
-                leading-[20px]
-                ">
+                                <figcaption
+                                    class="absolute left-1/2 -translate-x-1/2 bottom-8 w-[88%] bg-white rounded-[12px] px-[12px] py-[10px] shadow-[0_4px_16px_rgba(0,0,0,0.10)]">
+                                    <p class="text-[14px] font-medium text-[#4B5563] leading-[20px]">
                                         Electrical Safety & Workplace Compliance
                                     </p>
-
                                 </figcaption>
-
                             </figure>
-
-
-
-
 
                             <!-- Certificate 3 -->
                             <figure class="relative pb-[22px]">
-
                                 <img src="./assets/images/booking-details/certificate3.png"
-                                    alt="FIXNOW Verified Professional" class="w-full rounded-[14px]">
+                                    alt="FIXNOW Verified Professional" class="w-full rounded-[14px]" />
 
-                                <figcaption class="
-            absolute
-            left-1/2
-            -translate-x-1/2
-            bottom-8
-
-            w-[88%]
-
-            bg-white
-            rounded-[12px]
-
-            px-[12px]
-            py-[10px]
-
-            shadow-[0_4px_16px_rgba(0,0,0,0.10)]
-            ">
-
-                                    <p class="
-                text-[14px]
-                font-medium
-                text-[#4B5563]
-                leading-[20px]
-                ">
+                                <figcaption
+                                    class="absolute left-1/2 -translate-x-1/2 bottom-8 w-[88%] bg-white rounded-[12px] px-[12px] py-[10px] shadow-[0_4px_16px_rgba(0,0,0,0.10)]">
+                                    <p class="text-[14px] font-medium text-[#4B5563] leading-[20px]">
                                         FIXNOW Verified Professional
                                     </p>
-
                                 </figcaption>
-
                             </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Availability -->
+            <div
+                class="w-full border border-[#E5E7EB] rounded-[25px] p-[16px] min-[375px]:p-[20px] sm:p-[24px] mt-[24px] shadow-[inset_0_2px_13.7px_0_#E5E7EB]">
+                <h3 class="text-[18px] sm:text-[20px] font-semibold text-[var(--color9)] mb-[20px]">
+                    Availability
+                </h3>
+
+                <!-- Days -->
+                <div
+                    class="grid grid-cols-2 min-[375px]:grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-[10px] sm:gap-[12px] lg:gap-[16px]">
+                    <!-- Day 1 -->
+                    <div
+                        class="w-full min-h-[90px] sm:min-h-[105px] lg:min-h-[120px] px-[8px] sm:px-[10px] shadow-[inset_0_2px_13.7px_0_#E5E7EB] rounded-[16px] sm:rounded-[20px] flex flex-col justify-center items-center border border-transparent hover:border-[#3089E0] hover:bg-[#F0F9FE] transition-all duration-300">
+                        <p class="text-[13px] sm:text-[15px] lg:text-[16px] font-semibold text-[#374151]">
+                            Sun
+                        </p>
+
+                        <p class="text-[12px] sm:text-[14px] lg:text-[15px] font-medium text-[#6B7280] mt-[4px]">
+                            27 Jul
+                        </p>
+
+                        <div class="flex items-center mt-[10px]">
+                            <span class="w-[9px] h-[9px] rounded-full bg-[#8FE68D] shadow-[0_0_6px_#8FE68D]"></span>
+
+                            <span class="text-[10px] sm:text-[12px] font-semibold text-[#8FE68D] ml-[6px]">
+                                Available
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div
+                        class="w-full min-h-[90px] sm:min-h-[105px] lg:min-h-[120px] px-[8px] sm:px-[10px] shadow-[inset_0_2px_13.7px_0_#E5E7EB] rounded-[16px] sm:rounded-[20px] flex flex-col justify-center items-center border border-transparent hover:border-[#3089E0] hover:bg-[#F0F9FE] transition-all duration-300">
+                        <p class="text-[13px] sm:text-[15px] lg:text-[16px] font-semibold text-[#374151]">
+                            Mon
+                        </p>
+
+                        <p class="text-[12px] sm:text-[14px] lg:text-[15px] font-medium text-[#6B7280] mt-[4px]">
+                            28 Jul
+                        </p>
+
+                        <div class="flex items-center mt-[10px]">
+                            <span class="w-[9px] h-[9px] rounded-full bg-[#DC2626] shadow-[0_0_6px_#DC2626]"></span>
+
+                            <span class="text-[10px] sm:text-[12px] font-semibold text-[#DC2626] ml-[6px]">
+                                Unavailable
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 -->
+                    <div
+                        class="w-full min-h-[90px] sm:min-h-[105px] lg:min-h-[120px] px-[8px] sm:px-[10px] shadow-[inset_0_2px_13.7px_0_#E5E7EB] rounded-[16px] sm:rounded-[20px] flex flex-col justify-center items-center border border-transparent hover:border-[#3089E0] hover:bg-[#F0F9FE] transition-all duration-300">
+                        <p class="text-[13px] sm:text-[15px] lg:text-[16px] font-semibold text-[#374151]">
+                            Tue
+                        </p>
+
+                        <p class="text-[12px] sm:text-[14px] lg:text-[15px] font-medium text-[#6B7280] mt-[4px]">
+                            29 Jul
+                        </p>
+
+                        <div class="flex items-center mt-[10px]">
+                            <span class="w-[9px] h-[9px] rounded-full bg-[#8FE68D] shadow-[0_0_6px_#8FE68D]"></span>
+
+                            <span class="text-[10px] sm:text-[12px] font-semibold text-[#8FE68D] ml-[6px]">
+                                Available
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Day 4 -->
+                    <div
+                        class="w-full min-h-[90px] sm:min-h-[105px] lg:min-h-[120px] px-[8px] sm:px-[10px] shadow-[inset_0_2px_13.7px_0_#E5E7EB] rounded-[16px] sm:rounded-[20px] flex flex-col justify-center items-center border border-transparent hover:border-[#3089E0] hover:bg-[#F0F9FE] transition-all duration-300">
+                        <p class="text-[13px] sm:text-[15px] lg:text-[16px] font-semibold text-[#374151]">
+                            Wed
+                        </p>
+
+                        <p class="text-[12px] sm:text-[14px] lg:text-[15px] font-medium text-[#6B7280] mt-[4px]">
+                            30 Jul
+                        </p>
+
+                        <div class="flex items-center mt-[10px]">
+                            <span class="w-[9px] h-[9px] rounded-full bg-[#8FE68D] shadow-[0_0_6px_#8FE68D]"></span>
+
+                            <span class="text-[10px] sm:text-[12px] font-semibold text-[#8FE68D] ml-[6px]">
+                                Available
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Day 5 -->
+                    <div
+                        class="w-full min-h-[90px] sm:min-h-[105px] lg:min-h-[120px] px-[8px] sm:px-[10px] shadow-[inset_0_2px_13.7px_0_#E5E7EB] rounded-[16px] sm:rounded-[20px] flex flex-col justify-center items-center border border-transparent hover:border-[#3089E0] hover:bg-[#F0F9FE] transition-all duration-300">
+                        <p class="text-[13px] sm:text-[15px] lg:text-[16px] font-semibold text-[#374151]">
+                            Thu
+                        </p>
+
+                        <p class="text-[12px] sm:text-[14px] lg:text-[15px] font-medium text-[#6B7280] mt-[4px]">
+                            1 Aug
+                        </p>
+
+                        <div class="flex items-center mt-[10px]">
+                            <span class="w-[9px] h-[9px] rounded-full bg-[#8FE68D] shadow-[0_0_6px_#8FE68D]"></span>
+
+                            <span class="text-[10px] sm:text-[12px] font-semibold text-[#8FE68D] ml-[6px]">
+                                Available
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Day 6 -->
+                    <div
+                        class="w-full min-h-[90px] sm:min-h-[105px] lg:min-h-[120px] px-[8px] sm:px-[10px] shadow-[inset_0_2px_13.7px_0_#E5E7EB] rounded-[16px] sm:rounded-[20px] flex flex-col justify-center items-center border border-transparent hover:border-[#3089E0] hover:bg-[#F0F9FE] transition-all duration-300">
+                        <p class="text-[13px] sm:text-[15px] lg:text-[16px] font-semibold text-[#374151]">
+                            Fri
+                        </p>
+
+                        <p class="text-[12px] sm:text-[14px] lg:text-[15px] font-medium text-[#6B7280] mt-[4px]">
+                            2 Aug
+                        </p>
+
+                        <div class="flex items-center mt-[10px]">
+                            <span class="w-[9px] h-[9px] rounded-full bg-[#DC2626] shadow-[0_0_6px_#DC2626]"></span>
+
+                            <span class="text-[10px] sm:text-[12px] font-semibold text-[#DC2626] ml-[6px]">
+                                Unavailable
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Day 7 -->
+                    <div
+                        class="w-full min-h-[90px] sm:min-h-[105px] lg:min-h-[120px] px-[8px] sm:px-[10px] shadow-[inset_0_2px_13.7px_0_#E5E7EB] rounded-[16px] sm:rounded-[20px] flex flex-col justify-center items-center border border-transparent hover:border-[#3089E0] hover:bg-[#F0F9FE] transition-all duration-300">
+                        <p class="text-[13px] sm:text-[15px] lg:text-[16px] font-semibold text-[#374151]">
+                            Sat
+                        </p>
+
+                        <p class="text-[12px] sm:text-[14px] lg:text-[15px] font-medium text-[#6B7280] mt-[4px]">
+                            3 Aug
+                        </p>
+
+                        <div class="flex items-center mt-[10px]">
+                            <span class="w-[9px] h-[9px] rounded-full bg-[#8FE68D] shadow-[0_0_6px_#8FE68D]"></span>
+
+                            <span class="text-[10px] sm:text-[12px] font-semibold text-[#8FE68D] ml-[6px]">
+                                Available
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Time Slots -->
+                <h3 class="text-[18px] sm:text-[20px] font-semibold text-[var(--color9)] mt-[24px] mb-[16px]">
+                    Time Slots
+                </h3>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-[10px] sm:gap-[12px]">
+                    <div
+                        class="min-h-[45px] px-[10px] rounded-[14px] shadow-[inset_0_2px_13.7px_0_#E5E7EB] flex items-center justify-center text-[11px] sm:text-[13px] lg:text-[14px] font-medium text-[#374151]">
+                        9:00 AM
+                    </div>
+
+                    <div
+                        class="min-h-[45px] px-[10px] rounded-[14px] shadow-[inset_0_2px_13.7px_0_#E5E7EB] flex items-center justify-center text-[11px] sm:text-[13px] lg:text-[14px] font-medium text-[#374151]">
+                        11:00 AM
+                    </div>
+
+                    <div
+                        class="min-h-[45px] px-[10px] rounded-[14px] shadow-[inset_0_2px_13.7px_0_#E5E7EB] flex items-center justify-center text-[11px] sm:text-[13px] lg:text-[14px] font-medium text-[#374151]">
+                        1:00 PM
+                    </div>
+
+                    <div
+                        class="min-h-[45px] px-[10px] rounded-[14px] shadow-[inset_0_2px_13.7px_0_#E5E7EB] flex items-center justify-center text-[11px] sm:text-[13px] lg:text-[14px] font-medium text-[#374151]">
+                        3:30 PM
+                    </div>
+
+                    <div
+                        class="min-h-[45px] px-[10px] rounded-[14px] shadow-[inset_0_2px_13.7px_0_#E5E7EB] flex items-center justify-center text-[11px] sm:text-[13px] lg:text-[14px] font-medium text-[#374151]">
+                        6:00 PM
+                    </div>
+
+                    <div
+                        class="min-h-[45px] px-[10px] rounded-[14px] shadow-[inset_0_2px_13.7px_0_#E5E7EB] flex items-center justify-center text-[11px] sm:text-[13px] lg:text-[14px] font-medium text-[#374151]">
+                        7:00 PM
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rating & Reviews -->
+            <div
+                class="w-full border border-[#E5E7EB] rounded-[25px] p-[16px] min-[375px]:p-[20px] sm:p-[24px] mt-[24px] shadow-[inset_0_2px_13.7px_0_#E5E7EB]">
+                <h3 class="text-[18px] sm:text-[20px] font-semibold text-[var(--color9)] mb-[20px]">
+                    Rating &amp; Reviews
+                </h3>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-[24px]">
+                    <!-- Overall Rating -->
+                    <div class="lg:col-span-3
+            flex
+            flex-col
+            items-center
+            justify-center
+            text-center
+            py-[10px]">
+
+                        <!-- 3 Star Group -->
+                        <div class="flex items-center justify-center">
+
+                            <!-- svg add -->
+                            <svg width="95" height="55" viewBox="0 0 95 55" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <!-- svg add -->
+                            </svg>
+
+                        </div>
+
+
+                        <!-- Overall Rating Text -->
+                        <p class="text-[14px]
+                sm:text-[16px]
+                font-medium
+                text-[#4B5563]
+                mt-[20px]">
+                            Overall ratings
+                        </p>
+
+
+                        <!-- Rating Number -->
+                        <p class="text-[42px]
+                sm:text-[48px]
+                font-semibold
+                text-[#4B5563]
+                mt-[4px]">
+                            4.9
+                        </p>
+
+
+                        <!-- Review Count -->
+                        <p class="text-[12px]
+                sm:text-[14px]
+                font-medium
+                text-[#6B7280]
+                mt-[12px]
+                leading-[18px]">
+                            Based on 312 reviews
+                        </p>
+
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="hidden lg:flex lg:col-span-1 justify-center">
+                        <div
+                            class="w-[1px] h-full min-h-[220px] bg-gradient-to-b from-[#F0F9FE] via-[#3089E0] to-[#F0F9FE]">
+                        </div>
+                    </div>
+
+                    <!-- Rating Distribution -->
+                    <div class="lg:col-span-8 w-full">
+                        <h4 class="text-[16px] sm:text-[18px] font-semibold text-[#1A3151] mb-[20px]">
+                            Rating Distribution
+                        </h4>
+
+                        <!-- 5 Star -->
+                        <div class="flex items-center mb-[18px]">
+                            <span class="w-[14px] sm:w-[18px] text-[13px] sm:text-[15px] font-medium text-[#374151]">
+                                5
+                            </span>
+
+                            <span class="text-[#FDC403] text-[16px] ml-[5px]"> ★ </span>
+
+                            <div class="relative flex-1 h-[10px] ml-[8px] rounded-full bg-[#FEF3C7] overflow-hidden">
+                                <div class="absolute left-0 top-0 h-full w-4/5 rounded-full bg-[#F59E0B]"></div>
+                            </div>
+                        </div>
+
+                        <!-- 4 Star -->
+                        <div class="flex items-center mb-[18px]">
+                            <span class="w-[14px] sm:w-[18px] text-[13px] sm:text-[15px] font-medium text-[#374151]">
+                                4
+                            </span>
+
+                            <span class="text-[#FDC403] text-[16px] ml-[5px]"> ★ </span>
+
+                            <div class="relative flex-1 h-[10px] ml-[8px] rounded-full bg-[#FEF3C7] overflow-hidden">
+                                <div class="absolute left-0 top-0 h-full w-3/5 rounded-full bg-[#F59E0B]"></div>
+                            </div>
+                        </div>
+
+                        <!-- 3 Star -->
+                        <div class="flex items-center mb-[18px]">
+                            <span class="w-[14px] sm:w-[18px] text-[13px] sm:text-[15px] font-medium text-[#374151]">
+                                3
+                            </span>
+
+                            <span class="text-[#FDC403] text-[16px] ml-[5px]"> ★ </span>
+
+                            <div class="relative flex-1 h-[10px] ml-[8px] rounded-full bg-[#FEF3C7] overflow-hidden">
+                                <div class="absolute left-0 top-0 h-full w-2/5 rounded-full bg-[#F59E0B]"></div>
+                            </div>
+                        </div>
+
+                        <!-- 2 Star -->
+                        <div class="flex items-center mb-[18px]">
+                            <span class="w-[14px] sm:w-[18px] text-[13px] sm:text-[15px] font-medium text-[#374151]">
+                                2
+                            </span>
+
+                            <span class="text-[#FDC403] text-[16px] ml-[5px]"> ★ </span>
+
+                            <div class="relative flex-1 h-[10px] ml-[8px] rounded-full bg-[#FEF3C7] overflow-hidden">
+                                <div class="absolute left-0 top-0 h-full w-2/6 rounded-full bg-[#F59E0B]"></div>
+                            </div>
+                        </div>
+
+                        <!-- 1 Star -->
+                        <div class="flex items-center">
+                            <span class="w-[14px] sm:w-[18px] text-[13px] sm:text-[15px] font-medium text-[#374151]">
+                                1
+                            </span>
+
+                            <span class="text-[#FDC403] text-[16px] ml-[5px]"> ★ </span>
+
+                            <div class="relative flex-1 h-[10px] ml-[8px] rounded-full bg-[#FEF3C7] overflow-hidden">
+                                <div class="absolute left-0 top-0 h-full w-1/5 rounded-full bg-[#F59E0B]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews Section -->
+                <div class="mt-[36px]">
+
+                    <!-- View More -->
+                    <div class="flex justify-end mb-[20px]">
+                        <button class="
+            flex
+            items-center
+            gap-[8px]
+            text-[12px]
+            sm:text-[14px]
+            font-semibold
+            text-[#2772CC]
+            hover:text-[var(--color-15)]
+    transition-colors
+    duration-300
+            ">
+                            View More
+
+                            <!-- Arrow SVG -->
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+
+                                <path d="M3.75 9H14.25M14.25 9L9.75 4.5M14.25 9L9.75 13.5" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+
+                    <!-- Review Cards -->
+                    <div class="
+        grid
+        grid-cols-1
+        sm:grid-cols-2
+        lg:grid-cols-3
+        gap-[14px]
+        sm:gap-[16px]
+        lg:gap-[20px]
+    ">
+
+                        <!-- Review 1 -->
+                        <div class="
+            bg-gradient-to-b
+from-[#F0F9FE]
+to-[#FFFFFF]
+
+            rounded-[30px]
+            p-[20px]
+            sm:p-[25px]
+            lg:p-[30px]
+            min-h-[200px]
+            flex
+            flex-col
+            justify-between
+        ">
+
+                            <!-- User -->
+                            <div class="flex items-center">
+
+                                <img src="./assets/images/booking-details/review-user-1.png" alt="Amit Sharma" class="
+                    w-[38px]
+                    h-[38px]
+                    sm:w-[42px]
+                    sm:h-[42px]
+                    rounded-full
+                    object-cover
+                    shrink-0
+                    ">
+
+                                <div class="ml-[10px]">
+
+                                    <p class="
+                        text-[13px]
+                        sm:text-[16px]
+                        font-semibold
+                        text-[#1A3151]
+                    ">
+                                        Amit Sharma
+                                    </p>
+
+                                    <p class="
+                        text-[12px]
+                        sm:text-[14px]
+                        text-[#4B5563]
+                        mt-[3px]
+                    ">
+                                        24 May 2025
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Review Text -->
+                            <p class="
+                text-[12px]
+                sm:text-[13px]
+                lg:text-[14px]
+                text-[#374151]
+                leading-[18px]
+                sm:leading-[19px]
+                mt-[24px]
+            ">
+                                "Excellent service from start to finish.
+                                The technician arrived on time, explained
+                                the issue clearly, and repaired my AC quickly.
+                                Highly recommended."
+                            </p>
+
+
+                            <!-- Stars -->
+                            <div class="flex items-center mt-[18px] gap-[1.22px]">
+
+                                <!-- Star 1 -->
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.65625 0C8.35643 0.277156 8.58813 0.786625 8.90625 1.43555C8.98683 1.64267 9.06629 1.85023 9.1449 2.05811C9.57163 3.23746 9.57163 3.23746 10.4297 4.08943C11.056 4.29764 11.6955 4.35115 12.3517 4.38583C12.788 4.41228 13.2126 4.48393 13.6426 4.56055C13.7741 4.57988 13.9056 4.59922 14.0411 4.61914C14.4359 4.73461 14.5978 4.85811 14.8438 5.18555C14.9219 5.71289 14.9219 5.71289 14.8438 6.2793C14.4407 6.73032 13.9957 7.11835 13.5364 7.50977C12.4833 8.39054 12.4833 8.39054 11.9232 9.59351C11.9657 10.1225 12.063 10.6072 12.1875 11.123C12.2434 11.4353 12.2923 11.7476 12.3376 12.0615C12.3807 12.3583 12.4316 12.6538 12.4829 12.9492C12.503 13.5573 12.4388 13.7974 12.0312 14.248C11.5723 14.4268 11.2703 14.464 10.799 14.3045C10.4722 14.1552 10.1587 13.9912 9.84375 13.8184C9.7366 13.762 9.62944 13.7056 9.51904 13.6475C9.03983 13.3951 8.56563 13.1382 8.0957 12.8687C7.56817 12.6488 7.40812 12.6468 6.875 12.8418C6.31129 13.1197 5.76664 13.4307 5.22095 13.7421C4.52176 14.1279 3.94142 14.3759 3.125 14.4043C2.65625 14.1309 2.65625 14.1309 2.34375 13.623C2.30587 13.0354 2.39918 12.4825 2.5 11.9043C2.54109 11.659 2.54109 11.659 2.58301 11.4087C2.63598 11.0955 2.69128 10.7828 2.74963 10.4706C2.90134 9.5976 2.90134 9.5976 2.61719 8.79944C2.52695 8.71867 2.43672 8.6379 2.34375 8.55469C2.24465 8.46365 2.14556 8.37261 2.04346 8.27881C1.9363 8.18616 1.82915 8.09351 1.71875 7.99805C1.60837 7.90217 1.498 7.8063 1.38428 7.70752C1.17413 7.52539 0.962659 7.34475 0.749512 7.16614C0.245998 6.69656 0.0147834 6.41974 -0.0585938 5.72266C0 5.18555 0 5.18555 0.184937 4.92867C0.55848 4.64981 0.858332 4.60875 1.31836 4.53979C1.48392 4.51381 1.64949 4.48783 1.82007 4.46106C1.99288 4.43588 2.1657 4.41071 2.34375 4.38477C2.68559 4.33257 3.02739 4.2801 3.36914 4.22729C3.52081 4.20491 3.67247 4.18253 3.82874 4.15947C4.2373 4.09858 4.2373 4.09858 4.6875 3.93555C4.90006 3.60089 4.90006 3.60089 5.08179 3.18481C5.1543 3.03234 5.22681 2.87987 5.30151 2.72278C5.45138 2.39995 5.60072 2.07687 5.74951 1.75354C5.82242 1.60067 5.89534 1.44779 5.97046 1.29028C6.03539 1.14972 6.10032 1.00916 6.16722 0.864334C6.54838 0.28025 6.96461 0.0432276 7.65625 0Z"
+                                        fill="#FDC403" />
+                                </svg>
+
+
+                                <!-- Star 2 -->
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.65625 0C8.35643 0.277156 8.58813 0.786625 8.90625 1.43555C8.98683 1.64267 9.06629 1.85023 9.1449 2.05811C9.57163 3.23746 9.57163 3.23746 10.4297 4.08943C11.056 4.29764 11.6955 4.35115 12.3517 4.38583C12.788 4.41228 13.2126 4.48393 13.6426 4.56055C13.7741 4.57988 13.9056 4.59922 14.0411 4.61914C14.4359 4.73461 14.5978 4.85811 14.8438 5.18555C14.9219 5.71289 14.9219 5.71289 14.8438 6.2793C14.4407 6.73032 13.9957 7.11835 13.5364 7.50977C12.4833 8.39054 12.4833 8.39054 11.9232 9.59351C11.9657 10.1225 12.063 10.6072 12.1875 11.123C12.2434 11.4353 12.2923 11.7476 12.3376 12.0615C12.3807 12.3583 12.4316 12.6538 12.4829 12.9492C12.503 13.5573 12.4388 13.7974 12.0312 14.248C11.5723 14.4268 11.2703 14.464 10.799 14.3045C10.4722 14.1552 10.1587 13.9912 9.84375 13.8184C9.7366 13.762 9.62944 13.7056 9.51904 13.6475C9.03983 13.3951 8.56563 13.1382 8.0957 12.8687C7.56817 12.6488 7.40812 12.6468 6.875 12.8418C6.31129 13.1197 5.76664 13.4307 5.22095 13.7421C4.52176 14.1279 3.94142 14.3759 3.125 14.4043C2.65625 14.1309 2.65625 14.1309 2.34375 13.623C2.30587 13.0354 2.39918 12.4825 2.5 11.9043C2.54109 11.659 2.54109 11.659 2.58301 11.4087C2.63598 11.0955 2.69128 10.7828 2.74963 10.4706C2.90134 9.5976 2.90134 9.5976 2.61719 8.79944C2.52695 8.71867 2.43672 8.6379 2.34375 8.55469C2.24465 8.46365 2.14556 8.37261 2.04346 8.27881C1.9363 8.18616 1.82915 8.09351 1.71875 7.99805C1.60837 7.90217 1.498 7.8063 1.38428 7.70752C1.17413 7.52539 0.962659 7.34475 0.749512 7.16614C0.245998 6.69656 0.0147834 6.41974 -0.0585938 5.72266C0 5.18555 0 5.18555 0.184937 4.92867C0.55848 4.64981 0.858332 4.60875 1.31836 4.53979C1.48392 4.51381 1.64949 4.48783 1.82007 4.46106C1.99288 4.43588 2.1657 4.41071 2.34375 4.38477C2.68559 4.33257 3.02739 4.2801 3.36914 4.22729C3.52081 4.20491 3.67247 4.18253 3.82874 4.15947C4.2373 4.09858 4.2373 4.09858 4.6875 3.93555C4.90006 3.60089 4.90006 3.60089 5.08179 3.18481C5.1543 3.03234 5.22681 2.87987 5.30151 2.72278C5.45138 2.39995 5.60072 2.07687 5.74951 1.75354C5.82242 1.60067 5.89534 1.44779 5.97046 1.29028C6.03539 1.14972 6.10032 1.00916 6.16722 0.864334C6.54838 0.28025 6.96461 0.0432276 7.65625 0Z"
+                                        fill="#FDC403" />
+                                </svg>
+
+
+                                <!-- Star 3 -->
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.65625 0C8.35643 0.277156 8.58813 0.786625 8.90625 1.43555C8.98683 1.64267 9.06629 1.85023 9.1449 2.05811C9.57163 3.23746 9.57163 3.23746 10.4297 4.08943C11.056 4.29764 11.6955 4.35115 12.3517 4.38583C12.788 4.41228 13.2126 4.48393 13.6426 4.56055C13.7741 4.57988 13.9056 4.59922 14.0411 4.61914C14.4359 4.73461 14.5978 4.85811 14.8438 5.18555C14.9219 5.71289 14.9219 5.71289 14.8438 6.2793C14.4407 6.73032 13.9957 7.11835 13.5364 7.50977C12.4833 8.39054 12.4833 8.39054 11.9232 9.59351C11.9657 10.1225 12.063 10.6072 12.1875 11.123C12.2434 11.4353 12.2923 11.7476 12.3376 12.0615C12.3807 12.3583 12.4316 12.6538 12.4829 12.9492C12.503 13.5573 12.4388 13.7974 12.0312 14.248C11.5723 14.4268 11.2703 14.464 10.799 14.3045C10.4722 14.1552 10.1587 13.9912 9.84375 13.8184C9.7366 13.762 9.62944 13.7056 9.51904 13.6475C9.03983 13.3951 8.56563 13.1382 8.0957 12.8687C7.56817 12.6488 7.40812 12.6468 6.875 12.8418C6.31129 13.1197 5.76664 13.4307 5.22095 13.7421C4.52176 14.1279 3.94142 14.3759 3.125 14.4043C2.65625 14.1309 2.65625 14.1309 2.34375 13.623C2.30587 13.0354 2.39918 12.4825 2.5 11.9043C2.54109 11.659 2.54109 11.659 2.58301 11.4087C2.63598 11.0955 2.69128 10.7828 2.74963 10.4706C2.90134 9.5976 2.90134 9.5976 2.61719 8.79944C2.52695 8.71867 2.43672 8.6379 2.34375 8.55469C2.24465 8.46365 2.14556 8.37261 2.04346 8.27881C1.9363 8.18616 1.82915 8.09351 1.71875 7.99805C1.60837 7.90217 1.498 7.8063 1.38428 7.70752C1.17413 7.52539 0.962659 7.34475 0.749512 7.16614C0.245998 6.69656 0.0147834 6.41974 -0.0585938 5.72266C0 5.18555 0 5.18555 0.184937 4.92867C0.55848 4.64981 0.858332 4.60875 1.31836 4.53979C1.48392 4.51381 1.64949 4.48783 1.82007 4.46106C1.99288 4.43588 2.1657 4.41071 2.34375 4.38477C2.68559 4.33257 3.02739 4.2801 3.36914 4.22729C3.52081 4.20491 3.67247 4.18253 3.82874 4.15947C4.2373 4.09858 4.2373 4.09858 4.6875 3.93555C4.90006 3.60089 4.90006 3.60089 5.08179 3.18481C5.1543 3.03234 5.22681 2.87987 5.30151 2.72278C5.45138 2.39995 5.60072 2.07687 5.74951 1.75354C5.82242 1.60067 5.89534 1.44779 5.97046 1.29028C6.03539 1.14972 6.10032 1.00916 6.16722 0.864334C6.54838 0.28025 6.96461 0.0432276 7.65625 0Z"
+                                        fill="#FDC403" />
+                                </svg>
+
+
+                                <!-- Star 4 -->
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.65625 0C8.35643 0.277156 8.58813 0.786625 8.90625 1.43555C8.98683 1.64267 9.06629 1.85023 9.1449 2.05811C9.57163 3.23746 9.57163 3.23746 10.4297 4.08943C11.056 4.29764 11.6955 4.35115 12.3517 4.38583C12.788 4.41228 13.2126 4.48393 13.6426 4.56055C13.7741 4.57988 13.9056 4.59922 14.0411 4.61914C14.4359 4.73461 14.5978 4.85811 14.8438 5.18555C14.9219 5.71289 14.9219 5.71289 14.8438 6.2793C14.4407 6.73032 13.9957 7.11835 13.5364 7.50977C12.4833 8.39054 12.4833 8.39054 11.9232 9.59351C11.9657 10.1225 12.063 10.6072 12.1875 11.123C12.2434 11.4353 12.2923 11.7476 12.3376 12.0615C12.3807 12.3583 12.4316 12.6538 12.4829 12.9492C12.503 13.5573 12.4388 13.7974 12.0312 14.248C11.5723 14.4268 11.2703 14.464 10.799 14.3045C10.4722 14.1552 10.1587 13.9912 9.84375 13.8184C9.7366 13.762 9.62944 13.7056 9.51904 13.6475C9.03983 13.3951 8.56563 13.1382 8.0957 12.8687C7.56817 12.6488 7.40812 12.6468 6.875 12.8418C6.31129 13.1197 5.76664 13.4307 5.22095 13.7421C4.52176 14.1279 3.94142 14.3759 3.125 14.4043C2.65625 14.1309 2.65625 14.1309 2.34375 13.623C2.30587 13.0354 2.39918 12.4825 2.5 11.9043C2.54109 11.659 2.54109 11.659 2.58301 11.4087C2.63598 11.0955 2.69128 10.7828 2.74963 10.4706C2.90134 9.5976 2.90134 9.5976 2.61719 8.79944C2.52695 8.71867 2.43672 8.6379 2.34375 8.55469C2.24465 8.46365 2.14556 8.37261 2.04346 8.27881C1.9363 8.18616 1.82915 8.09351 1.71875 7.99805C1.60837 7.90217 1.498 7.8063 1.38428 7.70752C1.17413 7.52539 0.962659 7.34475 0.749512 7.16614C0.245998 6.69656 0.0147834 6.41974 -0.0585938 5.72266C0 5.18555 0 5.18555 0.184937 4.92867C0.55848 4.64981 0.858332 4.60875 1.31836 4.53979C1.48392 4.51381 1.64949 4.48783 1.82007 4.46106C1.99288 4.43588 2.1657 4.41071 2.34375 4.38477C2.68559 4.33257 3.02739 4.2801 3.36914 4.22729C3.52081 4.20491 3.67247 4.18253 3.82874 4.15947C4.2373 4.09858 4.2373 4.09858 4.6875 3.93555C4.90006 3.60089 4.90006 3.60089 5.08179 3.18481C5.1543 3.03234 5.22681 2.87987 5.30151 2.72278C5.45138 2.39995 5.60072 2.07687 5.74951 1.75354C5.82242 1.60067 5.89534 1.44779 5.97046 1.29028C6.03539 1.14972 6.10032 1.00916 6.16722 0.864334C6.54838 0.28025 6.96461 0.0432276 7.65625 0Z"
+                                        fill="#FDC403" />
+                                </svg>
+
+                                <!-- Star 5 -->
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.65625 0C8.35643 0.277156 8.58813 0.786625 8.90625 1.43555C8.98683 1.64267 9.06629 1.85023 9.1449 2.05811C9.57163 3.23746 9.57163 3.23746 10.4297 4.08943C11.056 4.29764 11.6955 4.35115 12.3517 4.38583C12.788 4.41228 13.2126 4.48393 13.6426 4.56055C13.7741 4.57988 13.9056 4.59922 14.0411 4.61914C14.4359 4.73461 14.5978 4.85811 14.8438 5.18555C14.9219 5.71289 14.9219 5.71289 14.8438 6.2793C14.4407 6.73032 13.9957 7.11835 13.5364 7.50977C12.4833 8.39054 12.4833 8.39054 11.9232 9.59351C11.9657 10.1225 12.063 10.6072 12.1875 11.123C12.2434 11.4353 12.2923 11.7476 12.3376 12.0615C12.3807 12.3583 12.4316 12.6538 12.4829 12.9492C12.503 13.5573 12.4388 13.7974 12.0312 14.248C11.5723 14.4268 11.2703 14.464 10.799 14.3045C10.4722 14.1552 10.1587 13.9912 9.84375 13.8184C9.7366 13.762 9.62944 13.7056 9.51904 13.6475C9.03983 13.3951 8.56563 13.1382 8.0957 12.8687C7.56817 12.6488 7.40812 12.6468 6.875 12.8418C6.31129 13.1197 5.76664 13.4307 5.22095 13.7421C4.52176 14.1279 3.94142 14.3759 3.125 14.4043C2.65625 14.1309 2.65625 14.1309 2.34375 13.623C2.30587 13.0354 2.39918 12.4825 2.5 11.9043C2.54109 11.659 2.54109 11.659 2.58301 11.4087C2.63598 11.0955 2.69128 10.7828 2.74963 10.4706C2.90134 9.5976 2.90134 9.5976 2.61719 8.79944C2.52695 8.71867 2.43672 8.6379 2.34375 8.55469C2.24465 8.46365 2.14556 8.37261 2.04346 8.27881C1.9363 8.18616 1.82915 8.09351 1.71875 7.99805C1.60837 7.90217 1.498 7.8063 1.38428 7.70752C1.17413 7.52539 0.962659 7.34475 0.749512 7.16614C0.245998 6.69656 0.0147834 6.41974 -0.0585938 5.72266C0 5.18555 0 5.18555 0.184937 4.92867C0.55848 4.64981 0.858332 4.60875 1.31836 4.53979C1.48392 4.51381 1.64949 4.48783 1.82007 4.46106C1.99288 4.43588 2.1657 4.41071 2.34375 4.38477C2.68559 4.33257 3.02739 4.2801 3.36914 4.22729C3.52081 4.20491 3.67247 4.18253 3.82874 4.15947C4.2373 4.09858 4.2373 4.09858 4.6875 3.93555C4.90006 3.60089 4.90006 3.60089 5.08179 3.18481C5.1543 3.03234 5.22681 2.87987 5.30151 2.72278C5.45138 2.39995 5.60072 2.07687 5.74951 1.75354C5.82242 1.60067 5.89534 1.44779 5.97046 1.29028C6.03539 1.14972 6.10032 1.00916 6.16722 0.864334C6.54838 0.28025 6.96461 0.0432276 7.65625 0Z"
+                                        fill="#FDC403" />
+                                </svg>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Review 2 -->
+                        <div class="
+            bg-gradient-to-b
+from-[#F0F9FE]
+to-[#FFFFFF]
+
+            rounded-[30px]
+            p-[20px]
+            sm:p-[25px]
+            lg:p-[30px]
+            min-h-[200px]
+            flex
+            flex-col
+            justify-between
+        ">
+
+                            <div class="flex items-center">
+
+                                <img src="./assets/images/booking-details/review-user-2.png" alt="Priya Mehta" class="
+                    w-[38px]
+                    h-[38px]
+                    sm:w-[42px]
+                    sm:h-[42px]
+                    rounded-full
+                    object-cover
+                    shrink-0
+                    ">
+
+                                <div class="ml-[10px]">
+
+                                    <p class="text-[13px] sm:text-[16px] font-semibold text-[#1A3151]">
+                                        Priya Mehta
+                                    </p>
+
+                                    <p class="text-[12px] sm:text-[14px] text-[#4B5563] mt-[3px]">
+                                        12 June 2026
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <p class="
+                text-[12px]
+                sm:text-[13px]
+                lg:text-[14px]
+                text-[#374151]
+                leading-[18px]
+                sm:leading-[19px]
+                mt-[18px]
+            ">
+                                "Very professional and courteous.
+                                Booking was simple, pricing was transparent,
+                                and the work was completed perfectly."
+                            </p>
+
+                            <div class="flex items-center mt-[18px] gap-[1.22px]">
+
+
+
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.65625 0C8.35643 0.277156 8.58813 0.786625 8.90625 1.43555C8.98683 1.64267 9.06629 1.85023 9.1449 2.05811C9.57163 3.23746 9.57163 3.23746 10.4297 4.08943C11.056 4.29764 11.6955 4.35115 12.3517 4.38583C12.788 4.41228 13.2126 4.48393 13.6426 4.56055C13.7741 4.57988 13.9056 4.59922 14.0411 4.61914C14.4359 4.73461 14.5978 4.85811 14.8438 5.18555C14.9219 5.71289 14.9219 5.71289 14.8438 6.2793C14.4407 6.73032 13.9957 7.11835 13.5364 7.50977C12.4833 8.39054 12.4833 8.39054 11.9232 9.59351C11.9657 10.1225 12.063 10.6072 12.1875 11.123C12.2434 11.4353 12.2923 11.7476 12.3376 12.0615C12.3807 12.3583 12.4316 12.6538 12.4829 12.9492C12.503 13.5573 12.4388 13.7974 12.0312 14.248C11.5723 14.4268 11.2703 14.464 10.799 14.3045C10.4722 14.1552 10.1587 13.9912 9.84375 13.8184C9.7366 13.762 9.62944 13.7056 9.51904 13.6475C9.03983 13.3951 8.56563 13.1382 8.0957 12.8687C7.56817 12.6488 7.40812 12.6468 6.875 12.8418C6.31129 13.1197 5.76664 13.4307 5.22095 13.7421C4.52176 14.1279 3.94142 14.3759 3.125 14.4043C2.65625 14.1309 2.65625 14.1309 2.34375 13.623C2.30587 13.0354 2.39918 12.4825 2.5 11.9043C2.54109 11.659 2.54109 11.659 2.58301 11.4087C2.63598 11.0955 2.69128 10.7828 2.74963 10.4706C2.90134 9.5976 2.90134 9.5976 2.61719 8.79944C2.52695 8.71867 2.43672 8.6379 2.34375 8.55469C2.24465 8.46365 2.14556 8.37261 2.04346 8.27881C1.9363 8.18616 1.82915 8.09351 1.71875 7.99805C1.60837 7.90217 1.498 7.8063 1.38428 7.70752C1.17413 7.52539 0.962659 7.34475 0.749512 7.16614C0.245998 6.69656 0.0147834 6.41974 -0.0585938 5.72266C0 5.18555 0 5.18555 0.184937 4.92867C0.55848 4.64981 0.858332 4.60875 1.31836 4.53979C1.48392 4.51381 1.64949 4.48783 1.82007 4.46106C1.99288 4.43588 2.1657 4.41071 2.34375 4.38477C2.68559 4.33257 3.02739 4.2801 3.36914 4.22729C3.52081 4.20491 3.67247 4.18253 3.82874 4.15947C4.2373 4.09858 4.2373 4.09858 4.6875 3.93555C4.90006 3.60089 4.90006 3.60089 5.08179 3.18481C5.1543 3.03234 5.22681 2.87987 5.30151 2.72278C5.45138 2.39995 5.60072 2.07687 5.74951 1.75354C5.82242 1.60067 5.89534 1.44779 5.97046 1.29028C6.03539 1.14972 6.10032 1.00916 6.16722 0.864334C6.54838 0.28025 6.96461 0.0432276 7.65625 0Z"
+                                        fill="#FDC403" />
+                                </svg>
+
+
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.65625 0C8.35643 0.277156 8.58813 0.786625 8.90625 1.43555C8.98683 1.64267 9.06629 1.85023 9.1449 2.05811C9.57163 3.23746 9.57163 3.23746 10.4297 4.08943C11.056 4.29764 11.6955 4.35115 12.3517 4.38583C12.788 4.41228 13.2126 4.48393 13.6426 4.56055C13.7741 4.57988 13.9056 4.59922 14.0411 4.61914C14.4359 4.73461 14.5978 4.85811 14.8438 5.18555C14.9219 5.71289 14.9219 5.71289 14.8438 6.2793C14.4407 6.73032 13.9957 7.11835 13.5364 7.50977C12.4833 8.39054 12.4833 8.39054 11.9232 9.59351C11.9657 10.1225 12.063 10.6072 12.1875 11.123C12.2434 11.4353 12.2923 11.7476 12.3376 12.0615C12.3807 12.3583 12.4316 12.6538 12.4829 12.9492C12.503 13.5573 12.4388 13.7974 12.0312 14.248C11.5723 14.4268 11.2703 14.464 10.799 14.3045C10.4722 14.1552 10.1587 13.9912 9.84375 13.8184C9.7366 13.762 9.62944 13.7056 9.51904 13.6475C9.03983 13.3951 8.56563 13.1382 8.0957 12.8687C7.56817 12.6488 7.40812 12.6468 6.875 12.8418C6.31129 13.1197 5.76664 13.4307 5.22095 13.7421C4.52176 14.1279 3.94142 14.3759 3.125 14.4043C2.65625 14.1309 2.65625 14.1309 2.34375 13.623C2.30587 13.0354 2.39918 12.4825 2.5 11.9043C2.54109 11.659 2.54109 11.659 2.58301 11.4087C2.63598 11.0955 2.69128 10.7828 2.74963 10.4706C2.90134 9.5976 2.90134 9.5976 2.61719 8.79944C2.52695 8.71867 2.43672 8.6379 2.34375 8.55469C2.24465 8.46365 2.14556 8.37261 2.04346 8.27881C1.9363 8.18616 1.82915 8.09351 1.71875 7.99805C1.60837 7.90217 1.498 7.8063 1.38428 7.70752C1.17413 7.52539 0.962659 7.34475 0.749512 7.16614C0.245998 6.69656 0.0147834 6.41974 -0.0585938 5.72266C0 5.18555 0 5.18555 0.184937 4.92867C0.55848 4.64981 0.858332 4.60875 1.31836 4.53979C1.48392 4.51381 1.64949 4.48783 1.82007 4.46106C1.99288 4.43588 2.1657 4.41071 2.34375 4.38477C2.68559 4.33257 3.02739 4.2801 3.36914 4.22729C3.52081 4.20491 3.67247 4.18253 3.82874 4.15947C4.2373 4.09858 4.2373 4.09858 4.6875 3.93555C4.90006 3.60089 4.90006 3.60089 5.08179 3.18481C5.1543 3.03234 5.22681 2.87987 5.30151 2.72278C5.45138 2.39995 5.60072 2.07687 5.74951 1.75354C5.82242 1.60067 5.89534 1.44779 5.97046 1.29028C6.03539 1.14972 6.10032 1.00916 6.16722 0.864334C6.54838 0.28025 6.96461 0.0432276 7.65625 0Z"
+                                        fill="#FDC403" />
+                                </svg>
+
+
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.65625 0C8.35643 0.277156 8.58813 0.786625 8.90625 1.43555C8.98683 1.64267 9.06629 1.85023 9.1449 2.05811C9.57163 3.23746 9.57163 3.23746 10.4297 4.08943C11.056 4.29764 11.6955 4.35115 12.3517 4.38583C12.788 4.41228 13.2126 4.48393 13.6426 4.56055C13.7741 4.57988 13.9056 4.59922 14.0411 4.61914C14.4359 4.73461 14.5978 4.85811 14.8438 5.18555C14.9219 5.71289 14.9219 5.71289 14.8438 6.2793C14.4407 6.73032 13.9957 7.11835 13.5364 7.50977C12.4833 8.39054 12.4833 8.39054 11.9232 9.59351C11.9657 10.1225 12.063 10.6072 12.1875 11.123C12.2434 11.4353 12.2923 11.7476 12.3376 12.0615C12.3807 12.3583 12.4316 12.6538 12.4829 12.9492C12.503 13.5573 12.4388 13.7974 12.0312 14.248C11.5723 14.4268 11.2703 14.464 10.799 14.3045C10.4722 14.1552 10.1587 13.9912 9.84375 13.8184C9.7366 13.762 9.62944 13.7056 9.51904 13.6475C9.03983 13.3951 8.56563 13.1382 8.0957 12.8687C7.56817 12.6488 7.40812 12.6468 6.875 12.8418C6.31129 13.1197 5.76664 13.4307 5.22095 13.7421C4.52176 14.1279 3.94142 14.3759 3.125 14.4043C2.65625 14.1309 2.65625 14.1309 2.34375 13.623C2.30587 13.0354 2.39918 12.4825 2.5 11.9043C2.54109 11.659 2.54109 11.659 2.58301 11.4087C2.63598 11.0955 2.69128 10.7828 2.74963 10.4706C2.90134 9.5976 2.90134 9.5976 2.61719 8.79944C2.52695 8.71867 2.43672 8.6379 2.34375 8.55469C2.24465 8.46365 2.14556 8.37261 2.04346 8.27881C1.9363 8.18616 1.82915 8.09351 1.71875 7.99805C1.60837 7.90217 1.498 7.8063 1.38428 7.70752C1.17413 7.52539 0.962659 7.34475 0.749512 7.16614C0.245998 6.69656 0.0147834 6.41974 -0.0585938 5.72266C0 5.18555 0 5.18555 0.184937 4.92867C0.55848 4.64981 0.858332 4.60875 1.31836 4.53979C1.48392 4.51381 1.64949 4.48783 1.82007 4.46106C1.99288 4.43588 2.1657 4.41071 2.34375 4.38477C2.68559 4.33257 3.02739 4.2801 3.36914 4.22729C3.52081 4.20491 3.67247 4.18253 3.82874 4.15947C4.2373 4.09858 4.2373 4.09858 4.6875 3.93555C4.90006 3.60089 4.90006 3.60089 5.08179 3.18481C5.1543 3.03234 5.22681 2.87987 5.30151 2.72278C5.45138 2.39995 5.60072 2.07687 5.74951 1.75354C5.82242 1.60067 5.89534 1.44779 5.97046 1.29028C6.03539 1.14972 6.10032 1.00916 6.16722 0.864334C6.54838 0.28025 6.96461 0.0432276 7.65625 0Z"
+                                        fill="#FDC403" />
+                                </svg>
+
+
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.65625 0C8.35643 0.277156 8.58813 0.786625 8.90625 1.43555C8.98683 1.64267 9.06629 1.85023 9.1449 2.05811C9.57163 3.23746 9.57163 3.23746 10.4297 4.08943C11.056 4.29764 11.6955 4.35115 12.3517 4.38583C12.788 4.41228 13.2126 4.48393 13.6426 4.56055C13.7741 4.57988 13.9056 4.59922 14.0411 4.61914C14.4359 4.73461 14.5978 4.85811 14.8438 5.18555C14.9219 5.71289 14.9219 5.71289 14.8438 6.2793C14.4407 6.73032 13.9957 7.11835 13.5364 7.50977C12.4833 8.39054 12.4833 8.39054 11.9232 9.59351C11.9657 10.1225 12.063 10.6072 12.1875 11.123C12.2434 11.4353 12.2923 11.7476 12.3376 12.0615C12.3807 12.3583 12.4316 12.6538 12.4829 12.9492C12.503 13.5573 12.4388 13.7974 12.0312 14.248C11.5723 14.4268 11.2703 14.464 10.799 14.3045C10.4722 14.1552 10.1587 13.9912 9.84375 13.8184C9.7366 13.762 9.62944 13.7056 9.51904 13.6475C9.03983 13.3951 8.56563 13.1382 8.0957 12.8687C7.56817 12.6488 7.40812 12.6468 6.875 12.8418C6.31129 13.1197 5.76664 13.4307 5.22095 13.7421C4.52176 14.1279 3.94142 14.3759 3.125 14.4043C2.65625 14.1309 2.65625 14.1309 2.34375 13.623C2.30587 13.0354 2.39918 12.4825 2.5 11.9043C2.54109 11.659 2.54109 11.659 2.58301 11.4087C2.63598 11.0955 2.69128 10.7828 2.74963 10.4706C2.90134 9.5976 2.90134 9.5976 2.61719 8.79944C2.52695 8.71867 2.43672 8.6379 2.34375 8.55469C2.24465 8.46365 2.14556 8.37261 2.04346 8.27881C1.9363 8.18616 1.82915 8.09351 1.71875 7.99805C1.60837 7.90217 1.498 7.8063 1.38428 7.70752C1.17413 7.52539 0.962659 7.34475 0.749512 7.16614C0.245998 6.69656 0.0147834 6.41974 -0.0585938 5.72266C0 5.18555 0 5.18555 0.184937 4.92867C0.55848 4.64981 0.858332 4.60875 1.31836 4.53979C1.48392 4.51381 1.64949 4.48783 1.82007 4.46106C1.99288 4.43588 2.1657 4.41071 2.34375 4.38477C2.68559 4.33257 3.02739 4.2801 3.36914 4.22729C3.52081 4.20491 3.67247 4.18253 3.82874 4.15947C4.2373 4.09858 4.2373 4.09858 4.6875 3.93555C4.90006 3.60089 4.90006 3.60089 5.08179 3.18481C5.1543 3.03234 5.22681 2.87987 5.30151 2.72278C5.45138 2.39995 5.60072 2.07687 5.74951 1.75354C5.82242 1.60067 5.89534 1.44779 5.97046 1.29028C6.03539 1.14972 6.10032 1.00916 6.16722 0.864334C6.54838 0.28025 6.96461 0.0432276 7.65625 0Z"
+                                        fill="#FDC403" />
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Review 3 -->
+                        <div class="
+            bg-gradient-to-b
+from-[#F0F9FE]
+to-[#FFFFFF]
+
+            rounded-[30px]
+            p-[20px]
+            sm:p-[25px]
+            lg:p-[30px]
+            min-h-[200px]
+            flex
+            flex-col
+            justify-between
+        ">
+
+                            <div class="flex items-center">
+
+                                <img src="./assets/images/booking-details/review-user-3.png" alt="Karan Verma" class="
+                    w-[38px]
+                    h-[38px]
+                    sm:w-[42px]
+                    sm:h-[42px]
+                    rounded-full
+                    object-cover
+                    shrink-0
+                    ">
+
+                                <div class="ml-[10px]">
+
+                                    <p class="text-[13px] sm:text-[16px] font-semibold text-[#1A3151]">
+                                        Karan Verma
+                                    </p>
+
+                                    <p class="text-[12px] sm:text-[14px] text-[#4B5563] mt-[3px]">
+                                        07 June 2026
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <p class="
+                text-[12px]
+                sm:text-[13px]
+                lg:text-[14px]
+                text-[#374151]
+                leading-[18px]
+                sm:leading-[19px]
+                mt-[18px]
+            ">
+                                "Excellent service from start to finish.
+                                The technician arrived on time, explained
+                                the issue clearly, and repaired my AC quickly.
+                                Highly recommended."
+                            </p>
+
+                            <div class="flex items-center mt-[18px] gap-[1.22px]">
+
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.65625 0C8.35643 0.277156 8.58813 0.786625 8.90625 1.43555C8.98683 1.64267 9.06629 1.85023 9.1449 2.05811C9.57163 3.23746 9.57163 3.23746 10.4297 4.08943C11.056 4.29764 11.6955 4.35115 12.3517 4.38583C12.788 4.41228 13.2126 4.48393 13.6426 4.56055C13.7741 4.57988 13.9056 4.59922 14.0411 4.61914C14.4359 4.73461 14.5978 4.85811 14.8438 5.18555C14.9219 5.71289 14.9219 5.71289 14.8438 6.2793C14.4407 6.73032 13.9957 7.11835 13.5364 7.50977C12.4833 8.39054 12.4833 8.39054 11.9232 9.59351C11.9657 10.1225 12.063 10.6072 12.1875 11.123C12.2434 11.4353 12.2923 11.7476 12.3376 12.0615C12.3807 12.3583 12.4316 12.6538 12.4829 12.9492C12.503 13.5573 12.4388 13.7974 12.0312 14.248C11.5723 14.4268 11.2703 14.464 10.799 14.3045C10.4722 14.1552 10.1587 13.9912 9.84375 13.8184C9.7366 13.762 9.62944 13.7056 9.51904 13.6475C9.03983 13.3951 8.56563 13.1382 8.0957 12.8687C7.56817 12.6488 7.40812 12.6468 6.875 12.8418C6.31129 13.1197 5.76664 13.4307 5.22095 13.7421C4.52176 14.1279 3.94142 14.3759 3.125 14.4043C2.65625 14.1309 2.65625 14.1309 2.34375 13.623C2.30587 13.0354 2.39918 12.4825 2.5 11.9043C2.54109 11.659 2.54109 11.659 2.58301 11.4087C2.63598 11.0955 2.69128 10.7828 2.74963 10.4706C2.90134 9.5976 2.90134 9.5976 2.61719 8.79944C2.52695 8.71867 2.43672 8.6379 2.34375 8.55469C2.24465 8.46365 2.14556 8.37261 2.04346 8.27881C1.9363 8.18616 1.82915 8.09351 1.71875 7.99805C1.60837 7.90217 1.498 7.8063 1.38428 7.70752C1.17413 7.52539 0.962659 7.34475 0.749512 7.16614C0.245998 6.69656 0.0147834 6.41974 -0.0585938 5.72266C0 5.18555 0 5.18555 0.184937 4.92867C0.55848 4.64981 0.858332 4.60875 1.31836 4.53979C1.48392 4.51381 1.64949 4.48783 1.82007 4.46106C1.99288 4.43588 2.1657 4.41071 2.34375 4.38477C2.68559 4.33257 3.02739 4.2801 3.36914 4.22729C3.52081 4.20491 3.67247 4.18253 3.82874 4.15947C4.2373 4.09858 4.2373 4.09858 4.6875 3.93555C4.90006 3.60089 4.90006 3.60089 5.08179 3.18481C5.1543 3.03234 5.22681 2.87987 5.30151 2.72278C5.45138 2.39995 5.60072 2.07687 5.74951 1.75354C5.82242 1.60067 5.89534 1.44779 5.97046 1.29028C6.03539 1.14972 6.10032 1.00916 6.16722 0.864334C6.54838 0.28025 6.96461 0.0432276 7.65625 0Z"
+                                        fill="#FDC403" />
+                                </svg>
+
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.65625 0C8.35643 0.277156 8.58813 0.786625 8.90625 1.43555C8.98683 1.64267 9.06629 1.85023 9.1449 2.05811C9.57163 3.23746 9.57163 3.23746 10.4297 4.08943C11.056 4.29764 11.6955 4.35115 12.3517 4.38583C12.788 4.41228 13.2126 4.48393 13.6426 4.56055C13.7741 4.57988 13.9056 4.59922 14.0411 4.61914C14.4359 4.73461 14.5978 4.85811 14.8438 5.18555C14.9219 5.71289 14.9219 5.71289 14.8438 6.2793C14.4407 6.73032 13.9957 7.11835 13.5364 7.50977C12.4833 8.39054 12.4833 8.39054 11.9232 9.59351C11.9657 10.1225 12.063 10.6072 12.1875 11.123C12.2434 11.4353 12.2923 11.7476 12.3376 12.0615C12.3807 12.3583 12.4316 12.6538 12.4829 12.9492C12.503 13.5573 12.4388 13.7974 12.0312 14.248C11.5723 14.4268 11.2703 14.464 10.799 14.3045C10.4722 14.1552 10.1587 13.9912 9.84375 13.8184C9.7366 13.762 9.62944 13.7056 9.51904 13.6475C9.03983 13.3951 8.56563 13.1382 8.0957 12.8687C7.56817 12.6488 7.40812 12.6468 6.875 12.8418C6.31129 13.1197 5.76664 13.4307 5.22095 13.7421C4.52176 14.1279 3.94142 14.3759 3.125 14.4043C2.65625 14.1309 2.65625 14.1309 2.34375 13.623C2.30587 13.0354 2.39918 12.4825 2.5 11.9043C2.54109 11.659 2.54109 11.659 2.58301 11.4087C2.63598 11.0955 2.69128 10.7828 2.74963 10.4706C2.90134 9.5976 2.90134 9.5976 2.61719 8.79944C2.52695 8.71867 2.43672 8.6379 2.34375 8.55469C2.24465 8.46365 2.14556 8.37261 2.04346 8.27881C1.9363 8.18616 1.82915 8.09351 1.71875 7.99805C1.60837 7.90217 1.498 7.8063 1.38428 7.70752C1.17413 7.52539 0.962659 7.34475 0.749512 7.16614C0.245998 6.69656 0.0147834 6.41974 -0.0585938 5.72266C0 5.18555 0 5.18555 0.184937 4.92867C0.55848 4.64981 0.858332 4.60875 1.31836 4.53979C1.48392 4.51381 1.64949 4.48783 1.82007 4.46106C1.99288 4.43588 2.1657 4.41071 2.34375 4.38477C2.68559 4.33257 3.02739 4.2801 3.36914 4.22729C3.52081 4.20491 3.67247 4.18253 3.82874 4.15947C4.2373 4.09858 4.2373 4.09858 4.6875 3.93555C4.90006 3.60089 4.90006 3.60089 5.08179 3.18481C5.1543 3.03234 5.22681 2.87987 5.30151 2.72278C5.45138 2.39995 5.60072 2.07687 5.74951 1.75354C5.82242 1.60067 5.89534 1.44779 5.97046 1.29028C6.03539 1.14972 6.10032 1.00916 6.16722 0.864334C6.54838 0.28025 6.96461 0.0432276 7.65625 0Z"
+                                        fill="#FDC403" />
+                                </svg>
+
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.65625 0C8.35643 0.277156 8.58813 0.786625 8.90625 1.43555C8.98683 1.64267 9.06629 1.85023 9.1449 2.05811C9.57163 3.23746 9.57163 3.23746 10.4297 4.08943C11.056 4.29764 11.6955 4.35115 12.3517 4.38583C12.788 4.41228 13.2126 4.48393 13.6426 4.56055C13.7741 4.57988 13.9056 4.59922 14.0411 4.61914C14.4359 4.73461 14.5978 4.85811 14.8438 5.18555C14.9219 5.71289 14.9219 5.71289 14.8438 6.2793C14.4407 6.73032 13.9957 7.11835 13.5364 7.50977C12.4833 8.39054 12.4833 8.39054 11.9232 9.59351C11.9657 10.1225 12.063 10.6072 12.1875 11.123C12.2434 11.4353 12.2923 11.7476 12.3376 12.0615C12.3807 12.3583 12.4316 12.6538 12.4829 12.9492C12.503 13.5573 12.4388 13.7974 12.0312 14.248C11.5723 14.4268 11.2703 14.464 10.799 14.3045C10.4722 14.1552 10.1587 13.9912 9.84375 13.8184C9.7366 13.762 9.62944 13.7056 9.51904 13.6475C9.03983 13.3951 8.56563 13.1382 8.0957 12.8687C7.56817 12.6488 7.40812 12.6468 6.875 12.8418C6.31129 13.1197 5.76664 13.4307 5.22095 13.7421C4.52176 14.1279 3.94142 14.3759 3.125 14.4043C2.65625 14.1309 2.65625 14.1309 2.34375 13.623C2.30587 13.0354 2.39918 12.4825 2.5 11.9043C2.54109 11.659 2.54109 11.659 2.58301 11.4087C2.63598 11.0955 2.69128 10.7828 2.74963 10.4706C2.90134 9.5976 2.90134 9.5976 2.61719 8.79944C2.52695 8.71867 2.43672 8.6379 2.34375 8.55469C2.24465 8.46365 2.14556 8.37261 2.04346 8.27881C1.9363 8.18616 1.82915 8.09351 1.71875 7.99805C1.60837 7.90217 1.498 7.8063 1.38428 7.70752C1.17413 7.52539 0.962659 7.34475 0.749512 7.16614C0.245998 6.69656 0.0147834 6.41974 -0.0585938 5.72266C0 5.18555 0 5.18555 0.184937 4.92867C0.55848 4.64981 0.858332 4.60875 1.31836 4.53979C1.48392 4.51381 1.64949 4.48783 1.82007 4.46106C1.99288 4.43588 2.1657 4.41071 2.34375 4.38477C2.68559 4.33257 3.02739 4.2801 3.36914 4.22729C3.52081 4.20491 3.67247 4.18253 3.82874 4.15947C4.2373 4.09858 4.2373 4.09858 4.6875 3.93555C4.90006 3.60089 4.90006 3.60089 5.08179 3.18481C5.1543 3.03234 5.22681 2.87987 5.30151 2.72278C5.45138 2.39995 5.60072 2.07687 5.74951 1.75354C5.82242 1.60067 5.89534 1.44779 5.97046 1.29028C6.03539 1.14972 6.10032 1.00916 6.16722 0.864334C6.54838 0.28025 6.96461 0.0432276 7.65625 0Z"
+                                        fill="#FDC403" />
+                                </svg>
+
+
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.65625 0C8.35643 0.277156 8.58813 0.786625 8.90625 1.43555C8.98683 1.64267 9.06629 1.85023 9.1449 2.05811C9.57163 3.23746 9.57163 3.23746 10.4297 4.08943C11.056 4.29764 11.6955 4.35115 12.3517 4.38583C12.788 4.41228 13.2126 4.48393 13.6426 4.56055C13.7741 4.57988 13.9056 4.59922 14.0411 4.61914C14.4359 4.73461 14.5978 4.85811 14.8438 5.18555C14.9219 5.71289 14.9219 5.71289 14.8438 6.2793C14.4407 6.73032 13.9957 7.11835 13.5364 7.50977C12.4833 8.39054 12.4833 8.39054 11.9232 9.59351C11.9657 10.1225 12.063 10.6072 12.1875 11.123C12.2434 11.4353 12.2923 11.7476 12.3376 12.0615C12.3807 12.3583 12.4316 12.6538 12.4829 12.9492C12.503 13.5573 12.4388 13.7974 12.0312 14.248C11.5723 14.4268 11.2703 14.464 10.799 14.3045C10.4722 14.1552 10.1587 13.9912 9.84375 13.8184C9.7366 13.762 9.62944 13.7056 9.51904 13.6475C9.03983 13.3951 8.56563 13.1382 8.0957 12.8687C7.56817 12.6488 7.40812 12.6468 6.875 12.8418C6.31129 13.1197 5.76664 13.4307 5.22095 13.7421C4.52176 14.1279 3.94142 14.3759 3.125 14.4043C2.65625 14.1309 2.65625 14.1309 2.34375 13.623C2.30587 13.0354 2.39918 12.4825 2.5 11.9043C2.54109 11.659 2.54109 11.659 2.58301 11.4087C2.63598 11.0955 2.69128 10.7828 2.74963 10.4706C2.90134 9.5976 2.90134 9.5976 2.61719 8.79944C2.52695 8.71867 2.43672 8.6379 2.34375 8.55469C2.24465 8.46365 2.14556 8.37261 2.04346 8.27881C1.9363 8.18616 1.82915 8.09351 1.71875 7.99805C1.60837 7.90217 1.498 7.8063 1.38428 7.70752C1.17413 7.52539 0.962659 7.34475 0.749512 7.16614C0.245998 6.69656 0.0147834 6.41974 -0.0585938 5.72266C0 5.18555 0 5.18555 0.184937 4.92867C0.55848 4.64981 0.858332 4.60875 1.31836 4.53979C1.48392 4.51381 1.64949 4.48783 1.82007 4.46106C1.99288 4.43588 2.1657 4.41071 2.34375 4.38477C2.68559 4.33257 3.02739 4.2801 3.36914 4.22729C3.52081 4.20491 3.67247 4.18253 3.82874 4.15947C4.2373 4.09858 4.2373 4.09858 4.6875 3.93555C4.90006 3.60089 4.90006 3.60089 5.08179 3.18481C5.1543 3.03234 5.22681 2.87987 5.30151 2.72278C5.45138 2.39995 5.60072 2.07687 5.74951 1.75354C5.82242 1.60067 5.89534 1.44779 5.97046 1.29028C6.03539 1.14972 6.10032 1.00916 6.16722 0.864334C6.54838 0.28025 6.96461 0.0432276 7.65625 0Z"
+                                        fill="#FDC403" />
+                                </svg>
+
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.65625 0C8.35643 0.277156 8.58813 0.786625 8.90625 1.43555C8.98683 1.64267 9.06629 1.85023 9.1449 2.05811C9.57163 3.23746 9.57163 3.23746 10.4297 4.08943C11.056 4.29764 11.6955 4.35115 12.3517 4.38583C12.788 4.41228 13.2126 4.48393 13.6426 4.56055C13.7741 4.57988 13.9056 4.59922 14.0411 4.61914C14.4359 4.73461 14.5978 4.85811 14.8438 5.18555C14.9219 5.71289 14.9219 5.71289 14.8438 6.2793C14.4407 6.73032 13.9957 7.11835 13.5364 7.50977C12.4833 8.39054 12.4833 8.39054 11.9232 9.59351C11.9657 10.1225 12.063 10.6072 12.1875 11.123C12.2434 11.4353 12.2923 11.7476 12.3376 12.0615C12.3807 12.3583 12.4316 12.6538 12.4829 12.9492C12.503 13.5573 12.4388 13.7974 12.0312 14.248C11.5723 14.4268 11.2703 14.464 10.799 14.3045C10.4722 14.1552 10.1587 13.9912 9.84375 13.8184C9.7366 13.762 9.62944 13.7056 9.51904 13.6475C9.03983 13.3951 8.56563 13.1382 8.0957 12.8687C7.56817 12.6488 7.40812 12.6468 6.875 12.8418C6.31129 13.1197 5.76664 13.4307 5.22095 13.7421C4.52176 14.1279 3.94142 14.3759 3.125 14.4043C2.65625 14.1309 2.65625 14.1309 2.34375 13.623C2.30587 13.0354 2.39918 12.4825 2.5 11.9043C2.54109 11.659 2.54109 11.659 2.58301 11.4087C2.63598 11.0955 2.69128 10.7828 2.74963 10.4706C2.90134 9.5976 2.90134 9.5976 2.61719 8.79944C2.52695 8.71867 2.43672 8.6379 2.34375 8.55469C2.24465 8.46365 2.14556 8.37261 2.04346 8.27881C1.9363 8.18616 1.82915 8.09351 1.71875 7.99805C1.60837 7.90217 1.498 7.8063 1.38428 7.70752C1.17413 7.52539 0.962659 7.34475 0.749512 7.16614C0.245998 6.69656 0.0147834 6.41974 -0.0585938 5.72266C0 5.18555 0 5.18555 0.184937 4.92867C0.55848 4.64981 0.858332 4.60875 1.31836 4.53979C1.48392 4.51381 1.64949 4.48783 1.82007 4.46106C1.99288 4.43588 2.1657 4.41071 2.34375 4.38477C2.68559 4.33257 3.02739 4.2801 3.36914 4.22729C3.52081 4.20491 3.67247 4.18253 3.82874 4.15947C4.2373 4.09858 4.2373 4.09858 4.6875 3.93555C4.90006 3.60089 4.90006 3.60089 5.08179 3.18481C5.1543 3.03234 5.22681 2.87987 5.30151 2.72278C5.45138 2.39995 5.60072 2.07687 5.74951 1.75354C5.82242 1.60067 5.89534 1.44779 5.97046 1.29028C6.03539 1.14972 6.10032 1.00916 6.16722 0.864334C6.54838 0.28025 6.96461 0.0432276 7.65625 0Z"
+                                        fill="#FDC403" />
+                                </svg>
+
+
+                            </div>
 
                         </div>
 
                     </div>
 
-
                 </div>
-
-
+            </div>
         </div>
-
-
-        </section>
-
-        </div>
-
     </dialog>
     <!-- provider details modal ends -->
 
