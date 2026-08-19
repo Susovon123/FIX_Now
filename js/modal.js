@@ -1,39 +1,52 @@
 // professional services modal starts
 
-const dialog = document.getElementById("myDialog");
-const openModal = document.getElementById("openModal");
-const closeModal = document.getElementById("closeModal");
+      /* ---------- Modal 1: Services grid ---------- */
+      const modal = document.getElementById("myDialog");
+      const openModal = document.getElementById("openModal");
+      const closeModal = document.getElementById("closeModal");
 
-if (dialog && openModal && closeModal) {
+      openModal.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      });
 
-    openModal.addEventListener("click", () => {
-        dialog.showModal();
-        document.body.style.overflow = "hidden";
-    });
+      const hideModal = () => {
+        modal.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+      };
 
-    closeModal.addEventListener("click", () => {
-        dialog.close();
-    });
+      closeModal.addEventListener("click", hideModal);
 
-    dialog.addEventListener("click", (e) => {
-        const rect = dialog.getBoundingClientRect();
-
-        const inside =
-            e.clientX >= rect.left &&
-            e.clientX <= rect.right &&
-            e.clientY >= rect.top &&
-            e.clientY <= rect.bottom;
-
-        if (!inside) {
-            dialog.close();
+      modal.addEventListener("click", (e) => {
+        const modalContent = modal.querySelector(".modal-content");
+        if (!modalContent.contains(e.target) && e.target !== closeModal) {
+          hideModal();
         }
-    });
+      });
 
-    dialog.addEventListener("close", () => {
-        document.body.style.overflow = "";
-    });
+      /* ---------- Modal 2: AC Service Plans (nested) ---------- */
+      const acModal = document.getElementById("acServiceModal");
+      const openACServiceModal = document.getElementById("openACServiceModal");
+      const closeACModal = document.getElementById("closeACModal");
+      const servicePagePanel = document.getElementById("servicePage");
 
-}
+      // Clicking the "AC" card inside modal 1 opens modal 2 on top of it
+      openACServiceModal.addEventListener("click", () => {
+        acModal.classList.remove("hidden");
+      });
+
+      // Close button inside the AC plans panel closes modal 2,
+      // revealing the services modal underneath again
+      closeACModal.addEventListener("click", () => {
+        acModal.classList.add("hidden");
+      });
+
+      // Clicking the dark backdrop (outside the white panel) also closes modal 2
+      acModal.addEventListener("click", (e) => {
+        if (!servicePagePanel.contains(e.target) && e.target !== closeACModal) {
+          acModal.classList.add("hidden");
+        }
+      });
 
 // booking details modal js 
 
