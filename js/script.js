@@ -443,3 +443,62 @@ document.addEventListener("click", function (event) {
     }
 });
 
+// mobile user nvbar reponsive
+
+  const mobileUserDropdownBtn = document.getElementById(
+    "mobileUserDropdownBtn"
+  );
+
+  const mobileUserMegaMenu = document.getElementById(
+    "mobileUserMegaMenu"
+  );
+
+  const mobileTriggerLogoutBtn = document.getElementById(
+    "mobileTriggerLogoutBtn"
+  );
+
+  // Open / Close User Menu
+  mobileUserDropdownBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+
+    const isHidden = mobileUserMegaMenu.classList.toggle("hidden");
+
+    mobileUserDropdownBtn.setAttribute(
+      "aria-expanded",
+      String(!isHidden)
+    );
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", function (e) {
+    if (
+      !mobileUserMegaMenu.contains(e.target) &&
+      !mobileUserDropdownBtn.contains(e.target)
+    ) {
+      mobileUserMegaMenu.classList.add("hidden");
+
+      mobileUserDropdownBtn.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+    }
+  });
+
+  // Logout
+  mobileTriggerLogoutBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    mobileUserMegaMenu.classList.add("hidden");
+
+    mobileUserDropdownBtn.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    const logoutDialog = document.getElementById("logoutDialog");
+
+    if (logoutDialog) {
+      logoutDialog.classList.remove("modal-hidden");
+      document.body.style.overflow = "hidden";
+    }
+  });
