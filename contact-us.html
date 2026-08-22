@@ -1,22 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
 
   <!-- Tailwind cdn -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <!-- css link -->
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/contact-us.css">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/contact-us.css" />
 </head>
 
 <body>
-  <!-- starting  navbar -->
   <!-- Loader -->
   <div id="loader"
     class="fixed inset-0 z-[999999] flex flex-col items-center justify-center bg-white transition-opacity duration-500">
@@ -105,7 +104,7 @@
               </li>
               <li>
                 <a href="contact-us.html"
-                   class="relative outline-none text-[16px] font-semibold text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-full after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 flex items-center gap-1">
+                  class="relative outline-none text-[16px] font-semibold text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-full after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 flex items-center gap-1">
                   Contact Us
                 </a>
               </li>
@@ -211,7 +210,7 @@
                     <div class="col-span-6">
                       <ul class="space-y-4">
                         <li>
-                          <a href="./personal-details.html"
+                          <a href="personal-details.html"
                             class="relative inline-block text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
                             Personal Details
                           </a>
@@ -290,13 +289,51 @@
               stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
-        <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
-              stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+        <div
+          class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2 relative">
+          <!-- User Button -->
+          <button id="mobileUserDropdownBtn" type="button" aria-haspopup="true" aria-expanded="false"
+            class="flex items-center justify-center">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
+                stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <!-- Mobile User Menu -->
+          <div id="mobileUserMegaMenu"
+            class="hidden fixed top-24 left-1/2 -translate-x-1/2 w-[88vw] max-w-[280px] bg-white shadow-2xl rounded-xl p-5 z-[60] text-left">
+            <ul class="space-y-3">
+
+              <!-- Personal Details -->
+              <li>
+                <a href="personal-details.html"
+                  class="relative inline-block text-[15px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
+                  Personal Details
+                </a>
+              </li>
+
+              <!-- Booking History -->
+              <li>
+                <a href="booking-history.html"
+                  class="relative inline-block text-[15px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
+                  Booking History
+                </a>
+              </li>
+
+              <!-- Logout -->
+              <li>
+                <a href="#" id="mobileTriggerLogoutBtn"
+                  class="relative inline-block text-[15px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
+                  Logout
+                </a>
+              </li>
+
+            </ul>
+          </div>
         </div>
+
         <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
           <a href="cart.html">
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -352,13 +389,9 @@
     <!-- contact banner starts -->
     <section
       class="contact-banner relative flex items-center overflow-hidden min-h-[360px] sm:min-h-[450px] md:min-h-[520px] lg:min-h-[644px]">
-
       <div class="custom-container relative z-[2]">
-
         <div class="flex justify-center">
-
           <div class="w-full text-center">
-
             <h1 class="heading-1 text-[var(--color2)] text-[36px] sm:text-[42px] md:text-[48px] lg:text-[56px]">
               Contact Us
             </h1>
@@ -367,27 +400,19 @@
               class="heading-3 mt-[8px] sm:mt-[10px] text-[var(--color-16)] text-[22px] sm:text-[26px] md:text-[30px] lg:text-[32px] font-[var(--outfit-r)]">
               We Are Here To Help!
             </h2>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
     <!-- contact banner ends -->
 
     <!-- contact area starts -->
     <section class="contact-area relative overflow-hidden bg-[var(--color2)] py-[60px] md:py-[80px] lg:py-[100px]">
-
       <div class="custom-container relative z-[2]">
-
         <div class="flex flex-col lg:flex-row">
-
           <!-- contact left starts -->
 
           <div class="w-full lg:w-1/2 mb-[50px] lg:mb-0 lg:pr-[26px]">
-
             <!-- Sub Heading -->
 
             <span
@@ -404,8 +429,8 @@
             <!-- Paragraph -->
 
             <p class="max-w-[590px] mb-[46px]">
-              We're happy to answer your questions and guide you through our services.
-              Expect a prompt response from our support team.
+              We're happy to answer your questions and guide you through our
+              services. Expect a prompt response from our support team.
             </p>
 
             <!-- Contact Card Starts -->
@@ -415,26 +440,21 @@
 
               <div
                 class="w-full sm:w-[48%] bg-[var(--color4)] rounded-[20px] p-[16px] sm:p-[20px] flex items-center mb-[20px] sm:mb-0 sm:mr-[4%]">
-
                 <!-- Icon -->
 
                 <div
                   class="w-[44px] h-[44px] rounded-full bg-[var(--color12)] flex justify-center items-center shrink-0">
-
                   <!-- Phone SVG -->
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-
                     <path
                       d="M9.50246 4.25722C9.19873 3.4979 8.46332 3 7.64551 3H4.89474C3.8483 3 3 3.8481 3 4.89453C3 13.7892 10.2108 21 19.1055 21C20.1519 21 21 20.1516 21 19.1052L21.0005 16.354C21.0005 15.5361 20.5027 14.8009 19.7434 14.4971L17.1069 13.4429C16.4249 13.1701 15.6483 13.2929 15.0839 13.7632L14.4035 14.3307C13.6089 14.9929 12.4396 14.9402 11.7082 14.2088L9.79222 12.2911C9.06079 11.5596 9.00673 10.3913 9.66895 9.59668L10.2363 8.9163C10.7066 8.35195 10.8305 7.57516 10.5577 6.89309L9.50246 4.25722Z"
                       stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
-
                 </div>
 
                 <!-- Content -->
 
                 <div class="ml-[16px]">
-
                   <h4 class="heading-6 font-[var(--outfit-r)] text-[20px] font-medium text-[var(--color2)] mb-[10px]">
                     Phone
                   </h4>
@@ -443,32 +463,25 @@
                     class="text-[16px] font-semibold text-[var(--color2)] transition-colors duration-700 hover:text-[var(--color10)]">
                     +91 98765 43210
                   </a>
-
                 </div>
-
               </div>
               <!-- Email -->
 
               <div class="w-full sm:w-[48%] bg-[var(--color-15)] rounded-[20px] p-[16px] sm:p-[20px] flex items-center">
-
                 <!-- Icon -->
 
                 <div class="w-[44px] h-[44px] rounded-full bg-[#FCD34D] flex justify-center items-center shrink-0">
-
                   <!-- Email SVG -->
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-
                     <path
                       d="M4 6L10.1076 10.6123L10.1097 10.614C10.7878 11.1113 11.1271 11.3601 11.4988 11.4562C11.8272 11.5412 12.1725 11.5412 12.501 11.4562C12.8729 11.36 13.2132 11.1105 13.8926 10.6123C13.8926 10.6123 17.8101 7.60594 20 6M3 15.8002V8.2002C3 7.08009 3 6.51962 3.21799 6.0918C3.40973 5.71547 3.71547 5.40973 4.0918 5.21799C4.51962 5 5.08009 5 6.2002 5H17.8002C18.9203 5 19.4796 5 19.9074 5.21799C20.2837 5.40973 20.5905 5.71547 20.7822 6.0918C21 6.5192 21 7.07899 21 8.19691V15.8036C21 16.9215 21 17.4805 20.7822 17.9079C20.5905 18.2842 20.2837 18.5905 19.9074 18.7822C19.48 19 18.921 19 17.8031 19H6.19691C5.07899 19 4.5192 19 4.0918 18.7822C3.71547 18.5905 3.40973 18.2842 3.21799 17.9079C3 17.4801 3 16.9203 3 15.8002Z"
                       stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
-
                 </div>
 
                 <!-- Content -->
 
                 <div class="ml-[16px]">
-
                   <h4 class="heading-6 font-[var(--outfit-r)] text-[20px] font-medium text-[var(--color2)] mb-[10px]">
                     Email
                   </h4>
@@ -477,33 +490,25 @@
                     class="text-[16px] font-semibold text-[var(--color2)] transition-colors duration-700 hover:text-[var(--color10)]">
                     info@fixnow.com
                   </a>
-
                 </div>
-
               </div>
-
             </div>
             <!-- Google Map -->
 
             <div class="rounded-[20px] overflow-hidden shadow-[0_18px_45px_rgba(0,0,0,.05)]">
-
               <iframe class="w-full h-[220px] sm:h-[260px] lg:h-[343px]"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.6010795292464!2d88.35877807475667!3d22.556611633557186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277023e8c0195%3A0x8649e48a66b8ace6!2sAngel%20Nursing%20Home%20Aaga%20mehdy%20street!5e0!3m2!1sen!2sin!4v1784222435621!5m2!1sen!2sin"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
                 referrerpolicy="strict-origin-when-cross-origin"></iframe>
-
             </div>
-
           </div>
 
           <!-- contact left ends -->
           <!-- contact form starts -->
 
           <div class="w-full lg:w-1/2">
-
             <div
               class="bg-[var(--color2)] rounded-[20px] shadow-[0_10px_35px_rgba(0,0,0,.08)] p-[20px] md:p-[22px] lg:p-[24px] relative z-[2]">
-
               <!-- Heading -->
 
               <h3
@@ -514,110 +519,88 @@
               <!-- Paragraph -->
 
               <p class="text-[14px] lg:text-[16px] text-[var(--color1)] mb-[36px] max-w-[580px]">
-                Have a question or need assistance? Fill out the form below, and our
-                team will get back to you as soon as possible.
+                Have a question or need assistance? Fill out the form below,
+                and our team will get back to you as soon as possible.
               </p>
 
               <!-- Form -->
 
               <form action="#">
-
                 <!-- Name -->
 
                 <div class="mb-[16px]">
-
                   <label for="name" class="block text-[14px] lg:text-[16px] font-semibold text-[#000000] mb-[10px]">
                     Name
                   </label>
 
                   <input type="text" id="name" placeholder="Enter Your Name"
-                    class="w-full h-[50px] md:h-[55px] lg:h-[57px] rounded-[20px] border border-[var(--color1)] p-[20px] outline-none focus:border-[var(--color1)] transition-all duration-300 placeholder:text-[var(--color1)] text-[#000000]">
-
+                    class="w-full h-[50px] md:h-[55px] lg:h-[57px] rounded-[20px] border border-[var(--color1)] p-[20px] outline-none focus:border-[var(--color1)] transition-all duration-300 placeholder:text-[var(--color1)] text-[#000000]" />
                 </div>
 
                 <!-- Email -->
 
                 <div class="mb-[16px]">
-
                   <label for="email" class="block text-[14px] lg:text-[16px] font-semibold text-[#000000] mb-[10px]">
                     Email
                   </label>
 
                   <input type="email" id="email" placeholder="Enter Your Email"
-                    class="w-full h-[50px] md:h-[55px] lg:h-[57px] rounded-[20px] border border-[var(--color1)] p-[20px] outline-none focus:border-[var(--color1)] transition-all duration-300 placeholder:text-[var(--color1)] text-[#000000]">
-
+                    class="w-full h-[50px] md:h-[55px] lg:h-[57px] rounded-[20px] border border-[var(--color1)] p-[20px] outline-none focus:border-[var(--color1)] transition-all duration-300 placeholder:text-[var(--color1)] text-[#000000]" />
                 </div>
 
                 <!-- Subject -->
 
                 <div class="mb-[16px]">
-
                   <label for="subject" class="block text-[14px] lg:text-[16px] font-semibold text-[#000000] mb-[10px]">
                     Subject
                   </label>
 
                   <input type="text" id="subject" placeholder="What Can We Help You With"
-                    class="w-full h-[50px] md:h-[55px] lg:h-[57px] rounded-[20px] border border-[var(--color1)] p-[20px] outline-none focus:border-[var(--color1)] transition-all duration-300 placeholder:text-[var(--color1)] text-[#000000]">
-
+                    class="w-full h-[50px] md:h-[55px] lg:h-[57px] rounded-[20px] border border-[var(--color1)] p-[20px] outline-none focus:border-[var(--color1)] transition-all duration-300 placeholder:text-[var(--color1)] text-[#000000]" />
                 </div>
 
                 <!-- Message -->
 
                 <div class="mb-[16px]">
-
                   <label for="message" class="block text-[14px] lg:text-[16px] font-semibold text-[#000000] mb-[10px]">
                     Message
                   </label>
 
                   <textarea id="message" rows="6" placeholder="Tell Us About Your Enquiry"
                     class="w-full h-[150px] md:h-[170px] lg:h-[200px] rounded-[20px] border border-[var(--color1)] p-[20px] resize-none outline-none focus:border-[var(--color1)] transition-all duration-300 placeholder:text-[var(--color1)] text-[#000000]"></textarea>
-
                 </div>
 
                 <!-- Button -->
 
                 <div class="flex justify-center lg:justify-end">
-
                   <button type="submit"
                     class="relative overflow-hidden bg-[var(--color4)] z-10 py-[16px] px-[36px] rounded-[20px] text-[16px] font-semibold text-[var(--color2)] border-0 transition-all duration-500 hover:bg-[var(--color-15)] hover:-translate-y-[3px] after:absolute after:top-0 after:left-[-120%] after:w-[50%] after:h-full after:bg-white/40 after:skew-x-[-25deg] after:transition-all after:duration-700 hover:after:left-[150%]">
                     Send Now
                   </button>
-
                 </div>
-
               </form>
-
             </div>
-
           </div>
 
           <!-- contact form ends -->
-
         </div>
-
       </div>
-
     </section>
     <!-- contact area ends -->
   </main>
 
   <!-- footer starts -->
   <footer class="bg-[var(--color-15)] py-[30px] sm:py-[40px] lg:py-[50px]">
-
     <div class="custom-container">
-
       <!-- footer top -->
 
       <div class="flex flex-col lg:flex-row">
-
         <!-- Logo -->
 
         <div class="w-full lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left">
           <a href="index.html" class="inline-block">
-
             <img src="./assets/images/footer-logo.png" alt="footer-logo"
-              class="w-[140px] sm:w-[160px] md:w-[180px] lg:w-[208px] mx-auto lg:mx-0">
-
+              class="w-[140px] sm:w-[160px] md:w-[180px] lg:w-[208px] mx-auto lg:mx-0" />
           </a>
 
           <div
@@ -626,16 +609,13 @@
           </div>
         </div>
 
-
         <!-- Newsletter -->
 
         <div class="w-full lg:w-1/2 text-center lg:text-left">
-
           <div
             class="text-[var(--color2)] text-[18px] md:text-[20px] lg:text-[24px] font-[var(--outfit-r)] font-semibold mb-[25.5px]">
             Stay Updated
           </div>
-
 
           <p class="text-[var(--color2)] text-[14px] max-w-full lg:max-w-[535px] mx-auto lg:mx-0 mb-[25.5px]">
             Get the latest service offers, home care tips, and exclusive
@@ -644,38 +624,27 @@
 
           <form
             class="flex w-full max-w-[635px] h-[50px] md:h-[55px] lg:h-[59.6px] rounded-[5px] overflow-hidden mx-auto lg:mx-0">
-
-
             <input type="email" placeholder="Email Address..."
-              class="h-full flex-1 px-[12px] md:px-[20px] outline-none placeholder:text-[var(--color5)] text-[var(--color5)] bg-[#FFFBEB]">
-
+              class="h-full flex-1 px-[12px] md:px-[20px] outline-none placeholder:text-[var(--color5)] text-[var(--color5)] bg-[#FFFBEB]" />
 
             <button type="submit"
               class="w-[50px] md:w-[55px] lg:w-[59.6px] h-full bg-[var(--color4)] flex justify-center items-center group transition-all duration-300 hover:bg-[var(--color5)]">
-
-
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="transition-transform duration-300 group-hover:translate-x-1"
                   d="M5.83325 14H22.1666M15.1666 21L22.1666 14L15.1666 7" stroke="#FFFFFF" stroke-width="2"
                   stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-
             </button>
-
           </form>
-
         </div>
-
       </div>
 
       <!-- footer middle -->
 
       <div class="flex flex-wrap justify-center mt-[34px]">
-
         <!-- Contact -->
 
         <div class="w-full md:w-1/2 lg:w-1/4 text-center lg:text-left mb-[20px] lg:mb-0">
-
           <div class="text-[var(--color10)] text-[18px] md:text-[20px] lg:text-[20px] font-semibold mb-[16px]">
             Contact Info
           </div>
@@ -683,8 +652,8 @@
           <ul>
             <li
               class="text-[14px] md:text-[15px] lg:text-[16px] text-[var(--color10)] mb-[30px] lg:mb-[51px] font-medium">
-              28 Park Street,<br>
-              Kolkata, West Bengal,<br>
+              28 Park Street,<br />
+              Kolkata, West Bengal,<br />
               India - 700016
             </li>
           </ul>
@@ -696,269 +665,202 @@
           <ul class="text-[14px] md:text-[15px] lg:text-[16px] font-medium">
             <li>
               <a href="tel:+6121234456"
-                class=" text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
+                class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
                 +(612) 123-4456
               </a>
             </li>
-
           </ul>
-
         </div>
 
         <!-- Pages -->
 
         <div class="w-full md:w-1/2 lg:w-1/4 text-center lg:text-left mb-[20px] lg:mb-0">
-
           <div class="text-[var(--color10)] text-[20px] font-semibold mb-[16px]">
             Pages
           </div>
 
           <ul class="text-[13px] md:text-[14px] lg:text-[14px] font-normal">
-
             <li class="mb-[8px]">
-
               <a href="index.html"
                 class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
                 Home
               </a>
-
             </li>
 
             <li class="mb-[8px]">
-
               <a href="service.html"
                 class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
                 Service
               </a>
-
             </li>
 
             <li class="mb-[8px]">
-
               <a href="about.us.html"
                 class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
                 About Us
               </a>
-
             </li>
 
             <li>
-
               <a href="contact-us.html"
                 class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
                 Contact Us
               </a>
-
             </li>
-
           </ul>
-
         </div>
 
         <!-- Services -->
 
-
         <div class="w-full md:w-1/2 lg:w-1/4 text-center lg:text-left mb-[20px] lg:mb-0">
-
           <div class="text-[var(--color10)] text-[20px] font-semibold mb-[16px]">
             Services
           </div>
 
           <ul class="text-[13px] md:text-[14px] lg:text-[14px] font-normal">
-
             <li class="mb-[8px]">
-
               <a href="#"
                 class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
                 House Help
               </a>
-
             </li>
 
             <li class="mb-[8px]">
-
               <a href="#"
                 class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
                 House Cleaning
               </a>
-
             </li>
 
             <li class="mb-[8px]">
-
               <a href="#"
                 class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
                 Electrical Service
               </a>
-
             </li>
 
             <li class="mb-[8px]">
-
               <a href="#"
                 class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
                 Plumbing
               </a>
-
             </li>
 
             <li>
-
               <a href="#"
                 class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
                 Home Repair
               </a>
-
             </li>
-
           </ul>
-
         </div>
 
         <!-- Company -->
 
         <div class="w-full md:w-1/2 lg:w-1/4 text-center lg:text-left mb-[20px] lg:mb-0">
-
           <div class="text-[var(--color10)] text-[20px] font-semibold mb-[16px]">
             Company
           </div>
 
           <ul class="text-[13px] md:text-[14px] lg:text-[14px] font-normal">
-
             <li class="mb-[8px]">
-
               <a href="#"
                 class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
                 Help & Support
               </a>
-
             </li>
 
             <li class="mb-[8px]">
-
               <a href="#"
                 class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
                 FAQ's
               </a>
-
             </li>
 
             <li class="mb-[8px]">
-
               <a href="#"
                 class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
                 Privacy Policy
               </a>
-
             </li>
 
             <li class="mb-[8px]">
-
               <a href="#"
                 class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
                 Terms & Conditions
               </a>
-
             </li>
 
             <li>
-
               <a href="#"
                 class="text-[var(--color10)] inline-block transition duration-300 hover:text-white hover:translate-x-2">
                 Refund Policy
               </a>
-
             </li>
-
           </ul>
-
         </div>
-
       </div>
-
 
       <!-- footer bottom -->
 
       <div class="flex justify-center lg:justify-end">
-
         <div class="text-center lg:text-right">
-
           <div class="text-[13px] md:text-[14px] lg:text-[16px] text-[var(--color10)] mb-[16px] font-semibold">
-            © 2026 <a href="index.html"
-              class="text-[var(--color10)] hover:text-[var(--color2)] transition-colors duration-300">FIXNOW</a>.
-            All Rights Reserved.
+            © 2026
+            <a href="index.html"
+              class="text-[var(--color10)] hover:text-[var(--color2)] transition-colors duration-300">FIXNOW</a>. All
+            Rights Reserved.
           </div>
 
           <ul
             class="flex flex-wrap justify-center lg:justify-end gap-x-[15px] font-bold text-[var(--color10)] text-[14px] md:text-[15px] lg:text-[16px]">
-
             <li class="mb-2">
-
               <a href="#"
-                class="relative inline-block text-[var(--color10)] transition-colors duration-300 hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0  after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+                class="relative inline-block text-[var(--color10)] transition-colors duration-300 hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
                 Facebook
               </a>
-
             </li>
 
             <li class="mb-2">
-
               <a href="#"
-                class="relative inline-block text-[var(--color10)] transition-colors duration-300 hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0  after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+                class="relative inline-block text-[var(--color10)] transition-colors duration-300 hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
                 Twitter
               </a>
-
             </li>
 
             <li class="mb-2">
-
               <a href="#"
-                class="relative inline-block text-[var(--color10)] transition-colors duration-300 hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0  after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+                class="relative inline-block text-[var(--color10)] transition-colors duration-300 hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
                 Youtube
               </a>
-
             </li>
 
             <li>
-
               <a href="#"
-                class="relative inline-block text-[var(--color10)] transition-colors duration-300 hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0  after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+                class="relative inline-block text-[var(--color10)] transition-colors duration-300 hover:text-white after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">
                 Instagram
               </a>
-
             </li>
-
           </ul>
-
         </div>
-
       </div>
-
     </div>
-
   </footer>
   <!-- footer ends -->
-
 
   <!-- modal login dialog box -->
   <!-- signup modal starts -->
   <div id="signupModal"
-    class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/30 backdrop-blur-sm py-[20px] lg:py-[36px] ">
-
+    class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/30 backdrop-blur-sm py-[20px] lg:py-[36px]">
     <div class="max-w-[1350px] mx-auto px-[15px] flex items-center justify-center min-h-full">
-
       <!-- Modal Box -->
 
       <section
         class="flex flex-col lg:flex-row lg:flex-nowrap w-full max-w-[1320px] bg-[var(--color2)] rounded-[20px] overflow-hidden shadow-[0px_4px_52.7px_0px_#FFFFFF]">
-
         <!--left side starts -->
 
         <div
           class="left-panel relative z-0 w-full lg:w-1/2 shrink-0 min-h-[260px] sm:min-h-[380px] lg:min-h-[821px] bg-[linear-gradient(180deg,_#DDF0FC_13%,_#2772CC_86%)] overflow-hidden rounded-none lg:rounded-tr-[70px] lg:rounded-br-[70px] flex items-center justify-center p-6 lg:p-0">
-
-
-
           <!-- Blur Shape -->
 
           <span
@@ -972,12 +874,9 @@
           <!-- Illustration -->
 
           <figure class="w-[220px] sm:w-[320px] md:w-[420px] lg:w-[560px] max-w-full">
-
             <img src="assets/images/Create Account Illustration.png" alt="Create Account Illustration"
-              class="block w-full h-auto object-contain" loading="lazy">
-
+              class="block w-full h-auto object-contain" loading="lazy" />
           </figure>
-
         </div>
 
         <!-- left side ends -->
@@ -986,130 +885,99 @@
 
         <div
           class="w-full lg:w-1/2 shrink-0 min-w-0 bg-[var(--color2)] pt-[30px] pb-[35px] px-[20px] sm:px-[35px] md:px-[50px] lg:px-[94px]">
-
           <!-- Skip -->
 
           <div class="flex justify-end">
-
             <button id="skipSignup" type="button"
               class="text-[16px] font-semibold text-[var(--color4)] hover:text-[var(--color-15)] transition-colors duration-300">
               Skip
             </button>
-
           </div>
 
           <!-- Heading -->
 
           <div class="mt-[5px]">
-
             <h2
               class="text-[28px] sm:text-[32px] lg:text-[32px] leading-none font-semibold text-[var(--color10)] font-[var(--outfit-r)]">
               Create An Account
             </h2>
-
           </div>
 
           <!-- ================= Form Starts ================= -->
           <form action="#" method="post" class="mt-[30px] lg:mt-[44px]">
-
             <!-- First Name & Last Name -->
 
             <div class="flex flex-col sm:flex-row justify-between">
-
               <div class="w-full sm:w-[48%] mb-[20px] sm:mb-0">
-
                 <input type="text" placeholder="First Name*" required
-                  class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300">
-
+                  class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300" />
               </div>
 
               <div class="w-full sm:w-[48%]">
-
                 <input type="text" placeholder="Last Name*" required
-                  class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300">
-
+                  class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300" />
               </div>
-
             </div>
 
             <!-- Phone & Email -->
 
             <div class="flex flex-col sm:flex-row justify-between mt-[20px]">
-
               <div class="w-full sm:w-[48%] mb-[20px] sm:mb-0">
-
                 <input type="tel" placeholder="Phone Number*" required
-                  class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300">
-
+                  class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300" />
               </div>
 
               <div class="w-full sm:w-[48%]">
-
                 <input type="email" placeholder="Enter Your Email"
-                  class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300">
-
+                  class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300" />
               </div>
-
             </div>
 
             <!-- Password -->
 
             <div class="mt-[20px]">
-
               <input type="password" placeholder="Enter Your Password"
-                class="w-full h-[55px] sm:h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[15px] sm:text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300">
-
+                class="w-full h-[55px] sm:h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[15px] sm:text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300" />
             </div>
 
             <!-- Confirm Password -->
 
             <div class="mt-[20px]">
-
               <input type="password" placeholder="Confirm Password"
-                class="w-full h-[55px] sm:h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[15px] sm:text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300">
-
+                class="w-full h-[55px] sm:h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[15px] sm:text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300" />
             </div>
 
             <!-- Terms -->
 
             <div class="flex items-start mt-[20px]">
-
               <input id="terms" type="checkbox" required
-                class="w-[22px] h-[22px] mt-[2px] rounded-[6px] accent-[#F4F1EC] flex-shrink-0">
+                class="w-[22px] h-[22px] mt-[2px] rounded-[6px] accent-[#F4F1EC] flex-shrink-0" />
 
               <label for="terms" class="ml-[5.5px] text-[14px] sm:text-[16px] leading-6 text-[var(--color1)]">
-
                 I Agree To The
                 <a href="#"
                   class="font-semibold text-[var(--color10)] hover:text-[var(--color-15)] transition-colors duration-300">
                   Terms & Conditions
                 </a>
-
               </label>
-
             </div>
 
             <!-- Button -->
 
             <button type="submit"
               class="cmn-btn group w-full h-[60px] sm:h-[68px] lg:h-[76px] mt-[20px] rounded-[20px] bg-[var(--color4)] transition-all duration-500 flex items-center justify-center text-[15px] sm:text-[16px] font-semibold text-[var(--color2)]">
-
               Create Account
 
               <svg class="ml-[16px] transition-transform duration-500 ease-in-out group-hover:translate-x-1" width="22"
                 height="22" viewBox="0 0 24 24" fill="none">
-
                 <path d="M5 12H19M13 6L19 12L13 18" stroke="white" stroke-width="2" stroke-linecap="round"
                   stroke-linejoin="round" />
-
               </svg>
-
             </button>
 
             <!-- OR Divider -->
 
             <div class="flex items-center my-[24px]">
-
               <div class="w-full h-[1px] bg-[#9CA3AF]"></div>
 
               <span class="mx-[14px] sm:mx-[20px] text-[14px] sm:text-[16px] font-medium text-[#9CA3AF]">
@@ -1117,16 +985,13 @@
               </span>
 
               <div class="w-full h-[1px] bg-[#9CA3AF]"></div>
-
             </div>
 
             <!-- Social Login -->
 
             <div class="flex flex-col sm:flex-row justify-between mt-[20px]">
-
               <button type="button"
                 class="group relative overflow-hidden z-10 w-full sm:w-[48%] mb-[15px] sm:mb-0 h-[66.25px] rounded-[20px] border-2 border-[var(--color4)] flex items-center justify-center transition-all duration-500 hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:-translate-y-[3px] after:absolute after:top-0 after:left-[-120%] after:w-[50%] after:h-full after:bg-white/40 after:skew-x-[-25deg] after:transition-all after:duration-700 hover:after:left-[150%]">
-
                 <span
                   class="mr-[12px] lg:mr-[24px] text-[14px] sm:text-[15px] lg:text-[16px] font-semibold text-[var(--color4)] transition-colors duration-500 group-hover:text-[var(--color2)]">
                   Continue With
@@ -1154,12 +1019,10 @@
                     d="M15.2201 17.4853C15.3396 17.5303 15.4006 17.588 15.4906 17.6787C15.5242 17.7123 15.5578 17.7458 15.5925 17.7804C15.6288 17.8174 15.6652 17.8544 15.7027 17.8926C15.7414 17.9314 15.7801 17.9702 15.82 18.0102C15.9259 18.1166 16.0315 18.2234 16.137 18.3302C16.2474 18.4419 16.3581 18.5531 16.4688 18.6644C16.6784 18.8752 16.8875 19.0863 17.0966 19.2975C17.3346 19.538 17.573 19.7781 17.8115 20.0182C18.302 20.512 18.792 21.0063 19.2816 21.5009C19.1504 21.6341 19.0265 21.7596 18.8716 21.8643C18.8388 21.8865 18.806 21.9086 18.7722 21.9315C18.7374 21.9545 18.7025 21.9775 18.6666 22.0012C18.6297 22.0257 18.5928 22.0501 18.5548 22.0753C17.1998 22.961 15.6988 23.5591 14.1052 23.8415C14.0415 23.8529 14.0415 23.8529 13.9765 23.8645C13.4866 23.949 13.0082 23.9903 12.5109 23.9854C12.462 23.9851 12.4132 23.9849 12.3629 23.9846C12.2441 23.984 12.1254 23.9831 12.0066 23.9819C12.0056 23.2503 12.0047 22.5187 12.0042 21.7871C12.004 21.4475 12.0037 21.1078 12.0031 20.7681C12.0027 20.4722 12.0024 20.1762 12.0023 19.8803C12.0022 19.7235 12.0021 19.5667 12.0017 19.4099C12.0014 19.2351 12.0013 19.0603 12.0014 18.8856C12.0012 18.8332 12.001 18.7809 12.0008 18.7269C12.0009 18.6796 12.001 18.6323 12.001 18.5835C12.001 18.5421 12.001 18.5007 12.0009 18.4581C12.0066 18.3646 12.0066 18.3646 12.0533 18.3178C12.1185 18.31 12.184 18.3049 12.2495 18.301C13.2014 18.2355 14.2105 18.0628 15.0279 17.5312C15.1312 17.4752 15.1312 17.4752 15.2201 17.4853Z"
                     fill="#0F9D58" />
                 </svg>
-
               </button>
 
               <button type="button"
                 class="group relative overflow-hidden z-10 w-full sm:w-[48%] h-[66.25px] rounded-[20px] border-2 border-[var(--color4)] flex items-center justify-center transition-all duration-500 hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:-translate-y-[3px] after:absolute after:top-0 after:left-[-120%] after:w-[50%] after:h-full after:bg-white/40 after:skew-x-[-25deg] after:transition-all after:duration-700 hover:after:left-[150%]">
-
                 <span
                   class="mr-[12px] lg:mr-[24px] text-[14px] sm:text-[15px] lg:text-[16px] font-semibold text-[var(--color4)] transition-colors duration-500 group-hover:text-[var(--color2)]">
                   Continue With
@@ -1172,9 +1035,7 @@
                     d="M12.4199 6.67773C14.1318 5.96193 16.1135 6.13521 17.6074 7.2041H17.6084C17.9713 7.47252 18.3165 7.77037 18.6162 8.09277V8.09375C17.4782 8.9252 16.7049 10.0476 16.3213 11.3838C16.3096 11.4245 16.2972 11.4649 16.2852 11.5068L16.2812 11.5195L16.2783 11.5322C15.952 12.9344 16.3917 14.4196 17.041 15.5811L17.1729 15.8086L17.1807 15.8203C17.7615 16.7241 18.5362 17.3424 19.4189 17.8242C19.4023 17.8677 19.3833 17.9137 19.3613 17.9629V17.9639C19.3413 18.009 19.3406 18.009 19.3203 18.0547C19.2773 18.1513 19.2337 18.248 19.1895 18.3457V18.3467C19.1743 18.3803 19.1592 18.4146 19.1436 18.4492C18.4918 19.8951 17.8005 21.3295 16.6807 22.2998L16.4502 22.4883C16.3399 22.5733 16.2325 22.6598 16.126 22.749C15.5033 23.2647 14.9735 23.5243 14.2461 23.4912C13.6516 23.4346 13.0718 23.1718 12.4033 22.9014L12.4014 22.9004L12.1191 22.7959C10.7236 22.3232 9.55268 22.5789 8.27051 23.0557C8.22057 23.0742 8.17059 23.0932 8.11914 23.1123H8.11816C8.02065 23.1488 7.92264 23.1853 7.8252 23.2227C7.36588 23.3959 6.96933 23.5052 6.54395 23.5H6.54199C6.50299 23.4996 6.46387 23.4994 6.42383 23.499H6.4248C6.14572 23.4918 5.93175 23.4466 5.69727 23.3379L5.69238 23.3359L5.54395 23.2686C4.69675 22.8494 4.00714 22.1394 3.4043 21.3369L3.40137 21.334L3.33301 21.2441C1.93879 19.4186 1.06118 17.1713 0.680664 14.9043V14.9014L0.657227 14.7666C0.287771 12.5859 0.531701 10.4018 1.7998 8.63672C2.67411 7.45042 3.80635 6.65055 5.24219 6.37988C6.41785 6.23384 7.44414 6.49902 8.58594 6.98242H8.58691C9.10552 7.20101 9.59956 7.31545 10.1074 7.31543C10.6138 7.31538 11.1067 7.20229 11.6221 7.00293L11.625 7.00098C11.8903 6.89636 12.1556 6.78941 12.4199 6.67773ZM14.3867 0.533203C14.4101 0.70214 14.4143 0.911645 14.3916 1.15332C14.3544 1.54923 14.2587 1.95319 14.166 2.24219C13.9874 2.75024 13.7326 3.13597 13.3398 3.53906L13.333 3.54688L13.3252 3.55469C13.3019 3.58077 13.2788 3.60703 13.2549 3.63379C12.6222 4.3148 11.555 4.75182 10.5225 4.94629C10.5602 3.87608 10.8222 2.88623 11.5146 2.13477C11.927 1.71094 12.4116 1.3948 12.9756 1.09961L12.9854 1.09375C13.0269 1.07084 13.0677 1.04696 13.1104 1.02344L13.1113 1.02441C13.5159 0.810769 13.9811 0.609698 14.3867 0.533203Z"
                     stroke="currentColor" stroke-width="1.2" />
                 </svg>
-
               </button>
-
             </div>
 
             <!-- Bottom -->
@@ -1183,23 +1044,17 @@
               Already Have An Account?
 
               <a href="#"
-                class=" font-semibold text-[var(--color4)] hover:text-[var(--color-15)] transition-colors duration-300"
+                class="font-semibold text-[var(--color4)] hover:text-[var(--color-15)] transition-colors duration-300"
                 id="signinLink">
                 Sign In
               </a>
-
             </p>
-
           </form>
-
         </div>
 
         <!-- right side ends -->
-
       </section>
-
     </div>
-
   </div>
   <!-- signup modal ends -->
 
@@ -1207,17 +1062,13 @@
 
   <div id="loginModal"
     class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/30 backdrop-blur-sm py-[20px] lg:py-[36px]">
-
     <div class="max-w-[1350px] mx-auto px-[15px] flex items-center justify-center min-h-full">
-
       <!-- Modal Box -->
       <section
         class="flex flex-col lg:flex-row lg:flex-nowrap w-full max-w-[1320px] bg-[var(--color2)] rounded-[20px] overflow-hidden shadow-[0px_4px_52.7px_0px_#FFFFFF]">
-
         <!-- Left Side -->
         <div
           class="relative z-0 w-full lg:w-1/2 shrink-0 min-h-[260px] sm:min-h-[380px] lg:min-h-[821px] bg-[linear-gradient(180deg,_#DDF0FC_13%,_#2772CC_86%)] overflow-hidden rounded-none lg:rounded-tr-[70px] lg:rounded-br-[70px] flex items-center justify-center p-6 lg:p-0">
-
           <!-- Blur Shapes -->
           <span class="absolute top-[36px] left-[42px] w-[128px] h-[32px] rounded-full bg-white/20">
           </span>
@@ -1228,15 +1079,13 @@
           <!-- Illustration -->
           <figure class="w-[220px] sm:w-[320px] md:w-[420px] lg:w-[560px] max-w-full">
             <img src="assets/images/Main Illustration Container.png" alt="Login Illustration"
-              class="block w-full h-auto object-contain">
+              class="block w-full h-auto object-contain" />
           </figure>
-
         </div>
 
         <!-- Right Side -->
         <div
           class="w-full lg:w-1/2 shrink-0 min-w-0 bg-[var(--color2)] pt-[30px] pb-[35px] px-[20px] sm:px-[35px] md:px-[50px] lg:px-[94px]">
-
           <!-- Close -->
           <div class="flex justify-end">
             <button id="closeLogin" class="closeModal" type="button">
@@ -1246,7 +1095,6 @@
 
           <!-- Heading -->
           <div class="mt-[5px]">
-
             <h2 class="text-[32px] font-semibold leading-none text-[var(--color10)] font-[var(--outfit-r)]">
               Welcome Back
             </h2>
@@ -1254,66 +1102,52 @@
             <p class="mt-[12px] text-[16px] text-[var(--color1)]">
               Login to continue your account.
             </p>
-
           </div>
 
           <!-- Login Form -->
           <form action="#" method="post" class="mt-[44px]">
             <!-- Email -->
             <div class="mt-[20px]">
-
               <input type="email" placeholder="Enter Your Email" required
-                class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300">
-
+                class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300" />
             </div>
 
             <!-- Password -->
             <div class="mt-[20px]">
-
               <input type="password" placeholder="Enter Your Password" required
-                class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300">
-
+                class="w-full h-[59px] p-[20px] bg-transparent border-0 border-b-2 border-[var(--color4)] rounded-b-[20px] outline-none text-[16px] font-medium placeholder:text-[var(--color1)] focus:border-[var(--color5)] transition-all duration-300" />
             </div>
 
             <!-- Remember & Forgot -->
             <div class="flex items-center justify-between mt-[24px]">
-
               <label class="flex items-center cursor-pointer">
-
-                <input type="checkbox" class="w-[20px] h-[20px] accent-[var(--color4)]">
+                <input type="checkbox" class="w-[20px] h-[20px] accent-[var(--color4)]" />
 
                 <span class="ml-[10px] text-[15px] text-[var(--color1)]">
                   Remember Me
                 </span>
-
               </label>
 
               <a href="#"
                 class="text-[15px] font-medium text-[var(--color4)] hover:text-[var(--color-15)] transition-all duration-300">
                 Forgot Password?
               </a>
-
             </div>
 
             <!-- Login Button -->
             <button type="submit"
-              class=" cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] inline-block z-10 py-[16px] w-full rounded-[20px]  font-[family-name:var(--outfit-r)]text-[18px] font-semibold text-[var(--color2)] text-center flex justify-center mt-[20px]">
-
+              class="cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] inline-block z-10 py-[16px] w-full rounded-[20px] font-[family-name:var(--outfit-r)]text-[18px] font-semibold text-[var(--color2)] text-center flex justify-center mt-[20px]">
               Login
 
               <svg class="ml-[16px] transition-transform duration-500 group-hover:translate-x-1" width="22" height="22"
                 viewBox="0 0 24 24" fill="none">
-
                 <path d="M5 12H19M13 6L19 12L13 18" stroke="white" stroke-width="2" stroke-linecap="round"
                   stroke-linejoin="round" />
-
               </svg>
-
             </button>
 
             <!-- OR Divider -->
             <div class="flex items-center my-[24px]">
-
               <div class="w-full h-[1px] bg-[#9CA3AF]"></div>
 
               <span class="mx-[20px] text-[16px] font-medium text-[#9CA3AF]">
@@ -1321,31 +1155,24 @@
               </span>
 
               <div class="w-full h-[1px] bg-[#9CA3AF]"></div>
-
             </div>
             <!-- Social Login -->
             <div class="flex flex-col sm:flex-row justify-between mt-[20px]">
-
               <!-- Google -->
               <button type="button"
                 class="group w-full sm:w-[48%] mb-[15px] sm:mb-0 h-[66px] rounded-[20px] border-2 border-[var(--color4)] flex items-center justify-center hover:bg-[var(--color-15)] hover:border-[var(--color-15)] transition-all duration-500">
-
-
                 <span
                   class="text-[14px] font-semibold text-[var(--color4)] group-hover:text-[var(--color2)] capitalize">
                   continue of Google
                 </span>
                 <figure>
-                  <img src="assets/images/Vector.png" alt="google" loading="lazy" class="object-contain ms-[12px]">
-
+                  <img src="assets/images/Vector.png" alt="google" loading="lazy" class="object-contain ms-[12px]" />
                 </figure>
-
               </button>
 
               <!-- Apple -->
               <button type="button"
                 class="group w-full sm:w-[48%] h-[66px] rounded-[20px] border-2 border-[var(--color4)] flex items-center justify-center hover:bg-[var(--color-15)] hover:border-[var(--color-15)] transition-all duration-500">
-
                 <span class="text-[14px] font-semibold text-[var(--color4)] group-hover:text-[var(--color2)]">
                   Continue with
                 </span>
@@ -1355,104 +1182,67 @@
                     d="M17.5127 9.78906C19.8169 8.80819 22.4772 9.05107 24.4766 10.5137V10.5127C24.8868 10.8227 25.2776 11.1594 25.6289 11.5176C24.1177 12.7229 23.0843 14.3081 22.5596 16.1709C22.5431 16.2292 22.5267 16.2876 22.5098 16.3477L22.5029 16.3721L22.4971 16.3965C21.9881 18.6252 22.7537 20.9681 23.7812 22.7012L23.7881 22.7129L23.7959 22.7246C24.592 23.9873 25.637 24.8708 26.8145 25.5586C26.7991 25.5938 26.7945 25.6045 26.7715 25.6572C26.7117 25.794 26.6507 25.9313 26.5889 26.0703L26.5879 26.0723C26.5667 26.1202 26.5462 26.1684 26.5244 26.2178C25.5468 28.4287 24.535 30.5431 22.8408 31.8711L22.8389 31.8721C22.6819 31.9954 22.5295 32.1206 22.3779 32.25C21.5395 32.9578 20.8736 33.2784 19.9697 33.2393C19.1975 33.1631 18.441 32.8138 17.4834 32.4189L17.4805 32.418L17.0654 32.2617C15.1504 31.6014 13.5231 31.8981 11.8311 32.5029L11.4678 32.6367C11.3979 32.6632 11.3279 32.6895 11.2559 32.7168L11.2539 32.7178C11.1172 32.7699 10.9805 32.8226 10.8438 32.876C10.2135 33.1183 9.70165 33.2568 9.16504 33.25H9.16211C9.10961 33.2495 9.05674 33.2495 9.00293 33.249H9.00391C8.64975 33.2397 8.39332 33.1839 8.10938 33.0498L8.09961 33.0459L7.91113 32.958C6.78251 32.3917 5.84728 31.4199 5.01172 30.2861L5.00586 30.2783L4.91016 30.1514C2.99028 27.5889 1.77689 24.4254 1.25 21.2256L1.24805 21.2188L1.21582 21.0283C0.706722 17.9645 1.04956 14.9336 2.7627 12.4961C3.94993 10.8513 5.46955 9.76041 7.38477 9.38867C8.9501 9.19187 10.3259 9.54734 11.8975 10.2256L11.8984 10.2266C12.6551 10.5517 13.3891 10.7256 14.1504 10.7256C14.9085 10.7255 15.6379 10.5533 16.3848 10.2588L16.3916 10.2559C16.7654 10.1056 17.1392 9.94995 17.5127 9.78906ZM19.8682 1.12207C19.8708 1.26892 19.8667 1.43574 19.8496 1.62109C19.7999 2.1601 19.6711 2.71362 19.5469 3.11035C19.3116 3.79244 18.9798 4.3084 18.4551 4.85742L18.4395 4.87305L18.4258 4.88965C18.3946 4.92527 18.363 4.96061 18.3311 4.99707C17.5776 5.8241 16.3287 6.39821 15.0518 6.69824C15.1401 5.45745 15.4613 4.33723 16.166 3.44824L16.3584 3.22266C16.9024 2.6574 17.5453 2.22819 18.3115 1.81934L18.3213 1.81348L18.3311 1.80859L18.5195 1.70215C18.9659 1.46284 19.4398 1.2492 19.8682 1.12207Z"
                     stroke="#2772CC" stroke-width="2" />
                 </svg>
-
-
               </button>
-
             </div>
-
           </form>
-
         </div>
         <!-- Right Side End -->
-
       </section>
       <!-- Modal Box End -->
-
     </div>
-
   </div>
 
   <!-- login end  -->
 
   <!-- logout  modal -->
 
-    <div
-      id="logoutDialog"
-      class="modal-hidden fixed inset-0 z-50 flex items-center justify-center"
-    >
-      <!-- Overlay -->
-      <div class="modal-overlay absolute inset-0 bg-black/40" data-close></div>
+  <div id="logoutDialog" class="modal-hidden fixed inset-0 z-50 flex items-center justify-center">
+    <!-- Overlay -->
+    <div class="modal-overlay absolute inset-0 bg-black/40" data-close></div>
 
-      <!-- Panel -->
-      <div
-        class="modal-panel relative bg-[var(--color2)] rounded-2xl shadow-xl w-[92%] max-w-sm px-8 py-8 text-center"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="logoutDialogTitle"
-      >
-        <!-- Icon -->
-        <div
-          class="mx-auto mb-5 flex items-center justify-center w-12 h-12 rounded-full bg-red-50"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-5 h-5 text-red-500"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-            <polyline points="16 17 21 12 16 7"></polyline>
-            <line x1="21" y1="12" x2="9" y2="12"></line>
-          </svg>
-        </div>
+    <!-- Panel -->
+    <div class="modal-panel relative bg-[var(--color2)] rounded-2xl shadow-xl w-[92%] max-w-sm px-8 py-8 text-center"
+      role="dialog" aria-modal="true" aria-labelledby="logoutDialogTitle">
+      <!-- Icon -->
+      <div class="mx-auto mb-5 flex items-center justify-center w-12 h-12 rounded-full bg-red-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <polyline points="16 17 21 12 16 7"></polyline>
+          <line x1="21" y1="12" x2="9" y2="12"></line>
+        </svg>
+      </div>
 
-        <!-- Title -->
-        <h2
-          id="logoutDialogTitle"
-          class="font-outfit text-xl font-semibold text-[var(--color6)] mb-2"
-        >
-          Log out?
-        </h2>
+      <!-- Title -->
+      <h2 id="logoutDialogTitle" class="font-outfit text-xl font-semibold text-[var(--color6)] mb-2">
+        Log out?
+      </h2>
 
-        <!-- Description -->
-        <p
-          class="text-sm text-[var(--color1)] leading-relaxed mb-7 normal-case"
-        >
-          Are you sure you want to log out of your account? You'll need to sign
-          back in to access your data.
-        </p>
+      <!-- Description -->
+      <p class="text-sm text-[var(--color1)] leading-relaxed mb-7 normal-case">
+        Are you sure you want to log out of your account? You'll need to sign
+        back in to access your data.
+      </p>
 
-        <!-- Actions -->
-        <div class="flex items-center gap-3">
-          <button
-            id="dialogCancelBtn"
-            data-close
-            class="flex-1 py-2.5 rounded-lg border border-[var(--color4)] text-[var(--color4)] font-medium text-sm hover:bg-[var(--color-14)] transition-colors"
-          >
-            Cancel
-          </button>
-          <button
-            id="dialogConfirmLogoutBtn"
-            class="flex-1 py-2.5 rounded-lg border border-red-500 text-red-500 font-medium text-sm hover:bg-red-50 transition-colors"
-          >
-            Logout
-          </button>
-        </div>
+      <!-- Actions -->
+      <div class="flex items-center gap-3">
+        <button id="dialogCancelBtn" data-close
+          class="flex-1 py-2.5 rounded-lg border border-[var(--color4)] text-[var(--color4)] font-medium text-sm hover:bg-[var(--color-14)] transition-colors">
+          Cancel
+        </button>
+        <button id="dialogConfirmLogoutBtn"
+          class="flex-1 py-2.5 rounded-lg border border-red-500 text-red-500 font-medium text-sm hover:bg-red-50 transition-colors">
+          Logout
+        </button>
       </div>
     </div>
+  </div>
 
   <!-- js link -->
   <script src="./js/script.js"></script>
   <script>
     window.addEventListener("load", () => {
-
       setTimeout(() => {
-
         const loader = document.getElementById("loader");
 
         loader.style.opacity = "0";
@@ -1461,171 +1251,135 @@
           loader.style.display = "none";
           document.getElementById("website").style.display = "block";
         }, 1000);
-
       }, 2000);
-
     });
   </script>
   <script>
-
     // Elements
     const searchBtn = document.getElementById("searchBtn");
     const searchIcon = document.getElementById("searchIcon");
     const searchContent = document.getElementById("searchContent");
     const searchInput = document.getElementById("searchInput");
 
-    const searchOptions =
-      document.querySelectorAll(".search-option");
+    const searchOptions = document.querySelectorAll(".search-option");
 
-    const removeButtons =
-      document.querySelectorAll(".remove-option");
+    const removeButtons = document.querySelectorAll(".remove-option");
 
-    const clearAll =
-      document.getElementById("clearAll");
+    const clearAll = document.getElementById("clearAll");
 
-    const recentSearches =
-      document.getElementById("recentSearches");
-
+    const recentSearches = document.getElementById("recentSearches");
 
     // Open / Close Search Dropdown
     searchBtn.addEventListener("click", function () {
-
       searchContent.classList.toggle("hidden");
 
       // Change Search Icon to X
       if (searchContent.classList.contains("hidden")) {
-
         searchIcon.classList.remove("fa-xmark");
         searchIcon.classList.add("fa-magnifying-glass");
-
       } else {
-
         searchIcon.classList.remove("fa-magnifying-glass");
         searchIcon.classList.add("fa-xmark");
 
         searchInput.focus();
-
       }
-
     });
-
 
     // Click Search Option
-    searchOptions.forEach(option => {
-
+    searchOptions.forEach((option) => {
       option.addEventListener("click", function () {
+        const placeholder = this.dataset.placeholder;
 
-        const placeholder =
-          this.dataset.placeholder;
-
-        searchInput.placeholder =
-          placeholder;
+        searchInput.placeholder = placeholder;
 
         searchInput.focus();
-
       });
-
     });
-
 
     // Remove Search Option
-    removeButtons.forEach(button => {
-
+    removeButtons.forEach((button) => {
       button.addEventListener("click", function (e) {
-
         e.stopPropagation();
 
-        const option =
-          this.closest(".search-option");
+        const option = this.closest(".search-option");
 
         option.remove();
-
       });
-
     });
-
 
     // Clear All Recent Searches
     clearAll.addEventListener("click", function () {
-
       recentSearches.innerHTML = "";
-
     });
-
 
     // Recent Search Click
-    document.querySelectorAll(".recent-item")
-      .forEach(item => {
+    document.querySelectorAll(".recent-item").forEach((item) => {
+      item.addEventListener("click", function () {
+        searchInput.value = this.textContent.trim();
 
-        item.addEventListener("click", function () {
-
-          searchInput.value =
-            this.textContent.trim();
-
-          searchInput.focus();
-
-        });
-
+        searchInput.focus();
       });
-
+    });
   </script>
-  
+
   <!-- log out -->
-   <script>
-      const logoutDialog = document.getElementById("logoutDialog");
-      const triggerLogoutBtn = document.getElementById("triggerLogoutBtn");
-      const dialogConfirmLogoutBtn = document.getElementById(
-        "dialogConfirmLogoutBtn",
-      );
-      const dialogCloseTriggers = document.querySelectorAll("[data-close]");
-
-      function openLogoutDialog() {
-        logoutDialog.classList.remove("modal-hidden");
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeLogoutDialog() {
-        logoutDialog.classList.add("modal-hidden");
-        document.body.style.overflow = "";
-      }
-
-      triggerLogoutBtn.addEventListener("click", openLogoutDialog);
-
-      dialogCloseTriggers.forEach((el) =>
-        el.addEventListener("click", closeLogoutDialog),
-      );
-
-      document.addEventListener("keydown", (e) => {
-        if (
-          e.key === "Escape" &&
-          !logoutDialog.classList.contains("modal-hidden")
-        ) {
-          closeLogoutDialog();
-        }
-      });
-
-      dialogConfirmLogoutBtn.addEventListener("click", () => {
-        // Replace with real logout logic
-        console.log("User logged out");
-        closeLogoutDialog();
-      });
-    </script>
   <script>
-    const userDropdownBtn = document.getElementById('userDropdownBtn');
-    const userMegaMenu = document.getElementById('userMegaMenu');
+    const logoutDialog = document.getElementById("logoutDialog");
+    const triggerLogoutBtn = document.getElementById("triggerLogoutBtn");
+    const dialogConfirmLogoutBtn = document.getElementById(
+      "dialogConfirmLogoutBtn",
+    );
+    const dialogCloseTriggers = document.querySelectorAll("[data-close]");
 
-    userDropdownBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      userMegaMenu.classList.toggle('hidden');
+    function openLogoutDialog() {
+      logoutDialog.classList.remove("modal-hidden");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLogoutDialog() {
+      logoutDialog.classList.add("modal-hidden");
+      document.body.style.overflow = "";
+    }
+
+    triggerLogoutBtn.addEventListener("click", openLogoutDialog);
+
+    dialogCloseTriggers.forEach((el) =>
+      el.addEventListener("click", closeLogoutDialog),
+    );
+
+    document.addEventListener("keydown", (e) => {
+      if (
+        e.key === "Escape" &&
+        !logoutDialog.classList.contains("modal-hidden")
+      ) {
+        closeLogoutDialog();
+      }
     });
 
-    document.addEventListener('click', (e) => {
-      if (!userMegaMenu.contains(e.target) && !userDropdownBtn.contains(e.target)) {
-        userMegaMenu.classList.add('hidden');
+    dialogConfirmLogoutBtn.addEventListener("click", () => {
+      // Replace with real logout logic
+      console.log("User logged out");
+      closeLogoutDialog();
+    });
+  </script>
+  <script>
+    const userDropdownBtn = document.getElementById("userDropdownBtn");
+    const userMegaMenu = document.getElementById("userMegaMenu");
+
+    userDropdownBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      userMegaMenu.classList.toggle("hidden");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (
+        !userMegaMenu.contains(e.target) &&
+        !userDropdownBtn.contains(e.target)
+      ) {
+        userMegaMenu.classList.add("hidden");
       }
     });
   </script>
 </body>
-
 
 </html>

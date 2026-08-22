@@ -293,7 +293,7 @@
                         <ul class="space-y-4">
                           <li>
                             <a
-                              href="./personal-details.html"
+                              href="personal-details.html"
                               class="relative inline-block text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
                             >
                               Personal Details
@@ -421,25 +421,76 @@
               />
             </svg>
           </div>
-          <div
-            class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2"
-          >
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
-                stroke="#1A3151"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
+         <div
+  class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2 relative"
+>
+  <!-- User Button -->
+  <button
+    id="mobileUserDropdownBtn"
+    type="button"
+    aria-haspopup="true"
+    aria-expanded="false"
+    class="flex items-center justify-center"
+  >
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
+        stroke="#1A3151"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+
+  <!-- Mobile User Menu -->
+  <div
+    id="mobileUserMegaMenu"
+    class="hidden fixed top-24 left-1/2 -translate-x-1/2 w-[88vw] max-w-[280px] bg-white shadow-2xl rounded-xl p-5 z-[60] text-left"
+  >
+    <ul class="space-y-3">
+
+      <!-- Personal Details -->
+      <li>
+        <a
+          href="personal-details.html"
+          class="relative inline-block text-[15px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+        >
+          Personal Details
+        </a>
+      </li>
+
+      <!-- Booking History -->
+      <li>
+        <a
+          href="booking-history.html"
+          class="relative inline-block text-[15px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+        >
+          Booking History
+        </a>
+      </li>
+
+      <!-- Logout -->
+      <li>
+        <a
+          href="#"
+          id="mobileTriggerLogoutBtn"
+          class="relative inline-block text-[15px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+        >
+          Logout
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
           <div
             class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2"
           >
@@ -2041,73 +2092,46 @@
 
     <!-- logout  modal -->
 
-    <div
-      id="logoutDialog"
-      class="modal-hidden fixed inset-0 z-50 flex items-center justify-center"
-    >
-      <!-- Overlay -->
-      <div class="modal-overlay absolute inset-0 bg-black/40" data-close></div>
+    <div id="logoutDialog" class="modal-hidden fixed inset-0 z-50 flex items-center justify-center">
+        <!-- Overlay -->
+        <div class="modal-overlay absolute inset-0 bg-black/40" data-close></div>
 
-      <!-- Panel -->
-      <div
-        class="modal-panel relative bg-[var(--color2)] rounded-2xl shadow-xl w-[92%] max-w-sm px-8 py-8 text-center"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="logoutDialogTitle"
-      >
-        <!-- Icon -->
-        <div
-          class="mx-auto mb-5 flex items-center justify-center w-12 h-12 rounded-full bg-red-50"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-5 h-5 text-red-500"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-            <polyline points="16 17 21 12 16 7"></polyline>
-            <line x1="21" y1="12" x2="9" y2="12"></line>
-          </svg>
+        <!-- Panel -->
+        <div class="modal-panel relative bg-[var(--color2)] rounded-2xl shadow-xl w-[92%] max-w-sm px-8 py-8 text-center"
+            role="dialog" aria-modal="true" aria-labelledby="logoutDialogTitle">
+            <!-- Icon -->
+            <div class="mx-auto mb-5 flex items-center justify-center w-12 h-12 rounded-full bg-red-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+            </div>
+
+            <!-- Title -->
+            <h2 id="logoutDialogTitle" class="font-outfit text-xl font-semibold text-[var(--color6)] mb-2">
+                Log out?
+            </h2>
+
+            <!-- Description -->
+            <p class="text-sm text-[var(--color1)] leading-relaxed mb-7 normal-case">
+                Are you sure you want to log out of your account? You'll need to sign
+                back in to access your data.
+            </p>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-3">
+                <button id="dialogCancelBtn" data-close
+                    class="flex-1 py-2.5 rounded-lg border border-[var(--color4)] text-[var(--color4)] font-medium text-sm hover:bg-[var(--color-14)] transition-colors">
+                    Cancel
+                </button>
+                <button id="dialogConfirmLogoutBtn"
+                    class="flex-1 py-2.5 rounded-lg border border-red-500 text-red-500 font-medium text-sm hover:bg-red-50 transition-colors">
+                    Logout
+                </button>
+            </div>
         </div>
-
-        <!-- Title -->
-        <h2
-          id="logoutDialogTitle"
-          class="font-outfit text-xl font-semibold text-[var(--color6)] mb-2"
-        >
-          Log out?
-        </h2>
-
-        <!-- Description -->
-        <p
-          class="text-sm text-[var(--color1)] leading-relaxed mb-7 normal-case"
-        >
-          Are you sure you want to log out of your account? You'll need to sign
-          back in to access your data.
-        </p>
-
-        <!-- Actions -->
-        <div class="flex items-center gap-3">
-          <button
-            id="dialogCancelBtn"
-            data-close
-            class="flex-1 py-2.5 rounded-lg border border-[var(--color4)] text-[var(--color4)] font-medium text-sm hover:bg-[var(--color-14)] transition-colors"
-          >
-            Cancel
-          </button>
-          <button
-            id="dialogConfirmLogoutBtn"
-            class="flex-1 py-2.5 rounded-lg border border-red-500 text-red-500 font-medium text-sm hover:bg-red-50 transition-colors"
-          >
-            Logout
-          </button>
-        </div>
-      </div>
     </div>
 
     <!-- provider details modal starts -->
@@ -3276,99 +3300,99 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 
-    const providerModal = document.getElementById("providerModal");
-    const openProviderModal = document.getElementById("openProviderModal");
-    const closeProviderModal = document.getElementById("closeProviderModal");
+            const providerModal = document.getElementById("providerModal");
+            const openProviderModal = document.getElementById("openProviderModal");
+            const closeProviderModal = document.getElementById("closeProviderModal");
 
-    if (!providerModal || !openProviderModal) {
-        console.error("Provider modal elements not found");
-        return;
-    }
+            if (!providerModal || !openProviderModal) {
+                console.error("Provider modal elements not found");
+                return;
+            }
 
-    let scrollPosition = 0;
+            let scrollPosition = 0;
 
-    // OPEN MODAL
-    openProviderModal.addEventListener("click", function (e) {
-        e.preventDefault();
+            // OPEN MODAL
+            openProviderModal.addEventListener("click", function (e) {
+                e.preventDefault();
 
-        // Current scroll position save
-        scrollPosition = window.scrollY;
+                // Current scroll position save
+                scrollPosition = window.scrollY;
 
-        // Completely freeze background
-        document.body.style.position = "fixed";
-        document.body.style.top = `-${scrollPosition}px`;
-        document.body.style.left = "0";
-        document.body.style.right = "0";
-        document.body.style.width = "100%";
-        document.body.style.overflow = "hidden";
+                // Completely freeze background
+                document.body.style.position = "fixed";
+                document.body.style.top = `-${scrollPosition}px`;
+                document.body.style.left = "0";
+                document.body.style.right = "0";
+                document.body.style.width = "100%";
+                document.body.style.overflow = "hidden";
 
-        providerModal.showModal();
-    });
+                providerModal.showModal();
+            });
 
-    // CLOSE MODAL
-    if (closeProviderModal) {
-        closeProviderModal.addEventListener("click", function () {
-            providerModal.close();
+            // CLOSE MODAL
+            if (closeProviderModal) {
+                closeProviderModal.addEventListener("click", function () {
+                    providerModal.close();
+                });
+            }
+
+            // MODAL CLOSED
+            providerModal.addEventListener("close", function () {
+
+                // Remove freeze
+                document.body.style.position = "";
+                document.body.style.top = "";
+                document.body.style.left = "";
+                document.body.style.right = "";
+                document.body.style.width = "";
+                document.body.style.overflow = "";
+
+                // Return to exact previous position
+                window.scrollTo(0, scrollPosition);
+            });
+
         });
-    }
-
-    // MODAL CLOSED
-    providerModal.addEventListener("close", function () {
-
-        // Remove freeze
-        document.body.style.position = "";
-        document.body.style.top = "";
-        document.body.style.left = "";
-        document.body.style.right = "";
-        document.body.style.width = "";
-        document.body.style.overflow = "";
-
-        // Return to exact previous position
-        window.scrollTo(0, scrollPosition);
-    });
-
-});
     </script>
 
     <!-- log out -->
     <script>
-      const logoutDialog = document.getElementById("logoutDialog");
-      const triggerLogoutBtn = document.getElementById("triggerLogoutBtn");
-      const dialogConfirmLogoutBtn = document.getElementById(
-        "dialogConfirmLogoutBtn",
-      );
-      const dialogCloseTriggers = document.querySelectorAll("[data-close]");
+        const logoutDialog = document.getElementById("logoutDialog");
+        const triggerLogoutBtn = document.getElementById("triggerLogoutBtn");
+        const dialogConfirmLogoutBtn = document.getElementById(
+            "dialogConfirmLogoutBtn",
+        );
+        const dialogCloseTriggers = document.querySelectorAll("[data-close]");
 
-      function openLogoutDialog() {
-        logoutDialog.classList.remove("modal-hidden");
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeLogoutDialog() {
-        logoutDialog.classList.add("modal-hidden");
-        document.body.style.overflow = "";
-      }
-
-      triggerLogoutBtn.addEventListener("click", openLogoutDialog);
-
-      dialogCloseTriggers.forEach((el) =>
-        el.addEventListener("click", closeLogoutDialog),
-      );
-
-      document.addEventListener("keydown", (e) => {
-        if (
-          e.key === "Escape" &&
-          !logoutDialog.classList.contains("modal-hidden")
-        ) {
-          closeLogoutDialog();
+        function openLogoutDialog() {
+            logoutDialog.classList.remove("modal-hidden");
+            document.body.style.overflow = "hidden";
         }
-      });
 
-      dialogConfirmLogoutBtn.addEventListener("click", () => {
-        // Replace with real logout logic
-        console.log("User logged out");
-        closeLogoutDialog();
-      });
+        function closeLogoutDialog() {
+            logoutDialog.classList.add("modal-hidden");
+            document.body.style.overflow = "";
+        }
+
+        triggerLogoutBtn.addEventListener("click", openLogoutDialog);
+
+        dialogCloseTriggers.forEach((el) =>
+            el.addEventListener("click", closeLogoutDialog),
+        );
+
+        document.addEventListener("keydown", (e) => {
+            if (
+                e.key === "Escape" &&
+                !logoutDialog.classList.contains("modal-hidden")
+            ) {
+                closeLogoutDialog();
+            }
+        });
+
+        dialogConfirmLogoutBtn.addEventListener("click", () => {
+            // Replace with real logout logic
+            console.log("User logged out");
+            closeLogoutDialog();
+        });
     </script>
 </body>
 
