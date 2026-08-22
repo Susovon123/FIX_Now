@@ -14,11 +14,10 @@
 
 
   <!-- Tailwind cdn -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  
 
   <!-- css link -->
   <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/booking-history.css" />
   <link rel="stylesheet" href="./css/about-us.css" />
 
 </head>
@@ -28,274 +27,561 @@
 
 
 
-       <!-- starting  navbar -->
-    <!-- Header -->
-<header>
-  <!-- Header Top -->
-  <div class="w-full min-h-[74px] bg-[var(--color-14)] px-[20px] py-[10px]">
-    <div class="w-full flex flex-col md:flex-row items-center justify-between">
-      <!-- Left -->
-      <div class="w-auto shrink-0 text-center md:text-left">
-        <p class="font-[var(--albert-sans-r)] text-[14px] text-[var(--color5)] whitespace-nowrap">
-          Trusted Local Services, Right When You Need Them.
-        </p>
-      </div>
-      <!-- Right -->
-      <div class="w-auto flex items-center justify-end gap-6 mt-4 md:mt-0">
-        <div class="location-box w-[250px] shrink-0">
-          <select id="locationSelect">
-            <option value="">Choose Location</option>
-            <option value="search">🔍 Search By Area</option>
-            <option value="current">📍 Use My Current Location</option>
-          </select>
-          <div id="searchBox" class="hide">
-            <input type="text" placeholder="Search your area..." />
-          </div>
-          <div id="addressBox" class="hide">
-            <h4>Your Current Address</h4>
-            <p id="address">No location selected.</p>
-          </div>
-        </div>
-    <a href="#" class="hidden lg:block text-[16px] text-[var(--color-15)] whitespace-nowrap">
-          Help & Support
-        </a>
-        <a
-          href="work-with-us.html"
-          class="hidden lg:block text-[16px] rounded-[20px] border-2 border-[var(--color4)] px-[36px] py-[16px] whitespace-nowrap text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-500 ease-in-out"
-        >
-          Work With Us
-        </a>
+    
+    <!-- starting  navbar -->
+    <!-- Loader -->
+    <div
+      id="loader"
+      class="fixed inset-0 z-[999999] flex flex-col items-center justify-center bg-white transition-opacity duration-500"
+    >
+      <!-- Logo -->
+      <h1
+        class="text-[70px] font-extrabold tracking-[2px] font-[family-name:var(--outfit-r)]"
+      >
+        <span class="text-[var(--color4)]">Fix</span
+        ><span class="text-[var(--color-15)]">Now</span>
+      </h1>
+
+      <!-- Progress Bar -->
+      <div class="mt-8 h-2 w-[220px] overflow-hidden rounded-full bg-gray-200">
+        <div
+          class="loader-progress h-full rounded-full bg-gradient-to-r from-[var(--color4)] to-[var(--color-15)]"
+        ></div>
       </div>
     </div>
-  </div>
 
-  <!-- Gradient Divider -->
-  <div class="h-[1px] w-full bg-[linear-gradient(90deg,rgb(240,249,254)_1%,rgb(48,137,224)_47%,rgb(240,249,254)_100%)]"></div>
+    <!-- starting  navbar -->
+    <!-- Header -->
+    <header>
+      <!-- Header Top -->
+      <div class="w-full min-h-[74px] bg-[var(--color-14)] px-[20px] py-[10px]">
+        <div
+          class="w-full flex flex-col md:flex-row items-center justify-between"
+        >
+          <!-- Left -->
+          <div class="w-auto shrink-0 text-center md:text-left">
+            <p
+              class="font-[var(--albert-sans-r)] text-[14px] text-[var(--color5)] whitespace-nowrap"
+            >
+              Trusted Local Services, Right When You Need Them.
+            </p>
+          </div>
+          <!-- Right -->
+          <div class="w-auto flex items-center justify-end gap-6 mt-4 md:mt-0">
+            <div class="location-box w-[250px] shrink-0">
+              <select id="locationSelect">
+                <option value="">Choose Location</option>
+                <option value="search">🔍 Search By Area</option>
+                <option value="current">📍 Use My Current Location</option>
+              </select>
+              <div id="searchBox" class="hide">
+                <input type="text" placeholder="Search your area..." />
+              </div>
+              <div id="addressBox" class="hide">
+                <h4>Your Current Address</h4>
+                <p id="address">No location selected.</p>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="hidden lg:block text-[16px] text-[var(--color-15)] whitespace-nowrap"
+            >
+              Help & Support
+            </a>
+            <a
+              href="work-with-us.html"
+              class="hidden lg:block text-[16px] rounded-[20px] border-2 border-[var(--color4)] px-[36px] py-[16px] whitespace-nowrap text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-500 ease-in-out"
+            >
+              Work With Us
+            </a>
+          </div>
+        </div>
+      </div>
 
-  <nav class="w-full bg-[var(--color2)] px-[20px] py-[11px]">
-    <div class="w-full">
-      <div class="flex items-center justify-between h-[70px] py-[14px]">
-        <!-- Logo -->
-        <a href="index.html" class="shrink-0">
-          <img src="assets/images/Frame 14.png" alt="logo-image" class="w-auto h-auto" />
-        </a>
+      <!-- Gradient Divider -->
+      <div
+        class="h-[1px] w-full bg-[linear-gradient(90deg,rgb(240,249,254)_1%,rgb(48,137,224)_47%,rgb(240,249,254)_100%)]"
+      ></div>
 
-        <!-- Desktop Menu -->
-        <div class="hidden lg:flex items-center w-full">
-          <ul class="flex mx-auto">
-            <li class="mr-[50px]">
-              <a href="index.html" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
-                Home
-              </a>
-            </li>
-            <li class="relative mr-[50px]">
-              <a href="service.html" id="serviceBtn" class="relative outline-none text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full flex items-center gap-1">
-                Service
+      <nav class="w-full bg-[var(--color2)] px-[20px] py-[11px]">
+        <div class="w-full">
+          <div class="flex items-center justify-between h-[70px] py-[14px]">
+            <!-- Logo -->
+            <a href="index.html" class="shrink-0">
+              <img
+                src="assets/images/Frame 14.png"
+                alt="logo-image"
+                class="w-auto h-auto"
+              />
+            </a>
 
-              </a>
-             
-            </li>
-            <li class="mr-[50px]">
-              <a href="about.us.html" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="contact-us.html" class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
-                Contact Us
-              </a>
-            </li>
-          </ul>
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center w-full">
+              <ul class="flex mx-auto">
+                <li class="mr-[50px]">
+                  <a
+                    href="index.html"
+                    class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li class="relative mr-[50px]">
+                  <a
+                    href="service.html"
+                    class="relative outline-none text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full flex items-center gap-1"
+                  >
+                    Service
+                  </a>
+                </li>
+                <li class="mr-[50px]">
+                  <a
+                    href="about.us.html"
+                    class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="contact-us.html"
+                    class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+                  >
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
 
-          <!-- Right Side -->
-          <div class="flex items-center">
-            <!-- Search -->
-            <div class="relative group mx-4">
-              <div class="absolute right-0 top-[48px] w-[40px] h-[25px] z-40"></div>
-              <button class="relative z-40 w-12 h-12 rounded-full border border-[var(--color5)] flex items-center justify-center bg-white text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300">
-                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-              <div class="absolute right-0 top-[73px] w-[440px] opacity-0 invisible translate-y-[-10px] group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-20">
-                <div class="relative w-full h-[62px] bg-white rounded-[30px] border border-[var(--color-15)] shadow-[0_4px_15px_rgba(0,0,0,0.10)]">
-                  <input type="search" placeholder="Search By City, Service Type, OR ZIP Code" class="w-full h-full rounded-[30px] pl-[25px] pr-[55px] outline-none text-[14px] text-gray-600 placeholder:text-gray-400" />
-                  <button class="absolute right-[17px] top-1/2 -translate-y-1/2 text-[var(--color5)] hover:text-[var(--color-15)] transition">
-                    <i class="fa-solid fa-microphone text-[20px]"></i>
+              <!-- Right Side -->
+              <div class="flex items-center">
+                <!-- Search -->
+                <div class="relative group mx-4">
+                  <div
+                    class="absolute right-0 top-[48px] w-[40px] h-[25px] z-40"
+                  ></div>
+                  <button
+                    class="relative z-40 w-12 h-12 rounded-full border border-[var(--color5)] flex items-center justify-center bg-white text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300"
+                  >
+                    <svg
+                      width="23"
+                      height="23"
+                      viewBox="0 0 23 23"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                   </button>
-                </div>
-                <div class="mt-[15px] w-full bg-white rounded-[16px] border border-[#e0e4e9] shadow-[0_5px_20px_rgba(0,0,0,0.12)] overflow-hidden">
-                  <div class="flex items-center min-h-[70px] px-[20px] bg-[#eef5ff] border-b border-[#dce3eb] cursor-pointer hover:bg-[#e7f1ff]">
-                    <div class="w-[40px] text-[var(--color5)]"><i class="fa-solid fa-location-dot text-[22px]"></i></div>
-                    <p class="flex-1 text-[14px] text-gray-600">Search by city</p>
-                    <i class="fa-solid fa-chevron-right text-[12px] text-gray-400"></i>
-                  </div>
-                  <div class="flex items-center min-h-[70px] px-[20px] border-b border-[#e0e0e0] cursor-pointer hover:bg-[#f7f9fc]">
-                    <div class="w-[40px] text-[var(--color5)]"><i class="fa-solid fa-border-all text-[21px]"></i></div>
-                    <p class="flex-1 text-[14px] text-gray-600">Search by service type</p>
-                    <i class="fa-solid fa-chevron-right text-[12px] text-gray-400"></i>
-                  </div>
-                  <div class="flex items-center min-h-[70px] px-[20px] border-b border-[#e0e0e0] cursor-pointer hover:bg-[#f7f9fc]">
-                    <div class="w-[40px] text-[var(--color5)]"><i class="fa-solid fa-map-location-dot text-[21px]"></i></div>
-                    <p class="flex-1 text-[14px] text-gray-600">Search by zip code</p>
-                    <i class="fa-solid fa-chevron-right text-[12px] text-gray-400"></i>
-                  </div>
-                  <div class="px-[20px] pt-[20px] pb-[20px]">
-                    <div class="flex items-center">
-                      <div class="w-[40px] text-[var(--color5)]"><i class="fa-solid fa-clock-rotate-left text-[19px]"></i></div>
-                      <p class="flex-1 text-[14px] text-gray-600">Recent Searches</p>
-                      <button class="text-gray-400 hover:text-[var(--color-15)]"><i class="fa-solid fa-xmark text-[17px]"></i></button>
+                  <div
+                    class="absolute right-0 top-[73px] w-[440px] opacity-0 invisible translate-y-[-10px] group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 z-20"
+                  >
+                    <div
+                      class="relative w-full h-[62px] bg-white rounded-[30px] border border-[var(--color-15)] shadow-[0_4px_15px_rgba(0,0,0,0.10)]"
+                    >
+                      <input
+                        type="search"
+                        placeholder="Search By City, Service Type, OR ZIP Code"
+                        class="w-full h-full rounded-[30px] pl-[25px] pr-[55px] outline-none text-[14px] text-gray-600 placeholder:text-gray-400"
+                      />
+                      <button
+                        class="absolute right-[17px] top-1/2 -translate-y-1/2 text-[var(--color5)] hover:text-[var(--color-15)] transition"
+                      >
+                        <i class="fa-solid fa-microphone text-[20px]"></i>
+                      </button>
                     </div>
-                    <div class="mt-[15px] flex overflow-hidden">
-                      <button class="shrink-0 bg-[#f1f3f6] rounded-[15px] px-[18px] py-[11px] mr-[10px] text-[13px] text-gray-500 hover:bg-[#e6eaf0]">Electrician Near Salt Lake</button>
-                      <button class="shrink-0 bg-[#f1f3f6] rounded-[15px] px-[18px] py-[11px] mr-[10px] text-[13px] text-gray-500 hover:bg-[#e6eaf0]">Salon At Home In Ballygunge</button>
+                    <div
+                      class="mt-[15px] w-full bg-white rounded-[16px] border border-[#e0e4e9] shadow-[0_5px_20px_rgba(0,0,0,0.12)] overflow-hidden"
+                    >
+                      <div
+                        class="flex items-center min-h-[70px] px-[20px] bg-[#eef5ff] border-b border-[#dce3eb] cursor-pointer hover:bg-[#e7f1ff]"
+                      >
+                        <div class="w-[40px] text-[var(--color5)]">
+                          <i class="fa-solid fa-location-dot text-[22px]"></i>
+                        </div>
+                        <p class="flex-1 text-[14px] text-gray-600">
+                          Search by city
+                        </p>
+                        <i
+                          class="fa-solid fa-chevron-right text-[12px] text-gray-400"
+                        ></i>
+                      </div>
+                      <div
+                        class="flex items-center min-h-[70px] px-[20px] border-b border-[#e0e0e0] cursor-pointer hover:bg-[#f7f9fc]"
+                      >
+                        <div class="w-[40px] text-[var(--color5)]">
+                          <i class="fa-solid fa-border-all text-[21px]"></i>
+                        </div>
+                        <p class="flex-1 text-[14px] text-gray-600">
+                          Search by service type
+                        </p>
+                        <i
+                          class="fa-solid fa-chevron-right text-[12px] text-gray-400"
+                        ></i>
+                      </div>
+                      <div
+                        class="flex items-center min-h-[70px] px-[20px] border-b border-[#e0e0e0] cursor-pointer hover:bg-[#f7f9fc]"
+                      >
+                        <div class="w-[40px] text-[var(--color5)]">
+                          <i
+                            class="fa-solid fa-map-location-dot text-[21px]"
+                          ></i>
+                        </div>
+                        <p class="flex-1 text-[14px] text-gray-600">
+                          Search by zip code
+                        </p>
+                        <i
+                          class="fa-solid fa-chevron-right text-[12px] text-gray-400"
+                        ></i>
+                      </div>
+                      <div class="px-[20px] pt-[20px] pb-[20px]">
+                        <div class="flex items-center">
+                          <div class="w-[40px] text-[var(--color5)]">
+                            <i
+                              class="fa-solid fa-clock-rotate-left text-[19px]"
+                            ></i>
+                          </div>
+                          <p class="flex-1 text-[14px] text-gray-600">
+                            Recent Searches
+                          </p>
+                          <button
+                            class="text-gray-400 hover:text-[var(--color-15)]"
+                          >
+                            <i class="fa-solid fa-xmark text-[17px]"></i>
+                          </button>
+                        </div>
+                        <div class="mt-[15px] flex overflow-hidden">
+                          <button
+                            class="shrink-0 bg-[#f1f3f6] rounded-[15px] px-[18px] py-[11px] mr-[10px] text-[13px] text-gray-500 hover:bg-[#e6eaf0]"
+                          >
+                            Electrician Near Salt Lake
+                          </button>
+                          <button
+                            class="shrink-0 bg-[#f1f3f6] rounded-[15px] px-[18px] py-[11px] mr-[10px] text-[13px] text-gray-500 hover:bg-[#e6eaf0]"
+                          >
+                            Salon At Home In Ballygunge
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                <!-- User -->
+                <div
+                  class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300 relative"
+                >
+                  <button id="userDropdownBtn" type="button" aria-haspopup="true" aria-expanded="false">
+                    <svg
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+
+                  <div
+                    id="userMegaMenu"
+                    class="hidden absolute right-0 top-[60px] w-[600px] bg-white shadow-2xl rounded-xl p-8 z-50"
+                  >
+                    <div class="grid grid-cols-12 gap-8">
+                      <div class="col-span-6">
+                        <ul class="space-y-4">
+                          <li>
+                            <a
+                              href="#"
+                              class="relative inline-block text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                              Personal Details
+                            </a>
+                          </li>
+
+                          <li>
+                            <a
+                              href="booking-history.html"
+                              class="relative inline-block text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                              Booking History
+                            </a>
+                          </li>
+
+                          <li>
+                            <a
+                              href="#"
+                              id="triggerLogoutBtn"
+                              class="relative inline-block text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+                            >
+                              Logout
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Cart -->
+                <div
+                  class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300"
+                >
+                  <a href="cart.html">
+                    <svg
+                      class="transition-transform duration-300"
+                      width="28"
+                      height="28"
+                      viewBox="0 0 28 28"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                <a
+                  href="#"
+                  class="openSignup cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] z-10 py-[16px] px-[48px] rounded-[20px] font-[family-name:var(--outfit-r)] text-[18px] font-semibold text-[var(--color2)]"
+                >
+                  Sign Up
+                </a>
               </div>
             </div>
 
-            <!-- User -->
-            <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300 relative">
-              <button id="userDropdownBtn">
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
+            <!-- Mobile Menu Button -->
+            <button id="menuBtn" class="lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-8 h-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
 
-       <div id="userMegaMenu"
-     class="hidden absolute right-0 top-[60px] w-[600px] bg-white shadow-2xl rounded-xl p-8 z-50">
+      <!-- Overlay -->
+      <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-40"></div>
 
-  <div class="grid grid-cols-12 gap-8">
-
-    <div class="col-span-6">
-      <ul class="space-y-4">
-
-        <li>
-          <a href="#"
-             class="relative inline-block text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300
-             after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)]
-             after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
-            Personal Details
+      <!-- Mobile Sidebar -->
+      <div
+        id="mobileMenu"
+        class="fixed top-0 right-[-100%] w-[300px] h-screen bg-white z-50 transition-all duration-300 shadow-2xl overflow-y-auto"
+      >
+        <div
+          class="flex items-center justify-between px-5 py-5 border-b border-[var(--color11)]"
+        >
+          <a href="index.html">
+            <img
+              src="assets/images/Frame 14.png"
+              alt="logo"
+              class="w-[140px]"
+            />
           </a>
-        </li>
+          <button id="closeBtn" class="text-4xl text-[var(--color6)]">
+            &times;
+          </button>
+        </div>
 
-        <li>
-          <a href="booking-history.html"
-             class="relative inline-block text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300
-             after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)]
-             after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
-            Booking History
-          </a>
-        </li>
+        <div class="flex justify-start px-8 gap-4 mt-8">
+          <div
+            class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2"
+          >
+            <svg
+              width="23"
+              height="23"
+              viewBox="0 0 23 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z"
+                stroke="#1A3151"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+         <div
+  class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2 relative"
+>
+  <!-- User Button -->
+  <button
+    id="mobileUserDropdownBtn"
+    type="button"
+    aria-haspopup="true"
+    aria-expanded="false"
+    class="flex items-center justify-center"
+  >
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z"
+        stroke="#1A3151"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
 
-        <li>
-          <a href="#"
-           id="triggerLogoutBtn"
-             class="relative inline-block text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300
-             after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)]
-             after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
-            Logout
-          </a>
-        </li>
+  <!-- Mobile User Menu -->
+  <div
+    id="mobileUserMegaMenu"
+    class="hidden fixed top-24 left-1/2 -translate-x-1/2 w-[88vw] max-w-[280px] bg-white shadow-2xl rounded-xl p-5 z-[60] text-left"
+  >
+    <ul class="space-y-3">
 
-      </ul>
-    </div>
+      <!-- Personal Details -->
+      <li>
+        <a
+          href="#"
+          class="relative inline-block text-[15px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+        >
+          Personal Details
+        </a>
+      </li>
 
+      <!-- Booking History -->
+      <li>
+        <a
+          href="booking-history.html"
+          class="relative inline-block text-[15px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+        >
+          Booking History
+        </a>
+      </li>
+
+      <!-- Logout -->
+      <li>
+        <a
+          href="#"
+          id="mobileTriggerLogoutBtn"
+          class="relative inline-block text-[15px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+        >
+          Logout
+        </a>
+      </li>
+
+    </ul>
   </div>
 </div>
-            </div>
 
-            <!-- Cart -->
-            <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-4 text-[var(--color5)] hover:bg-[var(--color-15)] hover:border-[var(--color-15)] hover:text-white transition-all duration-300">
-              <a href="cart.html">
-                <svg class="transition-transform duration-300" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </a>
-            </div>
-
-           
-            <a href="#" class="openSignup cmn-btn relative inline-block overflow-hidden ml-4 bg-[var(--color4)] z-10 py-[16px] px-[48px] rounded-[20px] font-[family-name:var(--outfit-r)] text-[18px] font-semibold text-[var(--color2)]">
-              Sign Up
+          <div
+            class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2"
+          >
+            <a href="cart.html">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z"
+                  stroke="#1A3151"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </a>
           </div>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <button id="menuBtn" class="lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        <ul class="mt-6">
+          <li class="border-b border-[var(--color11)]">
+            <a
+              href="index.html"
+              class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+              >Home</a
+            >
+          </li>
+
+          <li class="border-b border-[var(--color11)]">
+            <a
+              href="service.html"
+              class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+            >
+              Services
+            </a>
+          </li>
+
+          <li class="mr-[50px]">
+            <a
+              href="about.us.html"
+              class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+              >About</a
+            >
+          </li>
+
+          <li class="border-b border-[var(--color11)]">
+            <a
+              href="contact-us.html"
+              class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+
+        <div class="px-8 py-5 border-t border-[var(--color11)]">
+          <a
+            href="#"
+            class="block text-[18px] text-[var(--color-15)] hover:text-[var(--color4)] transition"
+            >Help & Support</a
+          >
+        </div>
+
+        <div class="px-8 mt-6 space-y-4">
+          <a
+            href="#"
+            class="openSignup cmn-btn relative block w-full overflow-hidden bg-[var(--color4)] z-10 py-[16px] rounded-[20px] text-center text-[18px] font-semibold text-white"
+            >Sign Up</a
+          >
+          <a
+            href="work-with-us.html"
+            class="block w-full border-2 border-[var(--color4)] rounded-[20px] py-[16px] text-center text-[18px] font-semibold text-[var(--color5)] hover:bg-[var(--color4)] hover:text-white transition-all duration-300"
+            >Work With Us</a
+          >
+        </div>
       </div>
-    </div>
-  </nav>
+    </header>
 
-  <!-- Overlay -->
-  <div id="overlay" class="fixed inset-0 bg-black/40 hidden z-40"></div>
-
-  <!-- Mobile Sidebar -->
-  <div id="mobileMenu" class="fixed top-0 right-[-100%] w-[300px] h-screen bg-white z-50 transition-all duration-300 shadow-2xl overflow-y-auto">
-    <div class="flex items-center justify-between px-5 py-5 border-b border-[var(--color11)]">
-      <a href="index.html">
-        <img src="assets/images/Frame 14.png" alt="logo" class="w-[140px]" />
-      </a>
-      <button id="closeBtn" class="text-4xl text-[var(--color6)]">&times;</button>
-    </div>
-
-    <div class="flex justify-start px-8 gap-4 mt-8">
-      <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
-        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 15L22 22M9.16667 17.3333C4.65634 17.3333 1 13.677 1 9.16667C1 4.65634 4.65634 1 9.16667 1C13.677 1 17.3333 4.65634 17.3333 9.16667C17.3333 13.677 13.677 17.3333 9.16667 17.3333Z" stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </div>
-      <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
-        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21 22.167C21 19.5897 17.866 17.5003 14 17.5003C10.134 17.5003 7 19.5897 7 22.167M14 14.0003C11.4227 14.0003 9.33333 11.911 9.33333 9.33366C9.33333 6.75633 11.4227 4.66699 14 4.66699C16.5773 4.66699 18.6667 6.75633 18.6667 9.33366C18.6667 11.911 16.5773 14.0003 14 14.0003Z" stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </div>
-      <div class="flex items-center justify-center w-12 h-12 border border-[var(--color5)] rounded-full mx-2">
-        <a href="cart.html">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3.5 3.5H3.81307C4.36581 3.5 4.64267 3.5 4.86811 3.59972C5.06688 3.68765 5.23683 3.82921 5.35937 4.00871C5.49814 4.21197 5.54825 4.48338 5.64827 5.02515L8.16671 18.6667L20.3254 18.6667C20.8542 18.6667 21.1194 18.6667 21.3384 18.5732C21.5318 18.4907 21.6987 18.3571 21.8226 18.1871C21.9627 17.9949 22.0221 17.7376 22.1407 17.2236L22.1416 17.22L23.9724 9.28662L23.9728 9.28496C24.1527 8.50518 24.2429 8.11435 24.1439 7.80778C24.057 7.53879 23.8741 7.31073 23.6315 7.16557C23.3549 7 22.9551 7 22.1535 7H6.41667M21 24.5C20.3557 24.5 19.8333 23.9777 19.8333 23.3333C19.8333 22.689 20.3557 22.1667 21 22.1667C21.6443 22.1667 22.1667 22.689 22.1667 23.3333C22.1667 23.9777 21.6443 24.5 21 24.5ZM9.33333 24.5C8.689 24.5 8.16667 23.9777 8.16667 23.3333C8.16667 22.689 8.689 22.1667 9.33333 22.1667C9.97767 22.1667 10.5 22.689 10.5 23.3333C10.5 23.9777 9.97767 24.5 9.33333 24.5Z" stroke="#1A3151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </a>
-      </div>
-    </div>
-
-    <ul class="mt-6">
-      <li class="border-b border-[var(--color11)]">
-        <a href="index.html" class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Home</a>
-      </li>
-
-      <li class="border-b border-[var(--color11)]">
-        <a href="service.html" class="w-full flex items-center justify-between px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">
-         service
-        </a>
-
-     
-      </li>
-
-      <li class="mr-[50px]">
-        <a href="about.us.html" class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">About</a>
-      </li>
-
-      <li class="border-b border-[var(--color11)]">
-        <a href="contact-us.html" class="block px-8 py-4 text-[15px] relative font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full">Contact Us</a>
-      </li>
-    </ul>
-
-    <div class="px-8 py-5 border-t border-[var(--color11)]">
-      <a href="#" class="block text-[18px] text-[var(--color-15)] hover:text-[var(--color4)] transition">Help & Support</a>
-    </div>
-
-    <div class="px-8 mt-6 space-y-4">
-      <a href="#" class="openSignup cmn-btn relative block w-full overflow-hidden bg-[var(--color4)] z-10 py-[16px] rounded-[20px] text-center text-[18px] font-semibold text-white">Sign Up</a>
-      <a href="#" class="block w-full border-2 border-[var(--color4)] rounded-[20px] py-[16px] text-center text-[18px] font-semibold text-[var(--color5)] hover:bg-[var(--color4)] hover:text-white transition-all duration-300">Work With Us</a>
-    </div>
-  </div>
-</header>
   
 
     <main>
@@ -371,7 +657,7 @@
                     </svg>
 
                     <p
-                      class="capitalize font-[family-name:var(--albert-sans-r)] font-medium text-[18px] text-[--color1]"
+                      class="capitalize font-[family-name:var(--albert-sans-r)] font-medium text-[18px] text-[var(--color1)]"
                     >
                       Verified Service Professional
                     </p>
@@ -509,7 +795,7 @@
                       10,000+
                     </p>
 
-                    <p class="text-[--color1] capitalize">Happy Customers</p>
+                    <p class="text-[var(--color1)] capitalize">Happy Customers</p>
                   </div>
                 </div>
               </div>
@@ -786,7 +1072,7 @@
                   data-aos-duration="3000"
                   data-aos-delay="500"
                 >
-                  <h3 class="text-[24px] font-semibold text-[--color5]">
+                  <h3 class="text-[24px] font-semibold text-[var(--color5)]">
                     500+
                   </h3>
                   <p class="mt-2 text-[16px] capitalize">Verified Providers</p>
@@ -810,7 +1096,7 @@
                   data-aos-duration="3000"
                   data-aos-delay="500"
                 >
-                  <h3 class="text-[24px] font-semibold text-[--color5]">
+                  <h3 class="text-[24px] font-semibold text-[var(--color5)]">
                     25,000+
                   </h3>
                   <p class="mt-2 text-[16px] capitalize">Service Completed</p>
@@ -946,7 +1232,7 @@
       <section class="py-[100px]">
         <div class="max-w-[1350px] mx-auto px-4">
           <h2
-            class="text-center font-[family-name:var(--outfit-r)] text-5xl font-semibold capitalize text-[--color5]"
+            class="text-center font-[family-name:var(--outfit-r)] text-5xl font-semibold capitalize text-[var(--color5)]"
           >
             What We Stand For
           </h2>
@@ -983,12 +1269,12 @@
               </div>
 
               <p
-                class="pt-3 font-[family-name:var(--outfit-r)] text-2xl font-medium capitalize text-[--color5]"
+                class="pt-3 font-[family-name:var(--outfit-r)] text-2xl font-medium capitalize text-[var(--color5)]"
               >
                 Trust
               </p>
 
-              <p class="mt-3 text-center font-medium text-[--color1]">
+              <p class="mt-3 text-center font-medium text-[var(--color1)]">
                 Building confidence through transparency and reliability.
               </p>
             </div>
@@ -1022,12 +1308,12 @@
               </div>
 
               <p
-                class="pt-3 font-[family-name:var(--outfit-r)] text-2xl font-medium capitalize text-[--color5]"
+                class="pt-3 font-[family-name:var(--outfit-r)] text-2xl font-medium capitalize text-[var(--color5)]"
               >
                 Customer First
               </p>
 
-              <p class="mt-3 text-center font-medium text-[--color1]">
+              <p class="mt-3 text-center font-medium text-[var(--color1)]">
                 Putting customer needs at the center of every decision.
               </p>
             </div>
@@ -1061,12 +1347,12 @@
               </div>
 
               <p
-                class="pt-3 font-[family-name:var(--outfit-r)] text-2xl font-medium capitalize text-[--color5]"
+                class="pt-3 font-[family-name:var(--outfit-r)] text-2xl font-medium capitalize text-[var(--color5)]"
               >
                 Integrity
               </p>
 
-              <p class="mt-3 text-center font-medium text-[--color1]">
+              <p class="mt-3 text-center font-medium text-[var(--color1)]">
                 Creating honest and meaningful connections so that you can rely
                 on us.
               </p>
@@ -1098,12 +1384,12 @@
               </div>
 
               <p
-                class="pt-3 font-[family-name:var(--outfit-r)] text-2xl font-medium capitalize text-[--color5]"
+                class="pt-3 font-[family-name:var(--outfit-r)] text-2xl font-medium capitalize text-[var(--color5)]"
               >
                 Community
               </p>
 
-              <p class="mt-3 text-center font-medium text-[--color1]">
+              <p class="mt-3 text-center font-medium text-[var(--color1)]">
                 Delivering quality experiences with passion and commitment.
               </p>
             </div>
@@ -1271,14 +1557,12 @@
       </section>
     </main>
 
-    <!-- footer starts -->
+      <!-- footer starts -->
     <footer class="bg-[var(--color-15)] py-[30px] sm:py-[40px] lg:py-[50px]">
       <div class="custom-container">
         <!-- footer top -->
-
         <div class="flex flex-col lg:flex-row">
           <!-- Logo -->
-
           <div class="w-full lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left">
             <a href="index.html" class="inline-block">
               <img
@@ -1287,30 +1571,25 @@
                 class="w-[140px] sm:w-[160px] md:w-[180px] lg:w-[208px] mx-auto lg:mx-0"
               />
             </a>
-
             <div
               class="text-[var(--color10)] text-[18px] md:text-[20px] lg:text-[24px] font-[var(--outfit-r)] font-semibold mt-[10px] max-w-[450px] mx-auto lg:mx-0"
             >
               Making Everyday Services Simple & Reliable
             </div>
           </div>
-
           <!-- Newsletter -->
-
           <div class="w-full lg:w-1/2 text-center lg:text-left">
             <div
               class="text-[var(--color2)] text-[18px] md:text-[20px] lg:text-[24px] font-[var(--outfit-r)] font-semibold mb-[25.5px]"
             >
               Stay Updated
             </div>
-
             <p
               class="text-[var(--color2)] text-[14px] max-w-full lg:max-w-[535px] mx-auto lg:mx-0 mb-[25.5px]"
             >
               Get the latest service offers, home care tips, and exclusive
               discounts delivered straight to your inbox.
             </p>
-
             <form
               class="flex w-full max-w-[635px] h-[50px] md:h-[55px] lg:h-[59.6px] rounded-[5px] overflow-hidden mx-auto lg:mx-0"
             >
@@ -1319,7 +1598,6 @@
                 placeholder="Email Address..."
                 class="h-full flex-1 px-[12px] md:px-[20px] outline-none placeholder:text-[var(--color5)] text-[var(--color5)] bg-[#FFFBEB]"
               />
-
               <button
                 type="submit"
                 class="w-[50px] md:w-[55px] lg:w-[59.6px] h-full bg-[var(--color4)] flex justify-center items-center group transition-all duration-300 hover:bg-[var(--color5)]"
@@ -1344,12 +1622,9 @@
             </form>
           </div>
         </div>
-
         <!-- footer middle -->
-
         <div class="flex flex-wrap justify-center mt-[34px]">
           <!-- Contact -->
-
           <div
             class="w-full md:w-1/2 lg:w-1/4 text-center lg:text-left mb-[20px] lg:mb-0"
           >
@@ -1358,23 +1633,22 @@
             >
               Contact Info
             </div>
-
             <ul>
               <li
                 class="text-[14px] md:text-[15px] lg:text-[16px] text-[var(--color10)] mb-[30px] lg:mb-[51px] font-medium"
               >
-                28 Park Street,<br />
-                Kolkata, West Bengal,<br />
+                28 Park Street,
+                <br />
+                Kolkata, West Bengal,
+                <br />
                 India - 700016
               </li>
             </ul>
-
             <div
               class="text-[var(--color10)] text-[18px] md:text-[20px] font-semibold mb-[10px]"
             >
               Support Care
             </div>
-
             <ul class="text-[14px] md:text-[15px] lg:text-[16px] font-medium">
               <li>
                 <a
@@ -1386,9 +1660,7 @@
               </li>
             </ul>
           </div>
-
           <!-- Pages -->
-
           <div
             class="w-full md:w-1/2 lg:w-1/4 text-center lg:text-left mb-[20px] lg:mb-0"
           >
@@ -1397,7 +1669,6 @@
             >
               Pages
             </div>
-
             <ul class="text-[13px] md:text-[14px] lg:text-[14px] font-normal">
               <li class="mb-[8px]">
                 <a
@@ -1407,7 +1678,6 @@
                   Home
                 </a>
               </li>
-
               <li class="mb-[8px]">
                 <a
                   href="service.html"
@@ -1416,7 +1686,6 @@
                   Service
                 </a>
               </li>
-
               <li class="mb-[8px]">
                 <a
                   href="about-us.html"
@@ -1425,7 +1694,6 @@
                   About Us
                 </a>
               </li>
-
               <li>
                 <a
                   href="contact-us.html"
@@ -1436,9 +1704,7 @@
               </li>
             </ul>
           </div>
-
           <!-- Services -->
-
           <div
             class="w-full md:w-1/2 lg:w-1/4 text-center lg:text-left mb-[20px] lg:mb-0"
           >
@@ -1447,7 +1713,6 @@
             >
               Services
             </div>
-
             <ul class="text-[13px] md:text-[14px] lg:text-[14px] font-normal">
               <li class="mb-[8px]">
                 <a
@@ -1457,7 +1722,6 @@
                   House Help
                 </a>
               </li>
-
               <li class="mb-[8px]">
                 <a
                   href="#"
@@ -1466,7 +1730,6 @@
                   House Cleaning
                 </a>
               </li>
-
               <li class="mb-[8px]">
                 <a
                   href="#"
@@ -1475,7 +1738,6 @@
                   Electrical Service
                 </a>
               </li>
-
               <li class="mb-[8px]">
                 <a
                   href="#"
@@ -1484,7 +1746,6 @@
                   Plumbing
                 </a>
               </li>
-
               <li>
                 <a
                   href="#"
@@ -1495,9 +1756,7 @@
               </li>
             </ul>
           </div>
-
           <!-- Company -->
-
           <div
             class="w-full md:w-1/2 lg:w-1/4 text-center lg:text-left mb-[20px] lg:mb-0"
           >
@@ -1506,7 +1765,6 @@
             >
               Company
             </div>
-
             <ul class="text-[13px] md:text-[14px] lg:text-[14px] font-normal">
               <li class="mb-[8px]">
                 <a
@@ -1516,7 +1774,6 @@
                   Help & Support
                 </a>
               </li>
-
               <li class="mb-[8px]">
                 <a
                   href="#"
@@ -1525,7 +1782,6 @@
                   FAQ's
                 </a>
               </li>
-
               <li class="mb-[8px]">
                 <a
                   href="#"
@@ -1534,7 +1790,6 @@
                   Privacy Policy
                 </a>
               </li>
-
               <li class="mb-[8px]">
                 <a
                   href="#"
@@ -1543,7 +1798,6 @@
                   Terms & Conditions
                 </a>
               </li>
-
               <li>
                 <a
                   href="#"
@@ -1555,9 +1809,7 @@
             </ul>
           </div>
         </div>
-
         <!-- footer bottom -->
-
         <div class="flex justify-center lg:justify-end">
           <div class="text-center lg:text-right">
             <div
@@ -1567,10 +1819,11 @@
               <a
                 href="index.html"
                 class="text-[var(--color10)] hover:text-[var(--color2)] transition-colors duration-300"
-                >FIXNOW</a
-              >. All Rights Reserved.
+              >
+                FIXNOW
+              </a>
+              . All Rights Reserved.
             </div>
-
             <ul
               class="flex flex-wrap justify-center lg:justify-end gap-x-[15px] font-bold text-[var(--color10)] text-[14px] md:text-[15px] lg:text-[16px]"
             >
@@ -1582,7 +1835,6 @@
                   Facebook
                 </a>
               </li>
-
               <li class="mb-2">
                 <a
                   href="#"
@@ -1591,7 +1843,6 @@
                   Twitter
                 </a>
               </li>
-
               <li class="mb-2">
                 <a
                   href="#"
@@ -1600,7 +1851,6 @@
                   Youtube
                 </a>
               </li>
-
               <li>
                 <a
                   href="#"
@@ -1614,7 +1864,6 @@
         </div>
       </div>
     </footer>
-
     <!-- modal login dialog box -->
     <!-- signup modal starts -->
     <div
@@ -1777,31 +2026,21 @@
                   </a>
                 </label>
               </div>
+        <!-- Button -->
+<button type="button" id="createAccountBtn"
+              class="cmn-btn group w-full h-[60px] sm:h-[68px] lg:h-[76px] mt-[20px] rounded-[20px] bg-[var(--color4)] transition-all duration-500 flex items-center justify-center text-[15px] sm:text-[16px] font-semibold text-[var(--color2)]">
 
-              <!-- Button -->
+              Create Account
 
-                  <a
-                href="registration-process.html"
-                class="group w-full h-[60px] sm:h-[68px] lg:h-[76px] mt-[20px] rounded-[20px] bg-[var(--color4)] hover:bg-[var(--color-15)] transition-all duration-500 flex items-center justify-center text-[15px] sm:text-[16px] font-semibold text-[var(--color2)]"
-              >
-                Create Account
+              <svg class="ml-[16px] transition-transform duration-500 ease-in-out group-hover:translate-x-1" width="22"
+                height="22" viewBox="0 0 24 24" fill="none">
 
-                <svg
-                  class="ml-[16px] transition-transform duration-500 ease-in-out group-hover:translate-x-1"
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M5 12H19M13 6L19 12L13 18"
-                    stroke="white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
+                <path d="M5 12H19M13 6L19 12L13 18" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+
+              </svg>
+
+            </button>
 
               <!-- OR Divider -->
 
@@ -2165,147 +2404,1130 @@
       </div>
     </div>
   </div>
-    <!-- login end  -->
-    <!-- AOS JS Link -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
  
+
+  </div>
+</div>
+ 
+<!-- ============ Payment Method Modal / Bottom Sheet ============ -->
+<div id="methodModal" class="method-hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center">
+  <!-- Overlay -->
+  <div class="method-overlay absolute inset-0 bg-black/40" data-close></div>
+ 
+  <!-- Panel -->
+  <div
+    id="methodPanel"
+    class="method-panel relative bg-[var(--color2)] w-full sm:max-w-md sm:rounded-2xl rounded-t-2xl max-h-[85vh] overflow-y-auto"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="methodModalTitle"
+  >
+    <!-- Header -->
+    <div class="sticky top-0 bg-[var(--color2)] flex items-center justify-between px-5 py-4 border-b border-[var(--color11)] z-10">
+      <div class="flex items-center gap-2.5">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[var(--color4)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+          <line x1="2" y1="10" x2="22" y2="10"></line>
+        </svg>
+        <span id="methodModalTitle" class="font-semibold text-sm text-[var(--color6)]">Payment Method</span>
+      </div>
+      <a href="javascript:void(0)" data-close class="text-[var(--color13)] text-sm font-semibold hover:underline">
+        Close
+      </a>
+    </div>
+ 
+    <div class="px-5 py-5">
+ 
+      <!-- Recommended Method -->
+      <h3 class="text-sm font-bold text-[var(--color6)] mb-3">Recommended Method</h3>
+ 
+      <div class="flex flex-col gap-3 mb-6">
+        <a
+          href="javascript:void(0)"
+          class="method-option flex items-start gap-3 rounded-xl border-2 px-4 py-3.5 cursor-pointer transition-colors border-[var(--color4)] bg-[var(--color-14)]"
+          data-method="upi"
+          data-label="UPI Payments"
+        >
+          <span class="w-6 h-6 mt-0.5 shrink-0 text-[var(--color4)]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+              <path d="M13 2 3 14h8l-1 8 10-12h-8l1-8Z"></path>
+            </svg>
+          </span>
+          <div class="flex-1">
+            <p class="text-sm font-semibold text-[var(--color9)] mb-0.5">UPI Payments</p>
+            <p class="text-xs text-[var(--color1)] leading-relaxed normal-case">
+              Pay Instantly Using Google Pay, PhonePe, Paytm, BHIM, Or Any UPI-Enabled App. Fast, Secure, And Hassle-Free.
+            </p>
+          </div>
+          <span class="method-radio w-5 h-5 mt-0.5 shrink-0 rounded-full border border-[var(--color4)] flex items-center justify-center">
+            <span class="w-2.5 h-2.5 rounded-full bg-[var(--color4)]"></span>
+          </span>
+        </a>
+ 
+        <a
+          href="javascript:void(0)"
+          class="method-option flex items-start gap-3 rounded-xl border-2 px-4 py-3.5 cursor-pointer transition-colors border-[var(--color11)]"
+          data-method="cod"
+          data-label="Cash On Delivery (COD)"
+        >
+          <span class="w-6 h-6 mt-0.5 shrink-0 text-[var(--color9)]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+              <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M6 6v0M18 18v0"></path>
+            </svg>
+          </span>
+          <div class="flex-1">
+            <p class="text-sm font-semibold text-[var(--color9)] mb-0.5">Cash On Delivery (COD)</p>
+            <p class="text-xs text-[var(--color1)] leading-relaxed normal-case">
+              Pay In Cash After The Service Has Been Completed. Available For Eligible Services And Locations.
+            </p>
+          </div>
+          <span class="method-radio w-5 h-5 mt-0.5 shrink-0 rounded-full border border-[var(--color-17)] flex items-center justify-center"></span>
+        </a>
+      </div>
+ 
+      <!-- Other Methods -->
+      <h3 class="text-sm font-bold text-[var(--color6)] mb-3">Choose Other Methods</h3>
+ 
+      <div class="flex flex-col gap-3">
+        <a
+          href="javascript:void(0)"
+          class="method-option flex items-center justify-between rounded-xl border border-[var(--color11)] px-4 py-3.5 cursor-pointer opacity-50 pointer-events-none transition-colors"
+          data-method="cards"
+          data-label="Credit & Debit Cards"
+        >
+          <div class="flex items-center gap-3">
+            <span class="w-6 h-6 shrink-0 text-[var(--color1)]">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                <line x1="2" y1="10" x2="22" y2="10"></line>
+              </svg>
+            </span>
+            <span class="text-sm font-medium text-[var(--color1)]">Credit & Debit Cards</span>
+          </div>
+          <span class="method-radio w-5 h-5 rounded-full border border-[var(--color-17)]"></span>
+        </a>
+ 
+        <a
+          href="javascript:void(0)"
+          class="method-option flex items-center justify-between rounded-xl border border-[var(--color11)] px-4 py-3.5 cursor-pointer opacity-50 pointer-events-none transition-colors"
+          data-method="netbanking"
+          data-label="Net Banking"
+        >
+          <div class="flex items-center gap-3">
+            <span class="w-6 h-6 shrink-0 text-[var(--color1)]">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                <path d="M3 10 12 3l9 7"></path>
+                <path d="M5 10v9h14v-9"></path>
+                <path d="M9 21v-6h6v6"></path>
+              </svg>
+            </span>
+            <span class="text-sm font-medium text-[var(--color1)]">Net Banking</span>
+          </div>
+          <span class="method-radio w-5 h-5 rounded-full border border-[var(--color-17)]"></span>
+        </a>
+ 
+        <a
+          href="javascript:void(0)"
+          class="method-option flex items-center justify-between rounded-xl border border-[var(--color11)] px-4 py-3.5 cursor-pointer transition-colors"
+          data-method="upi"
+          data-label="UPI Payments"
+        >
+          <div class="flex items-center gap-3">
+            <span class="w-6 h-6 shrink-0 text-[var(--color4)]">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                <path d="M13 2 3 14h8l-1 8 10-12h-8l1-8Z"></path>
+              </svg>
+            </span>
+            <span class="text-sm font-medium text-[var(--color9)]">UPI Payments</span>
+          </div>
+          <span class="method-radio w-5 h-5 rounded-full border border-[var(--color4)] flex items-center justify-center">
+            <span class="w-2.5 h-2.5 rounded-full bg-[var(--color4)]"></span>
+          </span>
+        </a>
+      </div>
+ 
+    </div>
+  </div>
+</div>
+
+    <!-- login end  -->
+
+ 
+    <!-- create account modal -->
+
+  <div id="createAccountModal"
+    class="hidden fixed inset-0 z-[9999] flex items-center justify-center bg-black/20 backdrop-blur-[8px] px-[16px] py-[20px] sm:px-[20px] sm:py-[24px]">
+
+    <!-- MODAL BOX -->
+
+    <div
+      class="relative w-full max-w-[996px] max-h-[calc(100vh-40px)] sm:max-h-[calc(100vh-48px)] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] rounded-[25px] bg-[#F0F9FE] p-[25px] sm:p-[28px] lg:p-[32px] shadow-[0_4px_35px_rgba(255,255,255,0.85)]">
+
+
+      <!-- ================================================= -->
+      <!-- CLOSE BUTTON -->
+      <!-- ================================================= -->
+
+      <button type="button" id="closeCreateAccountModal"
+        class="absolute right-[16px] top-[16px] sm:right-[20px] sm:top-[20px] flex items-center justify-center w-[30px] h-[30px] sm:w-[34px] sm:h-[34px] rounded-full bg-white text-[var(--color10)] shadow-[0_2px_6px_rgba(0,0,0,0.08)] transition-all duration-300 hover:bg-[var(--color-15)] hover:text-white">
+
+        <svg class="w-[15px] h-[15px] sm:w-[17px] sm:h-[17px]" viewBox="0 0 24 24" fill="none">
+
+          <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+
+        </svg>
+
+      </button>
+
+
+
+      <!-- ================================================= -->
+      <!-- MODAL HEADING -->
+      <!-- ================================================= -->
+
+      <div class="mb-[24px] pr-[40px]">
+
+        <h2
+          class="font-[var(--outfit-r)] text-[24px] sm:text-[28px] md:text-[34px] lg:text-[42px] font-semibold leading-[1.2] text-[var(--color5)]">
+          Complete Your Account
+        </h2>
+
+        <p class="mt-[8px] text-[12px] sm:text-[16px] leading-[1.3] text-[var(--color1)] capitalize">
+          Complete Your Details To Create Your Account.
+        </p>
+
+      </div>
+
+
+
+      <!-- ================================================= -->
+      <!-- FORM -->
+      <!-- ================================================= -->
+
+      <form id="createAccountForm" class="flex flex-col gap-[24px]">
+
+
+        <!-- ================================================= -->
+        <!-- PERSONAL INFORMATION -->
+        <!-- ================================================= -->
+
+        <div
+          class="w-full rounded-[25px] border border-[#E5E7EB] bg-white/75 backdrop-blur-[10px] p-[25px] sm:p-[28px] lg:p-[32px] shadow-[inset_0_1px_8px_rgba(229,231,235,0.75),0_2px_8px_rgba(229,231,235,0.35)]">
+
+
+          <div class="mb-[24px]">
+
+            <h3
+              class="font-[var(--outfit-r)] text-[15px] sm:text-[18px] lg:text-[24px] font-semibold leading-[1.2] text-[var(--color10)]">
+              Personal Information
+            </h3>
+
+            <p class="mt-[8px] text-[12px] sm:text-[16px] leading-[1.3] text-[var(--color1)] capitalize">
+              Lets Start With Basic Details.
+            </p>
+
+          </div>
+
+
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-[24px] gap-y-[17px]">
+
+
+            <!-- FULL NAME -->
+
+            <div>
+
+              <label
+                class="block mb-[8px] font-[var(--albert-sans-r)] text-[14px] sm:text-[16px] font-semibold leading-none text-[var(--color10)]">
+                Full Name
+              </label>
+
+              <input type="text" placeholder="Enter Your Full Name"
+                class="w-full h-[45px] sm:h-[48px] rounded-[4px] border border-[#9CA3AF] bg-white px-[16px] text-[13px] sm:text-[16px] text-[#9CA3AF] placeholder:text-[#9CA3AF] outline-none transition-all duration-200 focus:border-[#AEB6C0] focus:ring-0 focus:shadow-[0_0_0_2px_rgba(174,182,192,0.10)]" />
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div>
+
+              <label
+                class="block mb-[8px] font-[var(--albert-sans-r)] text-[14px] sm:text-[16px] font-semibold leading-none text-[var(--color10)]">
+                Email Address
+              </label>
+
+              <input type="email" placeholder="Enter Your Email Address"
+                class="w-full h-[45px] sm:h-[48px] rounded-[4px] border border-[#9CA3AF] bg-white px-[16px] text-[13px] sm:text-[16px] text-[#9CA3AF] placeholder:text-[#9CA3AF] outline-none transition-all duration-200 focus:border-[#AEB6C0] focus:ring-0 focus:shadow-[0_0_0_2px_rgba(174,182,192,0.10)]" />
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div>
+
+              <label
+                class="block mb-[8px] font-[var(--albert-sans-r)] text-[14px] sm:text-[16px] font-semibold leading-none text-[var(--color10)]">
+                Phone Number
+              </label>
+
+              <input type="text" placeholder="Enter Your Mobile Number"
+                class="w-full h-[45px] sm:h-[48px] rounded-[4px] border border-[#9CA3AF] bg-white px-[16px] text-[13px] sm:text-[16px] text-[#9CA3AF] placeholder:text-[#9CA3AF] outline-none transition-all duration-200 focus:border-[#AEB6C0] focus:ring-0 focus:shadow-[0_0_0_2px_rgba(174,182,192,0.10)]" />
+
+            </div>
+
+
+
+            <!-- ALTERNATIVE PHONE -->
+
+            <div>
+
+              <label
+                class="block mb-[8px] font-[var(--albert-sans-r)] text-[14px] sm:text-[16px] font-semibold leading-none text-[var(--color10)]">
+                Alternative Phone Number
+              </label>
+
+              <input type="text" placeholder="Enter Alternative Mobile Number"
+                class="w-full h-[45px] sm:h-[48px] rounded-[4px] border border-[#9CA3AF] bg-white px-[16px] text-[13px] sm:text-[16px] text-[#9CA3AF] placeholder:text-[#9CA3AF] outline-none transition-all duration-200 focus:border-[#AEB6C0] focus:ring-0 focus:shadow-[0_0_0_2px_rgba(174,182,192,0.10)]" />
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- ADDRESS INFORMATION -->
+        <!-- ================================================= -->
+
+        <div
+          class="w-full rounded-[25px] border border-[#E5E7EB] bg-white/75 backdrop-blur-[10px] p-[25px] sm:p-[28px] lg:p-[32px] shadow-[inset_0_1px_8px_rgba(229,231,235,0.75),0_2px_8px_rgba(229,231,235,0.35)]">
+
+
+          <div class="mb-[24px]">
+
+            <h3
+              class="font-[var(--outfit-r)] text-[15px] sm:text-[18px] lg:text-[24px] font-semibold leading-[1.2] text-[var(--color10)]">
+              Address Information
+            </h3>
+
+            <p class="mt-[8px] text-[12px] sm:text-[16px] leading-[1.3] text-[var(--color1)] capitalize">
+              Where Should We Reach You?
+            </p>
+
+          </div>
+
+
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-[24px] gap-y-[17px]">
+
+
+            <!-- HOUSE -->
+
+            <div>
+
+              <label
+                class="block mb-[8px] font-[var(--albert-sans-r)] text-[14px] sm:text-[16px] font-semibold leading-none text-[var(--color10)]">
+                House / Flat / Building No.
+              </label>
+
+              <input type="text" placeholder="Enter House / Flat / Building No."
+                class="w-full h-[45px] sm:h-[48px] rounded-[4px] border border-[#9CA3AF] bg-white px-[16px] text-[13px] sm:text-[16px] text-[#9CA3AF] placeholder:text-[#9CA3AF] outline-none transition-all duration-200 focus:border-[#AEB6C0] focus:ring-0 focus:shadow-[0_0_0_2px_rgba(174,182,192,0.10)]" />
+
+            </div>
+
+
+
+            <!-- STREET -->
+
+            <div>
+
+              <label
+                class="block mb-[8px] font-[var(--albert-sans-r)] text-[14px] sm:text-[16px] font-semibold leading-none text-[var(--color10)]">
+                Street / Area / Locality
+              </label>
+
+              <input type="text" placeholder="Enter Street, Area or Locality"
+                class="w-full h-[45px] sm:h-[48px] rounded-[4px] border border-[#9CA3AF] bg-white px-[16px] text-[13px] sm:text-[16px] text-[#9CA3AF] placeholder:text-[#9CA3AF] outline-none transition-all duration-200 focus:border-[#AEB6C0] focus:ring-0 focus:shadow-[0_0_0_2px_rgba(174,182,192,0.10)]" />
+
+            </div>
+
+
+
+            <!-- CITY -->
+
+            <div>
+
+              <label
+                class="block mb-[8px] font-[var(--albert-sans-r)] text-[14px] sm:text-[16px] font-semibold leading-none text-[var(--color10)]">
+                City / Town
+              </label>
+
+              <input type="text" placeholder="Enter Your City"
+                class="w-full h-[45px] sm:h-[48px] rounded-[4px] border border-[#9CA3AF] bg-white px-[16px] text-[13px] sm:text-[16px] text-[#9CA3AF] placeholder:text-[#9CA3AF] outline-none transition-all duration-200 focus:border-[#AEB6C0] focus:ring-0 focus:shadow-[0_0_0_2px_rgba(174,182,192,0.10)]" />
+
+            </div>
+
+
+
+            <!-- STATE -->
+
+            <div>
+
+              <label
+                class="block mb-[8px] font-[var(--albert-sans-r)] text-[14px] sm:text-[16px] font-semibold leading-none text-[var(--color10)]">
+                State
+              </label>
+
+              <div class="relative">
+
+                <select
+                  class="appearance-none w-full h-[45px] sm:h-[48px] rounded-[4px] border border-[#9CA3AF] bg-white px-[16px] pr-[45px] text-[13px] sm:text-[16px] text-[#9CA3AF] outline-none cursor-pointer transition-all duration-200 focus:border-[#AEB6C0] focus:ring-0">
+
+                  <option>Select Your State</option>
+                  <option>West Bengal</option>
+                  <option>Maharashtra</option>
+                  <option>Delhi</option>
+
+                </select>
+
+
+                <svg class="absolute right-[14px] top-1/2 -translate-y-1/2 pointer-events-none w-[15px] h-[9px]"
+                  viewBox="0 0 15 9" fill="none">
+
+                  <path d="M13.8333 1L7.41667 7.41667L1 1" stroke="#1A3151" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+
+                </svg>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- PIN -->
+
+            <div>
+
+              <label
+                class="block mb-[8px] font-[var(--albert-sans-r)] text-[14px] sm:text-[16px] font-semibold leading-none text-[var(--color10)]">
+                PIN Code
+              </label>
+
+              <input type="text" placeholder="Enter PIN Code"
+                class="w-full h-[45px] sm:h-[48px] rounded-[4px] border border-[#9CA3AF] bg-white px-[16px] text-[13px] sm:text-[16px] text-[#9CA3AF] placeholder:text-[#9CA3AF] outline-none transition-all duration-200 focus:border-[#AEB6C0] focus:ring-0 focus:shadow-[0_0_0_2px_rgba(174,182,192,0.10)]" />
+
+            </div>
+
+            <!-- CURRENT LOCATION -->
+
+            <div class="flex items-end">
+              <button type="button"
+                class="group ml-auto flex h-[45px] sm:h-[48px] w-auto items-center justify-center gap-[8px] rounded-[20px] border border-[#1769E0] bg-white px-[14px] sm:px-[16px] text-[12px] sm:text-[14px] font-semibold text-[#1769E0] transition-all duration-300 hover:border-[var(--color-15)] hover:bg-[var(--color-15)] hover:text-white">
+                <span>
+                  Use Current Location
+                </span>
+
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="shrink-0 transition-colors duration-200">
+
+                  <mask id="path-1-inside-1_6001_1472" fill="white">
+                    <path
+                      d="M14.3275 0.0268598C14.5987 0.15279 14.7287 0.314172 14.8733 0.572677C14.8917 0.722812 14.8991 0.849597 14.8946 0.998671C14.8943 1.03819 14.894 1.0777 14.8937 1.11842C14.8925 1.24356 14.8897 1.36862 14.8869 1.49374C14.8858 1.57903 14.8848 1.66431 14.884 1.7496C14.8816 1.95772 14.8778 2.16578 14.8733 2.37387C14.9291 2.37651 14.9848 2.37914 15.0423 2.38186C15.4941 2.40525 15.9312 2.44461 16.3743 2.54103C16.4571 2.55891 16.4571 2.55891 16.5415 2.57716C19.5576 3.25826 22.216 5.1181 23.8791 7.7263C23.9535 7.85186 24.0262 7.97763 24.0975 8.10496C24.1222 8.14905 24.147 8.19315 24.1725 8.23859C24.994 9.71735 25.6321 11.4129 25.6257 13.1265C25.6786 13.1253 25.7314 13.1242 25.7859 13.123C25.983 13.119 26.1801 13.1165 26.3773 13.1145C26.4624 13.1134 26.5475 13.1119 26.6327 13.11C26.7554 13.1073 26.8781 13.1061 27.0009 13.1052C27.0575 13.1035 27.0575 13.1035 27.1152 13.1017C27.3907 13.1016 27.5414 13.1742 27.7544 13.3448C27.9524 13.5533 27.9896 13.7205 28 13.9998C27.9896 14.2791 27.9524 14.4463 27.7544 14.6548C27.5039 14.8555 27.3146 14.9038 27.0009 14.8944C26.9614 14.8941 26.9219 14.8938 26.8812 14.8935C26.756 14.8923 26.631 14.8895 26.5058 14.8867C26.4206 14.8856 26.3353 14.8846 26.25 14.8838C26.0419 14.8814 25.8338 14.8776 25.6257 14.8731C25.6231 14.9289 25.6205 14.9846 25.6177 15.0421C25.5944 15.4939 25.555 15.931 25.4586 16.3741C25.4467 16.4293 25.4347 16.4845 25.4225 16.5414C24.8384 19.1279 23.3682 21.5424 21.2593 23.1695C21.2292 23.1929 21.1991 23.2162 21.1681 23.2403C19.7488 24.3345 18.1266 25.0815 16.3743 25.4585C16.3242 25.4694 16.2741 25.4803 16.2225 25.4915C15.7755 25.5805 15.3276 25.6042 14.8733 25.6257C14.8744 25.6785 14.8756 25.7314 14.8768 25.7858C14.8807 25.983 14.8832 26.1801 14.8853 26.3773C14.8864 26.4624 14.8879 26.5475 14.8898 26.6326C14.8924 26.7554 14.8937 26.8781 14.8946 27.0009C14.8957 27.0386 14.8969 27.0763 14.898 27.1152C14.8982 27.3907 14.8256 27.5414 14.655 27.7544C14.4465 27.9524 14.2793 27.9896 14 28C13.7207 27.9896 13.5535 27.9524 13.345 27.7544C13.1443 27.5039 13.096 27.3146 13.1054 27.0009C13.1057 26.9614 13.106 26.9219 13.1063 26.8812C13.1075 26.756 13.1103 26.6309 13.1131 26.5058C13.1142 26.4205 13.1152 26.3353 13.116 26.25C13.1184 26.0418 13.1222 25.8338 13.1267 25.6257C13.0593 25.6262 12.9919 25.6267 12.9225 25.6272C10.8378 25.6264 8.57239 24.5859 6.95906 23.3333C6.90397 23.2907 6.84888 23.2481 6.79212 23.2043C6.41312 22.9016 6.05675 22.5738 5.7037 22.2416C5.66775 22.208 5.6318 22.1744 5.59476 22.1397C4.0238 20.6232 2.99552 18.4848 2.54142 16.3741C2.53053 16.324 2.51964 16.2739 2.50842 16.2223C2.41942 15.7753 2.39573 15.3274 2.37427 14.8731C2.32142 14.8742 2.26857 14.8754 2.21412 14.8766C2.017 14.8805 1.81987 14.883 1.62272 14.8851C1.53759 14.8862 1.45246 14.8877 1.36735 14.8896C1.24458 14.8922 1.12187 14.8935 0.999086 14.8944C0.942524 14.8961 0.942524 14.8961 0.884819 14.8978C0.609282 14.898 0.458575 14.8254 0.245614 14.6548C0.0475762 14.4463 0.0103701 14.2791 0 13.9998C0.0103701 13.7205 0.0475762 13.5533 0.245614 13.3448C0.496135 13.1441 0.685399 13.0958 0.999086 13.1052C1.0386 13.1055 1.07812 13.1058 1.11883 13.1061C1.24398 13.1073 1.36903 13.11 1.49415 13.1128C1.57943 13.1139 1.66472 13.1149 1.75 13.1158C1.95812 13.1182 2.16618 13.122 2.37427 13.1265C2.3769 13.0707 2.37954 13.015 2.38225 12.9575C2.40565 12.5057 2.44501 12.0686 2.54142 11.6255C2.5593 11.5427 2.5593 11.5427 2.57755 11.4582C3.25864 8.44209 5.11845 5.78369 7.72661 4.12049C7.85217 4.04608 7.97794 3.9734 8.10526 3.90216C8.14936 3.8774 8.19346 3.85263 8.23889 3.82711C9.71764 3.00563 11.4132 2.36751 13.1267 2.37387C13.1256 2.32103 13.1244 2.26818 13.1232 2.21373C13.1193 2.0166 13.1168 1.81947 13.1147 1.62231C13.1136 1.53718 13.1121 1.45205 13.1102 1.36694C13.1076 1.24417 13.1063 1.12146 13.1054 0.998671C13.1043 0.960962 13.1031 0.923253 13.102 0.884402C13.1018 0.60886 13.1744 0.458151 13.345 0.245187C13.6327 -0.0281456 13.9513 -0.0237788 14.3275 0.0268598Z" />
+                    <path
+                      d="M14.3275 0.0268598C14.5987 0.15279 14.7287 0.314172 14.8733 0.572677C14.8917 0.722812 14.8991 0.849597 14.8946 0.998671C14.8943 1.03819 14.894 1.0777 14.8937 1.11842C14.8925 1.24356 14.8897 1.36862 14.8869 1.49374C14.8858 1.57903 14.8848 1.66431 14.884 1.7496C14.8816 1.95772 14.8778 2.16578 14.8733 2.37387C14.9291 2.37651 14.9848 2.37914 15.0423 2.38186C15.4941 2.40525 15.9312 2.44461 16.3743 2.54103C16.4571 2.55891 16.4571 2.55891 16.5415 2.57716C19.5576 3.25826 22.216 5.1181 23.8791 7.7263C23.9535 7.85186 24.0262 7.97763 24.0975 8.10496C24.1222 8.14905 24.147 8.19315 24.1725 8.23859C24.994 9.71735 25.6321 11.4129 25.6257 13.1265C25.6786 13.1253 25.7314 13.1242 25.7859 13.123C25.983 13.119 26.1801 13.1165 26.3773 13.1145C26.4624 13.1134 26.5475 13.1119 26.6327 13.11C26.7554 13.1073 26.8781 13.1061 27.0009 13.1052C27.0575 13.1035 27.0575 13.1035 27.1152 13.1017C27.3907 13.1016 27.5414 13.1742 27.7544 13.3448C27.9524 13.5533 27.9896 13.7205 28 13.9998C27.9896 14.2791 27.9524 14.4463 27.7544 14.6548C27.5039 14.8555 27.3146 14.9038 27.0009 14.8944C26.9614 14.8941 26.9219 14.8938 26.8812 14.8935C26.756 14.8923 26.631 14.8895 26.5058 14.8867C26.4206 14.8856 26.3353 14.8846 26.25 14.8838C26.0419 14.8814 25.8338 14.8776 25.6257 14.8731C25.6231 14.9289 25.6205 14.9846 25.6177 15.0421C25.5944 15.4939 25.555 15.931 25.4586 16.3741C25.4467 16.4293 25.4347 16.4845 25.4225 16.5414C24.8384 19.1279 23.3682 21.5424 21.2593 23.1695C21.2292 23.1929 21.1991 23.2162 21.1681 23.2403C19.7488 24.3345 18.1266 25.0815 16.3743 25.4585C16.3242 25.4694 16.2741 25.4803 16.2225 25.4915C15.7755 25.5805 15.3276 25.6042 14.8733 25.6257C14.8744 25.6785 14.8756 25.7314 14.8768 25.7858C14.8807 25.983 14.8832 26.1801 14.8853 26.3773C14.8864 26.4624 14.8879 26.5475 14.8898 26.6326C14.8924 26.7554 14.8937 26.8781 14.8946 27.0009C14.8957 27.0386 14.8969 27.0763 14.898 27.1152C14.8982 27.3907 14.8256 27.5414 14.655 27.7544C14.4465 27.9524 14.2793 27.9896 14 28C13.7207 27.9896 13.5535 27.9524 13.345 27.7544C13.1443 27.5039 13.096 27.3146 13.1054 27.0009C13.1057 26.9614 13.106 26.9219 13.1063 26.8812C13.1075 26.756 13.1103 26.6309 13.1131 26.5058C13.1142 26.4205 13.1152 26.3353 13.116 26.25C13.1184 26.0418 13.1222 25.8338 13.1267 25.6257C13.0593 25.6262 12.9919 25.6267 12.9225 25.6272C10.8378 25.6264 8.57239 24.5859 6.95906 23.3333C6.90397 23.2907 6.84888 23.2481 6.79212 23.2043C6.41312 22.9016 6.05675 22.5738 5.7037 22.2416C5.66775 22.208 5.6318 22.1744 5.59476 22.1397C4.0238 20.6232 2.99552 18.4848 2.54142 16.3741C2.53053 16.324 2.51964 16.2739 2.50842 16.2223C2.41942 15.7753 2.39573 15.3274 2.37427 14.8731C2.32142 14.8742 2.26857 14.8754 2.21412 14.8766C2.017 14.8805 1.81987 14.883 1.62272 14.8851C1.53759 14.8862 1.45246 14.8877 1.36735 14.8896C1.24458 14.8922 1.12187 14.8935 0.999086 14.8944C0.942524 14.8961 0.942524 14.8961 0.884819 14.8978C0.609282 14.898 0.458575 14.8254 0.245614 14.6548C0.0475762 14.4463 0.0103701 14.2791 0 13.9998C0.0103701 13.7205 0.0475762 13.5533 0.245614 13.3448C0.496135 13.1441 0.685399 13.0958 0.999086 13.1052C1.0386 13.1055 1.07812 13.1058 1.11883 13.1061C1.24398 13.1073 1.36903 13.11 1.49415 13.1128C1.57943 13.1139 1.66472 13.1149 1.75 13.1158C1.95812 13.1182 2.16618 13.122 2.37427 13.1265C2.3769 13.0707 2.37954 13.015 2.38225 12.9575C2.40565 12.5057 2.44501 12.0686 2.54142 11.6255C2.5593 11.5427 2.5593 11.5427 2.57755 11.4582C3.25864 8.44209 5.11845 5.78369 7.72661 4.12049C7.85217 4.04608 7.97794 3.9734 8.10526 3.90216C8.14936 3.8774 8.19346 3.85263 8.23889 3.82711C9.71764 3.00563 11.4132 2.36751 13.1267 2.37387C13.1256 2.32103 13.1244 2.26818 13.1232 2.21373C13.1193 2.0166 13.1168 1.81947 13.1147 1.62231C13.1136 1.53718 13.1121 1.45205 13.1102 1.36694C13.1076 1.24417 13.1063 1.12146 13.1054 0.998671C13.1043 0.960962 13.1031 0.923253 13.102 0.884402C13.1018 0.60886 13.1744 0.458151 13.345 0.245187C13.6327 -0.0281456 13.9513 -0.0237788 14.3275 0.0268598ZM9.96101 4.93922C9.92682 4.95452 9.89263 4.96982 9.8574 4.98559C8.99956 5.37576 8.21357 5.90211 7.50487 6.52209C7.46048 6.55987 7.41608 6.59765 7.37034 6.63658C6.46686 7.42304 5.77542 8.36137 5.21248 9.41492C5.18074 9.47142 5.14901 9.52791 5.11632 9.58613C4.53028 10.6779 4.22184 11.8944 4.17544 13.1265C4.20773 13.1325 4.24003 13.1384 4.2733 13.1446C4.8379 13.2579 4.8379 13.2579 5.0272 13.5213C5.15816 13.7811 5.13755 14.0434 5.10331 14.3273C5.00502 14.5428 4.92896 14.6264 4.73148 14.7537C4.54498 14.8232 4.37307 14.8533 4.17544 14.8731C4.16171 15.2824 4.19176 15.6574 4.28119 16.0568C4.29318 16.1105 4.30516 16.1643 4.31751 16.2196C4.91969 18.7675 6.53014 21.0361 8.75714 22.4165C9.00848 22.5667 9.26476 22.7067 9.52437 22.842C9.55733 22.8593 9.59029 22.8765 9.62425 22.8942C10.7224 23.4587 11.8956 23.7817 13.1267 23.8245C13.1327 23.7922 13.1387 23.7599 13.1448 23.7266C13.258 23.1625 13.258 23.1625 13.5214 22.9725C13.6944 22.8856 13.8074 22.8747 14 22.8761C14.0827 22.8755 14.0827 22.8755 14.1672 22.8749C14.3511 22.8998 14.4519 22.9503 14.6004 23.0604C14.7794 23.3189 14.8479 23.513 14.8733 23.8245C15.2764 23.8383 15.6411 23.8093 16.0331 23.7153C16.0845 23.7032 16.1359 23.691 16.1888 23.6785C17.5248 23.3492 18.7974 22.8088 19.8947 21.9687C19.9405 21.9343 19.9863 21.8999 20.0335 21.8645C21.8981 20.4208 23.1896 18.3794 23.7086 16.0807C23.7203 16.0295 23.7321 15.9782 23.7442 15.9254C23.8195 15.5709 23.838 15.2351 23.8246 14.8731C23.7897 14.8664 23.7547 14.8597 23.7188 14.8528C23.415 14.7932 23.1623 14.742 22.9728 14.4782C22.8418 14.2185 22.8624 13.9562 22.8967 13.6723C22.995 13.4568 23.071 13.3731 23.2685 13.2459C23.4549 13.1764 23.6279 13.1518 23.8246 13.1265C23.7901 10.7056 22.4924 8.44132 20.8037 6.77234C20.1192 6.11635 19.3122 5.59556 18.4756 5.15754C18.4132 5.12447 18.3507 5.09141 18.2863 5.05733C17.2686 4.55076 16.0206 4.11067 14.8733 4.17507C14.8673 4.20737 14.8613 4.23966 14.8552 4.27294C14.742 4.83705 14.742 4.83705 14.4786 5.02706C14.3056 5.11396 14.1926 5.1249 14 5.12343C13.9448 5.12385 13.8897 5.12427 13.8328 5.12471C13.6489 5.09975 13.5481 5.0493 13.3996 4.93922C13.2206 4.68064 13.1521 4.48655 13.1267 4.17507C12.0443 4.13178 10.9381 4.50166 9.96101 4.93922Z" />
+                    <path
+                      d="M13.9625 6.99627C14.0381 6.99667 14.0381 6.99667 14.1153 6.99708C14.4976 7.00362 14.8387 7.04951 15.2008 7.17707C15.2582 7.19564 15.3156 7.21422 15.3748 7.23336C16.4097 7.5946 17.185 8.32789 17.6802 9.29382C17.9522 9.8652 18.0653 10.3606 18.056 10.9944C18.0562 11.0546 18.0564 11.1148 18.0566 11.1768C18.0529 11.7417 17.9884 12.2542 17.7388 12.7649C17.7197 12.8043 17.7006 12.8438 17.681 12.8844C17.159 13.9226 16.3194 14.5876 15.243 14.9942C15.0916 15.0368 15.0916 15.0368 14.8733 15.0368C14.8738 15.1352 14.8738 15.1352 14.8744 15.2356C14.8777 15.854 14.8802 16.4724 14.8818 17.0908C14.8826 17.4087 14.8838 17.7266 14.8856 18.0445C14.8874 18.3514 14.8884 18.6582 14.8888 18.965C14.8891 19.0821 14.8897 19.1991 14.8906 19.3161C14.8918 19.4801 14.892 19.6441 14.8919 19.8081C14.8925 19.8564 14.8931 19.9047 14.8937 19.9545C14.8921 20.2687 14.8479 20.5071 14.6277 20.7485C14.3326 20.9783 14.0939 21.0315 13.7271 20.9862C13.4376 20.8388 13.2305 20.6427 13.1267 20.3313C13.1219 20.2578 13.12 20.1842 13.1201 20.1106C13.1201 20.0658 13.12 20.021 13.1199 19.9749C13.1202 19.9015 13.1202 19.9015 13.1205 19.8267C13.1205 19.775 13.1205 19.7233 13.1205 19.6701C13.1205 19.4991 13.1209 19.3281 13.1214 19.1571C13.1215 19.0386 13.1216 18.9202 13.1216 18.8017C13.1218 18.4897 13.1224 18.1777 13.123 17.8657C13.1235 17.5474 13.1238 17.2291 13.124 16.9108C13.1246 16.2862 13.1256 15.6615 13.1267 15.0368C13.0572 15.0287 12.9877 15.0205 12.9161 15.0121C12.753 14.993 12.6196 14.9676 12.4717 14.8929C12.436 14.8751 12.4002 14.8572 12.3633 14.8389C12.327 14.8198 12.2908 14.8007 12.2534 14.781C12.2152 14.7613 12.1769 14.7416 12.1375 14.7213C11.8634 14.5772 11.6157 14.4199 11.3801 14.2181C11.3279 14.1784 11.3279 14.1784 11.2746 14.1379C10.5378 13.5519 10.0618 12.5722 9.93031 11.6511C9.80723 10.5345 10.075 9.50247 10.749 8.5996C10.8125 8.52456 10.8774 8.45063 10.9435 8.37787C10.9785 8.33783 11.0135 8.2978 11.0496 8.25655C11.8044 7.4447 12.8569 6.98927 13.9625 6.99627Z" />
+                    <path
+                      d="M15.3473 9.16077C15.8061 9.48886 16.1502 9.95641 16.2924 10.5066C16.3661 11.2124 16.3464 11.8734 15.9073 12.4568C15.499 12.9351 15.0251 13.3408 14.378 13.4118C13.7006 13.4587 13.1123 13.3861 12.5719 12.9416C12.5223 12.898 12.5223 12.898 12.4717 12.8536C12.4387 12.8262 12.4056 12.7988 12.3715 12.7706C12.0423 12.4752 11.7356 11.9869 11.6979 11.5376C11.6747 10.6172 11.7567 10.05 12.4086 9.36354C13.2318 8.5825 14.4186 8.56784 15.3473 9.16077Z" />
+                  </mask>
+                  <path
+                    d="M14.3275 0.0268598C14.5987 0.15279 14.7287 0.314172 14.8733 0.572677C14.8917 0.722812 14.8991 0.849597 14.8946 0.998671C14.8943 1.03819 14.894 1.0777 14.8937 1.11842C14.8925 1.24356 14.8897 1.36862 14.8869 1.49374C14.8858 1.57903 14.8848 1.66431 14.884 1.7496C14.8816 1.95772 14.8778 2.16578 14.8733 2.37387C14.9291 2.37651 14.9848 2.37914 15.0423 2.38186C15.4941 2.40525 15.9312 2.44461 16.3743 2.54103C16.4571 2.55891 16.4571 2.55891 16.5415 2.57716C19.5576 3.25826 22.216 5.1181 23.8791 7.7263C23.9535 7.85186 24.0262 7.97763 24.0975 8.10496C24.1222 8.14905 24.147 8.19315 24.1725 8.23859C24.994 9.71735 25.6321 11.4129 25.6257 13.1265C25.6786 13.1253 25.7314 13.1242 25.7859 13.123C25.983 13.119 26.1801 13.1165 26.3773 13.1145C26.4624 13.1134 26.5475 13.1119 26.6327 13.11C26.7554 13.1073 26.8781 13.1061 27.0009 13.1052C27.0575 13.1035 27.0575 13.1035 27.1152 13.1017C27.3907 13.1016 27.5414 13.1742 27.7544 13.3448C27.9524 13.5533 27.9896 13.7205 28 13.9998C27.9896 14.2791 27.9524 14.4463 27.7544 14.6548C27.5039 14.8555 27.3146 14.9038 27.0009 14.8944C26.9614 14.8941 26.9219 14.8938 26.8812 14.8935C26.756 14.8923 26.631 14.8895 26.5058 14.8867C26.4206 14.8856 26.3353 14.8846 26.25 14.8838C26.0419 14.8814 25.8338 14.8776 25.6257 14.8731C25.6231 14.9289 25.6205 14.9846 25.6177 15.0421C25.5944 15.4939 25.555 15.931 25.4586 16.3741C25.4467 16.4293 25.4347 16.4845 25.4225 16.5414C24.8384 19.1279 23.3682 21.5424 21.2593 23.1695C21.2292 23.1929 21.1991 23.2162 21.1681 23.2403C19.7488 24.3345 18.1266 25.0815 16.3743 25.4585C16.3242 25.4694 16.2741 25.4803 16.2225 25.4915C15.7755 25.5805 15.3276 25.6042 14.8733 25.6257C14.8744 25.6785 14.8756 25.7314 14.8768 25.7858C14.8807 25.983 14.8832 26.1801 14.8853 26.3773C14.8864 26.4624 14.8879 26.5475 14.8898 26.6326C14.8924 26.7554 14.8937 26.8781 14.8946 27.0009C14.8957 27.0386 14.8969 27.0763 14.898 27.1152C14.8982 27.3907 14.8256 27.5414 14.655 27.7544C14.4465 27.9524 14.2793 27.9896 14 28C13.7207 27.9896 13.5535 27.9524 13.345 27.7544C13.1443 27.5039 13.096 27.3146 13.1054 27.0009C13.1057 26.9614 13.106 26.9219 13.1063 26.8812C13.1075 26.756 13.1103 26.6309 13.1131 26.5058C13.1142 26.4205 13.1152 26.3353 13.116 26.25C13.1184 26.0418 13.1222 25.8338 13.1267 25.6257C13.0593 25.6262 12.9919 25.6267 12.9225 25.6272C10.8378 25.6264 8.57239 24.5859 6.95906 23.3333C6.90397 23.2907 6.84888 23.2481 6.79212 23.2043C6.41312 22.9016 6.05675 22.5738 5.7037 22.2416C5.66775 22.208 5.6318 22.1744 5.59476 22.1397C4.0238 20.6232 2.99552 18.4848 2.54142 16.3741C2.53053 16.324 2.51964 16.2739 2.50842 16.2223C2.41942 15.7753 2.39573 15.3274 2.37427 14.8731C2.32142 14.8742 2.26857 14.8754 2.21412 14.8766C2.017 14.8805 1.81987 14.883 1.62272 14.8851C1.53759 14.8862 1.45246 14.8877 1.36735 14.8896C1.24458 14.8922 1.12187 14.8935 0.999086 14.8944C0.942524 14.8961 0.942524 14.8961 0.884819 14.8978C0.609282 14.898 0.458575 14.8254 0.245614 14.6548C0.0475762 14.4463 0.0103701 14.2791 0 13.9998C0.0103701 13.7205 0.0475762 13.5533 0.245614 13.3448C0.496135 13.1441 0.685399 13.0958 0.999086 13.1052C1.0386 13.1055 1.07812 13.1058 1.11883 13.1061C1.24398 13.1073 1.36903 13.11 1.49415 13.1128C1.57943 13.1139 1.66472 13.1149 1.75 13.1158C1.95812 13.1182 2.16618 13.122 2.37427 13.1265C2.3769 13.0707 2.37954 13.015 2.38225 12.9575C2.40565 12.5057 2.44501 12.0686 2.54142 11.6255C2.5593 11.5427 2.5593 11.5427 2.57755 11.4582C3.25864 8.44209 5.11845 5.78369 7.72661 4.12049C7.85217 4.04608 7.97794 3.9734 8.10526 3.90216C8.14936 3.8774 8.19346 3.85263 8.23889 3.82711C9.71764 3.00563 11.4132 2.36751 13.1267 2.37387C13.1256 2.32103 13.1244 2.26818 13.1232 2.21373C13.1193 2.0166 13.1168 1.81947 13.1147 1.62231C13.1136 1.53718 13.1121 1.45205 13.1102 1.36694C13.1076 1.24417 13.1063 1.12146 13.1054 0.998671C13.1043 0.960962 13.1031 0.923253 13.102 0.884402C13.1018 0.60886 13.1744 0.458151 13.345 0.245187C13.6327 -0.0281456 13.9513 -0.0237788 14.3275 0.0268598Z"
+                    fill="white" />
+                  <path
+                    d="M14.3275 0.0268598C14.5987 0.15279 14.7287 0.314172 14.8733 0.572677C14.8917 0.722812 14.8991 0.849597 14.8946 0.998671C14.8943 1.03819 14.894 1.0777 14.8937 1.11842C14.8925 1.24356 14.8897 1.36862 14.8869 1.49374C14.8858 1.57903 14.8848 1.66431 14.884 1.7496C14.8816 1.95772 14.8778 2.16578 14.8733 2.37387C14.9291 2.37651 14.9848 2.37914 15.0423 2.38186C15.4941 2.40525 15.9312 2.44461 16.3743 2.54103C16.4571 2.55891 16.4571 2.55891 16.5415 2.57716C19.5576 3.25826 22.216 5.1181 23.8791 7.7263C23.9535 7.85186 24.0262 7.97763 24.0975 8.10496C24.1222 8.14905 24.147 8.19315 24.1725 8.23859C24.994 9.71735 25.6321 11.4129 25.6257 13.1265C25.6786 13.1253 25.7314 13.1242 25.7859 13.123C25.983 13.119 26.1801 13.1165 26.3773 13.1145C26.4624 13.1134 26.5475 13.1119 26.6327 13.11C26.7554 13.1073 26.8781 13.1061 27.0009 13.1052C27.0575 13.1035 27.0575 13.1035 27.1152 13.1017C27.3907 13.1016 27.5414 13.1742 27.7544 13.3448C27.9524 13.5533 27.9896 13.7205 28 13.9998C27.9896 14.2791 27.9524 14.4463 27.7544 14.6548C27.5039 14.8555 27.3146 14.9038 27.0009 14.8944C26.9614 14.8941 26.9219 14.8938 26.8812 14.8935C26.756 14.8923 26.631 14.8895 26.5058 14.8867C26.4206 14.8856 26.3353 14.8846 26.25 14.8838C26.0419 14.8814 25.8338 14.8776 25.6257 14.8731C25.6231 14.9289 25.6205 14.9846 25.6177 15.0421C25.5944 15.4939 25.555 15.931 25.4586 16.3741C25.4467 16.4293 25.4347 16.4845 25.4225 16.5414C24.8384 19.1279 23.3682 21.5424 21.2593 23.1695C21.2292 23.1929 21.1991 23.2162 21.1681 23.2403C19.7488 24.3345 18.1266 25.0815 16.3743 25.4585C16.3242 25.4694 16.2741 25.4803 16.2225 25.4915C15.7755 25.5805 15.3276 25.6042 14.8733 25.6257C14.8744 25.6785 14.8756 25.7314 14.8768 25.7858C14.8807 25.983 14.8832 26.1801 14.8853 26.3773C14.8864 26.4624 14.8879 26.5475 14.8898 26.6326C14.8924 26.7554 14.8937 26.8781 14.8946 27.0009C14.8957 27.0386 14.8969 27.0763 14.898 27.1152C14.8982 27.3907 14.8256 27.5414 14.655 27.7544C14.4465 27.9524 14.2793 27.9896 14 28C13.7207 27.9896 13.5535 27.9524 13.345 27.7544C13.1443 27.5039 13.096 27.3146 13.1054 27.0009C13.1057 26.9614 13.106 26.9219 13.1063 26.8812C13.1075 26.756 13.1103 26.6309 13.1131 26.5058C13.1142 26.4205 13.1152 26.3353 13.116 26.25C13.1184 26.0418 13.1222 25.8338 13.1267 25.6257C13.0593 25.6262 12.9919 25.6267 12.9225 25.6272C10.8378 25.6264 8.57239 24.5859 6.95906 23.3333C6.90397 23.2907 6.84888 23.2481 6.79212 23.2043C6.41312 22.9016 6.05675 22.5738 5.7037 22.2416C5.66775 22.208 5.6318 22.1744 5.59476 22.1397C4.0238 20.6232 2.99552 18.4848 2.54142 16.3741C2.53053 16.324 2.51964 16.2739 2.50842 16.2223C2.41942 15.7753 2.39573 15.3274 2.37427 14.8731C2.32142 14.8742 2.26857 14.8754 2.21412 14.8766C2.017 14.8805 1.81987 14.883 1.62272 14.8851C1.53759 14.8862 1.45246 14.8877 1.36735 14.8896C1.24458 14.8922 1.12187 14.8935 0.999086 14.8944C0.942524 14.8961 0.942524 14.8961 0.884819 14.8978C0.609282 14.898 0.458575 14.8254 0.245614 14.6548C0.0475762 14.4463 0.0103701 14.2791 0 13.9998C0.0103701 13.7205 0.0475762 13.5533 0.245614 13.3448C0.496135 13.1441 0.685399 13.0958 0.999086 13.1052C1.0386 13.1055 1.07812 13.1058 1.11883 13.1061C1.24398 13.1073 1.36903 13.11 1.49415 13.1128C1.57943 13.1139 1.66472 13.1149 1.75 13.1158C1.95812 13.1182 2.16618 13.122 2.37427 13.1265C2.3769 13.0707 2.37954 13.015 2.38225 12.9575C2.40565 12.5057 2.44501 12.0686 2.54142 11.6255C2.5593 11.5427 2.5593 11.5427 2.57755 11.4582C3.25864 8.44209 5.11845 5.78369 7.72661 4.12049C7.85217 4.04608 7.97794 3.9734 8.10526 3.90216C8.14936 3.8774 8.19346 3.85263 8.23889 3.82711C9.71764 3.00563 11.4132 2.36751 13.1267 2.37387C13.1256 2.32103 13.1244 2.26818 13.1232 2.21373C13.1193 2.0166 13.1168 1.81947 13.1147 1.62231C13.1136 1.53718 13.1121 1.45205 13.1102 1.36694C13.1076 1.24417 13.1063 1.12146 13.1054 0.998671C13.1043 0.960962 13.1031 0.923253 13.102 0.884402C13.1018 0.60886 13.1744 0.458151 13.345 0.245187C13.6327 -0.0281456 13.9513 -0.0237788 14.3275 0.0268598ZM9.96101 4.93922C9.92682 4.95452 9.89263 4.96982 9.8574 4.98559C8.99956 5.37576 8.21357 5.90211 7.50487 6.52209C7.46048 6.55987 7.41608 6.59765 7.37034 6.63658C6.46686 7.42304 5.77542 8.36137 5.21248 9.41492C5.18074 9.47142 5.14901 9.52791 5.11632 9.58613C4.53028 10.6779 4.22184 11.8944 4.17544 13.1265C4.20773 13.1325 4.24003 13.1384 4.2733 13.1446C4.8379 13.2579 4.8379 13.2579 5.0272 13.5213C5.15816 13.7811 5.13755 14.0434 5.10331 14.3273C5.00502 14.5428 4.92896 14.6264 4.73148 14.7537C4.54498 14.8232 4.37307 14.8533 4.17544 14.8731C4.16171 15.2824 4.19176 15.6574 4.28119 16.0568C4.29318 16.1105 4.30516 16.1643 4.31751 16.2196C4.91969 18.7675 6.53014 21.0361 8.75714 22.4165C9.00848 22.5667 9.26476 22.7067 9.52437 22.842C9.55733 22.8593 9.59029 22.8765 9.62425 22.8942C10.7224 23.4587 11.8956 23.7817 13.1267 23.8245C13.1327 23.7922 13.1387 23.7599 13.1448 23.7266C13.258 23.1625 13.258 23.1625 13.5214 22.9725C13.6944 22.8856 13.8074 22.8747 14 22.8761C14.0827 22.8755 14.0827 22.8755 14.1672 22.8749C14.3511 22.8998 14.4519 22.9503 14.6004 23.0604C14.7794 23.3189 14.8479 23.513 14.8733 23.8245C15.2764 23.8383 15.6411 23.8093 16.0331 23.7153C16.0845 23.7032 16.1359 23.691 16.1888 23.6785C17.5248 23.3492 18.7974 22.8088 19.8947 21.9687C19.9405 21.9343 19.9863 21.8999 20.0335 21.8645C21.8981 20.4208 23.1896 18.3794 23.7086 16.0807C23.7203 16.0295 23.7321 15.9782 23.7442 15.9254C23.8195 15.5709 23.838 15.2351 23.8246 14.8731C23.7897 14.8664 23.7547 14.8597 23.7188 14.8528C23.415 14.7932 23.1623 14.742 22.9728 14.4782C22.8418 14.2185 22.8624 13.9562 22.8967 13.6723C22.995 13.4568 23.071 13.3731 23.2685 13.2459C23.4549 13.1764 23.6279 13.1518 23.8246 13.1265C23.7901 10.7056 22.4924 8.44132 20.8037 6.77234C20.1192 6.11635 19.3122 5.59556 18.4756 5.15754C18.4132 5.12447 18.3507 5.09141 18.2863 5.05733C17.2686 4.55076 16.0206 4.11067 14.8733 4.17507C14.8673 4.20737 14.8613 4.23966 14.8552 4.27294C14.742 4.83705 14.742 4.83705 14.4786 5.02706C14.3056 5.11396 14.1926 5.1249 14 5.12343C13.9448 5.12385 13.8897 5.12427 13.8328 5.12471C13.6489 5.09975 13.5481 5.0493 13.3996 4.93922C13.2206 4.68064 13.1521 4.48655 13.1267 4.17507C12.0443 4.13178 10.9381 4.50166 9.96101 4.93922Z"
+                    fill="#1A3151" />
+                  <path
+                    d="M13.9625 6.99627C14.0381 6.99667 14.0381 6.99667 14.1153 6.99708C14.4976 7.00362 14.8387 7.04951 15.2008 7.17707C15.2582 7.19564 15.3156 7.21422 15.3748 7.23336C16.4097 7.5946 17.185 8.32789 17.6802 9.29382C17.9522 9.8652 18.0653 10.3606 18.056 10.9944C18.0562 11.0546 18.0564 11.1148 18.0566 11.1768C18.0529 11.7417 17.9884 12.2542 17.7388 12.7649C17.7197 12.8043 17.7006 12.8438 17.681 12.8844C17.159 13.9226 16.3194 14.5876 15.243 14.9942C15.0916 15.0368 15.0916 15.0368 14.8733 15.0368C14.8738 15.1352 14.8738 15.1352 14.8744 15.2356C14.8777 15.854 14.8802 16.4724 14.8818 17.0908C14.8826 17.4087 14.8838 17.7266 14.8856 18.0445C14.8874 18.3514 14.8884 18.6582 14.8888 18.965C14.8891 19.0821 14.8897 19.1991 14.8906 19.3161C14.8918 19.4801 14.892 19.6441 14.8919 19.8081C14.8925 19.8564 14.8931 19.9047 14.8937 19.9545C14.8921 20.2687 14.8479 20.5071 14.6277 20.7485C14.3326 20.9783 14.0939 21.0315 13.7271 20.9862C13.4376 20.8388 13.2305 20.6427 13.1267 20.3313C13.1219 20.2578 13.12 20.1842 13.1201 20.1106C13.1201 20.0658 13.12 20.021 13.1199 19.9749C13.1202 19.9015 13.1202 19.9015 13.1205 19.8267C13.1205 19.775 13.1205 19.7233 13.1205 19.6701C13.1205 19.4991 13.1209 19.3281 13.1214 19.1571C13.1215 19.0386 13.1216 18.9202 13.1216 18.8017C13.1218 18.4897 13.1224 18.1777 13.123 17.8657C13.1235 17.5474 13.1238 17.2291 13.124 16.9108C13.1246 16.2862 13.1256 15.6615 13.1267 15.0368C13.0572 15.0287 12.9877 15.0205 12.9161 15.0121C12.753 14.993 12.6196 14.9676 12.4717 14.8929C12.436 14.8751 12.4002 14.8572 12.3633 14.8389C12.327 14.8198 12.2908 14.8007 12.2534 14.781C12.2152 14.7613 12.1769 14.7416 12.1375 14.7213C11.8634 14.5772 11.6157 14.4199 11.3801 14.2181C11.3279 14.1784 11.3279 14.1784 11.2746 14.1379C10.5378 13.5519 10.0618 12.5722 9.93031 11.6511C9.80723 10.5345 10.075 9.50247 10.749 8.5996C10.8125 8.52456 10.8774 8.45063 10.9435 8.37787C10.9785 8.33783 11.0135 8.2978 11.0496 8.25655C11.8044 7.4447 12.8569 6.98927 13.9625 6.99627Z"
+                    fill="#1A3151" />
+                  <path
+                    d="M15.3473 9.16077C15.8061 9.48886 16.1502 9.95641 16.2924 10.5066C16.3661 11.2124 16.3464 11.8734 15.9073 12.4568C15.499 12.9351 15.0251 13.3408 14.378 13.4118C13.7006 13.4587 13.1123 13.3861 12.5719 12.9416C12.5223 12.898 12.5223 12.898 12.4717 12.8536C12.4387 12.8262 12.4056 12.7988 12.3715 12.7706C12.0423 12.4752 11.7356 11.9869 11.6979 11.5376C11.6747 10.6172 11.7567 10.05 12.4086 9.36354C13.2318 8.5825 14.4186 8.56784 15.3473 9.16077Z"
+                    fill="white" />
+                  <path
+                    d="M14.3275 0.0268598C14.5987 0.15279 14.7287 0.314172 14.8733 0.572677C14.8917 0.722812 14.8991 0.849597 14.8946 0.998671C14.8943 1.03819 14.894 1.0777 14.8937 1.11842C14.8925 1.24356 14.8897 1.36862 14.8869 1.49374C14.8858 1.57903 14.8848 1.66431 14.884 1.7496C14.8816 1.95772 14.8778 2.16578 14.8733 2.37387C14.9291 2.37651 14.9848 2.37914 15.0423 2.38186C15.4941 2.40525 15.9312 2.44461 16.3743 2.54103C16.4571 2.55891 16.4571 2.55891 16.5415 2.57716C19.5576 3.25826 22.216 5.1181 23.8791 7.7263C23.9535 7.85186 24.0262 7.97763 24.0975 8.10496C24.1222 8.14905 24.147 8.19315 24.1725 8.23859C24.994 9.71735 25.6321 11.4129 25.6257 13.1265C25.6786 13.1253 25.7314 13.1242 25.7859 13.123C25.983 13.119 26.1801 13.1165 26.3773 13.1145C26.4624 13.1134 26.5475 13.1119 26.6327 13.11C26.7554 13.1073 26.8781 13.1061 27.0009 13.1052C27.0575 13.1035 27.0575 13.1035 27.1152 13.1017C27.3907 13.1016 27.5414 13.1742 27.7544 13.3448C27.9524 13.5533 27.9896 13.7205 28 13.9998C27.9896 14.2791 27.9524 14.4463 27.7544 14.6548C27.5039 14.8555 27.3146 14.9038 27.0009 14.8944C26.9614 14.8941 26.9219 14.8938 26.8812 14.8935C26.756 14.8923 26.631 14.8895 26.5058 14.8867C26.4206 14.8856 26.3353 14.8846 26.25 14.8838C26.0419 14.8814 25.8338 14.8776 25.6257 14.8731C25.6231 14.9289 25.6205 14.9846 25.6177 15.0421C25.5944 15.4939 25.555 15.931 25.4586 16.3741C25.4467 16.4293 25.4347 16.4845 25.4225 16.5414C24.8384 19.1279 23.3682 21.5424 21.2593 23.1695C21.2292 23.1929 21.1991 23.2162 21.1681 23.2403C19.7488 24.3345 18.1266 25.0815 16.3743 25.4585C16.3242 25.4694 16.2741 25.4803 16.2225 25.4915C15.7755 25.5805 15.3276 25.6042 14.8733 25.6257C14.8744 25.6785 14.8756 25.7314 14.8768 25.7858C14.8807 25.983 14.8832 26.1801 14.8853 26.3773C14.8864 26.4624 14.8879 26.5475 14.8898 26.6326C14.8924 26.7554 14.8937 26.8781 14.8946 27.0009C14.8957 27.0386 14.8969 27.0763 14.898 27.1152C14.8982 27.3907 14.8256 27.5414 14.655 27.7544C14.4465 27.9524 14.2793 27.9896 14 28C13.7207 27.9896 13.5535 27.9524 13.345 27.7544C13.1443 27.5039 13.096 27.3146 13.1054 27.0009C13.1057 26.9614 13.106 26.9219 13.1063 26.8812C13.1075 26.756 13.1103 26.6309 13.1131 26.5058C13.1142 26.4205 13.1152 26.3353 13.116 26.25C13.1184 26.0418 13.1222 25.8338 13.1267 25.6257C13.0593 25.6262 12.9919 25.6267 12.9225 25.6272C10.8378 25.6264 8.57239 24.5859 6.95906 23.3333C6.90397 23.2907 6.84888 23.2481 6.79212 23.2043C6.41312 22.9016 6.05675 22.5738 5.7037 22.2416C5.66775 22.208 5.6318 22.1744 5.59476 22.1397C4.0238 20.6232 2.99552 18.4848 2.54142 16.3741C2.53053 16.324 2.51964 16.2739 2.50842 16.2223C2.41942 15.7753 2.39573 15.3274 2.37427 14.8731C2.32142 14.8742 2.26857 14.8754 2.21412 14.8766C2.017 14.8805 1.81987 14.883 1.62272 14.8851C1.53759 14.8862 1.45246 14.8877 1.36735 14.8896C1.24458 14.8922 1.12187 14.8935 0.999086 14.8944C0.942524 14.8961 0.942524 14.8961 0.884819 14.8978C0.609282 14.898 0.458575 14.8254 0.245614 14.6548C0.0475762 14.4463 0.0103701 14.2791 0 13.9998C0.0103701 13.7205 0.0475762 13.5533 0.245614 13.3448C0.496135 13.1441 0.685399 13.0958 0.999086 13.1052C1.0386 13.1055 1.07812 13.1058 1.11883 13.1061C1.24398 13.1073 1.36903 13.11 1.49415 13.1128C1.57943 13.1139 1.66472 13.1149 1.75 13.1158C1.95812 13.1182 2.16618 13.122 2.37427 13.1265C2.3769 13.0707 2.37954 13.015 2.38225 12.9575C2.40565 12.5057 2.44501 12.0686 2.54142 11.6255C2.5593 11.5427 2.5593 11.5427 2.57755 11.4582C3.25864 8.44209 5.11845 5.78369 7.72661 4.12049C7.85217 4.04608 7.97794 3.9734 8.10526 3.90216C8.14936 3.8774 8.19346 3.85263 8.23889 3.82711C9.71764 3.00563 11.4132 2.36751 13.1267 2.37387C13.1256 2.32103 13.1244 2.26818 13.1232 2.21373C13.1193 2.0166 13.1168 1.81947 13.1147 1.62231C13.1136 1.53718 13.1121 1.45205 13.1102 1.36694C13.1076 1.24417 13.1063 1.12146 13.1054 0.998671C13.1043 0.960962 13.1031 0.923253 13.102 0.884402C13.1018 0.60886 13.1744 0.458151 13.345 0.245187C13.6327 -0.0281456 13.9513 -0.0237788 14.3275 0.0268598Z"
+                    stroke="#2772CC" stroke-width="2" mask="url(#path-1-inside-1_6001_1472)" />
+                  <path
+                    d="M14.3275 0.0268598C14.5987 0.15279 14.7287 0.314172 14.8733 0.572677C14.8917 0.722812 14.8991 0.849597 14.8946 0.998671C14.8943 1.03819 14.894 1.0777 14.8937 1.11842C14.8925 1.24356 14.8897 1.36862 14.8869 1.49374C14.8858 1.57903 14.8848 1.66431 14.884 1.7496C14.8816 1.95772 14.8778 2.16578 14.8733 2.37387C14.9291 2.37651 14.9848 2.37914 15.0423 2.38186C15.4941 2.40525 15.9312 2.44461 16.3743 2.54103C16.4571 2.55891 16.4571 2.55891 16.5415 2.57716C19.5576 3.25826 22.216 5.1181 23.8791 7.7263C23.9535 7.85186 24.0262 7.97763 24.0975 8.10496C24.1222 8.14905 24.147 8.19315 24.1725 8.23859C24.994 9.71735 25.6321 11.4129 25.6257 13.1265C25.6786 13.1253 25.7314 13.1242 25.7859 13.123C25.983 13.119 26.1801 13.1165 26.3773 13.1145C26.4624 13.1134 26.5475 13.1119 26.6327 13.11C26.7554 13.1073 26.8781 13.1061 27.0009 13.1052C27.0575 13.1035 27.0575 13.1035 27.1152 13.1017C27.3907 13.1016 27.5414 13.1742 27.7544 13.3448C27.9524 13.5533 27.9896 13.7205 28 13.9998C27.9896 14.2791 27.9524 14.4463 27.7544 14.6548C27.5039 14.8555 27.3146 14.9038 27.0009 14.8944C26.9614 14.8941 26.9219 14.8938 26.8812 14.8935C26.756 14.8923 26.631 14.8895 26.5058 14.8867C26.4206 14.8856 26.3353 14.8846 26.25 14.8838C26.0419 14.8814 25.8338 14.8776 25.6257 14.8731C25.6231 14.9289 25.6205 14.9846 25.6177 15.0421C25.5944 15.4939 25.555 15.931 25.4586 16.3741C25.4467 16.4293 25.4347 16.4845 25.4225 16.5414C24.8384 19.1279 23.3682 21.5424 21.2593 23.1695C21.2292 23.1929 21.1991 23.2162 21.1681 23.2403C19.7488 24.3345 18.1266 25.0815 16.3743 25.4585C16.3242 25.4694 16.2741 25.4803 16.2225 25.4915C15.7755 25.5805 15.3276 25.6042 14.8733 25.6257C14.8744 25.6785 14.8756 25.7314 14.8768 25.7858C14.8807 25.983 14.8832 26.1801 14.8853 26.3773C14.8864 26.4624 14.8879 26.5475 14.8898 26.6326C14.8924 26.7554 14.8937 26.8781 14.8946 27.0009C14.8957 27.0386 14.8969 27.0763 14.898 27.1152C14.8982 27.3907 14.8256 27.5414 14.655 27.7544C14.4465 27.9524 14.2793 27.9896 14 28C13.7207 27.9896 13.5535 27.9524 13.345 27.7544C13.1443 27.5039 13.096 27.3146 13.1054 27.0009C13.1057 26.9614 13.106 26.9219 13.1063 26.8812C13.1075 26.756 13.1103 26.6309 13.1131 26.5058C13.1142 26.4205 13.1152 26.3353 13.116 26.25C13.1184 26.0418 13.1222 25.8338 13.1267 25.6257C13.0593 25.6262 12.9919 25.6267 12.9225 25.6272C10.8378 25.6264 8.57239 24.5859 6.95906 23.3333C6.90397 23.2907 6.84888 23.2481 6.79212 23.2043C6.41312 22.9016 6.05675 22.5738 5.7037 22.2416C5.66775 22.208 5.6318 22.1744 5.59476 22.1397C4.0238 20.6232 2.99552 18.4848 2.54142 16.3741C2.53053 16.324 2.51964 16.2739 2.50842 16.2223C2.41942 15.7753 2.39573 15.3274 2.37427 14.8731C2.32142 14.8742 2.26857 14.8754 2.21412 14.8766C2.017 14.8805 1.81987 14.883 1.62272 14.8851C1.53759 14.8862 1.45246 14.8877 1.36735 14.8896C1.24458 14.8922 1.12187 14.8935 0.999086 14.8944C0.942524 14.8961 0.942524 14.8961 0.884819 14.8978C0.609282 14.898 0.458575 14.8254 0.245614 14.6548C0.0475762 14.4463 0.0103701 14.2791 0 13.9998C0.0103701 13.7205 0.0475762 13.5533 0.245614 13.3448C0.496135 13.1441 0.685399 13.0958 0.999086 13.1052C1.0386 13.1055 1.07812 13.1058 1.11883 13.1061C1.24398 13.1073 1.36903 13.11 1.49415 13.1128C1.57943 13.1139 1.66472 13.1149 1.75 13.1158C1.95812 13.1182 2.16618 13.122 2.37427 13.1265C2.3769 13.0707 2.37954 13.015 2.38225 12.9575C2.40565 12.5057 2.44501 12.0686 2.54142 11.6255C2.5593 11.5427 2.5593 11.5427 2.57755 11.4582C3.25864 8.44209 5.11845 5.78369 7.72661 4.12049C7.85217 4.04608 7.97794 3.9734 8.10526 3.90216C8.14936 3.8774 8.19346 3.85263 8.23889 3.82711C9.71764 3.00563 11.4132 2.36751 13.1267 2.37387C13.1256 2.32103 13.1244 2.26818 13.1232 2.21373C13.1193 2.0166 13.1168 1.81947 13.1147 1.62231C13.1136 1.53718 13.1121 1.45205 13.1102 1.36694C13.1076 1.24417 13.1063 1.12146 13.1054 0.998671C13.1043 0.960962 13.1031 0.923253 13.102 0.884402C13.1018 0.60886 13.1744 0.458151 13.345 0.245187C13.6327 -0.0281456 13.9513 -0.0237788 14.3275 0.0268598ZM9.96101 4.93922C9.92682 4.95452 9.89263 4.96982 9.8574 4.98559C8.99956 5.37576 8.21357 5.90211 7.50487 6.52209C7.46048 6.55987 7.41608 6.59765 7.37034 6.63658C6.46686 7.42304 5.77542 8.36137 5.21248 9.41492C5.18074 9.47142 5.14901 9.52791 5.11632 9.58613C4.53028 10.6779 4.22184 11.8944 4.17544 13.1265C4.20773 13.1325 4.24003 13.1384 4.2733 13.1446C4.8379 13.2579 4.8379 13.2579 5.0272 13.5213C5.15816 13.7811 5.13755 14.0434 5.10331 14.3273C5.00502 14.5428 4.92896 14.6264 4.73148 14.7537C4.54498 14.8232 4.37307 14.8533 4.17544 14.8731C4.16171 15.2824 4.19176 15.6574 4.28119 16.0568C4.29318 16.1105 4.30516 16.1643 4.31751 16.2196C4.91969 18.7675 6.53014 21.0361 8.75714 22.4165C9.00848 22.5667 9.26476 22.7067 9.52437 22.842C9.55733 22.8593 9.59029 22.8765 9.62425 22.8942C10.7224 23.4587 11.8956 23.7817 13.1267 23.8245C13.1327 23.7922 13.1387 23.7599 13.1448 23.7266C13.258 23.1625 13.258 23.1625 13.5214 22.9725C13.6944 22.8856 13.8074 22.8747 14 22.8761C14.0827 22.8755 14.0827 22.8755 14.1672 22.8749C14.3511 22.8998 14.4519 22.9503 14.6004 23.0604C14.7794 23.3189 14.8479 23.513 14.8733 23.8245C15.2764 23.8383 15.6411 23.8093 16.0331 23.7153C16.0845 23.7032 16.1359 23.691 16.1888 23.6785C17.5248 23.3492 18.7974 22.8088 19.8947 21.9687C19.9405 21.9343 19.9863 21.8999 20.0335 21.8645C21.8981 20.4208 23.1896 18.3794 23.7086 16.0807C23.7203 16.0295 23.7321 15.9782 23.7442 15.9254C23.8195 15.5709 23.838 15.2351 23.8246 14.8731C23.7897 14.8664 23.7547 14.8597 23.7188 14.8528C23.415 14.7932 23.1623 14.742 22.9728 14.4782C22.8418 14.2185 22.8624 13.9562 22.8967 13.6723C22.995 13.4568 23.071 13.3731 23.2685 13.2459C23.4549 13.1764 23.6279 13.1518 23.8246 13.1265C23.7901 10.7056 22.4924 8.44132 20.8037 6.77234C20.1192 6.11635 19.3122 5.59556 18.4756 5.15754C18.4132 5.12447 18.3507 5.09141 18.2863 5.05733C17.2686 4.55076 16.0206 4.11067 14.8733 4.17507C14.8673 4.20737 14.8613 4.23966 14.8552 4.27294C14.742 4.83705 14.742 4.83705 14.4786 5.02706C14.3056 5.11396 14.1926 5.1249 14 5.12343C13.9448 5.12385 13.8897 5.12427 13.8328 5.12471C13.6489 5.09975 13.5481 5.0493 13.3996 4.93922C13.2206 4.68064 13.1521 4.48655 13.1267 4.17507C12.0443 4.13178 10.9381 4.50166 9.96101 4.93922Z"
+                    stroke="#2772CC" stroke-width="2" mask="url(#path-1-inside-1_6001_1472)" />
+                  <path
+                    d="M13.9625 6.99627C14.0381 6.99667 14.0381 6.99667 14.1153 6.99708C14.4976 7.00362 14.8387 7.04951 15.2008 7.17707C15.2582 7.19564 15.3156 7.21422 15.3748 7.23336C16.4097 7.5946 17.185 8.32789 17.6802 9.29382C17.9522 9.8652 18.0653 10.3606 18.056 10.9944C18.0562 11.0546 18.0564 11.1148 18.0566 11.1768C18.0529 11.7417 17.9884 12.2542 17.7388 12.7649C17.7197 12.8043 17.7006 12.8438 17.681 12.8844C17.159 13.9226 16.3194 14.5876 15.243 14.9942C15.0916 15.0368 15.0916 15.0368 14.8733 15.0368C14.8738 15.1352 14.8738 15.1352 14.8744 15.2356C14.8777 15.854 14.8802 16.4724 14.8818 17.0908C14.8826 17.4087 14.8838 17.7266 14.8856 18.0445C14.8874 18.3514 14.8884 18.6582 14.8888 18.965C14.8891 19.0821 14.8897 19.1991 14.8906 19.3161C14.8918 19.4801 14.892 19.6441 14.8919 19.8081C14.8925 19.8564 14.8931 19.9047 14.8937 19.9545C14.8921 20.2687 14.8479 20.5071 14.6277 20.7485C14.3326 20.9783 14.0939 21.0315 13.7271 20.9862C13.4376 20.8388 13.2305 20.6427 13.1267 20.3313C13.1219 20.2578 13.12 20.1842 13.1201 20.1106C13.1201 20.0658 13.12 20.021 13.1199 19.9749C13.1202 19.9015 13.1202 19.9015 13.1205 19.8267C13.1205 19.775 13.1205 19.7233 13.1205 19.6701C13.1205 19.4991 13.1209 19.3281 13.1214 19.1571C13.1215 19.0386 13.1216 18.9202 13.1216 18.8017C13.1218 18.4897 13.1224 18.1777 13.123 17.8657C13.1235 17.5474 13.1238 17.2291 13.124 16.9108C13.1246 16.2862 13.1256 15.6615 13.1267 15.0368C13.0572 15.0287 12.9877 15.0205 12.9161 15.0121C12.753 14.993 12.6196 14.9676 12.4717 14.8929C12.436 14.8751 12.4002 14.8572 12.3633 14.8389C12.327 14.8198 12.2908 14.8007 12.2534 14.781C12.2152 14.7613 12.1769 14.7416 12.1375 14.7213C11.8634 14.5772 11.6157 14.4199 11.3801 14.2181C11.3279 14.1784 11.3279 14.1784 11.2746 14.1379C10.5378 13.5519 10.0618 12.5722 9.93031 11.6511C9.80723 10.5345 10.075 9.50247 10.749 8.5996C10.8125 8.52456 10.8774 8.45063 10.9435 8.37787C10.9785 8.33783 11.0135 8.2978 11.0496 8.25655C11.8044 7.4447 12.8569 6.98927 13.9625 6.99627Z"
+                    stroke="#2772CC" stroke-width="2" mask="url(#path-1-inside-1_6001_1472)" />
+                  <path
+                    d="M15.3473 9.16077C15.8061 9.48886 16.1502 9.95641 16.2924 10.5066C16.3661 11.2124 16.3464 11.8734 15.9073 12.4568C15.499 12.9351 15.0251 13.3408 14.378 13.4118C13.7006 13.4587 13.1123 13.3861 12.5719 12.9416C12.5223 12.898 12.5223 12.898 12.4717 12.8536C12.4387 12.8262 12.4056 12.7988 12.3715 12.7706C12.0423 12.4752 11.7356 11.9869 11.6979 11.5376C11.6747 10.6172 11.7567 10.05 12.4086 9.36354C13.2318 8.5825 14.4186 8.56784 15.3473 9.16077Z"
+                    stroke="#2772CC" stroke-width="2" mask="url(#path-1-inside-1_6001_1472)" />
+
+
+                </svg>
+              </button>
+            </div>
+
+            <!-- LANDMARK -->
+
+            <div>
+
+              <label
+                class="block mb-[8px] font-[var(--albert-sans-r)] text-[14px] sm:text-[16px] font-semibold leading-none text-[var(--color10)]">
+                Landmark (Optional)
+              </label>
+
+              <input type="text" placeholder="Nearby Landmark"
+                class="w-full h-[45px] sm:h-[48px] rounded-[4px] border border-[#9CA3AF] bg-white px-[16px] text-[13px] sm:text-[16px] text-[#9CA3AF] placeholder:text-[#9CA3AF] outline-none transition-all duration-200 focus:border-[#AEB6C0] focus:ring-0 focus:shadow-[0_0_0_2px_rgba(174,182,192,0.10)]" />
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- ADDITIONAL INFORMATION -->
+        <!-- ================================================= -->
+
+        <div
+          class="w-full rounded-[25px] border border-[#E5E7EB] bg-white/75 backdrop-blur-[10px] p-[25px] sm:p-[28px] lg:p-[32px] shadow-[inset_0_1px_8px_rgba(229,231,235,0.75),0_2px_8px_rgba(229,231,235,0.35)]">
+
+
+          <div class="mb-[24px]">
+
+            <h3
+              class="font-[var(--outfit-r)] text-[15px] sm:text-[18px] lg:text-[24px] font-semibold leading-[1.2] text-[var(--color10)]">
+              Additional Information
+            </h3>
+
+            <p class="mt-[8px] text-[12px] sm:text-[16px] leading-[1.3] text-[var(--color1)] capitalize">
+              Help Us Serve You Better.
+            </p>
+
+          </div>
+
+
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-[24px] gap-y-[17px]">
+
+
+            <!-- DATE OF BIRTH -->
+
+            <div>
+
+              <label
+                class="block mb-[8px] font-[var(--albert-sans-r)] text-[14px] sm:text-[16px] font-semibold leading-none text-[var(--color10)]">
+                Date Of Birth
+              </label>
+
+              <input type="date"
+                class="w-full h-[45px] sm:h-[48px] rounded-[4px] border border-[#9CA3AF] bg-white px-[16px] text-[13px] sm:text-[16px] text-[#9CA3AF] outline-none cursor-pointer transition-all duration-200 focus:border-[#AEB6C0] focus:ring-0 focus:shadow-[0_0_0_2px_rgba(174,182,192,0.10)]" />
+
+            </div>
+
+
+
+            <!-- GENDER -->
+
+            <div>
+
+              <label
+                class="block mb-[8px] font-[var(--albert-sans-r)] text-[14px] sm:text-[16px] font-semibold leading-none text-[var(--color10)]">
+                Gender
+              </label>
+
+              <div class="relative">
+
+                <select
+                  class="appearance-none w-full h-[45px] sm:h-[48px] rounded-[4px] border border-[#9CA3AF] bg-white px-[16px] pr-[45px] text-[13px] sm:text-[16px] text-[#9CA3AF] outline-none cursor-pointer transition-all duration-200 focus:border-[#AEB6C0] focus:ring-0">
+
+                  <option>Select Gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+
+                </select>
+
+
+                <svg class="absolute right-[14px] top-1/2 -translate-y-1/2 pointer-events-none w-[15px] h-[9px]"
+                  viewBox="0 0 15 9" fill="none">
+
+                  <path d="M13.8333 1L7.41667 7.41667L1 1" stroke="#1A3151" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+
+                </svg>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- LANGUAGE -->
+
+            <div>
+
+              <label
+                class="block mb-[8px] font-[var(--albert-sans-r)] text-[14px] sm:text-[16px] font-semibold leading-none text-[var(--color10)]">
+                Preferred Language
+              </label>
+
+              <div class="relative">
+
+                <select
+                  class="appearance-none w-full h-[45px] sm:h-[48px] rounded-[4px] border border-[#9CA3AF] bg-white px-[16px] pr-[45px] text-[13px] sm:text-[16px] text-[#9CA3AF] outline-none cursor-pointer transition-all duration-200 focus:border-[#AEB6C0] focus:ring-0">
+
+                  <option>Select Your Preferred Language</option>
+                  <option>English</option>
+                  <option>Bengali</option>
+                  <option>Hindi</option>
+
+                </select>
+
+
+                <svg class="absolute right-[14px] top-1/2 -translate-y-1/2 pointer-events-none w-[15px] h-[9px]"
+                  viewBox="0 0 15 9" fill="none">
+
+                  <path d="M13.8333 1L7.41667 7.41667L1 1" stroke="#1A3151" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+
+                </svg>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- PROFILE PHOTO -->
+
+            <div>
+              <label for="createAccountPhoto"
+                class="w-full h-[150px] rounded-[8px] border border-dashed border-[#BFDBFE] bg-[#F8FAFF] flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:border-[var(--color4)]">
+                <!-- Upload Icon -->
+                <svg class="w-[42px] h-[42px] mb-[8px]" width="50" height="50" viewBox="0 0 50 50" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14.6553 0.00988374C14.9612 0.0102083 15.267 0.0095685 15.5729 0.00894432C16.2941 0.00749416 17.0152 0.00763938 17.7364 0.0088302C18.4787 0.0100288 19.2209 0.00854955 19.9632 0.00577495C20.6035 0.00347167 21.2438 0.0027822 21.8841 0.00339244C22.2653 0.00374192 22.6465 0.00349626 23.0276 0.00170344C23.4515 -0.000204088 23.8753 0.00125881 24.2991 0.00304489C24.4245 0.00204008 24.5499 0.00103526 24.679 0C25.3367 0.00581271 25.7491 0.0225282 26.2456 0.470918C26.6227 0.867868 26.6935 1.18626 26.7133 1.71811C26.6935 2.24995 26.6227 2.56835 26.2456 2.9653C25.6789 3.45841 25.1768 3.44009 24.4455 3.43446C24.3278 3.4352 24.2101 3.43595 24.0888 3.43671C23.6996 3.43871 23.3105 3.43785 22.9213 3.43705C22.6494 3.43808 22.3775 3.43932 22.1056 3.44077C21.4618 3.44391 20.8181 3.44513 20.1743 3.4455C18.9583 3.44623 17.7422 3.44996 16.5262 3.45522C16.1293 3.45651 15.7325 3.45645 15.3356 3.45623C12.1115 3.46135 9.1712 3.80176 6.70621 6.08327C6.62556 6.15562 6.5449 6.22796 6.46181 6.3025C4.50452 8.14544 3.58943 10.7164 3.4843 13.3585C3.46624 14.1231 3.47005 14.8879 3.47085 15.6526C3.47071 15.8813 3.47052 16.1101 3.4703 16.3388C3.46982 16.9559 3.47 17.573 3.47034 18.19C3.4706 18.837 3.47035 19.484 3.47019 20.131C3.46999 21.2855 3.47031 22.44 3.47084 23.5945C3.47131 24.6408 3.47122 25.6871 3.47075 26.7335C3.47019 27.9511 3.46998 29.1687 3.47029 30.3864C3.47045 31.03 3.47047 31.6737 3.47013 32.3174C3.46983 32.9217 3.47004 33.5259 3.47064 34.1301C3.47078 34.352 3.47074 34.5738 3.47051 34.7957C3.47022 35.0981 3.47058 35.4005 3.4711 35.7029C3.47087 35.7909 3.47063 35.879 3.4704 35.9698C3.47176 36.3802 3.48642 36.7583 3.58823 37.1591C3.63347 37.0826 3.63347 37.0826 3.67963 37.0045C4.40901 35.7739 5.15935 34.559 5.9324 33.3554C6.16462 32.9933 6.39249 32.6291 6.61608 32.2617C8.31951 29.4733 10.6432 27.3105 13.8516 26.4151C14.1021 26.3558 14.3532 26.2993 14.6051 26.2462C14.7097 26.2228 14.8144 26.1995 14.9222 26.1755C17.904 25.6109 21.0096 26.2853 23.5539 27.9066C24.9843 28.918 26.146 30.1918 27.2386 31.5487C27.5416 31.9181 27.8543 32.2781 28.1683 32.638C28.8642 33.4363 29.534 34.253 30.195 35.0804C30.2873 34.9769 30.2873 34.9769 30.3814 34.8713C31.2451 33.9062 31.2451 33.9062 31.6501 33.5214C31.7121 33.4599 31.7741 33.3984 31.838 33.3351C33.752 31.5195 36.3074 30.8699 38.8799 30.9008C41.6058 30.9775 43.8768 32.2237 45.7776 34.1101C45.9566 34.312 46.1108 34.5121 46.2661 34.7318C46.3124 34.7972 46.3586 34.8625 46.4063 34.9298C46.4414 34.9795 46.4764 35.0292 46.5124 35.0804C46.5128 34.9477 46.5132 34.815 46.5136 34.6782C46.5174 33.4273 46.5234 32.1764 46.5316 30.9254C46.5357 30.2823 46.539 29.6392 46.5406 28.9961C46.5422 28.3754 46.5458 27.7548 46.5507 27.1342C46.5523 26.8974 46.5531 26.6606 46.5532 26.4238C46.5534 26.0921 46.5562 25.7605 46.5596 25.4289C46.5591 25.331 46.5586 25.2331 46.5581 25.1323C46.5673 24.5504 46.643 24.2129 47.0321 23.7518C47.4291 23.3747 47.7475 23.3038 48.2793 23.2841C48.8111 23.3038 49.1295 23.3747 49.5265 23.7518C50.056 24.3393 50.0012 24.9282 49.996 25.6916C49.9971 25.8905 49.9971 25.8905 49.9982 26.0934C50.0001 26.4564 49.9994 26.8194 49.9981 27.1824C49.997 27.5646 49.998 27.9467 49.9986 28.3288C49.9994 28.9721 49.9984 29.6153 49.9964 30.2585C49.9942 30.9968 49.9949 31.735 49.9972 32.4734C49.9991 33.1107 49.9993 33.748 49.9983 34.3853C49.9976 34.7643 49.9975 35.1434 49.9989 35.5224C50.0062 37.828 49.8372 39.9178 48.9029 42.0439C48.8735 42.1119 48.844 42.1799 48.8137 42.2499C47.7803 44.5908 45.9945 46.635 43.8102 47.968C43.6987 48.039 43.5873 48.1101 43.4724 48.1832C42.8085 48.5874 42.1328 48.9115 41.4068 49.1892C41.3357 49.2173 41.2646 49.2453 41.1913 49.2741C39.3886 49.928 37.5531 50.0036 35.6563 49.9965C35.3973 49.9971 35.1382 49.9979 34.8791 49.9988C34.2538 50.0004 33.6284 50.0002 33.003 49.999C32.4939 49.9981 31.9848 49.9979 31.4757 49.9984C31.4028 49.9984 31.3298 49.9985 31.2546 49.9986C31.1063 49.9987 30.958 49.9988 30.8097 49.999C29.425 50.0002 28.0403 49.9988 26.6556 49.9966C25.4721 49.9947 24.2887 49.995 23.1053 49.997C21.7249 49.9992 20.3445 50 18.9641 49.9988C18.8164 49.9986 18.6687 49.9985 18.521 49.9984C18.4121 49.9983 18.4121 49.9983 18.3009 49.9982C17.7935 49.9978 17.2861 49.9984 16.7787 49.9994C16.0935 50.0007 15.4083 49.9998 14.7231 49.9974C14.4732 49.9968 14.2234 49.997 13.9735 49.9979C11.849 50.005 9.90879 49.7627 7.9534 48.9034C7.88541 48.874 7.81742 48.8445 7.74736 48.8142C4.6195 47.4334 2.1556 44.7751 0.899375 41.6078C0.810975 41.3732 0.727117 41.1377 0.645633 40.9006C0.609698 40.7974 0.609698 40.7974 0.573037 40.692C0.0386431 39.04 0.00894163 37.4235 0.0125213 35.7041C0.0119276 35.4451 0.0112034 35.1861 0.0103597 34.9271C0.00869644 34.3003 0.00848362 33.6735 0.00903075 33.0466C0.0094532 32.5363 0.00929815 32.026 0.00874529 31.5158C0.00866751 31.4427 0.00858914 31.3697 0.00850899 31.2945C0.0083498 31.1461 0.00819062 30.9977 0.00803006 30.8493C0.00660773 29.4618 0.00716616 28.0743 0.00836151 26.6868C0.00939296 25.4221 0.00804982 24.1574 0.00556242 22.8927C0.00301794 21.589 0.00202994 20.2853 0.00271892 18.9816C0.00307984 18.2518 0.00286355 17.5219 0.00102995 16.792C-0.00067455 16.1051 -0.000154483 15.4182 0.00178959 14.7313C0.00216975 14.4808 0.00185807 14.2303 0.000761933 13.9797C-0.00667014 12.139 0.121047 10.3351 0.801532 8.60363C0.832171 8.52356 0.862809 8.4435 0.894376 8.361C2.18071 5.11802 4.76075 2.49108 7.94356 1.08193C8.32323 0.922624 8.70733 0.780145 9.09666 0.646304C9.19993 0.61037 9.19993 0.61037 9.30529 0.573709C9.54578 0.495917 9.78752 0.431052 10.0321 0.366986C10.1317 0.340566 10.2313 0.314145 10.3339 0.286924C11.7585 -0.0338411 13.2027 0.00749952 14.6553 0.00988374ZM11.695 31.4428C11.634 31.489 11.5731 31.5352 11.5103 31.5828C10.5197 32.3533 9.85675 33.5609 9.22008 34.6192C9.1111 34.7986 9.00188 34.9779 8.89263 35.1571C8.7848 35.334 8.67714 35.5111 8.56949 35.6881C8.29709 36.1336 8.01902 36.5754 7.73904 37.0162C7.26076 37.7706 6.78433 38.5262 6.30997 39.2832C6.24652 39.3841 6.18308 39.485 6.11771 39.5889C5.67564 40.2951 5.2514 41.0103 4.83542 41.7321C6.29012 44.0577 8.49096 45.7227 11.1715 46.3638C12.5901 46.6671 14.0562 46.646 15.4985 46.6405C15.7169 46.6405 15.9353 46.6405 16.1537 46.6406C16.7404 46.6407 17.3272 46.6395 17.9139 46.638C18.5294 46.6367 19.1448 46.6366 19.7603 46.6363C20.923 46.6357 22.0857 46.634 23.2484 46.6319C24.5733 46.6296 25.8982 46.6284 27.2231 46.6274C29.9459 46.6252 32.6688 46.6216 35.3916 46.6169C35.2927 46.4838 35.1936 46.3509 35.0944 46.218C35.0116 46.1069 35.0116 46.1069 34.9272 45.9935C34.737 45.7449 34.5329 45.5144 34.3198 45.2853C33.9989 44.9339 33.6902 44.5771 33.3909 44.207C33.0107 43.737 32.619 43.2788 32.2217 42.8234C31.7565 42.29 31.3029 41.7496 30.8576 41.1994C30.5562 40.8346 30.2462 40.4778 29.9352 40.1211C29.47 39.5877 29.0164 39.0473 28.5711 38.4972C28.2697 38.1323 27.9597 37.7756 27.6487 37.4189C27.1835 36.8855 26.7299 36.3451 26.2845 35.795C25.9262 35.3611 25.5555 34.9383 25.1856 34.5143C24.8515 34.1306 24.525 33.7424 24.2059 33.346C22.5467 31.3122 20.7124 29.839 18.0349 29.4681C15.6694 29.298 13.5056 29.8665 11.695 31.4428ZM33.5209 36.5355C32.9286 37.183 32.9286 37.183 32.7036 37.9848C32.8233 38.2697 32.9902 38.4687 33.1896 38.7051C33.2741 38.8058 33.3586 38.9066 33.4457 39.0104C33.54 39.1209 33.6343 39.2313 33.7287 39.3416C33.7775 39.3989 33.8263 39.4561 33.8766 39.515C34.1369 39.8201 34.398 40.1245 34.6596 40.4285C35.1023 40.9431 35.54 41.4619 35.9779 41.9806C36.1677 42.2053 36.3577 42.4298 36.5477 42.6543C36.6906 42.8231 36.8334 42.9919 36.9762 43.1608C37.168 43.3874 37.3599 43.6139 37.5519 43.8404C38.1868 44.5895 38.8176 45.3419 39.445 46.0973C40.1074 45.9807 40.6612 45.7889 41.2509 45.4672C41.3274 45.4258 41.404 45.3845 41.4829 45.3419C42.1504 44.9711 42.7302 44.5383 43.2905 44.0186C43.3788 43.9386 43.4671 43.8586 43.5581 43.7762C44.2391 43.1306 44.7716 42.4236 45.2653 41.6282C45.3297 41.5247 45.3941 41.4213 45.4605 41.3147C45.6386 40.8406 45.4295 40.5202 45.2348 40.0707C45.0686 39.7167 44.9011 39.3633 44.7326 39.0104C44.6761 38.8889 44.6195 38.7675 44.5613 38.6423C43.6752 36.7864 42.5207 35.399 40.5558 34.6777C37.9663 33.786 35.3632 34.5868 33.5209 36.5355Z"
+                    fill="#2772CC" />
+                  <path
+                    d="M39.7568 0.0551887C40.2734 0.295043 40.5204 0.602372 40.7961 1.09451C40.8336 1.38107 40.8491 1.62431 40.8433 1.90948C40.8434 1.98864 40.8435 2.0678 40.8435 2.14936C40.8432 2.40921 40.84 2.66893 40.8367 2.92876C40.836 3.10962 40.8354 3.29048 40.835 3.47135C40.8334 3.94603 40.8293 4.42065 40.8247 4.8953C40.8204 5.3802 40.8185 5.8651 40.8164 6.35C40.812 7.30044 40.8049 8.25084 40.7961 9.20124C40.8963 9.20032 40.9965 9.1994 41.0997 9.19844C42.0447 9.19001 42.9898 9.18378 43.9348 9.1797C44.4206 9.17753 44.9065 9.1746 45.3923 9.16988C45.8613 9.16536 46.3303 9.16288 46.7994 9.1618C46.9781 9.16103 47.1569 9.15953 47.3356 9.15729C47.5864 9.15426 47.8371 9.15385 48.0879 9.15405C48.1615 9.15255 48.2351 9.15106 48.3108 9.14952C48.8332 9.15384 49.1224 9.29348 49.5265 9.61697C49.9036 10.0139 49.9744 10.3323 49.9942 10.8642C49.9744 11.396 49.9036 11.7144 49.5265 12.1114C49.0489 12.4936 48.6856 12.5864 48.0879 12.5743C48.0088 12.5743 47.9296 12.5744 47.848 12.5745C47.5882 12.5742 47.3285 12.5709 47.0686 12.5677C46.8878 12.5669 46.7069 12.5663 46.5261 12.5659C46.0514 12.5643 45.5768 12.5602 45.1021 12.5556C44.6172 12.5514 44.1323 12.5495 43.6474 12.5474C42.697 12.5429 41.7466 12.5358 40.7961 12.5271C40.7971 12.6273 40.798 12.7274 40.7989 12.8306C40.8074 13.7757 40.8136 14.7207 40.8177 15.6657C40.8199 16.1516 40.8228 16.6374 40.8275 17.1232C40.832 17.5922 40.8345 18.0612 40.8356 18.5303C40.8364 18.709 40.8379 18.8878 40.8401 19.0665C40.8431 19.3173 40.8435 19.568 40.8433 19.8188C40.8448 19.8924 40.8463 19.966 40.8479 20.0418C40.8436 20.5641 40.7039 20.8533 40.3804 21.2574C39.9835 21.6345 39.6651 21.7054 39.1332 21.7251C38.6014 21.7054 38.283 21.6345 37.886 21.2574C37.5037 20.7798 37.411 20.4165 37.4231 19.8188C37.423 19.7397 37.423 19.6605 37.4229 19.579C37.4232 19.3191 37.4264 19.0594 37.4297 18.7996C37.4305 18.6187 37.4311 18.4378 37.4315 18.257C37.4331 17.7823 37.4371 17.3077 37.4418 16.833C37.446 16.3481 37.4479 15.8632 37.45 15.3783C37.4545 14.4279 37.4615 13.4775 37.4703 12.5271C37.3701 12.528 37.2699 12.5289 37.1667 12.5299C36.2217 12.5383 35.2767 12.5445 34.3316 12.5486C33.8458 12.5508 33.36 12.5537 32.8742 12.5584C32.4051 12.563 31.9361 12.5654 31.4671 12.5665C31.2883 12.5673 31.1096 12.5688 30.9308 12.571C30.68 12.5741 30.4293 12.5745 30.1785 12.5743C30.105 12.5758 30.0314 12.5773 29.9556 12.5788C29.4333 12.5745 29.1441 12.4348 28.74 12.1114C28.3628 11.7144 28.292 11.396 28.2723 10.8642C28.292 10.3323 28.3628 10.0139 28.74 9.61697C29.2176 9.23467 29.5809 9.1419 30.1785 9.15405C30.2577 9.15399 30.3368 9.15392 30.4184 9.15386C30.6782 9.15415 30.938 9.15738 31.1978 9.16064C31.3787 9.16142 31.5595 9.16201 31.7404 9.16243C32.2151 9.16401 32.6897 9.16809 33.1643 9.1727C33.6492 9.17696 34.1341 9.17885 34.6191 9.18094C35.5695 9.18539 36.5199 9.19248 37.4703 9.20124C37.4694 9.10107 37.4685 9.00089 37.4675 8.89768C37.4591 7.95266 37.4528 7.00764 37.4488 6.06259C37.4466 5.57675 37.4437 5.09095 37.4389 4.60512C37.4344 4.1361 37.4319 3.6671 37.4309 3.19805C37.4301 3.01929 37.4286 2.84053 37.4263 2.66178C37.4233 2.41098 37.4229 2.1603 37.4231 1.90948C37.4216 1.83592 37.4201 1.76236 37.4186 1.68656C37.4229 1.16424 37.5625 0.875056 37.886 0.470918C38.4339 -0.0495504 39.0405 -0.0412353 39.7568 0.0551887Z"
+                    fill="#2772CC" />
+                </svg>
+
+
+                <!-- Main Text -->
+                <span class="text-[14px] sm:text-[15px] font-semibold text-[#374151] leading-[20px]">
+                  Upload Photo
+                </span>
+
+                <!-- Sub Text -->
+                <span class="mt-[2px] text-[11px] sm:text-[12px] font-medium text-[#9CA3AF] leading-[18px]">
+                  JPG, PNG Up To 2MB
+                </span>
+              </label>
+
+              <input type="file" id="createAccountPhoto" class="hidden" accept=".jpg,.jpeg,.png" />
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- ACCOUNT PREFERENCES -->
+        <!-- ================================================= -->
+
+        <div
+          class="w-full rounded-[25px] border border-[#E5E7EB] bg-white/75 backdrop-blur-[10px] p-[25px] sm:p-[28px] lg:p-[32px] shadow-[inset_0_1px_8px_rgba(229,231,235,0.75),0_2px_8px_rgba(229,231,235,0.35)]">
+
+
+          <div class="mb-[24px]">
+
+            <h3
+              class="font-[var(--outfit-r)] text-[15px] sm:text-[18px] lg:text-[24px] font-semibold leading-[1.2] text-[var(--color10)]">
+              Account Preferences
+            </h3>
+
+            <p class="mt-[8px] text-[12px] sm:text-[16px] leading-[1.3] text-[var(--color1)] capitalize">
+              Choose How You Want To Stay Updated.
+            </p>
+
+          </div>
+
+
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-[24px] gap-y-[10px]">
+
+
+            <!-- SMS -->
+
+            <label
+              class="flex items-center justify-between min-h-[48px] rounded-[8px] border border-[#E5E7EB] bg-white px-[16px] py-[10px] cursor-pointer transition-all duration-300 hover:border-[var(--color4)] hover:shadow-[0_3px_8px_rgba(39,114,204,0.10)]">
+
+              <div class="flex items-center">
+
+                <div class="flex items-center justify-center p-[8px] rounded-full bg-[#EFF6FF] text-[var(--color4)]">
+
+                  <svg width="19" height="18" viewBox="0 0 19 18" fill="none">
+
+                    <path
+                      d="M17.4999 12.5C17.4999 13.4205 16.7537 14.1667 15.8333 14.1667H4.85659C4.41459 14.1668 3.99074 14.3425 3.67825 14.655L1.84325 16.49C1.67404 16.6592 1.41958 16.7098 1.19851 16.6183C0.977437 16.5267 0.833283 16.311 0.833252 16.0717V2.50004C0.833252 1.57957 1.57944 0.833374 2.49992 0.833374H15.8333C16.7537 0.833374 17.4999 1.57957 17.4999 2.50004V12.5Z"
+                      stroke="#3B82F6" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+
+                  </svg>
+
+                </div>
+
+
+                <div class="ml-[8px]">
+
+                  <p class="text-[12px] sm:text-[14px] font-semibold leading-[1.1] text-[var(--color10)]">
+                    SMS
+                  </p>
+
+                  <p class="mt-[2px] text-[10px] sm:text-[12px] text-[#8B929B]">
+                    Notifications
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <input type="checkbox" class="w-[16px] h-[16px] accent-[var(--color4)]" />
+
+            </label>
+
+
+
+            <!-- WHATSAPP -->
+
+            <label
+              class="flex items-center justify-between min-h-[48px] rounded-[8px] border border-[#E5E7EB] bg-white px-[16px] py-[10px] cursor-pointer transition-all duration-300 hover:border-[#22C55E] hover:shadow-[0_3px_8px_rgba(34,197,94,0.10)]">
+
+              <div class="flex items-center">
+
+                <div class="flex items-center justify-center p-[8px] rounded-full bg-[#F0FDF4] text-[#22C55E]">
+
+                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+
+                    <path
+                      d="M11.7041 12.7209C11.4678 13.0313 11.0478 13.1362 10.6933 12.9734C8.37861 11.8374 6.50549 9.9666 5.36659 7.65337C5.19267 7.29663 5.29448 6.86673 5.60992 6.62587L5.99992 6.33337C6.41959 6.01862 6.66658 5.52464 6.66658 5.00004V2.50004C6.66658 1.57957 5.92039 0.833374 4.99992 0.833374H2.49992C1.57944 0.833374 0.833252 1.57957 0.833252 2.50004C0.833252 10.7843 7.54898 17.5 15.8333 17.5C16.7537 17.5 17.4999 16.7538 17.4999 15.8334V13.3334C17.4999 12.4129 16.7537 11.6667 15.8333 11.6667H13.3333C12.8087 11.6667 12.3147 11.9137 11.9999 12.3334L11.7041 12.7209Z"
+                      stroke="#22C55E" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+
+                  </svg>
+
+                </div>
+
+
+                <div class="ml-[8px]">
+
+                  <p class="text-[12px] sm:text-[14px] font-semibold leading-[1.1] text-[var(--color10)]">
+                    WhatsApp
+                  </p>
+
+                  <p class="mt-[2px] text-[10px] sm:text-[12px] text-[#8B929B]">
+                    Notifications
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <input type="checkbox" class="w-[16px] h-[16px] accent-[#22C55E]" />
+
+            </label>
+
+
+
+            <!-- EMAIL -->
+
+            <label
+              class="flex items-center justify-between min-h-[48px] rounded-[8px] border border-[#E5E7EB] bg-white px-[16px] py-[10px] cursor-pointer transition-all duration-300 hover:border-[var(--color4)] hover:shadow-[0_3px_8px_rgba(39,114,204,0.10)]">
+
+              <div class="flex items-center">
+
+                <div class="flex items-center justify-center p-[8px] rounded-full bg-[#EFF6FF] text-[var(--color4)]">
+
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+
+                    <path
+                      d="M18.3334 5.83337L10.8409 10.6059C10.3233 10.9065 9.68432 10.9065 9.16675 10.6059L1.66675 5.83337"
+                      stroke="#3B82F6" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+
+                    <path
+                      d="M3.33341 3.33337H16.6667C17.5872 3.33337 18.3334 4.07957 18.3334 5.00004V15C18.3334 15.9205 17.5872 16.6667 16.6667 16.6667H3.33341C2.41294 16.6667 1.66675 15.9205 1.66675 15V5.00004C1.66675 4.07957 2.41294 3.33337 3.33341 3.33337Z"
+                      stroke="#3B82F6" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+
+                  </svg>
+
+                </div>
+
+
+                <div class="ml-[8px]">
+
+                  <p class="text-[12px] sm:text-[14px] font-semibold leading-[1.1] text-[var(--color10)]">
+                    Email
+                  </p>
+
+                  <p class="mt-[2px] text-[10px] sm:text-[12px] text-[#8B929B]">
+                    Notifications
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <input type="checkbox" class="w-[16px] h-[16px] accent-[var(--color4)]" />
+
+            </label>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM -->
+        <!-- ================================================= -->
+
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-[10px]">
+
+
+          <!-- INFO -->
+
+          <div class="flex-1 min-h-[40px] rounded-[8px] bg-[#BDE5FA] px-[12px] flex items-center">
+
+            <svg class="w-[14px] h-[14px] mr-[6px] flex-shrink-0 text-[var(--color4)]" viewBox="0 0 24 24" fill="none">
+
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" />
+
+              <path d="M12 10V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+
+              <circle cx="12" cy="7" r="0.8" fill="currentColor" />
+
+            </svg>
+
+
+            <span class="text-[9px] sm:text-[12px] text-[var(--color4)]">
+              You Can Edit Your Details Anytime After Creating Your Account.
+            </span>
+
+          </div>
+
+
+
+          <!-- SUBMIT -->
+
+          <button type="submit"
+            class="rounded-[20px] bg-[var(--color4)] px-[14px] py-[8px] text-[11px] sm:px-[28px] sm:py-[12px] sm:text-[14px] lg:px-[36px] lg:py-[16px] lg:text-[16px] font-semibold text-white transition-all duration-300 ease-in-out hover:bg-[var(--color-15)] hover:-translate-y-[1px] hover:shadow-[0_4px_10px_rgba(39,114,204,0.22)] active:translate-y-0">
+
+            Submit
+
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+    <!-- login end  -->
+   
     <!-- js link -->
     <script src="./js/script.js"></script>
+    <script src="./js/modal.js"></script>
+      <script src="./js/createaccount.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const loader = document.getElementById("loader");
 
-     <script>
-      
-    // Elements
-    const searchBtn = document.getElementById("searchBtn");
-    const searchIcon = document.getElementById("searchIcon");
-    const searchContent = document.getElementById("searchContent");
-    const searchInput = document.getElementById("searchInput");
+          loader.style.opacity = "0";
 
-    const searchOptions =
-        document.querySelectorAll(".search-option");
+          setTimeout(() => {
+            if (loader) {
+              loader.style.display = "none";
+            }
+            document.body.classList.remove("page-loading");
+          }, 1000);
+        }, 2000);
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // -----------------------------
+        // Search dropdown
+        // -----------------------------
+        const searchBtn = document.getElementById("searchBtn");
+        const searchIcon = document.getElementById("searchIcon");
+        const searchContent = document.getElementById("searchContent");
+        const searchInput = document.getElementById("searchInput");
+        const searchOptions = document.querySelectorAll(".search-option");
+        const removeButtons = document.querySelectorAll(".remove-option");
+        const clearAll = document.getElementById("clearAll");
+        const recentSearches = document.getElementById("recentSearches");
 
-    const removeButtons =
-        document.querySelectorAll(".remove-option");
-
-    const clearAll =
-        document.getElementById("clearAll");
-
-    const recentSearches =
-        document.getElementById("recentSearches");
-
-
-    // Open / Close Search Dropdown
-    searchBtn.addEventListener("click", function () {
-
-        searchContent.classList.toggle("hidden");
-
-        // Change Search Icon to X
-        if (searchContent.classList.contains("hidden")) {
-
+        function closeSearch() {
+          if (!searchContent) return;
+          searchContent.classList.add("hidden");
+          if (searchIcon) {
             searchIcon.classList.remove("fa-xmark");
             searchIcon.classList.add("fa-magnifying-glass");
-
-        } else {
-
-            searchIcon.classList.remove("fa-magnifying-glass");
-            searchIcon.classList.add("fa-xmark");
-
-            searchInput.focus();
-
+          }
         }
 
-    });
+        if (searchBtn && searchContent) {
+          searchBtn.addEventListener("click", function (event) {
+            event.stopPropagation();
+            searchContent.classList.toggle("hidden");
 
+            const isOpen = !searchContent.classList.contains("hidden");
+            if (searchIcon) {
+              searchIcon.classList.toggle("fa-xmark", isOpen);
+              searchIcon.classList.toggle("fa-magnifying-glass", !isOpen);
+            }
 
-    // Click Search Option
-    searchOptions.forEach(option => {
+            if (isOpen && searchInput) {
+              setTimeout(() => searchInput.focus(), 0);
+            }
+          });
+        }
 
-        option.addEventListener("click", function () {
-
-            const placeholder =
-                this.dataset.placeholder;
-
-            searchInput.placeholder =
-                placeholder;
-
+        searchOptions.forEach(function (option) {
+          option.addEventListener("click", function () {
+            if (!searchInput) return;
+            const placeholder = this.dataset.placeholder;
+            if (placeholder) searchInput.placeholder = placeholder;
             searchInput.focus();
-
+          });
         });
 
-    });
-
-
-    // Remove Search Option
-    removeButtons.forEach(button => {
-
-        button.addEventListener("click", function (e) {
-
-            e.stopPropagation();
-
-            const option =
-                this.closest(".search-option");
-
-            option.remove();
-
+        removeButtons.forEach(function (button) {
+          button.addEventListener("click", function (event) {
+            event.stopPropagation();
+            const option = this.closest(".search-option");
+            if (option) option.remove();
+          });
         });
 
-    });
+        if (clearAll && recentSearches) {
+          clearAll.addEventListener("click", function () {
+            recentSearches.innerHTML = "";
+          });
+        }
 
-
-    // Clear All Recent Searches
-    clearAll.addEventListener("click", function () {
-
-        recentSearches.innerHTML = "";
-
-    });
-
-
-    // Recent Search Click
-    document.querySelectorAll(".recent-item")
-        .forEach(item => {
-
-            item.addEventListener("click", function () {
-
-                searchInput.value =
-                    this.textContent.trim();
-
-                searchInput.focus();
-
-            });
-
+        document.querySelectorAll(".recent-item").forEach(function (item) {
+          item.addEventListener("click", function () {
+            if (!searchInput) return;
+            searchInput.value = item.textContent.trim();
+            searchInput.focus();
+          });
         });
 
-    </script> 
-      <script>
-    const logoutDialog = document.getElementById('logoutDialog');
-    const triggerLogoutBtn = document.getElementById('triggerLogoutBtn');
-    const dialogConfirmLogoutBtn = document.getElementById('dialogConfirmLogoutBtn');
-    const dialogCloseTriggers = document.querySelectorAll('[data-close]');
- 
-    function openLogoutDialog() {
-      logoutDialog.classList.remove('modal-hidden');
-      document.body.style.overflow = 'hidden';
-    }
- 
-    function closeLogoutDialog() {
-      logoutDialog.classList.add('modal-hidden');
-      document.body.style.overflow = '';
-    }
- 
-    triggerLogoutBtn.addEventListener('click', openLogoutDialog);
- 
-    dialogCloseTriggers.forEach(el => el.addEventListener('click', closeLogoutDialog));
- 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !logoutDialog.classList.contains('modal-hidden')) {
-        closeLogoutDialog();
-      }
-    });
- 
-    dialogConfirmLogoutBtn.addEventListener('click', () => {
-      // Replace with real logout logic
-      console.log('User logged out');
-      closeLogoutDialog();
-    });
-  </script>
-      
+        document.addEventListener("click", function (event) {
+          if (
+            searchContent &&
+            searchBtn &&
+            !searchContent.contains(event.target) &&
+            !searchBtn.contains(event.target)
+          ) {
+            closeSearch();
+          }
+        });
+
+        // -----------------------------
+        // Desktop user dropdown
+        // -----------------------------
+        const userDropdownBtn = document.getElementById("userDropdownBtn");
+        const userMegaMenu = document.getElementById("userMegaMenu");
+
+        function closeDesktopUserMenu() {
+          if (userMegaMenu) userMegaMenu.classList.add("hidden");
+        }
+
+        if (userDropdownBtn && userMegaMenu) {
+          userDropdownBtn.setAttribute("aria-haspopup", "true");
+          userDropdownBtn.setAttribute("aria-expanded", "false");
+
+          userDropdownBtn.addEventListener("click", function (event) {
+            event.stopPropagation();
+            const open = userMegaMenu.classList.toggle("hidden") === false;
+            userDropdownBtn.setAttribute("aria-expanded", String(open));
+          });
+
+          userMegaMenu.addEventListener("click", function (event) {
+            event.stopPropagation();
+          });
+
+          document.addEventListener("click", closeDesktopUserMenu);
+        }
+
+        // -----------------------------
+        // Mobile sidebar
+        // -----------------------------
+        const menuBtn = document.getElementById("menuBtn");
+        const closeBtn = document.getElementById("closeBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const overlay = document.getElementById("overlay");
+
+        function openMobileMenu() {
+          if (!mobileMenu) return;
+          mobileMenu.classList.remove("right-[-100%]");
+          mobileMenu.classList.add("right-0");
+          if (overlay) overlay.classList.remove("hidden");
+          document.body.classList.add("overflow-hidden");
+        }
+
+        function closeMobileMenu() {
+          if (!mobileMenu) return;
+          mobileMenu.classList.remove("right-0");
+          mobileMenu.classList.add("right-[-100%]");
+          if (overlay) overlay.classList.add("hidden");
+          document.body.classList.remove("overflow-hidden");
+        }
+
+        if (menuBtn) menuBtn.addEventListener("click", openMobileMenu);
+        if (closeBtn) closeBtn.addEventListener("click", closeMobileMenu);
+        if (overlay) overlay.addEventListener("click", closeMobileMenu);
+
+        // -----------------------------
+        // Mobile user dropdown
+        // -----------------------------
+        const mobileUserDropdownBtn =
+          document.getElementById("mobileUserDropdownBtn");
+        const mobileUserMegaMenu =
+          document.getElementById("mobileUserMegaMenu");
+
+        if (mobileUserDropdownBtn && mobileUserMegaMenu) {
+          mobileUserDropdownBtn.addEventListener("click", function (event) {
+            event.stopPropagation();
+            const isHidden = mobileUserMegaMenu.classList.toggle("hidden");
+            mobileUserDropdownBtn.setAttribute(
+              "aria-expanded",
+              String(!isHidden)
+            );
+          });
+
+          mobileUserMegaMenu.addEventListener("click", function (event) {
+            event.stopPropagation();
+          });
+
+          document.addEventListener("click", function () {
+            mobileUserMegaMenu.classList.add("hidden");
+            mobileUserDropdownBtn.setAttribute("aria-expanded", "false");
+          });
+        }
+
+        // -----------------------------
+        // Logout modal
+        // -----------------------------
+        const logoutDialog = document.getElementById("logoutDialog");
+        const triggerLogoutBtn =
+          document.getElementById("triggerLogoutBtn");
+        const mobileTriggerLogoutBtn =
+          document.getElementById("mobileTriggerLogoutBtn");
+        const dialogConfirmLogoutBtn =
+          document.getElementById("dialogConfirmLogoutBtn");
+        const dialogCloseTriggers =
+          document.querySelectorAll("[data-close]");
+
+        function openLogoutDialog(event) {
+          if (event) event.preventDefault();
+          if (!logoutDialog) return;
+
+          logoutDialog.classList.remove("modal-hidden");
+          document.body.classList.add("overflow-hidden");
+        }
+
+        function closeLogoutDialog() {
+          if (!logoutDialog) return;
+
+          logoutDialog.classList.add("modal-hidden");
+          document.body.classList.remove("overflow-hidden");
+        }
+
+        if (triggerLogoutBtn) {
+          triggerLogoutBtn.addEventListener("click", openLogoutDialog);
+        }
+
+        if (mobileTriggerLogoutBtn) {
+          mobileTriggerLogoutBtn.addEventListener("click", function (event) {
+            openLogoutDialog(event);
+            if (typeof closeMobileMenu === "function") closeMobileMenu();
+            if (mobileUserMegaMenu) mobileUserMegaMenu.classList.add("hidden");
+          });
+        }
+
+        dialogCloseTriggers.forEach(function (element) {
+          element.addEventListener("click", closeLogoutDialog);
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (
+            event.key === "Escape" &&
+            logoutDialog &&
+            !logoutDialog.classList.contains("modal-hidden")
+          ) {
+            closeLogoutDialog();
+          }
+
+          if (event.key === "Escape") {
+            closeSearch();
+            closeDesktopUserMenu();
+            closeMobileMenu();
+          }
+        });
+
+        if (dialogConfirmLogoutBtn) {
+          dialogConfirmLogoutBtn.addEventListener("click", function () {
+            // Connect your real authentication/logout API here.
+            closeLogoutDialog();
+          });
+        }
+
+        // -----------------------------
+        // Prevent placeholder links from jumping to the top
+        // -----------------------------
+        document.querySelectorAll('a[href="#"]').forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            // Keep links that have an actual JS/modal purpose working.
+            const id = link.id || "";
+            const classes = link.className || "";
+
+            if (
+              id === "triggerLogoutBtn" ||
+              id === "mobileTriggerLogoutBtn" ||
+              classes.includes("openSignup")
+            ) {
+              return;
+            }
+
+            event.preventDefault();
+          });
+        });
+      });
+    </script>
+      </body>
 </html>
