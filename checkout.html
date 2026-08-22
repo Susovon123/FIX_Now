@@ -654,9 +654,27 @@
                   </p>
                 </div>
                 <a
-                  href="#"
+                     href="javascript:void(0)"
+    id="proceedToPaymentBtn"
                   class="font-[family-name:var(--albert-sans-r)] text-[9px] lg:text-[14px] font-semibold text-[var(--color4)] hover:underline"
-                  >Change Method</a
+                  >Change Method</a 
+                  
+  <!-- Selected Method Display -->
+  <div
+    id="selectedMethodDisplay"
+    class="hidden mt-4 items-center gap-3 bg-[var(--color2)] border border-[var(--color11)] rounded-xl px-4 py-3.5"
+  >
+    <span id="selectedMethodIcon" class="w-6 h-6 shrink-0 text-[var(--color4)]"></span>
+    <div class="flex-1">
+      <p class="text-xs text-[var(--color1)] normal-case mb-0.5">Selected payment method</p>
+      <p id="selectedMethodLabel" class="text-sm font-semibold text-[var(--color9)]"></p>
+    </div>
+    <span class="w-5 h-5 shrink-0 rounded-full bg-[var(--color4)] flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </span>
+  </div>
                 >
               </div>
 
@@ -958,29 +976,12 @@
 
             <!-- Proceed Button -->
   <a
-    href="javascript:void(0)"
-    id="proceedToPaymentBtn"
+ 
     class="w-full block text-center rounded-full bg-[var(--color4)] text-white font-[family-name:var(--albert-sans-r)] font-semibold text-[12px] lg:text-[16px] py-3.5 hover:bg-[var(--color5)] transition-colors"
   >
     Proceed To Payment
   </a>
  
-  <!-- Selected Method Display -->
-  <div
-    id="selectedMethodDisplay"
-    class="hidden mt-4 items-center gap-3 bg-[var(--color2)] border border-[var(--color11)] rounded-xl px-4 py-3.5"
-  >
-    <span id="selectedMethodIcon" class="w-6 h-6 shrink-0 text-[var(--color4)]"></span>
-    <div class="flex-1">
-      <p class="text-xs text-[var(--color1)] normal-case mb-0.5">Selected payment method</p>
-      <p id="selectedMethodLabel" class="text-sm font-semibold text-[var(--color9)]"></p>
-    </div>
-    <span class="w-5 h-5 shrink-0 rounded-full bg-[var(--color4)] flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="20 6 9 17 4 12"></polyline>
-      </svg>
-    </span>
-  </div>
       </div>
       </div>
     </main>
@@ -1841,15 +1842,8 @@
       </div>
     </div>
   </div>
-   <div class="flex-1">
-      <p class="text-xs text-[var(--color1)] normal-case mb-0.5">Selected payment method</p>
-      <p id="selectedMethodLabel" class="text-sm font-semibold text-[var(--color9)]"></p>
-    </div>
-    <span class="w-5 h-5 shrink-0 rounded-full bg-[var(--color4)] flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="20 6 9 17 4 12"></polyline>
-      </svg>
-    </span>
+ 
+
   </div>
 </div>
  
