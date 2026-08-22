@@ -532,7 +532,44 @@ dialog::backdrop {
   );
   filter: blur(65px);
   z-index: -1;
-}
+} 
+/* logout pannel */ 
+
+  /* Modal open/close animation */
+  .modal-overlay {
+    transition: opacity 0.2s ease;
+  }
+  .modal-panel {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .modal-hidden {
+    pointer-events: none;
+  }
+  .modal-hidden .modal-overlay {
+    opacity: 0;
+  }
+  .modal-hidden .modal-panel {
+    transform: scale(0.95) translateY(8px);
+    opacity: 0;
+  }
+ 
+
+/* payment  */ 
+  .method-hidden { pointer-events: none; }
+  .method-hidden .method-overlay { opacity: 0; }
+  .method-hidden .method-panel {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  @media (min-width: 640px) {
+    .method-hidden .method-panel {
+      transform: scale(0.96) translateY(12px);
+    }
+  }
+ 
+  .method-overlay, .method-panel {
+    transition: all 0.25s ease;
+  }
 
 @media (max-width: 1023px) {
   .faq-section::after {

@@ -303,16 +303,7 @@
                             >
                           </li>
                       
-                    
-                      
-                       
-                        </ul>
-                      </div>
-                      <div class="col-span-6">
-                        <ul class="space-y-2">
-                   
-                          </li>
-                          <li>
+                    <li>
                             <a
                               href="booking-history.html"
                               class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
@@ -320,14 +311,18 @@
                             >
                           </li>
                           <li>
-                            <a
+                            <a 
+                             id="triggerLogoutBtn"
                               href="#"
                               class="relative text-[16px] font-semibold text-[var(--color10)] hover:text-[var(--color4)] transition-all duration-300 after:absolute after:left-1/2 after:-bottom-2 after:h-[1.5px] after:w-0 after:bg-[var(--color10)] after:transition-all after:duration-300 after:-translate-x-1/2 hover:after:w-full"
                               >Logout</a
                             >
                           </li>
+                      
+                       
                         </ul>
                       </div>
+                  
                     </div>
                   </div>
                 </div>
@@ -516,12 +511,12 @@
 
         <div class="px-8 mt-6 space-y-4">
           <a
-            href="#"
+            href="registration-process.html"
             class="openSignup cmn-btn relative block w-full overflow-hidden bg-[var(--color4)] z-10 py-[16px] rounded-[20px] text-center text-[18px] font-semibold text-white"
             >Sign Up</a
           >
           <a
-            href="#"
+            href="work-with-us.html"
             class="block w-full border-2 border-[var(--color4)] rounded-[20px] py-[16px] text-center text-[18px] font-semibold text-[var(--color5)] hover:bg-[var(--color4)] hover:text-white transition-all duration-300"
             >Work With Us</a
           >
@@ -2368,11 +2363,12 @@
                 </label>
               </div>
 
-              <button
-                type="submit"
-                class="cmn-btn group w-full h-[60px] sm:h-[68px] lg:h-[76px] mt-[20px] rounded-[20px] bg-[var(--color4)] transition-all duration-500 flex items-center justify-center text-[15px] sm:text-[16px] font-semibold text-[var(--color2)]"
+                 <a
+                href="registration-process.html"
+                class="group w-full h-[60px] sm:h-[68px] lg:h-[76px] mt-[20px] rounded-[20px] bg-[var(--color4)] hover:bg-[var(--color-15)] transition-all duration-500 flex items-center justify-center text-[15px] sm:text-[16px] font-semibold text-[var(--color2)]"
               >
                 Create Account
+
                 <svg
                   class="ml-[16px] transition-transform duration-500 ease-in-out group-hover:translate-x-1"
                   width="22"
@@ -2388,7 +2384,7 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-              </button>
+              </a>
 
               <div class="flex items-center my-[24px]">
                 <div class="w-full h-[1px] bg-[#9CA3AF]"></div>
@@ -2629,7 +2625,56 @@
         </section>
       </div>
     </div>
+<!-- logout  modal --> 
 
+  <div id="logoutDialog" class="modal-hidden fixed inset-0 z-50 flex items-center justify-center">
+    <!-- Overlay -->
+    <div class="modal-overlay absolute inset-0 bg-black/40" data-close></div>
+ 
+    <!-- Panel -->
+    <div
+      class="modal-panel relative bg-[var(--color2)] rounded-2xl shadow-xl w-[92%] max-w-sm px-8 py-8 text-center"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="logoutDialogTitle"
+    >
+      <!-- Icon -->
+      <div class="mx-auto mb-5 flex items-center justify-center w-12 h-12 rounded-full bg-red-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <polyline points="16 17 21 12 16 7"></polyline>
+          <line x1="21" y1="12" x2="9" y2="12"></line>
+        </svg>
+      </div>
+ 
+      <!-- Title -->
+      <h2 id="logoutDialogTitle" class="font-outfit text-xl font-semibold text-[var(--color6)] mb-2">
+        Log out?
+      </h2>
+ 
+      <!-- Description -->
+      <p class="text-sm text-[var(--color1)] leading-relaxed mb-7 normal-case">
+        Are you sure you want to log out of your account? You'll need to sign back in to access your data.
+      </p>
+ 
+      <!-- Actions -->
+      <div class="flex items-center gap-3">
+        <button
+          id="dialogCancelBtn"
+          data-close
+          class="flex-1 py-2.5 rounded-lg border border-[var(--color4)] text-[var(--color4)] font-medium text-sm hover:bg-[var(--color-14)] transition-colors"
+        >
+          Cancel
+        </button>
+        <button
+          id="dialogConfirmLogoutBtn"
+          class="flex-1 py-2.5 rounded-lg border border-red-500 text-red-500 font-medium text-sm hover:bg-red-50 transition-colors"
+        >
+          Logout
+        </button>
+      </div>
+    </div>
+  </div>
     <!-- Vendor scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -2964,5 +3009,37 @@ const observer = new IntersectionObserver(
 
 observer.observe(counter);
     </script>
+ <script>
+    const logoutDialog = document.getElementById('logoutDialog');
+    const triggerLogoutBtn = document.getElementById('triggerLogoutBtn');
+    const dialogConfirmLogoutBtn = document.getElementById('dialogConfirmLogoutBtn');
+    const dialogCloseTriggers = document.querySelectorAll('[data-close]');
+ 
+    function openLogoutDialog() {
+      logoutDialog.classList.remove('modal-hidden');
+      document.body.style.overflow = 'hidden';
+    }
+ 
+    function closeLogoutDialog() {
+      logoutDialog.classList.add('modal-hidden');
+      document.body.style.overflow = '';
+    }
+ 
+    triggerLogoutBtn.addEventListener('click', openLogoutDialog);
+ 
+    dialogCloseTriggers.forEach(el => el.addEventListener('click', closeLogoutDialog));
+ 
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !logoutDialog.classList.contains('modal-hidden')) {
+        closeLogoutDialog();
+      }
+    });
+ 
+    dialogConfirmLogoutBtn.addEventListener('click', () => {
+      // Replace with real logout logic
+      console.log('User logged out');
+      closeLogoutDialog();
+    });
+  </script>
   </body>
 </html>
