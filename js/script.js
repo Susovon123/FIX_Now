@@ -343,7 +343,62 @@ const popularServiceSwiper = new Swiper(".popular-service-swiper", {
     },
 });
 
+const testimonialSwiper = new Swiper(".testimonal-swiper", {
+  slidesPerView: 2,
+  spaceBetween: 30,
 
+  loop: true,
+
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+
+  breakpoints: {
+    1200: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+
+    991: {
+      slidesPerView: 2,
+      spaceBetween: 25,
+    },
+
+    780: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+
+    545: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+
+    480: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+  },
+});
+
+
+// Custom Previous Button
+document.querySelector(".testimonialPrev").addEventListener("click", () => {
+  testimonialSwiper.slidePrev();
+});
+
+
+// Custom Next Button
+document.querySelector(".testimonialNext").addEventListener("click", () => {
+  testimonialSwiper.slideNext();
+});
 //   FAQ Accordian
 
 console.log("FAQ JS loaded");
