@@ -4839,118 +4839,64 @@
                 </p>
               </div>
 
-              <!-- =====================
-                       SERVICE SELECTOR
-                  ====================== -->
-              <div class="mb-[20px]">
-                <h2
-                  class="font-sans text-[17px] sm:text-[19px] font-semibold text-[gray-900] mb-[12px]"
-                >
-                  Select A Service
-                </h2>
+          <!-- =====================
+     SERVICE SELECTOR
+====================== -->
+<div class="mb-[20px]">
+  <h2 class="font-sans text-[17px] sm:text-[19px] font-semibold text-[gray-900] mb-[12px]">
+    Select A Service
+  </h2>
 
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-[8px]">
-                  <!-- Service 1 -->
-                  <button
-                    type="button"
-                    class="text-left border-2 rounded-[10px] bg-white p-[8px] hover:border-blue-600 transition duration-200 cursor-pointer"
-                  >
-                    <div
-                      class="h-[55px] sm:h-[65px] rounded-[7px] bg-white flex items-center justify-center"
-                    >
-                      <div
-                        class="w-[45px] h-[48px] rounded-[6px] border border-green-200 bg-green-50 flex flex-col items-center justify-center"
-                      >
-                        <span
-                          class="text-[17px] font-bold text-green-500 leading-none"
-                          >25%</span
-                        >
-                        <span class="text-[12px] font-bold text-green-500"
-                          >OFF</span
-                        >
-                      </div>
-                    </div>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-[8px]">
+    <!-- Service 1 -->
+    <button type="button" id="servicePlansBtn"
+      class="text-left border-2 rounded-[10px] bg-white p-[8px] hover:border-blue-600 transition duration-200 cursor-pointer">
+      <div class="h-[55px] sm:h-[65px] rounded-[7px] bg-white flex items-center justify-center">
+        <div class="w-[45px] h-[48px] rounded-[6px] border border-green-200 bg-green-50 flex flex-col items-center justify-center">
+          <span class="text-[17px] font-bold text-green-500 leading-none">25%</span>
+          <span class="text-[12px] font-bold text-green-500">OFF</span>
+        </div>
+      </div>
+      <p class="text-[12px] sm:text-[13px] text-[gray-900] font-semibold mt-[5px]">Service Plans</p>
+    </button>
 
-                    <p
-                      class="text-[12px] sm:text-[13px] text-[gray-900] font-semibold mt-[5px]"
-                    >
-                      Service Plans
-                    </p>
-                  </button>
+    <!-- Service 2 -->
+    <button type="button" id="serviceBtn"
+      class="text-left border-2 rounded-[10px] bg-white p-[8px] hover:border-blue-600 transition duration-200 cursor-pointer">
+      <div class="h-[55px] sm:h-[65px] rounded-[7px] bg-white flex items-center justify-center p-[12px]">
+        <figure>
+          <img src="assets/images/53c5a4a278152d40b3e1a5931baef2ff241c2049.png" alt=""
+            class="w-full max-w-[180px] h-auto max-h-[53px] object-contain mt-[3px]" />
+        </figure>
+      </div>
+      <p class="text-[12px] sm:text-[13px] text-[gray-900] font-semibold mt-[5px]">Service</p>
+    </button>
 
-                  <!-- Service 2 -->
-                  <button
-                    type="button"
-                    class="text-left border-2 rounded-[10px] bg-white p-[8px] hover:border-blue-600 transition duration-200 cursor-pointer"
-                  >
-                    <div
-                      class="h-[55px] sm:h-[65px] rounded-[7px] bg-white flex items-center justify-center p-[12px]"
-                    >
-                      <figure>
-                        <img
-                          src="assets/images/53c5a4a278152d40b3e1a5931baef2ff241c2049.png"
-                          alt=""
-                          class="w-full max-w-[180px] h-auto max-h-[53px] object-contain mt-[3px]"
-                        />
-                      </figure>
-                    </div>
+    <!-- Service 3 -->
+    <button type="button" id="repairGasBtn"
+      class="text-left border-2 rounded-[10px] bg-white p-[8px] hover:border-blue-600 transition duration-200 cursor-pointer">
+      <div class="h-[55px] sm:h-[65px] rounded-[7px] bg-white flex items-center justify-center">
+        <figure>
+          <img src="assets/images/290adad60dbf461d93968f047b2d9026e768bcc3.png" alt=""
+            class="w-full max-w-[180px] h-auto max-h-[53px] object-contain mt-[3px]" />
+        </figure>
+      </div>
+      <p class="text-[12px] sm:text-[13px] text-[gray-900] font-semibold mt-[5px]">Repair Gas Refill</p>
+    </button>
 
-                    <p
-                      class="text-[12px] sm:text-[13px] text-[gray-900] font-semibold mt-[5px]"
-                    >
-                      Service
-                    </p>
-                  </button>
-
-                  <!-- Service 3 -->
-                  <button
-                    type="button"
-                    class="text-left border-2 rounded-[10px] bg-white p-[8px] hover:border-blue-600 transition duration-200 cursor-pointer"
-                  >
-                    <div
-                      class="h-[55px] sm:h-[65px] rounded-[7px] bg-white flex items-center justify-center"
-                    >
-                      <figure>
-                        <img
-                          src="assets/images/290adad60dbf461d93968f047b2d9026e768bcc3.png"
-                          alt=""
-                          class="w-full max-w-[180px] h-auto max-h-[53px] object-contain mt-[3px]"
-                        />
-                      </figure>
-                    </div>
-
-                    <p
-                      class="text-[12px] sm:text-[13px] text-[gray-900] font-semibold mt-[5px]"
-                    >
-                      Repair Gas Refill
-                    </p>
-                  </button>
-
-                  <!-- Service 4 -->
-                  <button
-                    type="button"
-                    class="text-left border-2 rounded-[10px] bg-white p-[8px] hover:border-blue-600 transition duration-200 cursor-pointer"
-                  >
-                    <div
-                      class="h-[55px] sm:h-[65px] rounded-[7px] bg-white flex items-center justify-center"
-                    >
-                      <figure>
-                        <img
-                          src="assets/images/a9bb058716c97e4cd4b04e8a00637a3398f62b14.png"
-                          alt=""
-                          class="w-full max-w-[180px] h-auto max-h-[53px] object-contain mt-[3px]"
-                        />
-                      </figure>
-                    </div>
-
-                    <p
-                      class="text-[12px] sm:text-[13px] text-[gray-900] font-semibold mt-[5px]"
-                    >
-                      Install Uninstall
-                    </p>
-                  </button>
-                </div>
-              </div>
+    <!-- Service 4 -->
+    <button type="button" id="installUninstallBtn"
+      class="text-left border-2 rounded-[10px] bg-white p-[8px] hover:border-blue-600 transition duration-200 cursor-pointer">
+      <div class="h-[55px] sm:h-[65px] rounded-[7px] bg-white flex items-center justify-center">
+        <figure>
+          <img src="assets/images/a9bb058716c97e4cd4b04e8a00637a3398f62b14.png" alt=""
+            class="w-full max-w-[180px] h-auto max-h-[53px] object-contain mt-[3px]" />
+        </figure>
+      </div>
+      <p class="text-[12px] sm:text-[13px] text-[gray-900] font-semibold mt-[5px]">Install Uninstall</p>
+    </button>
+  </div>
+</div>
 
               <!-- =====================
                        TRUST BAR
@@ -5080,230 +5026,110 @@
                 </div>
               </div>
 
-              <!-- =====================
-                       PLAN LIST
-                  ====================== -->
-              <div class="space-y-[10px]">
-                <!-- ANNUAL -->
-                <div
-                  class="border border-[gray-200] rounded-[10px] bg-white p-[10px] sm:p-[12px] shadow-[0_2px_7px_rgba(0,0,0,0.05)]"
-                >
-                  <div
-                    class="flex items-center flex-wrap gap-[6px] justify-between mb-[8px]"
-                  >
-                    <h3
-                      class="font-sans text-[15px] sm:text-[17px] font-semibold text-[gray-900]"
-                    >
-                      Annual Service Plan
-                      <span
-                        class="ml-[3px] px-[5px] py-[2px] rounded-[4px] bg-green-100 text-green-500 text-[10px] font-semibold"
-                      >
-                        25% OFF
-                      </span>
-                    </h3>
-                  </div>
+        <!-- =====================
+     PLAN LIST
+====================== -->
+<div class="space-y-[10px] hidden" id="planListSection">
+  <!-- ANNUAL -->
+  <div class="border border-[gray-200] rounded-[10px] bg-white p-[10px] sm:p-[12px] shadow-[0_2px_7px_rgba(0,0,0,0.05)]">
+    <div class="flex items-center flex-wrap gap-[6px] justify-between mb-[8px]">
+      <h3 class="font-sans text-[15px] sm:text-[17px] font-semibold text-[gray-900]">
+        Annual Service Plan
+        <span class="ml-[3px] px-[5px] py-[2px] rounded-[4px] bg-green-100 text-green-500 text-[10px] font-semibold">25% OFF</span>
+      </h3>
+    </div>
+    <div class="bg-[#f3f4f6] rounded-[5px] px-[10px] py-[10px] mb-[10px]">
+      <p class="font-sans text-[15px] sm:text-[17px] font-semibold text-[gray-900]">Annual Service Plan</p>
+      <p class="text-[13px] mt-[3px]">
+        <span class="line-through text-gray-400 mr-[3px]">₹999</span>
+        <span class="font-semibold text-green-500">₹749/AC</span>
+      </p>
+      <p class="text-[10px] text-[gray-500] mt-[2px]">Starts At ₹749/AC</p>
+      <p class="text-[10px] text-[gray-500]">AC Valid For 1 Year</p>
+    </div>
+    <p class="text-[11px] font-semibold text-[gray-900] mb-[5px]">What's Included</p>
+    <ul class="text-[10px] sm:text-[11px] text-[gray-500] leading-[1.7]">
+      <li>✓ 2 Comprehensive Service In 1 Year</li>
+      <li>✓ Applicable for Split Window or Split AC</li>
+      <li>✓ Deep Cleaning of Filters, Condenser & Evaporator</li>
+      <li>✓ Performance Check & Optimization</li>
+    </ul>
+    <div class="flex items-center flex-wrap gap-[8px] justify-between mt-[10px]">
+      <p class="text-[10px] text-[gray-500]">✓ Free Cancellation Before 6 Hours</p>
+      <button type="button"
+        class="min-w-[40px] sm:min-w-[55px] h-[25px] rounded-[5px] border border-blue-300 bg-blue-50 text-[11px] sm:text-[12px] text-[blue-600] font-semibold hover:bg-[blue-600] hover:text-white transition">
+        Add
+      </button>
+    </div>
+  </div>
 
-                  <div
-                    class="bg-[#f3f4f6] rounded-[5px] px-[10px] py-[10px] mb-[10px]"
-                  >
-                    <p
-                      class="font-sans text-[15px] sm:text-[17px] font-semibold text-[gray-900]"
-                    >
-                      Annual Service Plan
-                    </p>
+  <!-- HALF YEARLY -->
+  <div class="border border-[gray-200] rounded-[10px] bg-white p-[10px] sm:p-[12px] shadow-[0_2px_7px_rgba(0,0,0,0.05)]">
+    <div class="flex items-center flex-wrap gap-[6px] justify-between mb-[8px]">
+      <h3 class="font-sans text-[15px] sm:text-[17px] font-semibold text-[gray-900]">
+        Half-Yearly Service Plan
+        <span class="text-[12px] text-gray-400">(6 Months)</span>
+        <span class="ml-[3px] px-[5px] py-[2px] rounded-[4px] bg-green-100 text-green-500 text-[10px] font-semibold">15% OFF</span>
+      </h3>
+    </div>
+    <div class="bg-[#f3f4f6] rounded-[5px] px-[10px] py-[10px] mb-[10px]">
+      <p class="font-sans text-[15px] sm:text-[17px] font-semibold text-[gray-900]">Half-Yearly Service Plan</p>
+      <p class="text-[13px] mt-[3px]">
+        <span class="line-through text-gray-400 mr-[3px]">₹999</span>
+        <span class="font-semibold text-green-500">₹820/AC</span>
+      </p>
+      <p class="text-[10px] text-[gray-500] mt-[2px]">Starts At ₹820/AC</p>
+      <p class="text-[10px] text-[gray-500]">AC Valid For 6 Months</p>
+    </div>
+    <p class="text-[11px] font-semibold text-[gray-900] mb-[5px]">What's Included</p>
+    <ul class="text-[10px] sm:text-[11px] text-[gray-500] leading-[1.7]">
+      <li>✓ 2 Comprehensive Service In 6 Months</li>
+      <li>✓ Applicable for Split Window or Split AC</li>
+      <li>✓ Deep Cleaning of Filters, Condenser & Evaporator</li>
+      <li>✓ Performance Check & Optimization</li>
+    </ul>
+    <div class="flex items-center flex-wrap gap-[8px] justify-between mt-[10px]">
+      <p class="text-[10px] text-[gray-500]">✓ Free Cancellation Before 6 Hours</p>
+      <button type="button"
+        class="min-w-[40px] sm:min-w-[55px] h-[25px] rounded-[5px] border border-blue-300 bg-blue-50 text-[11px] sm:text-[12px] text-[blue-600] font-semibold hover:bg-[blue-600] hover:text-white transition">
+        Add
+      </button>
+    </div>
+  </div>
 
-                    <p class="text-[13px] mt-[3px]">
-                      <span class="line-through text-gray-400 mr-[3px]"
-                        >₹999</span
-                      >
-                      <span class="font-semibold text-green-500">₹749/AC</span>
-                    </p>
-
-                    <p class="text-[10px] text-[gray-500] mt-[2px]">
-                      Starts At ₹749/AC
-                    </p>
-
-                    <p class="text-[10px] text-[gray-500]">
-                      AC Valid For 1 Year
-                    </p>
-                  </div>
-
-                  <p class="text-[11px] font-semibold text-[gray-900] mb-[5px]">
-                    What's Included
-                  </p>
-
-                  <ul
-                    class="text-[10px] sm:text-[11px] text-[gray-500] leading-[1.7]"
-                  >
-                    <li>✓ 2 Comprehensive Service In 1 Year</li>
-                    <li>✓ Applicable for Split Window or Split AC</li>
-                    <li>✓ Deep Cleaning of Filters, Condenser & Evaporator</li>
-                    <li>✓ Performance Check & Optimization</li>
-                  </ul>
-
-                  <div
-                    class="flex items-center flex-wrap gap-[8px] justify-between mt-[10px]"
-                  >
-                    <p class="text-[10px] text-[gray-500]">
-                      ✓ Free Cancellation Before 6 Hours
-                    </p>
-
-                    <button
-                      type="button"
-                      class="min-w-[40px] sm:min-w-[55px] h-[25px] rounded-[5px] border border-blue-300 bg-blue-50 text-[11px] sm:text-[12px] text-[blue-600] font-semibold hover:bg-[blue-600] hover:text-white transition"
-                    >
-                      Add
-                    </button>
-                  </div>
-                </div>
-
-                <!-- HALF YEARLY -->
-                <div
-                  class="border border-[gray-200] rounded-[10px] bg-white p-[10px] sm:p-[12px] shadow-[0_2px_7px_rgba(0,0,0,0.05)]"
-                >
-                  <div
-                    class="flex items-center flex-wrap gap-[6px] justify-between mb-[8px]"
-                  >
-                    <h3
-                      class="font-sans text-[15px] sm:text-[17px] font-semibold text-[gray-900]"
-                    >
-                      Half-Yearly Service Plan
-                      <span class="text-[12px] text-gray-400">(6 Months)</span>
-                      <span
-                        class="ml-[3px] px-[5px] py-[2px] rounded-[4px] bg-green-100 text-green-500 text-[10px] font-semibold"
-                      >
-                        15% OFF
-                      </span>
-                    </h3>
-                  </div>
-
-                  <div
-                    class="bg-[#f3f4f6] rounded-[5px] px-[10px] py-[10px] mb-[10px]"
-                  >
-                    <p
-                      class="font-sans text-[15px] sm:text-[17px] font-semibold text-[gray-900]"
-                    >
-                      Half-Yearly Service Plan
-                    </p>
-
-                    <p class="text-[13px] mt-[3px]">
-                      <span class="line-through text-gray-400 mr-[3px]"
-                        >₹999</span
-                      >
-                      <span class="font-semibold text-green-500">₹820/AC</span>
-                    </p>
-
-                    <p class="text-[10px] text-[gray-500] mt-[2px]">
-                      Starts At ₹820/AC
-                    </p>
-
-                    <p class="text-[10px] text-[gray-500]">
-                      AC Valid For 6 Months
-                    </p>
-                  </div>
-
-                  <p class="text-[11px] font-semibold text-[gray-900] mb-[5px]">
-                    What's Included
-                  </p>
-
-                  <ul
-                    class="text-[10px] sm:text-[11px] text-[gray-500] leading-[1.7]"
-                  >
-                    <li>✓ 2 Comprehensive Service In 6 Months</li>
-                    <li>✓ Applicable for Split Window or Split AC</li>
-                    <li>✓ Deep Cleaning of Filters, Condenser & Evaporator</li>
-                    <li>✓ Performance Check & Optimization</li>
-                  </ul>
-
-                  <div
-                    class="flex items-center flex-wrap gap-[8px] justify-between mt-[10px]"
-                  >
-                    <p class="text-[10px] text-[gray-500]">
-                      ✓ Free Cancellation Before 6 Hours
-                    </p>
-
-                    <button
-                      type="button"
-                      class="min-w-[40px] sm:min-w-[55px] h-[25px] rounded-[5px] border border-blue-300 bg-blue-50 text-[11px] sm:text-[12px] text-[blue-600] font-semibold hover:bg-[blue-600] hover:text-white transition"
-                    >
-                      Add
-                    </button>
-                  </div>
-                </div>
-
-                <!-- QUARTERLY -->
-                <div
-                  class="border border-[gray-200] rounded-[10px] bg-white p-[10px] sm:p-[12px] shadow-[0_2px_7px_rgba(0,0,0,0.05)]"
-                >
-                  <div
-                    class="flex items-center flex-wrap gap-[6px] justify-between mb-[8px]"
-                  >
-                    <h3
-                      class="font-sans text-[15px] sm:text-[17px] font-semibold text-[gray-900]"
-                    >
-                      Quarterly Service Plan
-                      <span class="text-[12px] text-gray-400">(3 Months)</span>
-                      <span
-                        class="ml-[3px] px-[5px] py-[2px] rounded-[4px] bg-green-100 text-green-500 text-[10px] font-semibold"
-                      >
-                        10% OFF
-                      </span>
-                    </h3>
-                  </div>
-
-                  <div
-                    class="bg-[#f3f4f6] rounded-[5px] px-[10px] py-[10px] mb-[10px]"
-                  >
-                    <p
-                      class="font-sans text-[15px] sm:text-[17px] font-semibold text-[gray-900]"
-                    >
-                      Quarterly Service Plan
-                    </p>
-
-                    <p class="text-[13px] mt-[3px]">
-                      <span class="line-through text-gray-400 mr-[3px]"
-                        >₹999</span
-                      >
-                      <span class="font-semibold text-green-500">₹900/AC</span>
-                    </p>
-
-                    <p class="text-[10px] text-[gray-500] mt-[2px]">
-                      Starts At ₹900/AC
-                    </p>
-
-                    <p class="text-[10px] text-[gray-500]">
-                      AC Valid For 3 Months
-                    </p>
-                  </div>
-
-                  <p class="text-[11px] font-semibold text-[gray-900] mb-[5px]">
-                    What's Included
-                  </p>
-
-                  <ul
-                    class="text-[10px] sm:text-[11px] text-[gray-500] leading-[1.7]"
-                  >
-                    <li>✓ Applicable for Split Window or Split AC</li>
-                    <li>✓ Deep Cleaning of Filters, Condenser & Evaporator</li>
-                    <li>✓ Performance Check & Optimization</li>
-                  </ul>
-
-                  <div
-                    class="flex items-center flex-wrap gap-[8px] justify-between mt-[10px]"
-                  >
-                    <p class="text-[10px] text-[gray-500]">
-                      ✓ Free Cancellation Before 6 Hours
-                    </p>
-
-                    <button
-                      type="button"
-                      class="min-w-[40px] sm:min-w-[55px] h-[25px] rounded-[5px] border border-blue-300 bg-blue-50 text-[11px] sm:text-[12px] text-[blue-600] font-semibold hover:bg-[blue-600] hover:text-white transition"
-                    >
-                      Add
-                    </button>
-                  </div>
-                </div>
-              </div>
+  <!-- QUARTERLY -->
+  <div class="border border-[gray-200] rounded-[10px] bg-white p-[10px] sm:p-[12px] shadow-[0_2px_7px_rgba(0,0,0,0.05)]">
+    <div class="flex items-center flex-wrap gap-[6px] justify-between mb-[8px]">
+      <h3 class="font-sans text-[15px] sm:text-[17px] font-semibold text-[gray-900]">
+        Quarterly Service Plan
+        <span class="text-[12px] text-gray-400">(3 Months)</span>
+        <span class="ml-[3px] px-[5px] py-[2px] rounded-[4px] bg-green-100 text-green-500 text-[10px] font-semibold">10% OFF</span>
+      </h3>
+    </div>
+    <div class="bg-[#f3f4f6] rounded-[5px] px-[10px] py-[10px] mb-[10px]">
+      <p class="font-sans text-[15px] sm:text-[17px] font-semibold text-[gray-900]">Quarterly Service Plan</p>
+      <p class="text-[13px] mt-[3px]">
+        <span class="line-through text-gray-400 mr-[3px]">₹999</span>
+        <span class="font-semibold text-green-500">₹900/AC</span>
+      </p>
+      <p class="text-[10px] text-[gray-500] mt-[2px]">Starts At ₹900/AC</p>
+      <p class="text-[10px] text-[gray-500]">AC Valid For 3 Months</p>
+    </div>
+    <p class="text-[11px] font-semibold text-[gray-900] mb-[5px]">What's Included</p>
+    <ul class="text-[10px] sm:text-[11px] text-[gray-500] leading-[1.7]">
+      <li>✓ Applicable for Split Window or Split AC</li>
+      <li>✓ Deep Cleaning of Filters, Condenser & Evaporator</li>
+      <li>✓ Performance Check & Optimization</li>
+    </ul>
+    <div class="flex items-center flex-wrap gap-[8px] justify-between mt-[10px]">
+      <p class="text-[10px] text-[gray-500]">✓ Free Cancellation Before 6 Hours</p>
+      <button type="button"
+        class="min-w-[40px] sm:min-w-[55px] h-[25px] rounded-[5px] border border-blue-300 bg-blue-50 text-[11px] sm:text-[12px] text-[blue-600] font-semibold hover:bg-[blue-600] hover:text-white transition">
+        Add
+      </button>
+    </div>
+  </div>
+</div>
             </div>
 
             <!-- =====================
@@ -5664,6 +5490,28 @@
         console.log("User logged out");
         closeLogoutDialog();
       });
+    </script>
+    <script>
+/* ---------- Connect all 4 Service selector cards to Plan List ---------- */
+const servicePlansBtn = document.getElementById("servicePlansBtn");
+const serviceBtn = document.getElementById("serviceBtn");
+const repairGasBtn = document.getElementById("repairGasBtn");
+const installUninstallBtn = document.getElementById("installUninstallBtn");
+const planListSection = document.getElementById("planListSection");
+
+const serviceButtons = [servicePlansBtn, serviceBtn, repairGasBtn, installUninstallBtn];
+
+serviceButtons.forEach((btn) => {
+  if (!btn) return;
+  btn.addEventListener("click", () => {
+    // highlight the clicked card, unhighlight others
+    serviceButtons.forEach((b) => b && b.classList.remove("border-blue-600"));
+    btn.classList.add("border-blue-600");
+
+    // Show plan cards no matter which of the 4 cards is clicked
+    planListSection.classList.remove("hidden");
+  });
+});
     </script>
   </body>
 </html>
