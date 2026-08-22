@@ -176,147 +176,54 @@ document.querySelectorAll(".closeModal").forEach(btn => {
     });
 });
 
-// slider why choose us section
+// why choose us slider
 
-const swiper = new Swiper(".mySwiper", {
+  document.addEventListener("DOMContentLoaded", function () {
 
-    // Vertical slider
-    direction: "vertical",
+    const whyChooseSwiper = new Swiper(".whyChooseSwiper", {
 
-    // 3 cards visible
-    slidesPerView: 3,
+      slidesPerView: 1.15,
+      spaceBetween: 10,
 
-    // Center card
-    centeredSlides: true,
+      grabCursor: true,
 
-    // Gap between cards
-    spaceBetween: 140,
+      simulateTouch: true,
+      allowTouchMove: true,
 
-    // Infinite loop
-    loop: true,
+      mousewheel: false,
 
-    // Animation speed
-    speed: 1000,
+      breakpoints: {
 
-    // Auto slide
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-    },
-
-    on: {
-
-        init: function () {
-            updateRotation(this);
+        480: {
+          slidesPerView: 1.25,
+          spaceBetween: 10
         },
 
-        slideChangeTransitionStart: function () {
-            updateRotation(this);
+        640: {
+          slidesPerView: 1.5,
+          spaceBetween: 12
+        },
+
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 12
+        },
+
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 12
+        },
+
+        1280: {
+          slidesPerView: 2,
+          spaceBetween: 14
         }
 
-    }
-
-});
-
-
-function updateRotation(swiper) {
-
-    swiper.slides.forEach((slide) => {
-
-        // Check if this is the active center slide
-        if (slide.classList.contains("swiper-slide-active")) {
-
-            // Center card = normal
-            slide.style.transform = "rotate(0deg)";
-
-        } else {
-
-            // Other cards = rotated
-            slide.style.transform = "rotate(160deg)";
-
-        }
+      }
 
     });
 
-}
-// tetsimonal slider
-const testimonialSwiper = new Swiper(
-    ".testimonal-swiper",
-    {
-
-
-        freeMode: true,
-
-
-
-        autoplay: {
-
-            delay: 5000,
-
-            disableOnInteraction: false,
-
-        },
-
-
-
-
-        slidesPerView: 2,
-
-        spaceBetween: 30,
-
-
-
-
-        navigation: {
-
-            prevEl: ".testimonialPrev",
-
-            nextEl: ".testimonialNext",
-
-        },
-
-
-
-
-        breakpoints: {
-
-            /* Mobile */
-
-            320: {
-
-                slidesPerView: 1,
-
-                spaceBetween: 15,
-
-            },
-
-
-            /* Tablet */
-
-            768: {
-
-                slidesPerView: 1,
-
-                spaceBetween: 20,
-
-            },
-
-
-            /* Desktop */
-
-            992: {
-
-                slidesPerView: 2,
-
-                spaceBetween: 30,
-
-            }
-
-        }
-
-    }
-);
-
+  });
 // expert swiper  slider section
 
 
