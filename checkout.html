@@ -3415,441 +3415,659 @@
       </section>
     </div>
   </div> 
-  <!-- payment confirm --> 
-    <!-- =========================================================
-         SUCCESS MODAL OVERLAY
-    ========================================================== -->
+<!-- =========================================================
+     SUCCESS MODAL OVERLAY
+========================================================= -->
+
+<div
+    id="bookingModal"
+    class="fixed inset-0 z-[9999]
+    hidden
+    items-center justify-center
+    bg-black/55
+    backdrop-blur-[2px]
+    px-3
+    py-3
+    min-[375px]:px-4
+    min-[375px]:py-5
+    sm:px-6
+    sm:py-6"
+    aria-hidden="true"
+>
+
+    <!-- =====================================================
+         MODAL WRAPPER
+    ====================================================== -->
 
     <div
-        id="bookingModal"
-        class="fixed inset-0 z-[9999]
-        hidden
-        items-center justify-center
-        bg-black/55
-        backdrop-blur-[2px]
+        id="bookingModalBox"
+        class="relative
+        w-full
+        max-w-[520px]
+        min-h-[330px]
+        max-h-[calc(100vh-24px)]
+        min-[375px]:min-h-[350px]
+        sm:min-h-[390px]
+        md:min-h-[410px]
+
+        rounded-[20px]
+        min-[375px]:rounded-[24px]
+        sm:rounded-[28px]
+
+        bg-white
+        shadow-[0_20px_70px_rgba(0,0,0,0.25)]
+        overflow-hidden
+        overflow-y-auto
+
+        flex
+        flex-col
+        items-center
+        justify-center
+
         px-4
-        py-6
-        sm:px-6"
-        aria-hidden="true"
+        py-8
+
+        min-[375px]:px-5
+        min-[375px]:py-10
+
+        sm:px-8
+        sm:py-14
+
+        md:px-10
+        md:py-16"
     >
 
-        <!-- =====================================================
-             MODAL WRAPPER
-        ====================================================== -->
+        <!-- =================================================
+             SOFT BLUE BACKGROUND GLOW
+        ================================================== -->
 
         <div
-            id="bookingModalBox"
-            class="relative
-            w-full
-            max-w-[520px]
-            min-h-[360px]
-            sm:min-h-[390px]
-            md:min-h-[410px]
-            rounded-[24px]
-            sm:rounded-[28px]
-            bg-white
-            shadow-[0_20px_70px_rgba(0,0,0,0.25)]
-            overflow-hidden
-            flex
-            flex-col
-            items-center
-            justify-center
-            px-5
-            py-12
-            sm:px-8
-            sm:py-14
-            md:px-10
-            md:py-16"
+            class="pointer-events-none
+            absolute
+            -top-[70px]
+            min-[375px]:-top-[80px]
+            sm:-top-[90px]
+
+            left-1/2
+            -translate-x-1/2
+
+            w-[220px]
+            h-[220px]
+
+            min-[375px]:w-[260px]
+            min-[375px]:h-[260px]
+
+            sm:w-[340px]
+            sm:h-[340px]
+
+            rounded-full
+            bg-[var(--color7)]/25
+            blur-[35px]
+            sm:blur-[45px]"
+        ></div>
+
+
+        <!-- =================================================
+             CONFETTI / RIBBONS
+        ================================================== -->
+
+        <div
+            class="pointer-events-none
+            absolute
+            inset-0
+            overflow-hidden"
+            aria-hidden="true"
         >
 
-            <!-- =================================================
-                 SOFT BLUE BACKGROUND GLOW
-            ================================================== -->
+            <!-- Top Left Blue Ribbon -->
+            <span
+                class="absolute
+                left-[8%]
+                top-[5%]
+                w-[24px]
+                h-[9px]
 
-            <div
-                class="pointer-events-none
-                absolute
-                -top-[90px]
-                left-1/2
-                -translate-x-1/2
-                w-[280px]
-                h-[280px]
-                sm:w-[340px]
-                sm:h-[340px]
+                min-[375px]:w-[30px]
+                min-[375px]:h-[11px]
+
+                sm:w-[36px]
+                sm:h-[14px]
+
                 rounded-full
-                bg-[var(--color7)]/25
-                blur-[45px]"
-            ></div>
+                bg-[#7da9f5]
+                rotate-[-15deg]
+                animate-[ribbonFloat_2.8s_ease-in-out_infinite]"
+            ></span>
 
 
-            <!-- =================================================
-                 CONFETTI / RIBBONS
-            ================================================== -->
+            <!-- Top Left Yellow Dot -->
+            <span
+                class="absolute
+                left-[18%]
+                top-[7%]
+                w-[4px]
+                h-[4px]
 
-            <div
-                class="pointer-events-none absolute inset-0 overflow-hidden"
-                aria-hidden="true"
-            >
+                min-[375px]:w-[5px]
+                min-[375px]:h-[5px]
 
-                <!-- Top Left Blue Ribbon -->
-                <span
-                    class="absolute
-                    left-[10%]
-                    top-[5%]
-                    w-[30px]
-                    h-[12px]
-                    sm:w-[36px]
-                    sm:h-[14px]
-                    rounded-full
-                    bg-[#7da9f5]
-                    rotate-[-15deg]
-                    animate-[ribbonFloat_2.8s_ease-in-out_infinite]"
-                ></span>
-
-                <!-- Top Left Yellow Dot -->
-                <span
-                    class="absolute
-                    left-[20%]
-                    top-[7%]
-                    w-[5px]
-                    h-[5px]
-                    rounded-full
-                    bg-[#fbbf24]
-                    animate-[confettiFloat_2s_ease-in-out_infinite]"
-                ></span>
-
-                <!-- Yellow Squiggle -->
-                <span
-                    class="absolute
-                    left-[31%]
-                    top-[9%]
-                    w-[12px]
-                    h-[38px]
-                    border-l-[5px]
-                    border-[#f5cf4a]
-                    rounded-full
-                    rotate-[-10deg]
-                    animate-[ribbonFloat_3s_ease-in-out_infinite]"
-                ></span>
-
-                <!-- Blue Squiggle -->
-                <span
-                    class="absolute
-                    right-[22%]
-                    top-[8%]
-                    w-[10px]
-                    h-[34px]
-                    border-l-[5px]
-                    border-[#00a9e8]
-                    rounded-full
-                    rotate-[18deg]
-                    animate-[ribbonFloat_2.4s_ease-in-out_infinite]"
-                ></span>
-
-                <!-- Purple Ribbon -->
-                <span
-                    class="absolute
-                    right-[9%]
-                    top-[12%]
-                    w-[28px]
-                    h-[12px]
-                    rounded-full
-                    bg-[#9b70dc]
-                    rotate-[25deg]
-                    animate-[ribbonFloat_2.7s_ease-in-out_infinite]"
-                ></span>
-
-                <!-- Green Dot -->
-                <span
-                    class="absolute
-                    left-[49%]
-                    top-[10%]
-                    w-[6px]
-                    h-[9px]
-                    rounded-full
-                    bg-[#16a34a]
-                    rotate-[20deg]
-                    animate-[confettiFloat_2.2s_ease-in-out_infinite]"
-                ></span>
-
-                <!-- Purple Plus -->
-                <span
-                    class="absolute
-                    left-[50%]
-                    top-[22%]
-                    text-[#7469c4]
-                    text-[24px]
-                    font-bold
-                    rotate-[20deg]
-                    animate-[confettiFloat_2.5s_ease-in-out_infinite]"
-                >
-                    +
-                </span>
-
-                <!-- Yellow Dot -->
-                <span
-                    class="absolute
-                    right-[25%]
-                    top-[24%]
-                    w-[6px]
-                    h-[6px]
-                    rounded-full
-                    bg-[#facc15]
-                    animate-[confettiFloat_2.1s_ease-in-out_infinite]"
-                ></span>
-
-                <!-- Left Blue Wave -->
-                <span
-                    class="absolute
-                    left-[5%]
-                    top-[20%]
-                    w-[24px]
-                    h-[8px]
-                    border-t-[3px]
-                    border-[#54b7ee]
-                    rounded-full
-                    rotate-[20deg]
-                    animate-[ribbonFloat_2.6s_ease-in-out_infinite]"
-                ></span>
-
-                <!-- Left Yellow Small -->
-                <span
-                    class="absolute
-                    left-[12%]
-                    top-[31%]
-                    w-[9px]
-                    h-[18px]
-                    border-l-[4px]
-                    border-[#f7c34b]
-                    rounded-full
-                    rotate-[25deg]
-                    animate-[ribbonFloat_2.3s_ease-in-out_infinite]"
-                ></span>
-
-                <!-- Left Purple Ribbon -->
-                <span
-                    class="absolute
-                    left-[21%]
-                    top-[29%]
-                    w-[25px]
-                    h-[11px]
-                    rounded-full
-                    bg-[#9b6fdd]
-                    rotate-[-12deg]
-                    animate-[ribbonFloat_2.8s_ease-in-out_infinite]"
-                ></span>
-
-                <!-- Right Blue Wave -->
-                <span
-                    class="absolute
-                    right-[8%]
-                    top-[27%]
-                    w-[27px]
-                    h-[10px]
-                    border-t-[4px]
-                    border-[#31b4ed]
-                    rounded-full
-                    rotate-[-20deg]
-                    animate-[ribbonFloat_2.5s_ease-in-out_infinite]"
-                ></span>
-
-                <!-- Orange Star -->
-                <span
-                    class="absolute
-                    left-[8%]
-                    top-[42%]
-                    text-[#f59e0b]
-                    text-[20px]
-                    animate-[confettiFloat_2.3s_ease-in-out_infinite]"
-                >
-                    +
-                </span>
-
-                <!-- Pink Star -->
-                <span
-                    class="absolute
-                    left-[18%]
-                    top-[39%]
-                    text-[#fb7185]
-                    text-[20px]
-                    animate-[confettiFloat_2.6s_ease-in-out_infinite]"
-                >
-                    ✦
-                </span>
-
-                <!-- Right Yellow Squiggle -->
-                <span
-                    class="absolute
-                    right-[14%]
-                    top-[38%]
-                    w-[10px]
-                    h-[25px]
-                    border-l-[4px]
-                    border-[#f5c84c]
-                    rounded-full
-                    rotate-[15deg]
-                    animate-[ribbonFloat_2.7s_ease-in-out_infinite]"
-                ></span>
-
-                <!-- Blue Dot -->
-                <span
-                    class="absolute
-                    right-[4%]
-                    top-[34%]
-                    w-[7px]
-                    h-[7px]
-                    rounded-full
-                    bg-[#0ea5e9]
-                    animate-[confettiFloat_2s_ease-in-out_infinite]"
-                ></span>
-
-                <!-- Bottom Left Purple -->
-                <span
-                    class="absolute
-                    left-[7%]
-                    bottom-[18%]
-                    w-[22px]
-                    h-[10px]
-                    rounded-full
-                    bg-[#8b6bd1]
-                    rotate-[-20deg]
-                    animate-[ribbonFloat_2.9s_ease-in-out_infinite]"
-                ></span>
-
-                <!-- Bottom Right Blue -->
-                <span
-                    class="absolute
-                    right-[8%]
-                    bottom-[16%]
-                    w-[30px]
-                    h-[11px]
-                    rounded-full
-                    bg-[#44b7eb]
-                    rotate-[25deg]
-                    animate-[ribbonFloat_2.4s_ease-in-out_infinite]"
-                ></span>
-
-            </div>
+                rounded-full
+                bg-[#fbbf24]
+                animate-[confettiFloat_2s_ease-in-out_infinite]"
+            ></span>
 
 
-            <!-- =================================================
-                 SUCCESS CHECK CIRCLE
-            ================================================== -->
+            <!-- Yellow Squiggle -->
+            <span
+                class="absolute
+                left-[28%]
+                top-[8%]
+                w-[9px]
+                h-[30px]
 
-            <div
-                class="relative z-20
-                flex
-                items-center
-                justify-center
-                w-[72px]
-                h-[72px]
-                sm:w-[82px]
-                sm:h-[82px]
-                md:w-[92px]
-                md:h-[92px]
+                min-[375px]:w-[11px]
+                min-[375px]:h-[35px]
+
+                sm:w-[12px]
+                sm:h-[38px]
+
+                border-l-[4px]
+                sm:border-l-[5px]
+
+                border-[#f5cf4a]
+                rounded-full
+                rotate-[-10deg]
+                animate-[ribbonFloat_3s_ease-in-out_infinite]"
+            ></span>
+
+
+            <!-- Blue Squiggle -->
+            <span
+                class="absolute
+                right-[20%]
+                top-[8%]
+                w-[8px]
+                h-[28px]
+
+                min-[375px]:h-[32px]
+
+                sm:w-[10px]
+                sm:h-[34px]
+
+                border-l-[4px]
+                sm:border-l-[5px]
+
+                border-[#00a9e8]
+                rounded-full
+                rotate-[18deg]
+                animate-[ribbonFloat_2.4s_ease-in-out_infinite]"
+            ></span>
+
+
+            <!-- Purple Ribbon -->
+            <span
+                class="absolute
+                right-[7%]
+                top-[12%]
+                w-[23px]
+                h-[10px]
+
+                min-[375px]:w-[26px]
+                min-[375px]:h-[11px]
+
+                sm:w-[28px]
+                sm:h-[12px]
+
+                rounded-full
+                bg-[#9b70dc]
+                rotate-[25deg]
+                animate-[ribbonFloat_2.7s_ease-in-out_infinite]"
+            ></span>
+
+
+            <!-- Green Dot -->
+            <span
+                class="absolute
+                left-[49%]
+                top-[10%]
+                w-[5px]
+                h-[7px]
+
+                min-[375px]:w-[6px]
+                min-[375px]:h-[9px]
+
                 rounded-full
                 bg-[#16a34a]
-                shrink-0
-                shadow-[0_8px_25px_rgba(22,163,74,0.25)]"
+                rotate-[20deg]
+                animate-[confettiFloat_2.2s_ease-in-out_infinite]"
+            ></span>
+
+
+            <!-- Purple Plus -->
+            <span
+                class="absolute
+                left-[50%]
+                top-[20%]
+                text-[#7469c4]
+                text-[18px]
+
+                min-[375px]:text-[21px]
+
+                sm:text-[24px]
+
+                font-bold
+                rotate-[20deg]
+                animate-[confettiFloat_2.5s_ease-in-out_infinite]"
             >
-
-                <!-- Check -->
-                <span
-                    class="relative
-                    block
-                    w-[30px]
-                    h-[17px]
-                    sm:w-[36px]
-                    sm:h-[21px]
-                    md:w-[42px]
-                    md:h-[24px]
-                    border-l-[7px]
-                    border-bottom-[7px]
-                    sm:border-l-[8px]
-                    sm:border-b-[8px]
-                    border-white
-                    rotate-[-45deg]
-                    translate-y-[-4px]"
-                ></span>
-
-            </div>
+                +
+            </span>
 
 
-            <!-- =================================================
-                 MODAL CONTENT
-            ================================================== -->
+            <!-- Yellow Dot -->
+            <span
+                class="absolute
+                right-[22%]
+                top-[24%]
+                w-[5px]
+                h-[5px]
 
-            <div
-                class="relative z-20
-                mt-8
-                sm:mt-9
-                md:mt-10
-                text-center"
+                min-[375px]:w-[6px]
+                min-[375px]:h-[6px]
+
+                rounded-full
+                bg-[#facc15]
+                animate-[confettiFloat_2.1s_ease-in-out_infinite]"
+            ></span>
+
+
+            <!-- Left Blue Wave -->
+            <span
+                class="absolute
+                left-[4%]
+                top-[20%]
+                w-[20px]
+                h-[7px]
+
+                min-[375px]:w-[23px]
+
+                sm:w-[24px]
+                sm:h-[8px]
+
+                border-t-[3px]
+                border-[#54b7ee]
+                rounded-full
+                rotate-[20deg]
+                animate-[ribbonFloat_2.6s_ease-in-out_infinite]"
+            ></span>
+
+
+            <!-- Left Yellow Small -->
+            <span
+                class="absolute
+                left-[10%]
+                top-[31%]
+                w-[8px]
+                h-[16px]
+
+                min-[375px]:w-[9px]
+                min-[375px]:h-[18px]
+
+                border-l-[3px]
+                sm:border-l-[4px]
+
+                border-[#f7c34b]
+                rounded-full
+                rotate-[25deg]
+                animate-[ribbonFloat_2.3s_ease-in-out_infinite]"
+            ></span>
+
+
+            <!-- Left Purple Ribbon -->
+            <span
+                class="absolute
+                left-[19%]
+                top-[29%]
+                w-[21px]
+                h-[9px]
+
+                min-[375px]:w-[24px]
+                min-[375px]:h-[10px]
+
+                sm:w-[25px]
+                sm:h-[11px]
+
+                rounded-full
+                bg-[#9b6fdd]
+                rotate-[-12deg]
+                animate-[ribbonFloat_2.8s_ease-in-out_infinite]"
+            ></span>
+
+
+            <!-- Right Blue Wave -->
+            <span
+                class="absolute
+                right-[6%]
+                top-[27%]
+                w-[23px]
+                h-[8px]
+
+                min-[375px]:w-[26px]
+                min-[375px]:h-[9px]
+
+                sm:w-[27px]
+                sm:h-[10px]
+
+                border-t-[3px]
+                sm:border-t-[4px]
+
+                border-[#31b4ed]
+                rounded-full
+                rotate-[-20deg]
+                animate-[ribbonFloat_2.5s_ease-in-out_infinite]"
+            ></span>
+
+
+            <!-- Orange Plus -->
+            <span
+                class="absolute
+                left-[7%]
+                top-[42%]
+                text-[#f59e0b]
+                text-[17px]
+
+                min-[375px]:text-[19px]
+
+                sm:text-[20px]
+
+                animate-[confettiFloat_2.3s_ease-in-out_infinite]"
             >
-
-                <h2
-                    class="font-[family-name:var(--albert-sans-r)]
-                    font-bold
-                    text-[18px]
-                    sm:text-[20px]
-                    md:text-[22px]
-                    leading-[1.25]
-                    text-gray-900
-                    capitalize"
-                >
-                    Successfully Booked
-                </h2>
-
-                <p
-                    class="mt-1
-                    font-[family-name:var(--albert-sans-r)]
-                    text-[12px]
-                    sm:text-[13px]
-                    md:text-[14px]
-                    leading-[1.4]
-                    text-gray-500
-                    normal-case"
-                >
-                    Booking ID : 1234567890
-                </p>
-
-            </div>
+                +
+            </span>
 
 
-            <!-- =================================================
-                 DONE BUTTON
-            ================================================== -->
+            <!-- Pink Star -->
+            <span
+                class="absolute
+                left-[16%]
+                top-[39%]
+                text-[#fb7185]
+                text-[17px]
 
-            <button
-                type="button"
-                id="closeBookingModal"
-                class="relative z-20
-                mt-8
-                sm:mt-9
-                md:mt-10
-                w-full
-                max-w-[240px]
-                sm:max-w-[260px]
-                rounded-[8px]
-                bg-[#16a34a]
-                hover:bg-[#15803d]
-                text-white
-                font-[family-name:var(--albert-sans-r)]
-                font-semibold
-                text-[13px]
-                sm:text-[14px]
-                md:text-[15px]
-                py-2.5
-                sm:py-3
-                transition-colors
-                duration-200"
+                min-[375px]:text-[19px]
+
+                sm:text-[20px]
+
+                animate-[confettiFloat_2.6s_ease-in-out_infinite]"
             >
-                Done
-            </button>
+                ✦
+            </span>
+
+
+            <!-- Right Yellow Squiggle -->
+            <span
+                class="absolute
+                right-[12%]
+                top-[38%]
+                w-[8px]
+                h-[21px]
+
+                min-[375px]:w-[9px]
+                min-[375px]:h-[23px]
+
+                sm:w-[10px]
+                sm:h-[25px]
+
+                border-l-[3px]
+                sm:border-l-[4px]
+
+                border-[#f5c84c]
+                rounded-full
+                rotate-[15deg]
+                animate-[ribbonFloat_2.7s_ease-in-out_infinite]"
+            ></span>
+
+
+            <!-- Blue Dot -->
+            <span
+                class="absolute
+                right-[3%]
+                top-[34%]
+                w-[6px]
+                h-[6px]
+
+                min-[375px]:w-[7px]
+                min-[375px]:h-[7px]
+
+                rounded-full
+                bg-[#0ea5e9]
+                animate-[confettiFloat_2s_ease-in-out_infinite]"
+            ></span>
+
+
+            <!-- Bottom Left Purple -->
+            <span
+                class="absolute
+                left-[6%]
+                bottom-[15%]
+                w-[19px]
+                h-[8px]
+
+                min-[375px]:w-[21px]
+                min-[375px]:h-[9px]
+
+                sm:w-[22px]
+                sm:h-[10px]
+
+                rounded-full
+                bg-[#8b6bd1]
+                rotate-[-20deg]
+                animate-[ribbonFloat_2.9s_ease-in-out_infinite]"
+            ></span>
+
+
+            <!-- Bottom Right Blue -->
+            <span
+                class="absolute
+                right-[7%]
+                bottom-[14%]
+                w-[26px]
+                h-[9px]
+
+                min-[375px]:w-[29px]
+                min-[375px]:h-[10px]
+
+                sm:w-[30px]
+                sm:h-[11px]
+
+                rounded-full
+                bg-[#44b7eb]
+                rotate-[25deg]
+                animate-[ribbonFloat_2.4s_ease-in-out_infinite]"
+            ></span>
 
         </div>
 
+
+        <!-- =================================================
+             SUCCESS CHECK CIRCLE
+        ================================================== -->
+
+        <div
+            class="relative
+            z-20
+            flex
+            items-center
+            justify-center
+
+            w-[62px]
+            h-[62px]
+
+            min-[375px]:w-[70px]
+            min-[375px]:h-[70px]
+
+            sm:w-[82px]
+            sm:h-[82px]
+
+            md:w-[92px]
+            md:h-[92px]
+
+            rounded-full
+            bg-[#16a34a]
+            shrink-0
+            shadow-[0_8px_25px_rgba(22,163,74,0.25)]"
+        >
+
+            <!-- Check -->
+            <span
+                class="relative
+                block
+
+                w-[25px]
+                h-[14px]
+
+                min-[375px]:w-[29px]
+                min-[375px]:h-[16px]
+
+                sm:w-[36px]
+                sm:h-[21px]
+
+                md:w-[42px]
+                md:h-[24px]
+
+                border-l-[6px]
+                border-bottom-[6px]
+
+                min-[375px]:border-l-[7px]
+                min-[375px]:border-b-[7px]
+
+                sm:border-l-[8px]
+                sm:border-b-[8px]
+
+                border-white
+                rotate-[-45deg]
+                translate-y-[-3px]"
+            ></span>
+
+        </div>
+
+
+        <!-- =================================================
+             MODAL CONTENT
+        ================================================== -->
+
+        <div
+            class="relative
+            z-20
+            mt-5
+
+            min-[375px]:mt-6
+
+            sm:mt-9
+
+            md:mt-10
+
+            text-center"
+        >
+
+            <h2
+                class="font-[family-name:var(--albert-sans-r)]
+                font-bold
+
+                text-[17px]
+
+                min-[375px]:text-[18px]
+
+                sm:text-[20px]
+
+                md:text-[22px]
+
+                leading-[1.25]
+                text-gray-900
+                capitalize"
+            >
+                Successfully Booked
+            </h2>
+
+
+            <p
+                class="mt-1
+                font-[family-name:var(--albert-sans-r)]
+
+                text-[11px]
+
+                min-[375px]:text-[12px]
+
+                sm:text-[13px]
+
+                md:text-[14px]
+
+                leading-[1.4]
+                text-gray-500
+                normal-case"
+            >
+                Booking ID : 1234567890
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             DONE BUTTON
+        ================================================== -->
+
+        <button
+            type="button"
+            id="closeBookingModal"
+            class="relative
+            z-20
+
+            mt-6
+
+            min-[375px]:mt-7
+
+            sm:mt-9
+
+            md:mt-10
+
+            w-full
+            max-w-[210px]
+
+            min-[375px]:max-w-[230px]
+
+            sm:max-w-[260px]
+
+            rounded-[8px]
+            bg-[#16a34a]
+            hover:bg-[#15803d]
+
+            text-white
+
+            font-[family-name:var(--albert-sans-r)]
+            font-semibold
+
+            text-[12px]
+
+            min-[375px]:text-[13px]
+
+            sm:text-[14px]
+
+            md:text-[15px]
+
+            py-2.5
+
+            min-[375px]:py-2.5
+
+            sm:py-3
+
+            transition-colors
+            duration-200"
+        >
+            Done
+        </button>
+
     </div>
+
+</div>
 
   <!-- Checkout Schedule Modal Ends -->
     <!-- js link -->
